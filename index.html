@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SEA Pipeline — HubSpot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="sea">
+  <header class="head">
+    <div class="head-row">
+      <h1>SEA pipeline</h1>
+      <div class="asof" id="asof">Loading HubSpot data…</div>
+    </div>
+    <div class="sub">HubSpot Sales Pipeline · Thailand, Philippines, Indonesia, Malaysia, Singapore · USD</div>
+    <p class="take" id="takeaway"></p>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Open pipeline by country</h2>
+      <div class="note">Deal value now sitting in each open stage</div>
+      <div class="legend" id="pipe-legend"></div>
+      <div class="chart" id="pipe-chart"></div>
+    </div>
+    <div class="card">
+      <h2>Closed-won by quarter</h2>
+      <div class="note">Won deal value by close-date quarter, since Apr 2025</div>
+      <div class="legend" id="won-legend"></div>
+      <div class="chart" id="won-chart"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Country scorecard</h2>
+    <div class="note">Win rate = won ÷ (won + lost) by deal count, all time in the Sales Pipeline</div>
+    <div class="tbl-wrap"><table id="country-tbl"><thead><tr>
+      <th>Country</th><th class="num">Active value</th><th class="num">Active deals</th><th class="num">On-hold value</th>
+      <th class="num">On-hold deals</th><th class="num">Won FY27</th><th class="num">Won (all time)</th><th class="num">Lost (all time)</th><th class="num">Win rate</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <h2>By deal owner</h2>
+    <div class="note">Open SEA deals per owner; "stale" = never contacted or no logged contact in 90+ days</div>
+    <div class="tbl-wrap"><table id="owner-tbl"><thead><tr>
+      <th>Owner</th><th class="num">Open deals</th><th class="num">Active value</th><th class="num">Weighted</th><th class="num">On-hold value</th><th class="num">Stale deals</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Open deals</h2>
+    <div class="note" id="deals-note"></div>
+    <div class="controls">
+      <select id="f-country" aria-label="Country"><option value="">All countries</option></select>
+      <select id="f-stage" aria-label="Stage"><option value="">All open stages</option></select>
+      <select id="f-owner" aria-label="Owner"><option value="">All owners</option></select>
+      <select id="f-flag" aria-label="Health"><option value="">Any health</option><option value="flag">Has a data flag</option><option value="clean">No flags</option></select>
+      <input id="f-q" type="search" placeholder="Search deal or owner" aria-label="Search deals">
+      <button id="csv" class="btn" type="button">Download CSV</button>
+    </div>
+    <div class="tbl-wrap tall"><table id="deal-tbl"><thead><tr>
+      <th><button data-k="deal">Deal</button></th><th><button data-k="country">Country</button></th><th><button data-k="stage">Stage</button></th>
+      <th class="num"><button data-k="amount">Value</button></th><th class="num"><button data-k="weighted">Weighted</button></th>
+      <th><button data-k="close_date">Close date</button></th><th><button data-k="owner">Owner</button></th>
+      <th class="num"><button data-k="days">Days since contact</button></th><th>Flags</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Top of funnel</h2>
+      <div class="note">SEA deals in the Qualification pipeline, by stage (all time)</div>
+      <div id="funnel"></div>
+    </div>
+    <div class="card">
+      <h2>Data health</h2>
+      <div class="note">HubSpot hygiene items that distort the numbers above</div>
+      <table id="q-tbl"><thead><tr><th>Item</th><th class="num">Count</th><th>Detail</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
+  <p class="foot">Values are HubSpot's company-currency amounts (USD). SEA = HubSpot regions "Thailand &amp; Others", Indonesia, Philippines, Malaysia and Singapore, Sales Pipeline only. Closed-lost values are left out of every total because some look like local-currency entries (see Data health). FY27 = 1 Apr 2026 – 31 Mar 2027. Data refreshes daily from HubSpot.</p>
+</main>
+<div class="tip" id="tip"></div>
+<script src="vendor/d3.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
