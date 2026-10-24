@@ -32,20 +32,22 @@
   const FILTERS = {
     closures: [
       {k: 'period', label: 'Financial year', opts: () => Object.entries(FY).map(([k, v]) => [k, v[2]])},
-      {k: 'year', label: 'Calendar year', opts: () => yearsOf().map((y) => [y, y])},
-      {k: 'owner', label: 'Owner', opts: () => ownersOf(D.closures).map((o) => [o, o])},
-      {k: 'source', label: 'Source', opts: () => sourcesOf(D.closures).map((o) => [o, o])}],
+      {k: 'year', label: 'Calendar year', dyn: true, opts: () => yearsOf().map((y) => [y, y])},
+      {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
+      {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
+      {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.closures).map((o) => [o, o])}],
     active: [
       {k: 'status', label: 'Status', opts: () => [['active', 'Active (Demo → Contracting)']].concat(STAGES.map((s) => [s, s]))},
       {k: 'prob', label: 'Conversion probability', opts: () => [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low'], ['none', 'Not rated']]},
       {k: 'close', label: 'Closure date', opts: () => [['past', 'Close date passed'], ['30', 'Next 30 days'], ['90', 'Next 90 days'], ['fy27', 'By 31 Mar 2027'], ['later', 'After Mar 2027'], ['none', 'No close date']]},
-      {k: 'owner', label: 'Owner', opts: () => ownersOf(D.active).map((o) => [o, o])},
+      {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
+      {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'health', label: 'Follow-up', opts: () => [['stale', 'Last activity 90+ days ago'], ['never', 'No activity logged'], ['cta', 'Call to action: Yes'], ['nocontact', 'No contact linked'], ['noamount', 'No amount']]}],
     leads: [
       {k: 'type', label: 'Stage', opts: () => [['mql', 'Reached MQL'], ['sql', 'Reached SQL'], ['nowmql', 'Currently MQL'], ['nowsql', 'Currently SQL'], ['converted', 'MQL that became SQL']]},
       {k: 'period', label: 'When', opts: () => [['30', 'Last 30 days'], ['90', 'Last 90 days'], ['fy27', 'FY27 (since Apr 2026)'], ['fy26', 'FY26']]},
-      {k: 'owner', label: 'Owner', opts: () => ownersOf(D.leads).map((o) => [o, o])},
-      {k: 'source', label: 'Source', opts: () => sourcesOf(D.leads).map((o) => [o, o])}]
+      {k: 'owner', label: 'Contact owner', dyn: true, opts: () => ownersOf(D.leads).map((o) => [o, o])},
+      {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.leads).map((o) => [o, o])}]
   };
   const PILL = {month: (v) => 'Month: ' + fmonth(v), quarter: (v) => 'Quarter: ' + qLabel(v), q: (v) => 'Search: “' + v + '”', country: (v) => v};
 
@@ -75,7 +77,7 @@
   function rowsClosures(f = S.f) {
     return D.closures.filter((r) => (!f.country || r.country === f.country) && (!f.year || r.year === f.year) && (!f.period || inFY(r.close_date, f.period)) &&
       (!f.month || r.month === f.month) && (!f.quarter || (r.close_date >= qRange(f.quarter)[0] && r.close_date < qRange(f.quarter)[1])) &&
-      (!f.owner || r.deal_owner === f.owner || r.account_owner === f.owner) && (!f.source || r.source === f.source) &&
+      (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) && (!f.source || r.source === f.source) &&
       match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, ppl(r)));
   }
   function rowsActive(f = S.f) {
@@ -85,7 +87,7 @@
       (!f.close || (f.close === 'past' ? r.close_date && r.close_date < today : f.close === 'none' ? !r.close_date :
         f.close === 'fy27' ? r.close_date >= today && r.close_date < '2027-04-01' : f.close === 'later' ? r.close_date >= '2027-04-01' :
         r.close_date >= today && r.close_date <= plusDays(Number(f.close)))) &&
-      (!f.owner || r.deal_owner === f.owner || r.account_owner === f.owner) &&
+      (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) &&
       (!f.health || (f.health === 'stale' ? (r.last_activity && r.last_activity < plusDays(-90)) : f.health === 'never' ? !r.last_activity :
         f.health === 'cta' ? r.cta === 'Yes' : f.health === 'nocontact' ? !(r.contacts || []).length : !r.amount)) &&
       match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.remarks, r.next_step, r.conv_reason, ppl(r)));
@@ -121,7 +123,13 @@
     ctr.replaceChildren();
     FILTERS[S.tab].forEach((def) => {
       const s = el('select'); s.setAttribute('aria-label', def.label); if (S.f[def.k]) s.classList.add('on');
-      s.append(new Option(def.label + ': all', ''), ...def.opts().map(([v, l]) => new Option(def.label + ': ' + l, v)));
+      const allN = ROWS[S.tab](Object.assign({}, S.f, {[def.k]: ''})).length;
+      s.append(new Option(def.label + ': all (' + num(allN) + ')', ''));
+      def.opts().forEach(([v, l]) => {
+        const n = ROWS[S.tab](Object.assign({}, S.f, {[def.k]: v})).length;
+        if (!n && def.dyn && S.f[def.k] !== v) return;
+        const o = new Option(def.label + ': ' + l + ' (' + num(n) + ')', v); if (!n && S.f[def.k] !== v) o.disabled = true; s.append(o);
+      });
       s.value = S.f[def.k] || '';
       s.addEventListener('change', () => set({[def.k]: s.value}));
       ctr.appendChild(s);
@@ -288,7 +296,7 @@
       if (!won && r.close_date && r.close_date < today) top.append(el('span', 'tag Low', 'Close date passed'));
       b.appendChild(top);
       facts(b, [[won ? 'Closed' : 'Closure date', fdate(r.close_date)], ['Created', fdate(r.created)], ['Deal owner', r.deal_owner && filterLink(r.deal_owner, won ? 'closures' : 'active', {owner: r.deal_owner})],
-        ['Account', r.company], ['Account owner', r.account_owner], ['Source', r.source], ['Headcount', r.headcount], ['Industry', r.industry],
+        ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Source', r.source], ['Headcount', r.headcount], ['Industry', r.industry],
         ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
       section(b, 'Contacts');
       if ((r.contacts || []).length) { const ul = el('ul', 'people'); r.contacts.forEach((p) => { const li = el('li', null, p.name); if (p.title) li.append(el('small', null, ' · ' + p.title)); ul.appendChild(li); }); b.appendChild(ul); }

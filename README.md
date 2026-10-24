@@ -18,6 +18,8 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 - **MQL & SQL** tab: contacts that reached MQL or SQL by country, monthly trend, conversion, and the contact list
 - Every tab filters by country and downloads as CSV
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
+- Every dropdown shows how many rows each choice gives, and hides choices with none
+- `tests/filter_check.py` re-checks every filter, dropdown count, summary number and tile against the data (about 2,000 checks)
 - Filters are kept in the link (e.g. `#active?country=Thailand&status=On-Hold`), so a filtered view can be shared
 
 ## How the data gets here
