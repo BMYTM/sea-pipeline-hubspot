@@ -137,10 +137,20 @@ def main():
     portal = req("GET", "/account-info/v3/details").get("portalId")
     link = lambda kind, i: f"https://app.hubspot.com/contacts/{portal}/record/{kind}/{i}"
     who = lambda i: own.get(i or "", i) if i else None
-    props = ["dealname", "dealstage", "region", "amount_in_home_currency", "closedate", "createdate", "hubspot_owner_id",
+    props = ["dealname", "dealstage", "pipeline", "region", "amount_in_home_currency", "closedate", "createdate", "hubspot_owner_id",
              "notes_last_contacted", "notes_last_updated", "hs_deal_stage_probability", "hs_next_step", "new_deal_source", "test"]
     sales = search_deals(SALES, props)
     qual = search_deals(QUAL, ["dealstage", "region"])
+    # SEA closures filed under a non-SEA HubSpot region (see data/sea_overrides.json)
+    over = json.loads((DATA / "sea_overrides.json").read_text()).get("deals", {})
+    seen = {str(d["id"]) for d in sales}
+    to_region = {v: k for k, v in COUNTRY.items()}
+    region_note = {}
+    for i, p in batch_read("deals", [i for i in over if i not in seen], props).items():
+        if p.get("dealstage") != WON or p.get("pipeline", SALES) != SALES and p.get("pipeline"): continue
+        region_note[i] = "Region in HubSpot: " + (p.get("region") or "not set")
+        p["region"] = to_region.get(over[i]["country"], over[i]["country"])
+        sales.append({"id": i, "properties": p})
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # ---- overview (sea.json)
@@ -187,7 +197,7 @@ def main():
                 "headcount": st.get("headcount"), "industry": st.get("industry"), "url": link("0-3", i)}
         if s == WON:
             cd = base["close_date"] or ""
-            closures.append(dict(base, year=cd[:4] or None, month=cd[:7] or None))
+            closures.append(dict(base, year=cd[:4] or None, month=cd[:7] or None, **({"region_note": region_note[i]} if i in region_note else {})))
         else:
             active.append(dict(base, stage_id=s, stage=labels.get(s, s), probability=num(p.get("hs_deal_stage_probability")),
                                next_step=p.get("hs_next_step") or None, last_activity=day(p.get("notes_last_updated")),

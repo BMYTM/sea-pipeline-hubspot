@@ -1,0 +1,10 @@
+{
+ "_about": "Closed-won SEA deals whose HubSpot Region is not an SEA region (mostly pre-2024 deals tagged India-North). The dashboard counts them under the country given here. Remove an entry once its Region is fixed in HubSpot; duplicates are ignored either way.",
+ "deals": {
+  "4427906798": {"country": "Singapore", "name": "AG&P", "hubspot_region": "India-North"},
+  "4155854806": {"country": "Indonesia", "name": "Kanmo Group", "hubspot_region": "India-North"},
+  "6562678998": {"country": "Thailand", "name": "Indorama (Mar 2023)", "hubspot_region": "India-North"},
+  "7492992461": {"country": "Thailand", "name": "Indorama (Jul 2023)", "hubspot_region": "India-North"},
+  "7086527725": {"country": "Thailand", "name": "LF Logistics Thailand", "hubspot_region": "India-North"}
+ }
+}

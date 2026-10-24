@@ -45,6 +45,7 @@ HubSpot ──(daily GitHub Action, token in repo secret)──> data/sea.json �
 - Values are HubSpot's company-currency amount (USD). FY27 = 1 Apr 2026 – 31 Mar 2027.
 - MQL / SQL = the contact's lifecycle stage history (date entered MQL / SQL), grouped by the contact's Country field.
 - Notes = the deal's "Deal Status" remarks plus Next step. Conversion probability is the owner's own rating in those remarks.
+- `data/sea_overrides.json` lists SEA closed-won deals that HubSpot files under a non-SEA Region (mostly 2022–2023 deals tagged India-North, e.g. AG&P). They are counted under the country given there and tagged "region not SEA" on the page. Fix the Region in HubSpot, then remove the entry.
 - Closed-lost values are left out of every total: some Thailand and Philippines lost deals look like local-currency entries.
 
 ## Note on access

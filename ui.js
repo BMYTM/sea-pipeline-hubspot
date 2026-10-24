@@ -289,7 +289,7 @@
       b.appendChild(top);
       facts(b, [[won ? 'Closed' : 'Closure date', fdate(r.close_date)], ['Created', fdate(r.created)], ['Deal owner', r.deal_owner && filterLink(r.deal_owner, won ? 'closures' : 'active', {owner: r.deal_owner})],
         ['Account', r.company], ['Account owner', r.account_owner], ['Source', r.source], ['Headcount', r.headcount], ['Industry', r.industry],
-        ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
+        ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
       section(b, 'Contacts');
       if ((r.contacts || []).length) { const ul = el('ul', 'people'); r.contacts.forEach((p) => { const li = el('li', null, p.name); if (p.title) li.append(el('small', null, ' · ' + p.title)); ul.appendChild(li); }); b.appendChild(ul); }
       else b.appendChild(el('p', 'm', 'No contact linked to this deal in HubSpot.'));
@@ -354,14 +354,15 @@
       (!f.period || inFY(m + '-01', f.period)) && (!f.quarter || (m + '-01' >= qRange(f.quarter)[0] && m + '-01' < qRange(f.quarter)[1])) : null;
     const series = (f.country ? [f.country] : ORDER).map((c) => ({key: c, label: c, color: col(c), extra: (m) => ' (' + chartRows.filter((r) => r.country === c && r.month === m).length + ')'}));
     legend('#cl-legend', series.map((s) => [s.color, s.label]));
-    monthBars('#cl-chart', lastMonths(24), series, (m, c) => sum(chartRows.filter((r) => r.country === c && r.month === m), (r) => r.amount), money, false,
+    monthBars('#cl-chart', (() => { const first = d3.min(D.closures, (r) => r.month) || '2022-01'; const out = []; let m = new Date(first + '-01T00:00:00Z'); const end = new Date(); while (m <= end) { out.push(m.toISOString().slice(0, 7)); m = new Date(Date.UTC(m.getUTCFullYear(), m.getUTCMonth() + 1, 1)); } return out; })(), series, (m, c) => sum(chartRows.filter((r) => r.country === c && r.month === m), (r) => r.amount), money, false,
       (m) => set({month: f.month === m ? '' : m, year: '', period: '', quarter: ''}), timeSel);
     const odd = rows.filter((r) => r.amount != null && r.amount < 100).length;
-    $('#cl-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + (odd ? ' · ' + odd + ' with a value under $100 in HubSpot (marked “check”, likely local currency)' : '');
+    const mis = rows.filter((r) => r.region_note).length;
+    $('#cl-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + (mis ? ' · ' + mis + ' filed under a non-SEA region in HubSpot (tagged)' : '') + (odd ? ' · ' + odd + ' with a value under $100 in HubSpot (marked “check”, likely local currency)' : '');
     list('#cl-tbl', 'closures', [
       {k: 'country', label: 'Country', f: countryCell},
       {k: 'close_date', label: 'Closed', f: (v) => v ? d3.utcFormat('%b %Y')(new Date(v + 'T00:00:00Z')) : '—'},
-      {k: 'deal', label: 'Deal', f: nameCell},
+      {k: 'deal', label: 'Deal', f: (v, r) => { const f = nameCell(v, r); if (r.region_note) { const t = el('span', 'tag warn', 'region not SEA'); t.title = r.region_note + ' — counted as ' + r.country + ' here'; f.append(' ', t); } return f; }},
       {k: 'amount', label: 'Value', cls: 'num', num: true, f: (v, r, td) => { if (v != null && v < 100) { td.classList.add('flag'); return money(v) + ' check'; } return money(v); }},
       {k: 'company', label: 'Account'}, {k: 'deal_owner', label: 'Deal owner'}, {k: 'account_owner', label: 'Account owner'},
       {k: 'contacts', label: 'Contacts', sort: false, f: people}, {k: 'source', label: 'Source'}], rows, {open: (r) => openDeal(r.id)});

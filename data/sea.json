@@ -78,8 +78,8 @@
    "region": "Indonesia",
    "stage_id": "280510161",
    "stage": "Closed won",
-   "count": 11,
-   "amount": 138400.15
+   "count": 12,
+   "amount": 175064.33
   },
   {
    "region": "Malaysia",
@@ -145,6 +145,13 @@
    "amount": 224900.0
   },
   {
+   "region": "Singapore",
+   "stage_id": "280510161",
+   "stage": "Closed won",
+   "count": 1,
+   "amount": 137490.7
+  },
+  {
    "region": "Thailand & Others",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
@@ -169,8 +176,8 @@
    "region": "Thailand & Others",
    "stage_id": "280510161",
    "stage": "Closed won",
-   "count": 13,
-   "amount": 677747.0
+   "count": 16,
+   "amount": 690040.85
   }
  ],
  "won_quarterly": [

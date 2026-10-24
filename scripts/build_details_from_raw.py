@@ -103,6 +103,15 @@ def main():
                                next_step=d.get("hs_next_step"), last_activity=d.get("notes_last_updated"),
                                conv_prob=st.get("conv_prob"), conv_reason=st.get("conv_reason"), cta=st.get("cta"), cta_reason=st.get("cta_reason")))
 
+    # SEA closures filed under a non-SEA HubSpot region (see data/sea_overrides.json)
+    over = json.loads((DATA / "sea_overrides.json").read_text())["deals"]
+    have = {c["id"] for c in closures}
+    for r in json.loads((RAW / "legacy_closures.json").read_text()):
+        if r["id"] in have or r["id"] not in over: continue
+        cd = r["close_date"]
+        closures.append(dict(r, country=over[r["id"]]["country"], year=cd[:4], month=cd[:7], remarks=None, headcount=None,
+                             url=url("0-3", r["id"]), region_note="Region in HubSpot: " + over[r["id"]]["hubspot_region"]))
+
     leads = {}
     for r in table("contacts.txt") + json.loads((RAW / "contacts_pre2024.json").read_text()):
         mql, sql = r.get("hs_v2_date_entered_marketingqualifiedlead"), r.get("hs_v2_date_entered_salesqualifiedlead")

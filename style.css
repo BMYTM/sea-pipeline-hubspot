@@ -161,3 +161,4 @@ button.link{all:unset;cursor:pointer;color:var(--c1);text-decoration:underline;t
   #fb-controls select{flex:1 1 calc(50% - 6px);max-width:none;min-width:0}
   #fb-controls input{flex:1 1 100%}
 }
+td .tag.warn{color:var(--warn);border-color:currentColor;font-size:10.5px;padding:0 6px;vertical-align:1px}
