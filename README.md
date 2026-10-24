@@ -2,7 +2,9 @@
 
 Team review dashboard for HONO's Southeast Asia pipeline (Thailand, Philippines, Indonesia, Malaysia, Singapore), built from HubSpot.
 
-This is a separate project from the existing SEA Dashboard (`sea-dashboard`). It does not read or change that repo.
+Live site: https://bmytm.github.io/sea-pipeline-hubspot/
+
+This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and from `sea-hubspot-dashboard`. It does not read or change either repo.
 
 ## What's on the page
 
