@@ -134,8 +134,8 @@
    "region": "Philippines",
    "stage_id": "280510161",
    "stage": "Closed won",
-   "count": 7,
-   "amount": 826464.0
+   "count": 8,
+   "amount": 963954.7
   },
   {
    "region": "Singapore",
@@ -143,13 +143,6 @@
    "stage": "On-Hold",
    "count": 4,
    "amount": 224900.0
-  },
-  {
-   "region": "Singapore",
-   "stage_id": "280510161",
-   "stage": "Closed won",
-   "count": 1,
-   "amount": 137490.7
   },
   {
    "region": "Thailand & Others",
