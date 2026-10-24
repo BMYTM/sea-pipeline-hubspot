@@ -80,3 +80,11 @@ def fix_all(obj):
     if isinstance(obj, list): return [fix_all(x) for x in obj]
     if isinstance(obj, dict): return {k: fix_all(v) for k, v in obj.items()}
     return obj
+
+
+def last_meeting(meetings, today):
+    """meetings: list of (start_date 'YYYY-MM-DD', title). Returns the latest one on or before today."""
+    past = sorted((m for m in meetings if m[0] and m[0] <= today), reverse=True)
+    if not past: return {"last_meeting": None, "last_meeting_title": None, "meetings": 0}
+    t = past[0][1]
+    return {"last_meeting": past[0][0], "last_meeting_title": None if not t or t == "Unassigned" else t.strip(), "meetings": len(past)}

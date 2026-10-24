@@ -1436,7 +1436,10 @@
    "proposal_sent": "2025-05-02",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2025-02-25",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "14900636152",
@@ -1477,7 +1480,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-12-03",
+   "last_meeting_title": "Early Breakfast Catch Up: BPI x HONO",
+   "meetings": 5
   },
   {
    "id": "216255209695",
@@ -1518,7 +1524,10 @@
    "proposal_sent": "2025-09-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-08-12",
+   "last_meeting_title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "meetings": 1
   },
   {
    "id": "496653097202",
@@ -1559,7 +1568,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Customer Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "515111097585",
@@ -1600,7 +1612,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-09-21",
+   "last_meeting_title": "HONO x PTC Ceremonial Signing",
+   "meetings": 9
   },
   {
    "id": "8213541081",
@@ -1641,7 +1656,10 @@
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-10-12",
+   "last_meeting_title": null,
+   "meetings": 11
   },
   {
    "id": "267197143227",
@@ -1682,7 +1700,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Website Direct",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "529589966018",
@@ -1723,7 +1744,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "112816249045",
@@ -1764,7 +1788,10 @@
    "proposal_sent": "2025-01-28",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sunil Narang",
-   "partner": "Sunil Narang"
+   "partner": "Sunil Narang",
+   "last_meeting": "2026-08-31",
+   "last_meeting_title": "Short Catch up on Inspiro Proposal",
+   "meetings": 35
   },
   {
    "id": "427315168501",
@@ -1805,7 +1832,10 @@
    "proposal_sent": "2026-01-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Mukul Jain",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-01-08",
+   "last_meeting_title": "HONO introduction to Busana Remaja Agracipta",
+   "meetings": 1
   },
   {
    "id": "15487249117",
@@ -1846,7 +1876,10 @@
    "proposal_sent": "2025-09-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-07-16",
+   "last_meeting_title": "HONO HCM Demo & Evaluation Session — Kapal Api Group",
+   "meetings": 4
   },
   {
    "id": "432363985137",
@@ -1887,7 +1920,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Email Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-06-05",
+   "last_meeting_title": null,
+   "meetings": 3
   },
   {
    "id": "511204612323",
@@ -1928,7 +1964,10 @@
    "proposal_sent": "2026-10-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-08-12",
+   "last_meeting_title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "meetings": 1
   },
   {
    "id": "515113098451",
@@ -1969,7 +2008,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Email Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "258180625649",
@@ -2014,7 +2056,10 @@
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "501831430334",
@@ -2055,7 +2100,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Website Organic",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-07-14",
+   "last_meeting_title": "[PLACEHOLDER] HONO PAYROLL DEMO PART2",
+   "meetings": 3
   },
   {
    "id": "511204612302",
@@ -2096,7 +2144,10 @@
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "129537318081",
@@ -2137,7 +2188,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "339992582371",
@@ -2178,7 +2232,10 @@
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Remax International",
-   "partner": "Remax International"
+   "partner": "Remax International",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "47123630325",
@@ -2219,7 +2276,10 @@
    "proposal_sent": "2024-12-27",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "127892441278",
@@ -2260,7 +2320,10 @@
    "proposal_sent": "2025-02-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "CTG+ Consulting",
-   "partner": "CTG+ Consulting"
+   "partner": "CTG+ Consulting",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "413524599027",
@@ -2301,7 +2364,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "502402814191",
@@ -2342,7 +2408,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "472986056894",
@@ -2383,7 +2452,10 @@
    "proposal_sent": "2026-10-22",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "G-Able Group",
-   "partner": "G-Able Group"
+   "partner": "G-Able Group",
+   "last_meeting": "2026-04-23",
+   "last_meeting_title": "Cadence Call: HONO x G Able",
+   "meetings": 5
   },
   {
    "id": "6777413058",
@@ -2432,7 +2504,10 @@
    "proposal_sent": "2024-03-12",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-03-18",
+   "last_meeting_title": null,
+   "meetings": 2
   },
   {
    "id": "116068228296",
@@ -2473,7 +2548,10 @@
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-07-07",
+   "last_meeting_title": "Hono - The introduction session - Thantawan Industry [In-person]",
+   "meetings": 1
   },
   {
    "id": "500640783600",
@@ -2514,7 +2592,10 @@
    "proposal_sent": "2026-07-01",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-05-29",
+   "last_meeting_title": "Hono.AI - Singapore Institute of management",
+   "meetings": 1
   },
   {
    "id": "512459995376",
@@ -2555,7 +2636,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-08-13",
+   "last_meeting_title": "Hono x TOA global: Payroll demo",
+   "meetings": 1
   },
   {
    "id": "527356129501",
@@ -2596,7 +2680,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "286017173691",
@@ -2637,7 +2724,10 @@
    "proposal_sent": "2025-08-28",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-07-15",
+   "last_meeting_title": "Pak Herry x Pak Mukul - Ritz Carlton Kuningan",
+   "meetings": 23
   },
   {
    "id": "502454590697",
@@ -2678,7 +2768,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "291510272192",
@@ -2714,7 +2807,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "9301752250",
@@ -2763,7 +2859,10 @@
    "proposal_sent": "2024-02-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-12-11",
+   "last_meeting_title": "[HCIS] Hono.Ai - Travel Demo",
+   "meetings": 8
   },
   {
    "id": "379729670388",
@@ -2804,7 +2903,10 @@
    "proposal_sent": "2025-04-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "515111037159",
@@ -2845,7 +2947,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Jingo Fermin",
-   "partner": "Jingo Fermin"
+   "partner": "Jingo Fermin",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "193935600873",
@@ -2886,7 +2991,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "ABP",
-   "partner": "ABP"
+   "partner": "ABP",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "509448217802",
@@ -2927,7 +3035,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Jingo Fermin",
-   "partner": "Jingo Fermin"
+   "partner": "Jingo Fermin",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "322791746798",
@@ -2972,7 +3083,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "LinkedIn Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-11-12",
+   "last_meeting_title": "Hono - The introduction session -  [In-person]",
+   "meetings": 1
   },
   {
    "id": "499826487512",
@@ -3013,7 +3127,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Customer Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-07-13",
+   "last_meeting_title": "Mr. Srikanth (Supra Bara Energi)x Mr. Mukul (HONO) Introduction",
+   "meetings": 3
   },
   {
    "id": "60864294079",
@@ -3054,7 +3171,10 @@
    "proposal_sent": "2024-12-03",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-08-12",
+   "last_meeting_title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "meetings": 1
   },
   {
    "id": "403846554863",
@@ -3099,7 +3219,10 @@
    "proposal_sent": "2025-12-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-12-09",
+   "last_meeting_title": "HONO introduction for Dua Delapan Resources",
+   "meetings": 3
   },
   {
    "id": "508099332323",
@@ -3144,7 +3267,10 @@
    "proposal_sent": "2026-06-25",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-08-24",
+   "last_meeting_title": "Meeting with Ms. Apples / Asialink Finance",
+   "meetings": 4
   },
   {
    "id": "21071258827",
@@ -3185,7 +3311,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "ABP",
-   "partner": "ABP"
+   "partner": "ABP",
+   "last_meeting": "2024-09-26",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "499552206030",
@@ -3226,7 +3355,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-06-03",
+   "last_meeting_title": "Invitation for HONO – MAKA Group Discussion Meeting",
+   "meetings": 2
   },
   {
    "id": "135770848467",
@@ -3267,7 +3399,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "276560500965",
@@ -3312,7 +3447,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "126359758029",
@@ -3353,7 +3491,10 @@
    "proposal_sent": "2025-03-07",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "ABP",
-   "partner": "ABP"
+   "partner": "ABP",
+   "last_meeting": "2026-02-26",
+   "last_meeting_title": "FW: Diskusi rencana pengembangan aplikasi HRIS",
+   "meetings": 8
   },
   {
    "id": "116068228306",
@@ -3394,7 +3535,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "174721274089",
@@ -3435,7 +3579,10 @@
    "proposal_sent": "2025-09-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "57476230342",
@@ -3476,7 +3623,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Email Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "453127862504",
@@ -3517,7 +3667,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "361874262218",
@@ -3558,7 +3711,10 @@
    "proposal_sent": "2025-11-18",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-11-07",
+   "last_meeting_title": "HONO introduction to Bank Neo Commerce",
+   "meetings": 1
   },
   {
    "id": "295427044579",
@@ -3599,7 +3755,10 @@
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-08-12",
+   "last_meeting_title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "meetings": 10
   },
   {
    "id": "523343584494",
@@ -3640,7 +3799,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "508879036615",
@@ -3681,7 +3843,10 @@
    "proposal_sent": "2026-10-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "526802138353",
@@ -3722,7 +3887,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "500196369598",
@@ -3763,7 +3931,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-06-10",
+   "last_meeting_title": "HONO HRMS Demo with SoDrama! Media",
+   "meetings": 1
   },
   {
    "id": "351130684663",
@@ -3804,7 +3975,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "526799803625",
@@ -3845,7 +4019,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "187781578939",
@@ -3886,7 +4063,10 @@
    "proposal_sent": "2025-04-29",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "193935600872",
@@ -3927,7 +4107,10 @@
    "proposal_sent": "2025-04-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "ABP",
-   "partner": "ABP"
+   "partner": "ABP",
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "6829809341",
@@ -3968,7 +4151,10 @@
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-03-16",
+   "last_meeting_title": null,
+   "meetings": 2
   },
   {
    "id": "349110390001",
@@ -4009,7 +4195,10 @@
    "proposal_sent": "2025-10-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "G-Able Group",
-   "partner": "G-Able Group"
+   "partner": "G-Able Group",
+   "last_meeting": "2026-04-23",
+   "last_meeting_title": "Cadence Call: HONO x G Able",
+   "meetings": 9
   },
   {
    "id": "14806106567",
@@ -4050,7 +4239,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": null,
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-06-25",
+   "last_meeting_title": "Hono - The introduction session - Siam@siam Design Hotel",
+   "meetings": 1
   },
   {
    "id": "216340267230",
@@ -4091,7 +4283,10 @@
    "proposal_sent": "2025-06-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "GinSight Technology, TH",
-   "partner": "GinSight Technology, TH"
+   "partner": "GinSight Technology, TH",
+   "last_meeting": "2026-01-08",
+   "last_meeting_title": "Canceled: Weekly Cadence call: HONO x GinSight",
+   "meetings": 10
   },
   {
    "id": "253765531860",
@@ -4132,7 +4327,10 @@
    "proposal_sent": "2025-09-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Website Organic",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "420946178244",
@@ -4173,7 +4371,10 @@
    "proposal_sent": "2026-03-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-08-12",
+   "last_meeting_title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "meetings": 12
   },
   {
    "id": "335777782984",
@@ -4214,7 +4415,10 @@
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "G-Able Group",
-   "partner": "G-Able Group"
+   "partner": "G-Able Group",
+   "last_meeting": "2026-04-23",
+   "last_meeting_title": "Cadence Call: HONO x G Able",
+   "meetings": 9
   },
   {
    "id": "15184709348",
@@ -4263,7 +4467,10 @@
    "proposal_sent": "2024-07-29",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Website Direct",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-08-28",
+   "last_meeting_title": "HONO discussion with Pintu (Payroll, PMS)",
+   "meetings": 3
   },
   {
    "id": "301579200725",
@@ -4304,7 +4511,10 @@
    "proposal_sent": "2025-10-06",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-09-16",
+   "last_meeting_title": "HONO Introduction for Great Eastern Life",
+   "meetings": 1
   },
   {
    "id": "499553621196",
@@ -4345,7 +4555,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-04-28",
+   "last_meeting_title": "WWF x HONO Demo Part 2",
+   "meetings": 1
   },
   {
    "id": "473244653777",
@@ -4386,7 +4599,10 @@
    "proposal_sent": "2026-02-19",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Sales Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-02-13",
+   "last_meeting_title": "HONO Discussion with Pak Redi (Otten Coffee)",
+   "meetings": 1
   },
   {
    "id": "416188364988",
@@ -4427,7 +4643,10 @@
    "proposal_sent": "2026-01-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Website Organic",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-01-07",
+   "last_meeting_title": "HONO introduction for YUPI",
+   "meetings": 1
   },
   {
    "id": "7766005467",
@@ -4472,7 +4691,10 @@
    "proposal_sent": "2023-10-13",
    "proposal_sent_source": "Proposal sent Date field",
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-08-01",
+   "last_meeting_title": null,
+   "meetings": 4
   },
   {
    "id": "7896846064",
@@ -4513,7 +4735,10 @@
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Website Direct",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-08-15",
+   "last_meeting_title": null,
+   "meetings": 5
   },
   {
    "id": "351254128830",
@@ -4554,7 +4779,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "10474922962",
@@ -4595,7 +4823,10 @@
    "proposal_sent": "2024-01-17",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Mukul Jain",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-10-01",
+   "last_meeting_title": "Dinner with Mr Naresh",
+   "meetings": 2
   },
   {
    "id": "12941865974",
@@ -4636,7 +4867,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "505742381258",
@@ -4677,7 +4911,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "513634997475",
@@ -4718,7 +4955,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-08-11",
+   "last_meeting_title": "Initial Meeting: Hono x Anta PH",
+   "meetings": 1
   },
   {
    "id": "515193189573",
@@ -4759,7 +4999,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "21821524182",
@@ -4800,7 +5043,10 @@
    "proposal_sent": "2024-10-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-10-07",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "499153227970",
@@ -4845,7 +5091,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-05-06",
+   "last_meeting_title": "HONO.AI - Commonwealth Group",
+   "meetings": 1
   },
   {
    "id": "240815360208",
@@ -4886,7 +5135,10 @@
    "proposal_sent": "2025-08-20",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "502011290855",
@@ -4931,7 +5183,10 @@
    "proposal_sent": "2026-06-17",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-07-06",
+   "last_meeting_title": "HONO x Unioil: Alignment",
+   "meetings": 2
   },
   {
    "id": "10353093575",
@@ -4972,7 +5227,10 @@
    "proposal_sent": "2024-01-15",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-01-10",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "496652367053",
@@ -5013,7 +5271,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2026-04-01",
+   "last_meeting_title": "Presentation and Demo for Digital Workforce",
+   "meetings": 1
   },
   {
    "id": "13273431268",
@@ -5054,7 +5315,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "129173185755",
@@ -5095,7 +5359,10 @@
    "proposal_sent": "2025-03-05",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "LinkedIn Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-02-25",
+   "last_meeting_title": "HONO introduction for Wincheez",
+   "meetings": 1
   },
   {
    "id": "6721684977",
@@ -5136,7 +5403,10 @@
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-05-29",
+   "last_meeting_title": null,
+   "meetings": 2
   },
   {
    "id": "405250335942",
@@ -5172,7 +5442,10 @@
    "proposal_sent": "2025-12-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Website Organic",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2025-12-17",
+   "last_meeting_title": "HONO introduction to Wangsasequoia",
+   "meetings": 1
   },
   {
    "id": "10739612118",
@@ -5213,7 +5486,10 @@
    "proposal_sent": "2024-02-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-02-13",
+   "last_meeting_title": null,
+   "meetings": 2
   },
   {
    "id": "126689552596",
@@ -5254,7 +5530,10 @@
    "proposal_sent": "2025-02-18",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "LinkedIn Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "21275029723",
@@ -5295,7 +5574,10 @@
    "proposal_sent": "2024-11-05",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-10-04",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "517313274045",
@@ -5336,7 +5618,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "519366681792",
@@ -5377,7 +5662,10 @@
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Mukul Jain",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "512054574282",
@@ -5418,7 +5706,10 @@
    "proposal_sent": "2026-10-22",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "9353324753",
@@ -5459,7 +5750,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2023-10-16",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "14534873577",
@@ -5500,7 +5794,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-06-07",
+   "last_meeting_title": "HONO introduction for YAKKUM",
+   "meetings": 1
   },
   {
    "id": "493651891403",
@@ -5541,7 +5838,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "LinkedIn Outreach",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "10679387097",
@@ -5582,7 +5882,10 @@
    "proposal_sent": "2024-02-15",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Internal Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-02-01",
+   "last_meeting_title": null,
+   "meetings": 2
   },
   {
    "id": "502452980924",
@@ -5623,7 +5926,10 @@
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
    "sub_source": "Cold-Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "334969359605",
@@ -5664,7 +5970,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Ramssol",
-   "partner": "Ramssol"
+   "partner": "Ramssol",
+   "last_meeting": "2026-07-15",
+   "last_meeting_title": "Pak Herry x Pak Mukul - Ritz Carlton Kuningan",
+   "meetings": 64
   },
   {
    "id": "486351587557",
@@ -5705,7 +6014,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Cold Call",
-   "partner": null
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
   },
   {
    "id": "15464612560",
@@ -5750,7 +6062,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "ABP",
-   "partner": "ABP"
+   "partner": "ABP",
+   "last_meeting": "2024-07-05",
+   "last_meeting_title": null,
+   "meetings": 1
   },
   {
    "id": "22012789185",
@@ -5799,7 +6114,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Self Refferal",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-10-15",
+   "last_meeting_title": "Intro/Payroll Demo Hono x Metrobank",
+   "meetings": 1
   },
   {
    "id": "15599173102",
@@ -5840,7 +6158,10 @@
    "proposal_sent": null,
    "proposal_sent_source": null,
    "sub_source": "Event",
-   "partner": null
+   "partner": null,
+   "last_meeting": "2024-07-23",
+   "last_meeting_title": "Hono - The introduction session - Home Product Center",
+   "meetings": 1
   }
  ],
  "leads": [

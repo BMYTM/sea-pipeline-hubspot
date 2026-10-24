@@ -7,7 +7,7 @@ written to the repo or to the site. Standard library only, so the Action needs n
 """
 import json, os, re, sys, time, pathlib, urllib.request, urllib.error
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from money_fields import money_fields, MONEY_PROPS, fix_all, source_fields
+from money_fields import money_fields, MONEY_PROPS, fix_all, source_fields, last_meeting
 from collections import defaultdict
 from datetime import datetime, timezone
 
@@ -207,6 +207,17 @@ def main():
             active.append(dict(base, stage_id=s, stage=labels.get(s, s), probability=num(p.get("hs_deal_stage_probability")),
                                next_step=p.get("hs_next_step") or None, last_activity=day(p.get("notes_last_updated")),
                                conv_prob=st.get("conv_prob"), conv_reason=st.get("conv_reason"), cta=st.get("cta"), cta_reason=st.get("cta_reason")))
+
+    # last meeting logged on each open deal
+    try:
+        aids = [r["id"] for r in active]
+        d2m = associations("deals", "meetings", aids)
+        mts = batch_read("meetings", [m for v in d2m.values() for m in v], ["hs_meeting_start_time", "hs_meeting_title"])
+        today = time.strftime("%Y-%m-%d")
+        for r in active:
+            r.update(last_meeting([(day(mts.get(m, {}).get("hs_meeting_start_time")), mts.get(m, {}).get("hs_meeting_title")) for m in d2m.get(r["id"], [])], today))
+    except Exception as e:  # missing scope etc: keep the rest of the refresh
+        print("meetings skipped:", e)
 
     countries = list(COUNTRY.values())
     lprops = ["firstname", "lastname", "jobtitle", "company", "country__hono_", "lifecyclestage", "hs_lead_status",

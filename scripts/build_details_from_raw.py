@@ -1,7 +1,7 @@
 """One-off: builds data/details.json (and refreshes data/sea.json deal rows) from the
 HubSpot exports pulled on 24 Oct 2026 into raw/. The daily GitHub Action
 (scripts/fetch_hubspot.py) produces the same files straight from the HubSpot API."""
-import json, re, pathlib
+import json, time, re, pathlib
 from collections import defaultdict
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -150,6 +150,19 @@ def main():
     for row in closures + active:
         sp = srcs.get(row["id"]) or {"new_deal_source": row.get("source")}
         row.update(source_fields(sp))
+
+    # last meeting logged on the deal (raw/meetings.txt: MEETING rows with their deal id)
+    from money_fields import last_meeting
+    mt = json.loads((RAW / "meetings.txt").read_text())["results"][0]["content"].split("Dataset TSV:\n")[1].strip().split("\n")
+    hdr = mt[0].split("\t"); di = [k for k, h in enumerate(hdr) if h.startswith("Deal [")][0]
+    ti = [k for k, h in enumerate(hdr) if "hs_meeting_title" in h][0]; si = [k for k, h in enumerate(hdr) if "hs_meeting_start_time" in h][0]
+    meet = defaultdict(dict)
+    for line in mt[1:]:
+        c = line.split("\t")
+        if len(c) == len(hdr): meet[c[di]][c[[k for k, h in enumerate(hdr) if h.startswith("Record ID")][0]]] = (c[si][:10], c[ti])
+    mday = time.strftime("%Y-%m-%d", time.localtime((RAW / "meetings.txt").stat().st_mtime))
+    for row in active:
+        row.update(last_meeting(list(meet.get(row["id"], {}).values()), mday))
 
     # a deal linked to two companies comes back as two rows: keep one
     def dedupe(rows):
