@@ -17,6 +17,8 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 - **Active pipeline** tab: every open deal by country with status, conversion probability, closure date, notes (Deal Status remarks, next step, call to action), owners and contacts
 - **MQL & SQL** tab: contacts that reached MQL or SQL by country, monthly trend, conversion, and the contact list
 - Every tab filters by country and downloads as CSV
+- Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
+- Filters are kept in the link (e.g. `#active?country=Thailand&status=On-Hold`), so a filtered view can be shared
 
 ## How the data gets here
 

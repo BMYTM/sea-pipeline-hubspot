@@ -155,7 +155,7 @@ def main():
             open_deals.append({"id": str(d["id"]), "deal": (p.get("dealname") or "").strip(), "stage_id": s,
                 "stage": labels.get(s, s), "region": r, "amount": a, "close_date": close,
                 "owner": who(p.get("hubspot_owner_id")) or "Unassigned",
-                "last_contacted": day(p.get("notes_last_contacted")),
+                "last_contacted": day(p.get("notes_last_updated")),
                 "probability": num(p.get("hs_deal_stage_probability")), "url": link("0-3", d["id"])})
     qs = defaultdict(int)
     for d in qual:

@@ -60,8 +60,8 @@
     owners = [...m.values()].sort((a, b) => b.active - a.active || b.n - a.n);
     const has = (t) => rows.filter((d) => d.flags.includes(t)).length;
     const share = (n) => rows.length ? Math.round(n / rows.length * 100) + '% of open deals' : '';
-    quality = [['Close date already passed', 'Close date passed'], ['No contact logged in 90+ days', 'No contact 90d+'], ['Never contacted', 'Never contacted'], ['No amount entered', 'No amount']]
-      .map(([issue, t]) => ({issue, n: has(t), detail: share(has(t))}));
+    quality = [['Close date already passed', 'Close date passed', {close: 'past'}], ['No activity logged in 90+ days', 'No contact 90d+', {health: 'stale'}], ['No activity logged at all', 'Never contacted', {health: 'never'}], ['No amount entered', 'No amount', {health: 'noamount'}]]
+      .map(([issue, t, to]) => ({issue, n: has(t), detail: share(has(t)), to}));
     P.filter((r) => r.stage_id === LOST).forEach((r) => {
       const avg = r.count ? r.amount / r.count : 0;
       if (avg > 500000) quality.push({issue: 'Lost value out of scale, ' + (REG[r.region] || r.region), n: r.count, detail: 'lost deals average $' + Math.round(avg / 1000) + 'K each; likely local currency', bad: true});
@@ -69,7 +69,7 @@
   }
 
   function drawAll() {
-    drawHead(); drawKpis(); drawPipe(); drawWon(); drawCountry(); drawOwners(); setupDeals(); drawFunnel(); drawQuality();
+    drawHead(); drawKpis(); drawPipe(); drawWon(); drawCountry(); drawOwners(); drawFunnel(); drawQuality();
     let w = window.innerWidth;
     window.addEventListener('resize', () => { if (Math.abs(window.innerWidth - w) > 30) { w = window.innerWidth; drawPipe(); drawWon(); } });
     matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { drawPipe(); drawWon(); drawFunnel(); });
@@ -86,16 +86,18 @@
       b(money(kpi.hold)), ' is parked on hold. Unparking on-hold deals and converting weighted pipeline are the routes to close the ' + money(kpi.gap) + ' gap.');
   }
 
+const go = (tab, f) => window.SEA_UI && window.SEA_UI.go(tab, f);
   function drawKpis() {
     const tiles = [
-      ['Closed-won, FY27 to date', money(kpi.won), pct(kpi.pct) + ' of ' + money(kpi.target) + ' target', true],
-      ['Active pipeline (Demo → Contracting)', money(kpi.active), num(kpi.activeN) + ' deals'],
-      ['Weighted active pipeline', money(kpi.weighted), 'Value × HubSpot stage probability'],
-      ['Parked on hold', money(kpi.hold), num(kpi.holdN) + ' deals'],
-      ['Gap to target', money(kpi.gap), 'FY27 ends 31 Mar 2027']
+      ['Closed-won, FY27 to date', money(kpi.won), pct(kpi.pct) + ' of ' + money(kpi.target) + ' target', true, ['closures', {period: 'fy27'}]],
+      ['Active pipeline (Demo → Contracting)', money(kpi.active), num(kpi.activeN) + ' deals', false, ['active', {status: 'active'}]],
+      ['Weighted active pipeline', money(kpi.weighted), 'Value × HubSpot stage probability', false, ['active', {status: 'active'}]],
+      ['Parked on hold', money(kpi.hold), num(kpi.holdN) + ' deals', false, ['active', {status: 'On-Hold'}]],
+      ['Gap to target', money(kpi.gap), 'Deals that could close by 31 Mar 2027 →', false, ['active', {close: 'fy27'}]]
     ];
-    $('#kpis').replaceChildren(...tiles.map(([l, v, s, bar]) => {
-      const c = el('div', 'card'); c.append(el('div', 'k-lab', l), el('div', 'k-val', v), el('div', 'k-sub', s));
+    $('#kpis').replaceChildren(...tiles.map(([l, v, s, bar, to]) => {
+      const c = el('button', 'card kpi click'); c.type = 'button'; c.title = 'Show these deals'; c.addEventListener('click', () => go(to[0], to[1]));
+      c.append(el('div', 'k-lab', l), el('div', 'k-val', v), el('div', 'k-sub', s));
       if (bar) { const k = el('div', 'k-bar'), i = el('i'); i.style.width = Math.min(100, Math.max(0, kpi.pct * 100)) + '%'; k.appendChild(i); c.appendChild(k); }
       return c;
     }));
@@ -133,12 +135,16 @@
     svg.append('g').selectAll('text').data(ticks).join('text').attr('x', x).attr('y', H - 6).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', css('--muted')).text(money);
     data.forEach((d, i) => {
       const y = top + i * rowH + 8, h = rowH - 16; let x0 = 0;
-      svg.append('text').attr('x', 0).attr('y', y + h / 2).attr('dy', '0.35em').attr('font-size', 12).attr('fill', css('--fg')).text(d.country);
-      STAGES.forEach((s) => { const v = d[s.id]; if (!v) return; svg.append('rect').attr('x', x(x0)).attr('y', y).attr('width', Math.max(1, x(x0 + v) - x(x0))).attr('height', h).attr('fill', css(s.v)); x0 += v; });
-      svg.append('text').attr('x', x(d.total) + 6).attr('y', y + h / 2).attr('dy', '0.35em').attr('font-size', 12).attr('fill', css('--fg')).text(money(d.total));
-      svg.append('rect').attr('x', 0).attr('y', y - 6).attr('width', W).attr('height', h + 12).attr('fill', 'transparent')
-        .on('mousemove', (ev) => showTip(ev, d.country + ' · ' + num(d.n) + ' open deals', STAGES.map((s) => [css(s.v), s.label + ': ' + money(d[s.id]) + ' (' + num(d['n' + s.id]) + ')'])))
-        .on('mouseleave', hideTip);
+      const tipAll = (ev) => showTip(ev, d.country + ' · ' + num(d.n) + ' open deals · click to open', STAGES.map((s) => [css(s.v), s.label + ': ' + money(d[s.id]) + ' (' + num(d['n' + s.id]) + ')']));
+      svg.append('rect').attr('x', 0).attr('y', y - 6).attr('width', W).attr('height', h + 12).attr('fill', 'transparent').style('cursor', 'pointer')
+        .on('mousemove', tipAll).on('mouseleave', hideTip).on('click', () => { hideTip(); go('active', {country: d.country}); });
+      svg.append('text').attr('x', 0).attr('y', y + h / 2).attr('dy', '0.35em').attr('font-size', 12).attr('fill', css('--fg')).style('pointer-events', 'none').text(d.country);
+      STAGES.forEach((s) => { const v = d[s.id]; if (!v) return;
+        svg.append('rect').attr('x', x(x0)).attr('y', y).attr('width', Math.max(1, x(x0 + v) - x(x0))).attr('height', h).attr('fill', css(s.v)).style('cursor', 'pointer')
+          .on('mousemove', (ev) => showTip(ev, d.country + ' · ' + s.label + ' · click to open', [[css(s.v), money(v) + ' · ' + num(d['n' + s.id]) + ' deals']]))
+          .on('mouseleave', hideTip).on('click', (ev) => { ev.stopPropagation(); hideTip(); go('active', {country: d.country, status: s.label}); });
+        x0 += v; });
+      svg.append('text').attr('x', x(d.total) + 6).attr('y', y + h / 2).attr('dy', '0.35em').attr('font-size', 12).attr('fill', css('--fg')).style('pointer-events', 'none').text(money(d.total));
     });
   }
 
@@ -169,63 +175,29 @@
       let y0 = 0; const bx = x(d.q) + (x.bandwidth() - bw) / 2;
       ORDER.forEach((c) => { const v = d[c]; if (!v) return; svg.append('rect').attr('x', bx).attr('width', bw).attr('y', y(y0 + v)).attr('height', Math.max(1, y(y0) - y(y0 + v))).attr('fill', col(c)); y0 += v; });
       if (d.total) svg.append('text').attr('x', bx + bw / 2).attr('y', y(d.total) - 4).attr('text-anchor', 'middle').attr('font-size', 11).attr('fill', css('--fg')).text(money(d.total));
-      svg.append('rect').attr('x', x(d.q)).attr('width', x.bandwidth()).attr('y', top).attr('height', H - bottom - top).attr('fill', 'transparent')
-        .on('mousemove', (ev) => showTip(ev, qLab(d.q) + ' · ' + num(d.n) + ' won', d.n ? ORDER.filter((c) => d['n' + c]).map((c) => [col(c), c + ': ' + money(d[c]) + ' (' + num(d['n' + c]) + ')']) : [[null, 'No wins']]))
+      const hit = svg.append('rect').attr('x', x(d.q)).attr('width', x.bandwidth()).attr('y', top).attr('height', H - bottom - top).attr('fill', 'transparent')
+        .on('mousemove', (ev) => showTip(ev, qLab(d.q) + ' · ' + num(d.n) + ' won' + (d.n ? ' · click to open' : ''), d.n ? ORDER.filter((c) => d['n' + c]).map((c) => [col(c), c + ': ' + money(d[c]) + ' (' + num(d['n' + c]) + ')']) : [[null, 'No wins']]))
         .on('mouseleave', hideTip);
+      if (d.n) hit.style('cursor', 'pointer').on('click', () => { hideTip(); go('closures', {quarter: d.q}); });
     });
   }
 
-  function fill(sel, data, cols) {
+  function fill(sel, data, cols, onRow) {
     const tb = $(sel + ' tbody');
     tb.replaceChildren(...data.map((r) => {
       const tr = el('tr');
+      const to = onRow && onRow(r);
+      if (to) { tr.className = 'row'; tr.tabIndex = 0; tr.title = 'Show these deals'; const open = () => go(to[0], to[1]); tr.addEventListener('click', open); tr.addEventListener('keydown', (e) => { if (e.key === 'Enter') open(); }); }
       cols.forEach(([k, f, cls]) => { const td = el('td', cls); const v = f ? f(r[k], r, td) : r[k]; if (v instanceof Node) td.appendChild(v); else td.textContent = v == null || v === '' ? '—' : v; tr.appendChild(td); });
       return tr;
     }));
   }
   function drawCountry() {
-    fill('#country-tbl', byCountry, [['country'], ['active', money, 'num'], ['activeN', num, 'num'], ['hold', money, 'num'], ['holdN', num, 'num'], ['wonFy', money, 'num'], ['wonN', num, 'num'], ['lostN', num, 'num'], ['rate', pct, 'num']]);
+    fill('#country-tbl', byCountry, [['country'], ['active', money, 'num'], ['activeN', num, 'num'], ['hold', money, 'num'], ['holdN', num, 'num'], ['wonFy', money, 'num'], ['wonN', num, 'num'], ['lostN', num, 'num'], ['rate', pct, 'num']], (r) => ['active', {country: r.country}]);
   }
   function drawOwners() {
     fill('#owner-tbl', owners, [['owner'], ['n', num, 'num'], ['active', money, 'num'], ['weighted', money, 'num'], ['hold', money, 'num'],
-      ['stale', (v, r, td) => { if (r.n && v / r.n > 0.5) td.classList.add('flag'); return num(v); }, 'num']]);
-  }
-
-  const st = {k: 'amount', dir: -1};
-  function filtered() {
-    const c = $('#f-country').value, s = $('#f-stage').value, o = $('#f-owner').value, f = $('#f-flag').value, q = $('#f-q').value.trim().toLowerCase();
-    const r = rows.filter((d) => (!c || d.country === c) && (!s || d.stage === s) && (!o || d.owner === o) && (!f || (f === 'flag' ? !!d.flags : !d.flags)) && (!q || (d.deal + ' ' + d.owner).toLowerCase().includes(q)));
-    r.sort((a, b) => { const x = a[st.k], y = b[st.k]; if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1; return (typeof x === 'number' ? x - y : String(x).localeCompare(String(y))) * st.dir; });
-    return r;
-  }
-  function setupDeals() {
-    ORDER.forEach((c) => $('#f-country').appendChild(new Option(c, c)));
-    STAGES.forEach((s) => $('#f-stage').appendChild(new Option(s.label, s.label)));
-    [...new Set(rows.map((r) => r.owner))].sort().forEach((o) => $('#f-owner').appendChild(new Option(o, o)));
-    ['#f-country', '#f-stage', '#f-owner', '#f-flag'].forEach((s) => $(s).addEventListener('change', drawDeals));
-    $('#f-q').addEventListener('input', drawDeals);
-    document.querySelectorAll('#deal-tbl th button').forEach((b) => b.addEventListener('click', () => {
-      const k = b.dataset.k; st.dir = st.k === k ? -st.dir : (['deal', 'country', 'stage', 'owner', 'close_date'].includes(k) ? 1 : -1); st.k = k; drawDeals();
-    }));
-    $('#csv').addEventListener('click', () => {
-      const cols = ['deal', 'country', 'stage', 'amount', 'weighted', 'close_date', 'owner', 'days', 'flags', 'url'];
-      const esc = (v) => v == null ? '' : /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v);
-      const csv = [cols.join(',')].concat(filtered().map((r) => cols.map((c) => esc(c === 'weighted' && r[c] != null ? Math.round(r[c]) : r[c])).join(','))).join('\n');
-      const a = el('a'); a.href = URL.createObjectURL(new Blob([csv], {type: 'text/csv'})); a.download = 'sea-open-deals-' + D.generated_at.slice(0, 10) + '.csv'; a.click(); URL.revokeObjectURL(a.href);
-    });
-    drawDeals();
-  }
-  function drawDeals() {
-    const r = filtered(), today = new Date().toISOString().slice(0, 10);
-    document.querySelectorAll('#deal-tbl th').forEach((th) => { const b = th.querySelector('button'); if (b) th.setAttribute('aria-sort', b.dataset.k === st.k ? (st.dir > 0 ? 'ascending' : 'descending') : 'none'); });
-    fill('#deal-tbl', r, [
-      ['deal', (v, d) => { if (!d.url) return v; const a = el('a', null, v); a.href = d.url; a.target = '_blank'; a.rel = 'noopener'; return a; }],
-      ['country'], ['stage'], ['amount', money, 'num'], ['weighted', money, 'num'],
-      ['close_date', (v, d, td) => { if (v && v < today) td.classList.add('flag'); return fdate(v); }], ['owner'],
-      ['days', (v, d, td) => { if (v == null || v > 90) td.classList.add('flag'); return v == null ? 'never' : num(v); }, 'num'],
-      ['flags', (v, d, td) => { if (v) td.classList.add('flag'); return v; }]
-    ]);
-    $('#deals-note').textContent = 'Showing ' + num(r.length) + ' of ' + num(rows.length) + ' open SEA deals (' + money(sum(r, (d) => d.amount)) + '). Click a header to sort; deal names open in HubSpot (HubSpot login needed).';
+      ['stale', (v, r, td) => { if (r.n && v / r.n > 0.5) td.classList.add('flag'); return num(v); }, 'num']], (r) => ['active', {owner: r.owner}]);
   }
 
   function drawFunnel() {
@@ -240,6 +212,6 @@
     }));
   }
   function drawQuality() {
-    fill('#q-tbl', quality, [['issue'], ['n', (v, r, td) => { if (v > 0) td.classList.add(r.bad ? 'bad' : 'flag'); return num(v); }, 'num'], ['detail']]);
+    fill('#q-tbl', quality, [['issue'], ['n', (v, r, td) => { if (v > 0) td.classList.add(r.bad ? 'bad' : 'flag'); return num(v); }, 'num'], ['detail']], (r) => r.to ? ['active', r.to] : null);
   }
 })();
