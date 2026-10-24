@@ -6,6 +6,8 @@ crm.objects.owners.read). The token is read from the environment only; it is nev
 written to the repo or to the site. Standard library only, so the Action needs no installs.
 """
 import json, os, re, sys, time, pathlib, urllib.request, urllib.error
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from money_fields import money_fields, MONEY_PROPS, fix_all
 from collections import defaultdict
 from datetime import datetime, timezone
 
@@ -138,7 +140,8 @@ def main():
     link = lambda kind, i: f"https://app.hubspot.com/contacts/{portal}/record/{kind}/{i}"
     who = lambda i: own.get(i or "", i) if i else None
     props = ["dealname", "dealstage", "pipeline", "region", "amount_in_home_currency", "closedate", "createdate", "hubspot_owner_id",
-             "notes_last_contacted", "notes_last_updated", "hs_deal_stage_probability", "hs_next_step", "new_deal_source", "test"]
+             "notes_last_contacted", "notes_last_updated", "hs_deal_stage_probability", "hs_next_step", "new_deal_source", "test",
+             "number_of_employees"] + [x for x in MONEY_PROPS if x != "number_of_employees"]
     sales = search_deals(SALES, props)
     qual = search_deals(QUAL, ["dealstage", "region"])
     # SEA closures filed under a non-SEA HubSpot region (see data/sea_overrides.json)
@@ -195,6 +198,7 @@ def main():
                 "deal_owner": who(p.get("hubspot_owner_id")), "company": co.get("name"), "account_owner": who(co.get("hubspot_owner_id")),
                 "source": p.get("new_deal_source"), "contacts": people, "remarks": st.get("remarks") or None,
                 "headcount": st.get("headcount"), "industry": st.get("industry"), "url": link("0-3", i)}
+        base.update(money_fields(p, base["amount"], st.get("headcount")))
         if s == WON:
             cd = base["close_date"] or ""
             closures.append(dict(base, year=cd[:4] or None, month=cd[:7] or None, **({"region_note": region_note[i]} if i in region_note else {})))
@@ -229,8 +233,20 @@ def main():
                "active": sorted(active, key=lambda x: -(x["amount"] or 0)),
                "leads": sorted(leads.values(), key=lambda x: max(x["mql_date"] or "", x["sql_date"] or ""), reverse=True)}
 
+    # exchange rates for the local-currency view (keep the last good file if the call fails)
+    try:
+        with urllib.request.urlopen("https://open.er-api.com/v6/latest/USD", timeout=30) as resp:
+            fx_api = json.loads(resp.read())
+        fx = json.loads((DATA / "fx.json").read_text())
+        if fx_api.get("result") == "success":
+            fx["rates"] = {k: fx_api["rates"][k] for k in fx["rates"] if k in fx_api["rates"]}
+            fx["as_of"] = datetime.fromtimestamp(fx_api["time_last_update_unix"], tz=timezone.utc).strftime("%Y-%m-%d")
+            (DATA / "fx.json").write_text(json.dumps(fx, indent=1))
+    except Exception as e:
+        print("Exchange rates not refreshed:", e)
+
     (DATA / "sea.json").write_text(json.dumps(sea, indent=1, ensure_ascii=False))
-    (DATA / "details.json").write_text(json.dumps(details, indent=1, ensure_ascii=False))
+    (DATA / "details.json").write_text(json.dumps(fix_all(details), indent=1, ensure_ascii=False))
     print(f"{len(sales)} sales deals, {len(open_deals)} open, {len(closures)} won, {len(leads)} MQL/SQL contacts")
 
 

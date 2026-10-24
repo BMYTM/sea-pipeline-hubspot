@@ -29,6 +29,6 @@ jobs:
           if git diff --quiet data/; then echo "No change"; exit 0; fi
           git config user.name "sea-dashboard-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/sea.json data/details.json
+          git add data/sea.json data/details.json data/fx.json
           git commit -m "Refresh HubSpot data $(date -u +%F)"
           git push

@@ -129,6 +129,30 @@ def main():
                     "last_activity": r.get("notes_last_updated"), "deals": int(num(r.get("num_associated_deals")) or 0),
                     "url": url("0-1", i)}
 
+    # money, headcount and proposal-sent fields (pulled 24 Oct into raw/money.txt)
+    import sys; sys.path.insert(0, str(ROOT / "scripts")); from money_fields import money_fields
+    mj = json.loads((RAW / "money.txt").read_text())
+    money = {}
+    for r in mj["results"]:
+        pr = json.loads(r["content"])["properties"]
+        money[pr["hs_object_id"]] = {k: (v.replace("&amp;", "&") if isinstance(v, str) else v) for k, v in pr.items() if not k.endswith(("_formatted", "_iso"))}
+        for k, v in pr.items():
+            if k.endswith("_iso"): money[pr["hs_object_id"]][k[:-4]] = v
+    for row in closures + active:
+        row.update(money_fields(money.get(row["id"], {}), row["amount"], row.get("headcount")))
+
+    # a deal linked to two companies comes back as two rows: keep one
+    def dedupe(rows):
+        seen, out_ = set(), []
+        for r in rows:
+            if r["id"] in seen: continue
+            seen.add(r["id"]); out_.append(r)
+        return out_
+    closures, active = dedupe(closures), dedupe(active)
+    from money_fields import fix_all
+    closures, active = fix_all(closures), fix_all(active)
+    leads = {k: fix_all(v) for k, v in leads.items()}
+
     out = {"generated_at": "2026-10-24T05:00:00Z", "source": "HubSpot (seed snapshot)",
            "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),
            "active": sorted(active, key=lambda x: -(x["amount"] or 0)),

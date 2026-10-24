@@ -71,8 +71,8 @@
    "region": "Indonesia",
    "stage_id": "280510160",
    "stage": "On-Hold",
-   "count": 38,
-   "amount": 2284954.0
+   "count": 36,
+   "amount": 2210406.0
   },
   {
    "region": "Indonesia",
@@ -127,7 +127,7 @@
    "region": "Philippines",
    "stage_id": "280510160",
    "stage": "On-Hold",
-   "count": 12,
+   "count": 11,
    "amount": 1288434.0
   },
   {
@@ -155,8 +155,8 @@
    "region": "Thailand & Others",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 8,
-   "amount": 767454.0
+   "count": 7,
+   "amount": 567454.0
   },
   {
    "region": "Thailand & Others",
@@ -514,19 +514,6 @@
    "last_contacted": "2026-08-07",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515113098451"
-  },
-  {
-   "id": "258180625649",
-   "deal": "McDonald's Thailand (McThai Co.,Ltd.)",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 200000.0,
-   "close_date": "2026-12-18",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-04-02",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/258180625649"
   },
   {
    "id": "258180625649",
@@ -943,19 +930,6 @@
    "last_contacted": "2026-02-13",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/135770848467"
-  },
-  {
-   "id": "276560500965",
-   "deal": "Mowilex Indonesia",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": 61050.0,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/276560500965"
   },
   {
    "id": "276560500965",
@@ -1556,19 +1530,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129173185755"
   },
   {
-   "id": "129173185755",
-   "deal": "Bangun Rasaguna Lestari (wincheez)",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": 13498.0,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.2,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129173185755"
-  },
-  {
    "id": "6721684977",
    "deal": "(SMF)Sarana Multigriya Finansial",
    "stage_id": "280510160",
@@ -1775,19 +1736,6 @@
    "last_contacted": "2026-02-06",
    "probability": 0.3,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15464612560"
-  },
-  {
-   "id": "22012789185",
-   "deal": "Metrobank",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Philippines",
-   "amount": null,
-   "close_date": "2025-03-01",
-   "owner": "Prielle Seandrè Tactacan",
-   "last_contacted": "2026-02-06",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185"
   },
   {
    "id": "22012789185",

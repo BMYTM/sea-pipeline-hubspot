@@ -20,11 +20,19 @@
     }
    ],
    "remarks": "client internally discuss and will feedback by 20th Jan",
-   "headcount": "400",
+   "headcount": 550,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/237747296457",
    "year": "2026",
-   "month": "2026-10"
+   "month": "2026-10",
+   "subscription": 33825.0,
+   "implementation": 18724.0,
+   "split_note": null,
+   "year1_total": 52549.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-12-08",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "205288072422",
@@ -48,11 +56,19 @@
     }
    ],
    "remarks": "Done meeting with First Maritime Shared Services (FMSS) and PTC on Dec. 4. Good discussion with COO of PTC. Finalizing proposal and excel templates in time for FMSS Board Meeting on Dec 17-19. Will close by Jan 2026",
-   "headcount": "1,500",
+   "headcount": 2100,
    "industry": "Transportation and Logistics",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/205288072422",
    "year": "2026",
-   "month": "2026-08"
+   "month": "2026-08",
+   "subscription": 54000.0,
+   "implementation": 36000.0,
+   "split_note": null,
+   "year1_total": 90000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-12-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "368986032325",
@@ -72,11 +88,19 @@
     }
    ],
    "remarks": "Will have the deep dive demo to client again mid of Dec. Last update 1st Dec.",
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/368986032325",
    "year": "2026",
-   "month": "2026-04"
+   "month": "2026-04",
+   "subscription": 20737.0,
+   "implementation": 18369.0,
+   "split_note": null,
+   "year1_total": 39106.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-12-01",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "320947549392",
@@ -96,11 +120,19 @@
     }
    ],
    "remarks": "Got the signed LOA, raising the invoice. Reviewing the contract.",
-   "headcount": "1,700",
+   "headcount": 1700,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/320947549392",
    "year": "2026",
-   "month": "2026-01"
+   "month": "2026-01",
+   "subscription": 36720.0,
+   "implementation": 62550.0,
+   "split_note": null,
+   "year1_total": 99270.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-10-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "16379514562",
@@ -120,11 +152,19 @@
     }
    ],
    "remarks": "Pushing to close by mid Dec. MSA is being signed and hopefully receive by Dec 12 or Dec 15. All requirements and requests provided in latest MSA.",
-   "headcount": "1,200",
+   "headcount": 1200,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/16379514562",
    "year": "2026",
-   "month": "2026-01"
+   "month": "2026-01",
+   "subscription": 40176.0,
+   "implementation": 20059.0,
+   "split_note": null,
+   "year1_total": 60235.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-09-26",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "252393171178",
@@ -144,11 +184,19 @@
     }
    ],
    "remarks": "They are internally discussing about proposal and contract. Expect to close by 24th Nov.",
-   "headcount": "150",
+   "headcount": 150,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/252393171178",
    "year": "2025",
-   "month": "2025-12"
+   "month": "2025-12",
+   "subscription": 6318.0,
+   "implementation": 7500.0,
+   "split_note": null,
+   "year1_total": 13818.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "275627029734",
@@ -168,11 +216,19 @@
     }
    ],
    "remarks": "Got signed proposal",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/275627029734",
    "year": "2025",
-   "month": "2025-12"
+   "month": "2025-12",
+   "subscription": 7200.0,
+   "implementation": 7000.0,
+   "split_note": null,
+   "year1_total": 14200.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-09-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "306935125184",
@@ -192,11 +248,19 @@
     }
    ],
    "remarks": "Contract/Proposal/NDA in the process of signing. Update: 16 Oct",
-   "headcount": "60",
+   "headcount": 60,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/306935125184",
    "year": "2025",
-   "month": "2025-10"
+   "month": "2025-10",
+   "subscription": 9234.0,
+   "implementation": 3255.0,
+   "split_note": null,
+   "year1_total": 12489.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "15556360902",
@@ -216,11 +280,19 @@
     }
    ],
    "remarks": "Contract signed. Latest update: 11th Sept",
-   "headcount": "9,686",
+   "headcount": 9686,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15556360902",
    "year": "2025",
-   "month": "2025-09"
+   "month": "2025-09",
+   "subscription": 138000.0,
+   "implementation": 110000.0,
+   "split_note": null,
+   "year1_total": 248000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-08-22",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15556281337",
@@ -240,11 +312,19 @@
     }
    ],
    "remarks": "Contract signed",
-   "headcount": "3,000",
+   "headcount": 3000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15556281337",
    "year": "2025",
-   "month": "2025-09"
+   "month": "2025-09",
+   "subscription": 82800.0,
+   "implementation": 110000.0,
+   "split_note": null,
+   "year1_total": 192800.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-07-25",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "147539004622",
@@ -259,11 +339,19 @@
    "source": "Partner",
    "contacts": [],
    "remarks": "Contract signed",
-   "headcount": "7,000",
+   "headcount": 7000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/147539004622",
    "year": "2025",
-   "month": "2025-09"
+   "month": "2025-09",
+   "subscription": 234600.0,
+   "implementation": 110000.0,
+   "split_note": "Subscription + implementation in HubSpot do not add up to the deal value",
+   "year1_total": 303200.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-03-06",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "242673491163",
@@ -283,11 +371,19 @@
     }
    ],
    "remarks": "We got the email confirmation, they are working on the documents signing and will send back by 29th July. Latest update on 23 July",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/242673491163",
    "year": "2025",
-   "month": "2025-07"
+   "month": "2025-07",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 57576.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-07-17",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "193938140397",
@@ -307,11 +403,19 @@
     }
    ],
    "remarks": "Getting payroll/leaves/attendance requirements that's unique to Remax, then do personalized demo and demonstrate HONO can address requirements",
-   "headcount": "250",
+   "headcount": 250,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193938140397",
    "year": "2025",
-   "month": "2025-07"
+   "month": "2025-07",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 17000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "10463855043",
@@ -331,11 +435,19 @@
     }
    ],
    "remarks": "On process for Agreement Signing, Pak Rama, the Managing Director is still on leave",
-   "headcount": "11,800",
+   "headcount": 11800,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10463855043",
    "year": "2025",
-   "month": "2025-07"
+   "month": "2025-07",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 91530.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-04-23",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15903832256",
@@ -355,11 +467,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15903832256",
    "year": "2025",
-   "month": "2025-01"
+   "month": "2025-01",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 50200.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-12-27",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "51507301621",
@@ -379,11 +499,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/51507301621",
    "year": "2025",
-   "month": "2025-01"
+   "month": "2025-01",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 33663.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-01-13",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "16547209197",
@@ -403,11 +531,19 @@
     }
    ],
    "remarks": null,
-   "headcount": "100",
+   "headcount": 100,
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/16547209197",
    "year": "2024",
-   "month": "2024-12"
+   "month": "2024-12",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 77069.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-09-29",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15903832804",
@@ -427,11 +563,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "1,800",
+   "headcount": 1800,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15903832804",
    "year": "2024",
-   "month": "2024-12"
+   "month": "2024-12",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 61152.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-09-12",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "11994935748",
@@ -451,11 +595,19 @@
     }
    ],
    "remarks": "WON",
-   "headcount": "1,596",
+   "headcount": 1596,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/11994935748",
    "year": "2024",
-   "month": "2024-10"
+   "month": "2024-10",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 3.44583158,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-09-19",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "14534411223",
@@ -475,11 +627,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "900",
+   "headcount": 900,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/14534411223",
    "year": "2024",
-   "month": "2024-09"
+   "month": "2024-09",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 28788.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-09-23",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15006161387",
@@ -499,11 +659,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "755",
+   "headcount": 755,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15006161387",
    "year": "2024",
-   "month": "2024-08"
+   "month": "2024-08",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 47374.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-07-25",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "12053443059",
@@ -527,7 +695,15 @@
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/12053443059",
    "year": "2024",
-   "month": "2024-08"
+   "month": "2024-08",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 5.15758272,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-05-20",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "10454330568",
@@ -571,7 +747,15 @@
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10454330568",
    "year": "2024",
-   "month": "2024-06"
+   "month": "2024-06",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 46139.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "11658044392",
@@ -591,11 +775,19 @@
     }
    ],
    "remarks": "Close Won",
-   "headcount": "70",
+   "headcount": 70,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/11658044392",
    "year": "2024",
-   "month": "2024-06"
+   "month": "2024-06",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 22223.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-03-28",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "7008906475",
@@ -619,7 +811,15 @@
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7008906475",
    "year": "2024",
-   "month": "2024-03"
+   "month": "2024-03",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 33688.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "8548783062",
@@ -647,11 +847,19 @@
     }
    ],
    "remarks": "done deal",
-   "headcount": "100",
+   "headcount": 100,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/8548783062",
    "year": "2024",
-   "month": "2024-02"
+   "month": "2024-02",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 1.22805093,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "9185986552",
@@ -679,7 +887,15 @@
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/9185986552",
    "year": "2024",
-   "month": "2024-02"
+   "month": "2024-02",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 30960.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-11-21",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "7274568152",
@@ -698,7 +914,15 @@
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7274568152",
    "year": "2024",
-   "month": "2024-01"
+   "month": "2024-01",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "INR",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "7476199668",
@@ -718,11 +942,19 @@
     }
    ],
    "remarks": "WON",
-   "headcount": "4,000",
+   "headcount": 4000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7476199668",
    "year": "2023",
-   "month": "2023-12"
+   "month": "2023-12",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 6.55228206,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "6855461323",
@@ -746,11 +978,19 @@
     }
    ],
    "remarks": null,
-   "headcount": "3,200",
+   "headcount": 3200,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6855461323",
    "year": "2023",
-   "month": "2023-12"
+   "month": "2023-12",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 1.8720719,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "7293114850",
@@ -774,7 +1014,15 @@
    "industry": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7293114850",
    "year": "2023",
-   "month": "2023-09"
+   "month": "2023-09",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 30421.3965,
+   "booked_currency": "IDR",
+   "booked_amount": 500000000.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "6930423249",
@@ -794,11 +1042,19 @@
     }
    ],
    "remarks": "WON",
-   "headcount": "10,000",
+   "headcount": 10000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6930423249",
    "year": "2023",
-   "month": "2023-09"
+   "month": "2023-09",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 18.98295142,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "7086527725",
@@ -823,7 +1079,15 @@
    "remarks": null,
    "headcount": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7086527725",
-   "region_note": "Region in HubSpot: India-North"
+   "region_note": "Region in HubSpot: India-North",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 4621.9788972,
+   "booked_currency": "INR",
+   "booked_amount": 403400.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "7492992461",
@@ -848,7 +1112,15 @@
    "remarks": null,
    "headcount": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7492992461",
-   "region_note": "Region in HubSpot: India-North"
+   "region_note": "Region in HubSpot: India-North",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 2745.11632122,
+   "booked_currency": "INR",
+   "booked_amount": 239590.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "6347482069",
@@ -872,7 +1144,15 @@
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6347482069",
    "year": "2023",
-   "month": "2023-05"
+   "month": "2023-05",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 16409.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "6500894404",
@@ -896,11 +1176,19 @@
     }
    ],
    "remarks": "WON",
-   "headcount": "4,100",
+   "headcount": 4100,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6500894404",
    "year": "2023",
-   "month": "2023-05"
+   "month": "2023-05",
+   "subscription": 2.32,
+   "implementation": 0.2,
+   "split_note": null,
+   "year1_total": 2.51371999,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "6562678998",
@@ -925,7 +1213,15 @@
    "remarks": null,
    "headcount": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6562678998",
-   "region_note": "Region in HubSpot: India-North"
+   "region_note": "Region in HubSpot: India-North",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 4926.74994,
+   "booked_currency": "INR",
+   "booked_amount": 430000.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "4427906798",
@@ -958,7 +1254,15 @@
    "remarks": null,
    "headcount": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/4427906798",
-   "region_note": "Region in HubSpot: India-North"
+   "region_note": "Region in HubSpot: India-North",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 137490.696,
+   "booked_currency": "INR",
+   "booked_amount": 12000000.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "4155854806",
@@ -1003,7 +1307,15 @@
    "remarks": null,
    "headcount": null,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/4155854806",
-   "region_note": "Region in HubSpot: India-North"
+   "region_note": "Region in HubSpot: India-North",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 36664.1856,
+   "booked_currency": "INR",
+   "booked_amount": 3200000.0,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   }
  ],
  "active": [
@@ -1025,7 +1337,7 @@
     }
    ],
    "remarks": "POC still under preparation by ms sheetal. will do dry run with ramssol team before meet panin team probably POC will be scheduled at the last week of Jan. Herry will confirm",
-   "headcount": "9,000",
+   "headcount": 9000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/103713977545",
    "stage_id": "280510158",
@@ -1036,7 +1348,15 @@
    "conv_prob": "High",
    "conv_reason": "Pak herry (ramsso), work previously with panin. currently we still waiting a chance to meet pak lionto (son of owner)",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": 417112.0,
+   "implementation": 216280.0,
+   "split_note": null,
+   "year1_total": 633392.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-05-02",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "14900636152",
@@ -1056,7 +1376,7 @@
     }
    ],
    "remarks": "Had meeting with contact person in BPI, together with Mr. Mukul and Mr. Boonchoo. Exploring how to handle Asticom so they can continue to sell HONO to BPI. Get update by Dec 12",
-   "headcount": "22,000",
+   "headcount": 22000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/14900636152",
    "stage_id": "280510160",
@@ -1067,7 +1387,15 @@
    "conv_prob": "Low",
    "conv_reason": "As per discussion with Asticom on Nov 17, they have improved on Peoplesoft internally and decided to keep this for BPI",
    "cta": "Yes",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 414000.0,
+   "implementation": 207000.0,
+   "split_note": null,
+   "year1_total": 621000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "216255209695",
@@ -1087,7 +1415,7 @@
     }
    ],
    "remarks": "Sent updated proposal and compliance sheet to client. Rams following up the feedback, follow up again Jan. Last update 16th Dec",
-   "headcount": "7,000",
+   "headcount": 7000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/216255209695",
    "stage_id": "280510158",
@@ -1098,7 +1426,15 @@
    "conv_prob": "Low",
    "conv_reason": "slow movement",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 384000.0,
+   "implementation": 160000.0,
+   "split_note": null,
+   "year1_total": 544000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-09-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "496653097202",
@@ -1118,7 +1454,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "10,000",
+   "headcount": 10000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/496653097202",
    "stage_id": "280510157",
@@ -1129,7 +1465,15 @@
    "conv_prob": "Low",
    "conv_reason": "Just starting",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 300000.0,
+   "implementation": 150000.0,
+   "split_note": null,
+   "year1_total": 450000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "515111097585",
@@ -1149,7 +1493,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "30,000",
+   "headcount": 30000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111097585",
    "stage_id": "280510157",
@@ -1160,7 +1504,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need to prove platform can be automated acording to specs",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 385000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "8213541081",
@@ -1180,7 +1532,7 @@
     }
    ],
    "remarks": "still waiting for the next update from bu yenty (as per Bu Marta's info)",
-   "headcount": "8,000",
+   "headcount": 8000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/8213541081",
    "stage_id": "280510160",
@@ -1191,7 +1543,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 365538.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "267197143227",
@@ -1211,7 +1571,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "6,500",
+   "headcount": 6500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/267197143227",
    "stage_id": "280510157",
@@ -1222,7 +1582,15 @@
    "conv_prob": "Low",
    "conv_reason": "30%",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 300000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "529589966018",
@@ -1242,7 +1610,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,334",
+   "headcount": 1334,
    "industry": "Banking & Financial Services (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/529589966018",
    "stage_id": "280510157",
@@ -1253,7 +1621,15 @@
    "conv_prob": "Medium",
    "conv_reason": "partner connect with exec",
    "cta": "Yes",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 300000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "112816249045",
@@ -1273,7 +1649,7 @@
     }
    ],
    "remarks": "Demo done on 6th March, additional information on expense module given on 13th March. Now waiting for next step. Only BIPO and HONO is shortlisted. Sunil is following with client but no movement. Last Update: 4th Nov",
-   "headcount": "4,350",
+   "headcount": 4350,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/112816249045",
    "stage_id": "280510160",
@@ -1284,7 +1660,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 173000.0,
+   "implementation": 93000.0,
+   "split_note": null,
+   "year1_total": 266000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-01-28",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "427315168501",
@@ -1304,7 +1688,7 @@
     }
    ],
    "remarks": "proposal sent to pak renjith. he will review and get back to us soon.",
-   "headcount": "12,000",
+   "headcount": 12000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/427315168501",
    "stage_id": "280510158",
@@ -1315,7 +1699,15 @@
    "conv_prob": "Medium",
    "conv_reason": null,
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 172800.0,
+   "implementation": 86400.0,
+   "split_note": null,
+   "year1_total": 259200.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-01-13",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15487249117",
@@ -1335,7 +1727,7 @@
     }
    ],
    "remarks": "will meet bu farida and Pak beni tomorrow. 18 December 2025",
-   "headcount": "16,500",
+   "headcount": 16500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15487249117",
    "stage_id": "280510160",
@@ -1346,7 +1738,15 @@
    "conv_prob": "Medium",
    "conv_reason": "we've got shorlisted to the final stage but on of BOD recommend bitrix. since they are using bitrix as crm software",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": 149280.0,
+   "implementation": 99520.0,
+   "split_note": null,
+   "year1_total": 248800.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-09-24",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "432363985137",
@@ -1366,7 +1766,7 @@
     }
    ],
    "remarks": "employee : 6600 Current system : Darwin box. contract will be ends by decembr 2026 We will do another session before send them proposal. currently the management asking the team to starts window shopping they will looking system with better feature and better price than DB",
-   "headcount": "6,600",
+   "headcount": 6600,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/432363985137",
    "stage_id": "280510160",
@@ -1377,7 +1777,15 @@
    "conv_prob": "Medium",
    "conv_reason": "darwin contracts will be end by december 2026",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 143148.0,
+   "implementation": 95432.0,
+   "split_note": null,
+   "year1_total": 238580.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "511204612323",
@@ -1397,7 +1805,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/511204612323",
    "stage_id": "280510158",
@@ -1408,7 +1816,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Huaweii also help to push",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 210000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-21",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "515113098451",
@@ -1424,11 +1840,11 @@
    "contacts": [
     {
      "name": "Winyoo Limrostham",
-     "title": "à¸œà¸¹à¹‰à¸Šà¹ˆà¸§à¸¢à¸œà¸¹à¹‰à¸ˆà¸±à¸”à¸à¸²à¸£à¸à¹ˆà¸²à¸¢à¸­à¸²à¸§à¸¸à¹‚à¸ªà¸à¸²à¸£à¸›à¸£à¸°à¹€à¸¡à¸´à¸™à¸œà¸¥à¸à¸²à¸£à¸›à¸à¸´à¸šà¸±à¸•à¸´à¸‡à¸²à¸™"
+     "title": "ผู้ช่วยผู้จัดการฝ่ายอาวุโสการประเมินผลการปฏิบัติงาน"
     }
    ],
    "remarks": null,
-   "headcount": "10,000",
+   "headcount": 10000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515113098451",
    "stage_id": "280510157",
@@ -1439,7 +1855,15 @@
    "conv_prob": "Low",
    "conv_reason": "investment budget",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 200000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "258180625649",
@@ -1463,7 +1887,7 @@
     }
    ],
    "remarks": "Change the requirement so need time to gather requirement from each team. Project delay to Q22026. Follow up again Feb 2026",
-   "headcount": "6,500",
+   "headcount": 6500,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/258180625649",
    "stage_id": "280510158",
@@ -1474,42 +1898,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but take long time for deciding",
    "cta": null,
-   "cta_reason": null
-  },
-  {
-   "id": "258180625649",
-   "deal": "McDonald's Thailand (McThai Co.,Ltd.)",
-   "country": "Thailand",
-   "amount": 200000.0,
-   "close_date": "2026-12-18",
-   "created": "2025-07-09",
-   "deal_owner": "Suntisuk Kulpiya",
-   "company": null,
-   "account_owner": "Sammy William Wamalwa",
-   "source": "Sales",
-   "contacts": [
-    {
-     "name": "Kasidit Mulpathana",
-     "title": "Human Resources Executive"
-    },
-    {
-     "name": "Panhathai Suwannapruek",
-     "title": "HRM manager"
-    }
-   ],
-   "remarks": "Change the requirement so need time to gather requirement from each team. Project delay to Q22026. Follow up again Feb 2026",
-   "headcount": "6,500",
-   "industry": "Retail and E-commerce",
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/258180625649",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "probability": 0.6,
-   "next_step": null,
-   "last_activity": "2026-04-02",
-   "conv_prob": "Medium",
-   "conv_reason": "Need is there but take long time for deciding",
-   "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 140000.0,
+   "implementation": 60000.0,
+   "split_note": null,
+   "year1_total": 200000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "501831430334",
@@ -1529,7 +1926,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "10,500",
+   "headcount": 10500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/501831430334",
    "stage_id": "280510157",
@@ -1540,7 +1937,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need to meet business, technical, cost requirements",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 126000.0,
+   "implementation": 73000.0,
+   "split_note": null,
+   "year1_total": 199500.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "511204612302",
@@ -1560,7 +1965,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "2,000",
+   "headcount": 2000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/511204612302",
    "stage_id": "280510158",
@@ -1571,7 +1976,15 @@
    "conv_prob": "Low",
    "conv_reason": "still in early stage and need POC",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 180000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "129537318081",
@@ -1591,7 +2004,7 @@
     }
    ],
    "remarks": "Project delay since team is busy with other projects. Follow up again end of Jan",
-   "headcount": "3,000",
+   "headcount": 3000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129537318081",
    "stage_id": "280510160",
@@ -1602,7 +2015,15 @@
    "conv_prob": "Low",
    "conv_reason": "Slow Movement",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 108000.0,
+   "implementation": 72000.0,
+   "split_note": null,
+   "year1_total": 180000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "339992582371",
@@ -1622,7 +2043,7 @@
     }
    ],
    "remarks": "Done meeting with NBI and Remax on Dec 9. POC confirms presentation and demo to HR Team being planned this month January, followed by bidding process for 4 weeks, then awarding by end-Feb 2026",
-   "headcount": "4,000",
+   "headcount": 4000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/339992582371",
    "stage_id": "280510160",
@@ -1633,7 +2054,15 @@
    "conv_prob": "Medium",
    "conv_reason": "TOR is based on HONO features but need to see how RFP works out. HR Team has not yet seen the platform and we'll need to tweak commercials to fit government agencies' expectations. Need also to configure our payroll module for government employees (different from private sector)",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 100000.0,
+   "implementation": 60000.0,
+   "split_note": null,
+   "year1_total": 160000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "47123630325",
@@ -1653,7 +2082,7 @@
     }
    ],
    "remarks": "They have already extend the contract with existing system. Will rework again Beg of 2026. Latest update 31st July.",
-   "headcount": "5,000",
+   "headcount": 5000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/47123630325",
    "stage_id": "280510160",
@@ -1664,7 +2093,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 157500.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-12-27",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "127892441278",
@@ -1684,7 +2121,7 @@
     }
    ],
    "remarks": "Bu Lusi suddenly called me. Different information. Pak Eiffel (the owner) has decided to put on hold the replacement of the new system and continue for now with the current system (Talenta) due to a change in strategy of current situation (financial). They said even 1 billion IDR budget is too expensive for them now. This is surprising because it is sudden and even very different from the information conveyed by Bu Lusi previously even one day earlier.",
-   "headcount": "1,300",
+   "headcount": 1300,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/127892441278",
    "stage_id": "280510160",
@@ -1695,7 +2132,15 @@
    "conv_prob": "Low",
    "conv_reason": "they are extending talenta for this year due to financial problem. will continue again next year",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 106598.0,
+   "implementation": 46153.0,
+   "split_note": null,
+   "year1_total": 152751.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-02-21",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "413524599027",
@@ -1715,7 +2160,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "3,000",
+   "headcount": 3000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/413524599027",
    "stage_id": "280510160",
@@ -1726,7 +2171,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Prduct fit",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 97090.0,
+   "implementation": 48546.0,
+   "split_note": null,
+   "year1_total": 145636.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "502402814191",
@@ -1746,7 +2199,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "3,000",
+   "headcount": 3000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502402814191",
    "stage_id": "280510160",
@@ -1757,7 +2210,15 @@
    "conv_prob": "Medium",
    "conv_reason": "would undergo shortlisting process",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 90000.0,
+   "implementation": 52500.0,
+   "split_note": null,
+   "year1_total": 142500.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "472986056894",
@@ -1777,7 +2238,7 @@
     }
    ],
    "remarks": "Scheduled the demo meeting with management team on 26th March.",
-   "headcount": "17,000",
+   "headcount": 17000,
    "industry": "Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/472986056894",
    "stage_id": "280510158",
@@ -1788,7 +2249,15 @@
    "conv_prob": "Medium",
    "conv_reason": "HONO functionality fit",
    "cta": "Yes",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 68727.0,
+   "implementation": 68727.0,
+   "split_note": null,
+   "year1_total": 137454.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-22",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "6777413058",
@@ -1816,7 +2285,7 @@
     }
    ],
    "remarks": "17.4.24 : All docs are send, waiting for updates from Tunas Ridean including promotions (will be done at SF or new system). Bu Feby and Bu Stella said they are still waiting for budget approval from Management 15.01.25 : Nicolas from ramssol know the CFO (Ibu Stella) and he said Bu Stella would consider to invite HONO. back then they thought HONO company in indonesia will not long last",
-   "headcount": "4,600",
+   "headcount": 4600,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6777413058",
    "stage_id": "280510160",
@@ -1827,7 +2296,15 @@
    "conv_prob": "Low",
    "conv_reason": "only for PMS,LMS and talent",
    "cta": "No",
-   "cta_reason": "Pricing"
+   "cta_reason": "Pricing",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 134153.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-03-12",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "116068228296",
@@ -1847,7 +2324,7 @@
     }
    ],
    "remarks": "Sent the final proposal to client, waiting their feedback. Last Update",
-   "headcount": "2,500",
+   "headcount": 2500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/116068228296",
    "stage_id": "280510160",
@@ -1858,7 +2335,15 @@
    "conv_prob": "High",
    "conv_reason": "We are shortlisted with another one vendor",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 88182.0,
+   "implementation": 44826.0,
+   "split_note": null,
+   "year1_total": 133008.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "500640783600",
@@ -1878,7 +2363,7 @@
     }
    ],
    "remarks": null,
-   "headcount": null,
+   "headcount": 1377,
    "industry": "Education & Training",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/500640783600",
    "stage_id": "280510160",
@@ -1889,7 +2374,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 130000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-07-01",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "512459995376",
@@ -1909,7 +2402,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512459995376",
    "stage_id": "280510157",
@@ -1920,7 +2413,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Still building the engagement",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 80160.0,
+   "implementation": 48096.0,
+   "split_note": null,
+   "year1_total": 128256.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "527356129501",
@@ -1940,7 +2441,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "10,500",
+   "headcount": 10500,
    "industry": "Banking & Financial Services (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/527356129501",
    "stage_id": "280510157",
@@ -1951,7 +2452,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 126000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "286017173691",
@@ -1971,7 +2480,7 @@
     }
    ],
    "remarks": "Based on the CFO’s decision, the purchase, administrative process, and kick-off will be happen in April 2026. Herry has confirmed that he has already update the same to Boonchoo Sir and Brian about this.",
-   "headcount": "4,000",
+   "headcount": 4000,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/286017173691",
    "stage_id": "280510158",
@@ -1982,7 +2491,15 @@
    "conv_prob": "High",
    "conv_reason": "came from ramssol. ramssol country director is former head of hr of JAS. requirement is there",
    "cta": "No",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 81600.0,
+   "implementation": 40800.0,
+   "split_note": null,
+   "year1_total": 122400.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-08-28",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "502454590697",
@@ -2002,7 +2519,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "5,000",
+   "headcount": 5000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502454590697",
    "stage_id": "280510160",
@@ -2013,7 +2530,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need local Attendance and Payroll",
    "cta": "Yes",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 75600.0,
+   "implementation": 44100.0,
+   "split_note": null,
+   "year1_total": 119700.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "291510272192",
@@ -2028,7 +2553,7 @@
    "source": "Sales",
    "contacts": [],
    "remarks": "Khun Waraporn is quite. Need to find new PIC.",
-   "headcount": "2,000",
+   "headcount": 2000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/291510272192",
    "stage_id": "280510160",
@@ -2039,7 +2564,15 @@
    "conv_prob": "Low",
    "conv_reason": "Slow Movement",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 69000.0,
+   "implementation": 45000.0,
+   "split_note": null,
+   "year1_total": 114000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "9301752250",
@@ -2067,7 +2600,7 @@
     }
    ],
    "remarks": "07.05.24 : Ibu Tyas said Project to replace DB is still under discussing by Management and still not final. They need extend the time for reviewing the requirements",
-   "headcount": "1,500",
+   "headcount": 1500,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/9301752250",
    "stage_id": "280510160",
@@ -2078,7 +2611,15 @@
    "conv_prob": "Low",
    "conv_reason": "Trauma with Indian Product",
    "cta": "No",
-   "cta_reason": "Pricing"
+   "cta_reason": "Pricing",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 110769.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-02-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "379729670388",
@@ -2098,7 +2639,7 @@
     }
    ],
    "remarks": "Is able to schedule presentation and demo for the new CTO and new payroll head of Cognizant on Jan. 16. Objective is to explain how HONO platform works, thus initiating automations in shifts, rosters and payroll. Closure being planned in March (will assess in January if feasible)",
-   "headcount": "4,000",
+   "headcount": 4000,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/379729670388",
    "stage_id": "280510160",
@@ -2109,7 +2650,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need to assure HONO can pull out shifts and rosters from existing shift scheduling systems being used, them automate these into the payroll module",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 72000.0,
+   "implementation": 36000.0,
+   "split_note": null,
+   "year1_total": 108000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-04-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "515111037159",
@@ -2129,7 +2678,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "6,000",
+   "headcount": 5000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111037159",
    "stage_id": "280510157",
@@ -2140,7 +2689,15 @@
    "conv_prob": "Medium",
    "conv_reason": "WIll look into pricing",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 72000.0,
+   "implementation": 24000.0,
+   "split_note": null,
+   "year1_total": 96000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "193935600873",
@@ -2160,7 +2717,7 @@
     }
    ],
    "remarks": "Finalizing small POC for Okada covering Core HR/201 Files, with initial output being shown by Sheetal. Looking at presenting to Okada by January once POC is finished. Review again with Sheetal and Gerard",
-   "headcount": "12,000",
+   "headcount": 12000,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193935600873",
    "stage_id": "280510160",
@@ -2171,7 +2728,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Going through proof of concept for Core HR (201 Files) and benefits of having digitized records, attendance, overtime, leaves. POC under development and will determine conversion once we have presented the program",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 60000.0,
+   "implementation": 30000.0,
+   "split_note": null,
+   "year1_total": 90000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "509448217802",
@@ -2191,7 +2756,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "5,000",
+   "headcount": 5000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/509448217802",
    "stage_id": "280510157",
@@ -2202,7 +2767,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Manual operations but need to lower prices",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 60000.0,
+   "implementation": 30000.0,
+   "split_note": null,
+   "year1_total": 90000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "322791746798",
@@ -2226,7 +2799,7 @@
     }
    ],
    "remarks": "Sent proposal to client, follow up the progress end of Dec",
-   "headcount": "1,500",
+   "headcount": 1500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/322791746798",
    "stage_id": "280510160",
@@ -2237,7 +2810,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but need long time to decide",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 59455.0,
+   "implementation": 29727.0,
+   "split_note": null,
+   "year1_total": 89182.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "499826487512",
@@ -2257,7 +2838,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Construction and Real Estate",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499826487512",
    "stage_id": "280510160",
@@ -2268,7 +2849,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Not Happy with current system",
    "cta": "Yes",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 42000.0,
+   "implementation": 35000.0,
+   "split_note": null,
+   "year1_total": 77000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "509154906305",
@@ -2288,7 +2877,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "2,000",
+   "headcount": 2000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/509154906305",
    "stage_id": "280510157",
@@ -2299,7 +2888,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Referral partner knows owner of Ace Promotions",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 76000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "60864294079",
@@ -2319,7 +2916,7 @@
     }
    ],
    "remarks": "Post partner meeting with client on 24th March. There are internal issues at client end and this project is put on hold until July. We got to know about July date on 24th April from partner.",
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/60864294079",
    "stage_id": "280510160",
@@ -2330,7 +2927,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 75300.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-12-03",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "403846554863",
@@ -2354,7 +2959,7 @@
     }
    ],
    "remarks": "Proposal sent to Bu Fiya and Pak Orlando. preparing on premise vs cloud document. discuss on going with ms sheetal",
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/403846554863",
    "stage_id": "280510160",
@@ -2365,7 +2970,15 @@
    "conv_prob": "Medium",
    "conv_reason": "open for cloud option",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 49536.0,
+   "implementation": 24768.0,
+   "split_note": null,
+   "year1_total": 74304.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-12-24",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "508099332323",
@@ -2389,7 +3002,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "5,000",
+   "headcount": 3000,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323",
    "stage_id": "280510158",
@@ -2400,7 +3013,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Group CEO already involved",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 66880.0,
+   "implementation": 7000.0,
+   "split_note": null,
+   "year1_total": 73880.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-06-25",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "21071258827",
@@ -2420,7 +3041,7 @@
     }
    ],
    "remarks": "09.10.2024 : The journal entry process is still manual. Currently, the bank process is handled by HSBC, but next it will be given to an outsourced company that handles payroll outsourcing. Reporting is also processed in Gasi. 2500 employees. currently using GASI and expense 1,1B for 1 year 18.10.2024 : Turns out Ibu Dina not received my email regarding to thank you for the 1st meeting. Ibu Heni (ABP) will follow up to Bu Dina for the next meeting 22.10.24 : Bu Dina request to be sent 1 page highlight on HONO features on Payroll Outsourcing.",
-   "headcount": "2,500",
+   "headcount": 2500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21071258827",
    "stage_id": "280510160",
@@ -2431,7 +3052,15 @@
    "conv_prob": "Low",
    "conv_reason": "Gasi Payroll outsourcing used by most banks",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 73846.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "499552206030",
@@ -2451,7 +3080,7 @@
     }
    ],
    "remarks": "currently using DB (Catapa for Payroll) and Akravia (recruitment). they asking on Free Form builder like in DarwinBox, we promise will discuss and show our capabilities for Form Builder on next meeting",
-   "headcount": "1,500",
+   "headcount": 1500,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499552206030",
    "stage_id": "280510160",
@@ -2462,7 +3091,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Multisystem-Payroll manual update",
    "cta": "Yes",
-   "cta_reason": "Pricing"
+   "cta_reason": "Pricing",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 70000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "135770848467",
@@ -2482,7 +3119,7 @@
     }
    ],
    "remarks": "Client summarize data to present management team, Will decide by Q3 2025. Last update: 1st July",
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/135770848467",
    "stage_id": "280510160",
@@ -2493,7 +3130,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Product fit",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 41475.0,
+   "implementation": 20737.0,
+   "split_note": null,
+   "year1_total": 62212.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "276560500965",
@@ -2517,7 +3162,7 @@
     }
    ],
    "remarks": "we got new PIC contact. waiting confirmation from Bu Rona for second demo",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/276560500965",
    "stage_id": "280510160",
@@ -2528,42 +3173,15 @@
    "conv_prob": "Medium",
    "conv_reason": "demo still on progress. waiting for second demo schedule",
    "cta": "No",
-   "cta_reason": null
-  },
-  {
-   "id": "276560500965",
-   "deal": "Mowilex Indonesia",
-   "country": "Indonesia",
-   "amount": 61050.0,
-   "close_date": "2026-12-31",
-   "created": "2025-08-01",
-   "deal_owner": "Jun de Dios",
-   "company": "PT. Mowilex",
-   "account_owner": "Jun de Dios",
-   "source": "Sales",
-   "contacts": [
-    {
-     "name": "Titik Nurjianti",
-     "title": "Admin"
-    },
-    {
-     "name": "Welly Susanto",
-     "title": "Manager IT"
-    }
-   ],
-   "remarks": "we got new PIC contact. waiting confirmation from Bu Rona for second demo",
-   "headcount": "500",
-   "industry": "Industrial and Manufacturing",
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/276560500965",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "probability": 0.4,
-   "next_step": null,
-   "last_activity": "2026-02-06",
-   "conv_prob": "Medium",
-   "conv_reason": "demo still on progress. waiting for second demo schedule",
-   "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 35700.0,
+   "implementation": 25350.0,
+   "split_note": null,
+   "year1_total": 61050.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "126359758029",
@@ -2583,7 +3201,7 @@
     }
    ],
    "remarks": "BCA asking for talent management POC. will discuss internally with ms sheetal",
-   "headcount": "850",
+   "headcount": 850,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/126359758029",
    "stage_id": "280510160",
@@ -2594,7 +3212,15 @@
    "conv_prob": "High",
    "conv_reason": "deal must be made by this year, bu tam said. frida also confirmed",
    "cta": "Yes",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 35700.0,
+   "implementation": 25350.0,
+   "split_note": null,
+   "year1_total": 61050.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-03-07",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "116068228306",
@@ -2614,7 +3240,7 @@
     }
    ],
    "remarks": "Sending the proposal to client and schedule for the demo meeting after New Year",
-   "headcount": "1,100",
+   "headcount": 1100,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/116068228306",
    "stage_id": "280510160",
@@ -2625,7 +3251,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Like our product",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 22000.0,
+   "implementation": 38000.0,
+   "split_note": null,
+   "year1_total": 60000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "174721274089",
@@ -2645,7 +3279,7 @@
     }
    ],
    "remarks": "We are shortlisted with another 2 vendors, they are internally evaluating the vendor, waiting feedback from client. Last update: 27th Nov",
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/174721274089",
    "stage_id": "280510160",
@@ -2656,7 +3290,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but take long time for deciding",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 34363.0,
+   "implementation": 24568.0,
+   "split_note": null,
+   "year1_total": 58931.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-09-08",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "57476230342",
@@ -2676,7 +3318,7 @@
     }
    ],
    "remarks": "still waiting for meeting schedule from them",
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/57476230342",
    "stage_id": "280510160",
@@ -2687,7 +3329,15 @@
    "conv_prob": "Low",
    "conv_reason": "project hold",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 53169.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "453127862504",
@@ -2707,7 +3357,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "25,000",
+   "headcount": 2000,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/453127862504",
    "stage_id": "280510160",
@@ -2718,7 +3368,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Might have concern on pricing due to huge number of personnel",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 34170.0,
+   "implementation": 18800.0,
+   "split_note": null,
+   "year1_total": 52970.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "361874262218",
@@ -2738,7 +3396,7 @@
     }
    ],
    "remarks": "proposal sent to Pak Indra. Pak Indra already forwarded to management for review",
-   "headcount": "950",
+   "headcount": 950,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/361874262218",
    "stage_id": "280510160",
@@ -2749,7 +3407,15 @@
    "conv_prob": "Medium",
    "conv_reason": "tender still open. talenta will ends at april 2026",
    "cta": "No",
-   "cta_reason": "Intervention for Client Meeting"
+   "cta_reason": "Intervention for Client Meeting",
+   "subscription": 34890.0,
+   "implementation": 17445.0,
+   "split_note": null,
+   "year1_total": 52335.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-18",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "295427044579",
@@ -2769,7 +3435,7 @@
     }
    ],
    "remarks": "Done company introduction. Sent the proposal and product video to Rams team. Try to schedule another demo meeting. Slow progress",
-   "headcount": "900",
+   "headcount": 900,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/295427044579",
    "stage_id": "280510160",
@@ -2780,7 +3446,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but slow movement",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 27000.0,
+   "implementation": 24000.0,
+   "split_note": null,
+   "year1_total": 51000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "523343584494",
@@ -2800,7 +3474,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "550",
+   "headcount": 550,
    "industry": "Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/523343584494",
    "stage_id": "280510157",
@@ -2811,7 +3485,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 50000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "508879036615",
@@ -2831,7 +3513,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "2,000",
+   "headcount": 2000,
    "industry": "Agriculture and Crop Distribution",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508879036615",
    "stage_id": "280510158",
@@ -2842,7 +3524,15 @@
    "conv_prob": "High",
    "conv_reason": "connection",
    "cta": "Yes",
-   "cta_reason": "Negotiations"
+   "cta_reason": "Negotiations",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 50000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-21",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "526802138353",
@@ -2862,7 +3552,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526802138353",
    "stage_id": "280510157",
@@ -2873,7 +3563,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 50000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "500196369598",
@@ -2893,7 +3591,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "200",
+   "headcount": 250,
    "industry": "Media and Entertainment",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/500196369598",
    "stage_id": "280510160",
@@ -2904,7 +3602,15 @@
    "conv_prob": "Medium",
    "conv_reason": "not actively looking but exploring on new technology in HRIS",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 30000.0,
+   "implementation": 17500.0,
+   "split_note": null,
+   "year1_total": 47500.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "351130684663",
@@ -2924,7 +3630,7 @@
     }
    ],
    "remarks": "Scheduling the demo for January '26 and POC confirmed they need the system to save on their current system (Success Factors). Determining budget amount and finalize timing in when we get demo schedule",
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/351130684663",
    "stage_id": "280510157",
@@ -2935,7 +3641,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need to have full demo and better understand the procurement process",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 30000.0,
+   "implementation": 17000.0,
+   "split_note": null,
+   "year1_total": 47000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "526799803625",
@@ -2955,7 +3669,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,200",
+   "headcount": 1200,
    "industry": "Information Technology (IT) & Software",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526799803625",
    "stage_id": "280510157",
@@ -2966,7 +3680,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 45000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "187781578939",
@@ -2986,7 +3708,7 @@
     }
    ],
    "remarks": "Prepare the revied proposal and share back to client. Requesting budget on March, decide April 2026",
-   "headcount": "800",
+   "headcount": 800,
    "industry": "Education & Training",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/187781578939",
    "stage_id": "280510160",
@@ -2997,7 +3719,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Done recap meeting with client. They'll summary and share back the scope to us. Decide: Mar2026 / Golive Q2-Q3 2026",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 33000.0,
+   "implementation": 11000.0,
+   "split_note": null,
+   "year1_total": 44000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-04-29",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "193935600872",
@@ -3017,7 +3747,7 @@
     }
    ],
    "remarks": "Next steps - working on (i) NDA signing, (ii) demo using DOS-1 data, (iii) commercial proposal is done and share once 3rd demo is done. Will ask referral partner if still ok to explore",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193935600872",
    "stage_id": "280510160",
@@ -3028,7 +3758,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 44000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-04-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "6829809341",
@@ -3048,7 +3786,7 @@
     }
    ],
    "remarks": "Latest decision, management decided to continue with talenta this year. Bu Lasita said, she will keep contact with us, and update us once management decide to replace talenta. Bu Lasita said, please try to comback in early 2025",
-   "headcount": "2,000",
+   "headcount": 2000,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6829809341",
    "stage_id": "280510160",
@@ -3059,7 +3797,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed due to internal financial condition. Bu Lasita confirmed",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 41969.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "349110390001",
@@ -3079,7 +3825,7 @@
     }
    ],
    "remarks": "Client postpone the project since implementing another project and has no bandwidth",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/349110390001",
    "stage_id": "280510160",
@@ -3090,7 +3836,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but slow decision process",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 24909.0,
+   "implementation": 16606.0,
+   "split_note": null,
+   "year1_total": 41515.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-10-30",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "14806106567",
@@ -3121,7 +3875,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 39113.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "216340267230",
@@ -3141,7 +3903,7 @@
     }
    ],
    "remarks": "Sent them the proposal. Client requesting the project approval, project slightly delay because of the internal issue. Keep following up. Last update: 16th Dec",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/216340267230",
    "stage_id": "280510160",
@@ -3152,7 +3914,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need is there but slow movement",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 19500.0,
+   "implementation": 17500.0,
+   "split_note": null,
+   "year1_total": 37000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-06-26",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "253765531860",
@@ -3172,7 +3942,7 @@
     }
    ],
    "remarks": "Have been trying to connect with POC since September (every 2 weeks) but not successful yet. Evaluate again by early November if we will put on hold",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/253765531860",
    "stage_id": "280510160",
@@ -3183,7 +3953,15 @@
    "conv_prob": "Low",
    "conv_reason": "For a couple of months, have not been responding to emails and chats. Looking for another way to get the POC engaged and continue the conversation",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 23864.0,
+   "implementation": 12300.0,
+   "split_note": null,
+   "year1_total": 36164.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-09-08",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "420946178244",
@@ -3203,7 +3981,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "180",
+   "headcount": 180,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/420946178244",
    "stage_id": "280510160",
@@ -3214,7 +3992,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Product fit",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 29000.0,
+   "implementation": 12500.0,
+   "split_note": "Subscription + implementation in HubSpot do not add up to the deal value",
+   "year1_total": 35020.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-03-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "335777782984",
@@ -3234,7 +4020,7 @@
     }
    ],
    "remarks": "No feedback from client after several Follow up",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/335777782984",
    "stage_id": "280510160",
@@ -3245,7 +4031,15 @@
    "conv_prob": "Low",
    "conv_reason": "No feedback from client",
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 20364.0,
+   "implementation": 13576.0,
+   "split_note": null,
+   "year1_total": 33940.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-11-10",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "15184709348",
@@ -3273,7 +4067,7 @@
     }
    ],
    "remarks": "Did a multiple follow up to Dea. but no response But we got information from Bu Donna (Ex DANA). who joined pintu only for 2 months as Head of HR said, there is no progress at all for HRIS",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15184709348",
    "stage_id": "280510160",
@@ -3284,7 +4078,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed. ex head of HR confirmed",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 33330.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-07-29",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "301579200725",
@@ -3304,7 +4106,7 @@
     }
    ],
    "remarks": "internal discussion still ongoing. some team member insist for on premises. wnother team member open for cloud option so far their intention is for on premise",
-   "headcount": "400",
+   "headcount": 400,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/301579200725",
    "stage_id": "280510160",
@@ -3315,7 +4117,15 @@
    "conv_prob": "Low",
    "conv_reason": "COmpoete with sunfish upgrade price (cheap). also prefer on premise",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 20160.0,
+   "implementation": 10080.0,
+   "split_note": null,
+   "year1_total": 30240.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-10-06",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "499553621196",
@@ -3335,7 +4145,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "110",
+   "headcount": 110,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499553621196",
    "stage_id": "280510160",
@@ -3346,7 +4156,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Need to justify pricing and HONO has no client yet in Singapore",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 29400.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "473244653777",
@@ -3366,7 +4184,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "250",
+   "headcount": 250,
    "industry": "Leisure, Travel & Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/473244653777",
    "stage_id": "280510158",
@@ -3377,7 +4195,15 @@
    "conv_prob": "Low",
    "conv_reason": "Q4 2026",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 19500.0,
+   "implementation": 9750.0,
+   "split_note": null,
+   "year1_total": 29250.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-02-19",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "416188364988",
@@ -3397,7 +4223,7 @@
     }
    ],
    "remarks": "proposal sent to pak kharisma. he will review first and get back to us",
-   "headcount": "1,400",
+   "headcount": 1400,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/416188364988",
    "stage_id": "280510160",
@@ -3408,7 +4234,15 @@
    "conv_prob": "Medium",
    "conv_reason": "looking for lms system",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 17207.0,
+   "implementation": 8603.0,
+   "split_note": null,
+   "year1_total": 25810.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-01-13",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "7766005467",
@@ -3432,7 +4266,7 @@
     }
    ],
    "remarks": "We have negotiated with the CFO (Pak Ahmad). It has reached the final price. However, currently it is hampered by a decision from the owner (Pak Ahmad's father). Still waiting for the green light from him. last follow up wit Pak Dedi (30 APril). still there is no greenlight from the owner. still keep a good relations with Pak Dedi",
-   "headcount": "900",
+   "headcount": 900,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7766005467",
    "stage_id": "280510160",
@@ -3443,7 +4277,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed. eventhought we are shirtlisted back then",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 24800.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-13",
+   "proposal_sent_source": "Proposal sent Date field"
   },
   {
    "id": "7896846064",
@@ -3463,7 +4305,7 @@
     }
    ],
    "remarks": "(2 April) Update from Mr. Erwin (Indonesian HR Director). HR project on hold until group company (aboitiz Philippines) provides direction.",
-   "headcount": "8,000",
+   "headcount": 8000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7896846064",
    "stage_id": "280510160",
@@ -3474,7 +4316,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 24061.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "513628486851",
@@ -3494,7 +4344,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,000",
+   "headcount": 1000,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/513628486851",
    "stage_id": "280510157",
@@ -3505,7 +4355,15 @@
    "conv_prob": "Medium",
    "conv_reason": "still in the exploratory phase",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 24000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "351254128830",
@@ -3525,7 +4383,7 @@
     }
    ],
    "remarks": "Done guided demo on Nov 26 with positive feedback from Head of HR/Admin. Trying to get scope with POC and then draft the commercials for their first review in Jan/Feb.",
-   "headcount": "5,000",
+   "headcount": 1000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/351254128830",
    "stage_id": "280510157",
@@ -3536,7 +4394,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Requested for guided demo so they can experience 'look and feel' of the HONO platform. Has a requirement to do 'bulk biometrics' tracking to minimize long queues for employees",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 15000.0,
+   "implementation": 8000.0,
+   "split_note": null,
+   "year1_total": 23000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "10474922962",
@@ -3556,7 +4422,7 @@
     }
    ],
    "remarks": "Awaiting for sample data/report to do final validation post which will move forward. No Movement.",
-   "headcount": "550",
+   "headcount": 550,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10474922962",
    "stage_id": "280510160",
@@ -3567,7 +4433,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 22380.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-01-17",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "12941865974",
@@ -3587,7 +4461,7 @@
     }
    ],
    "remarks": "30.04.24 : 40 Business Units-include hospital(200 Employee) need system regarding to Employee Income taxes need to elaborate with UI. will need attendance and payroll. Will create a workshop session with UI Management, still waiting the schedule from their HR Director.",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "Education & Training",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/12941865974",
    "stage_id": "280510160",
@@ -3598,7 +4472,15 @@
    "conv_prob": "Low",
    "conv_reason": "no progress for now",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 21292.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "505742381258",
@@ -3618,7 +4500,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/505742381258",
    "stage_id": "280510157",
@@ -3629,7 +4511,15 @@
    "conv_prob": "Medium",
    "conv_reason": "technical compliance",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 20000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "515690307786",
@@ -3649,7 +4539,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "300",
+   "headcount": 300,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515690307786",
    "stage_id": "280510157",
@@ -3660,7 +4550,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Initial Discovery",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 20000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "513634997475",
@@ -3680,7 +4578,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "1,000",
+   "headcount": 500,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/513634997475",
    "stage_id": "280510157",
@@ -3691,7 +4589,15 @@
    "conv_prob": "Medium",
    "conv_reason": "They still need approval from HO",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 7000.0,
+   "implementation": 12000.0,
+   "split_note": null,
+   "year1_total": 19000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "515193189573",
@@ -3711,7 +4617,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "700",
+   "headcount": 700,
    "industry": "Transportation and Logistics",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515193189573",
    "stage_id": "280510157",
@@ -3722,7 +4628,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Would focus on platform and price",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 12600.0,
+   "implementation": 6000.0,
+   "split_note": null,
+   "year1_total": 18600.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "21821524182",
@@ -3742,7 +4656,7 @@
     }
    ],
    "remarks": "did a multiple follow up to Pak Bambang for a further meeting. but no response yet.",
-   "headcount": "250",
+   "headcount": 250,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21821524182",
    "stage_id": "280510160",
@@ -3753,7 +4667,15 @@
    "conv_prob": "Low",
    "conv_reason": "slow response after first meeting",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 18000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-10-08",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "499153227970",
@@ -3777,7 +4699,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "150",
+   "headcount": 150,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499153227970",
    "stage_id": "280510160",
@@ -3788,7 +4710,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Perception HONO is complicated",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 18000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "240815360208",
@@ -3808,7 +4738,7 @@
     }
    ],
    "remarks": "Will revisit in Jan-Feb 2026",
-   "headcount": "150",
+   "headcount": 150,
    "industry": "Media and Entertainment",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/240815360208",
    "stage_id": "280510160",
@@ -3819,7 +4749,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 12000.0,
+   "implementation": 5000.0,
+   "split_note": null,
+   "year1_total": 17000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-08-20",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "502011290855",
@@ -3843,7 +4781,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "400",
+   "headcount": 400,
    "industry": "Energy and Utilities",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502011290855",
    "stage_id": "280510160",
@@ -3854,7 +4792,15 @@
    "conv_prob": "High",
    "conv_reason": "Wants system that follows their workflows, end-to-end",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 16800.0,
+   "implementation": 11200.0,
+   "split_note": "Subscription + implementation in HubSpot do not add up to the deal value",
+   "year1_total": 16800.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-06-17",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "10353093575",
@@ -3874,7 +4820,7 @@
     }
    ],
    "remarks": "No response/dormant",
-   "headcount": "150",
+   "headcount": 150,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10353093575",
    "stage_id": "280510160",
@@ -3885,7 +4831,15 @@
    "conv_prob": "Low",
    "conv_reason": "no budget",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 16615.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-01-15",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "496652367053",
@@ -3905,7 +4859,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "250",
+   "headcount": 250,
    "industry": "IT, ITES, Telecom",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/496652367053",
    "stage_id": "280510157",
@@ -3916,7 +4870,15 @@
    "conv_prob": "Low",
    "conv_reason": "Interest is high but just started, will evaluate at a later stage",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 10000.0,
+   "implementation": 5800.0,
+   "split_note": null,
+   "year1_total": 15800.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "13273431268",
@@ -3936,7 +4898,7 @@
     }
    ],
    "remarks": "08.05.24 will have onsite meeting with HR team on Thursday, 16 May at 15.30 at Bandung. 22.05.24 : Meeting done, they currenly using SF, On premise for 200 Employee. they need from Us : Recruitment and LMS for 200 employee. The plan to implementation is 2025 but need to submit the Budget before July 2024. Draft quote is done 24.05.24 : Proposal sent, for budgeting next year",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/13273431268",
    "stage_id": "280510160",
@@ -3947,7 +4909,15 @@
    "conv_prob": "Low",
    "conv_reason": "lost contact and slow response",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 14769.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "129173185755",
@@ -3967,7 +4937,7 @@
     }
    ],
    "remarks": "still no response from pak gibran. multiple follow up did to Pak Gibran. But at the first meeting, the management said, they are prfer to on premis solution",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129173185755",
    "stage_id": "280510160",
@@ -3978,38 +4948,15 @@
    "conv_prob": "Low",
    "conv_reason": "slow response for now. plan for 2026",
    "cta": "No",
-   "cta_reason": null
-  },
-  {
-   "id": "129173185755",
-   "deal": "Bangun Rasaguna Lestari (wincheez)",
-   "country": "Indonesia",
-   "amount": 13498.0,
-   "close_date": "2026-12-31",
-   "created": "2025-02-14",
-   "deal_owner": "Jun de Dios",
-   "company": "PT. BANGUN RASAGUNA LESTARI",
-   "account_owner": "Jun de Dios",
-   "source": "Sales",
-   "contacts": [
-    {
-     "name": "Gibran",
-     "title": "HR"
-    }
-   ],
-   "remarks": "still no response from pak gibran. multiple follow up did to Pak Gibran. But at the first meeting, the management said, they are prfer to on premis solution",
-   "headcount": "200",
-   "industry": "Industrial and Manufacturing",
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129173185755",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "probability": 0.2,
-   "next_step": null,
-   "last_activity": "2026-02-06",
-   "conv_prob": "Low",
-   "conv_reason": "slow response for now. plan for 2026",
-   "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 13498.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-03-05",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "6721684977",
@@ -4029,7 +4976,7 @@
     }
    ],
    "remarks": "No decision yet from Management about self deploy or purchase from vendor",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/6721684977",
    "stage_id": "280510160",
@@ -4040,7 +4987,15 @@
    "conv_prob": "Low",
    "conv_reason": "Budget",
    "cta": "No",
-   "cta_reason": "Pricing"
+   "cta_reason": "Pricing",
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 13009.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2023-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "405250335942",
@@ -4055,7 +5010,7 @@
    "source": "Marketing",
    "contacts": [],
    "remarks": "proposal sent to bu denise. waiting for her response after her meeting with management",
-   "headcount": "120",
+   "headcount": 120,
    "industry": "Hospitality and Tourism",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/405250335942",
    "stage_id": "280510160",
@@ -4066,7 +5021,15 @@
    "conv_prob": "Medium",
    "conv_reason": "planned to replace the existing",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": 7272.0,
+   "implementation": 3939.0,
+   "split_note": null,
+   "year1_total": 11211.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-12-24",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "10739612118",
@@ -4086,7 +5049,7 @@
     }
    ],
    "remarks": "no response at all from bu Nanik",
-   "headcount": "200",
+   "headcount": 200,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10739612118",
    "stage_id": "280510160",
@@ -4097,7 +5060,15 @@
    "conv_prob": "Low",
    "conv_reason": "no progress for now",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 10461.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-02-13",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "126689552596",
@@ -4117,7 +5088,7 @@
     }
    ],
    "remarks": "still no response from bu ester",
-   "headcount": "120",
+   "headcount": 120,
    "industry": "Banking, Financial Services, and Insurance (BFSI)",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/126689552596",
    "stage_id": "280510160",
@@ -4128,7 +5099,15 @@
    "conv_prob": "Low",
    "conv_reason": "slow response after we submit proposal",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 9435.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2025-02-18",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "21275029723",
@@ -4148,7 +5127,7 @@
     }
    ],
    "remarks": "did a meeting with the hr team. before continue to the proposal stage. they have some questions that need to be answerd by us. already compiled the questione and sent to arushi and prasanth misra. 18.10.24: all the questios from KLAAI is answerd and sent to them. they will make an RFI for HRIS vendor after that . 6.11.24 : Budget letter sent to bu hilmah. 20.12.2024 : Bu Hilmah said they still need time to process and discuss internally. 05.02.2025: did a few follow up from december, january and february. but still no response . 11.03.2025: snet an iftar invitation to bu hilma and asking for update. no update yet from management",
-   "headcount": "250",
+   "headcount": 250,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21275029723",
    "stage_id": "280510160",
@@ -4159,7 +5138,15 @@
    "conv_prob": "Low",
    "conv_reason": "budget constraint",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 8861.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-11-05",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "517313274045",
@@ -4179,7 +5166,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/517313274045",
    "stage_id": "280510157",
@@ -4190,7 +5177,15 @@
    "conv_prob": "Low",
    "conv_reason": "budget",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "519366681792",
@@ -4221,7 +5216,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "512054574282",
@@ -4252,7 +5255,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-22",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "10679387097",
@@ -4272,7 +5283,7 @@
     }
    ],
    "remarks": "did a multiple follow up from Jun 2024 to December 2024 but no response from Bu Monica",
-   "headcount": "1,500",
+   "headcount": 1500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10679387097",
    "stage_id": "280510160",
@@ -4283,7 +5294,15 @@
    "conv_prob": "Low",
    "conv_reason": "dissapeared after first meeting",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2024-02-15",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "9353324753",
@@ -4303,7 +5322,7 @@
     }
    ],
    "remarks": "early stage. Pak Bayu still has to continue discussions with the Loreal team regarding plans for LMS needs this year. Mr Bayu is an HR consultant who is often used by Loreal",
-   "headcount": "500",
+   "headcount": 500,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/9353324753",
    "stage_id": "280510160",
@@ -4314,7 +5333,15 @@
    "conv_prob": "Low",
    "conv_reason": "no response for now",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "493651891403",
@@ -4334,7 +5361,7 @@
     }
    ],
    "remarks": null,
-   "headcount": "5,000",
+   "headcount": 5000,
    "industry": "Industrial and Manufacturing",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403",
    "stage_id": "280510157",
@@ -4345,7 +5372,15 @@
    "conv_prob": "Medium",
    "conv_reason": "Management direction to find a new solution in 2026",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "14534873577",
@@ -4365,7 +5400,7 @@
     }
    ],
    "remarks": "did a few follow up to bu nunung. but never got her response",
-   "headcount": "800",
+   "headcount": 800,
    "industry": "Other",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/14534873577",
    "stage_id": "280510160",
@@ -4376,7 +5411,15 @@
    "conv_prob": "Low",
    "conv_reason": "no response after first meeting",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "502452980924",
@@ -4407,7 +5450,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage"
   },
   {
    "id": "486351587557",
@@ -4438,7 +5489,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "334969359605",
@@ -4458,7 +5517,7 @@
     }
    ],
    "remarks": "Yesterday we conducted a second demo with Ibu Fabi and the team (onsite). Most likely, this is not intended to replace their internal system, but rather to add features (integration with their existing system). After this, they will continue with internal discussions and choose which modules they want to integrate. If things move forward, we will meet with their GM, IT, and BOD. They requested sample reports for recruitment, PMS, separation, and module list. For report, I will coordinate with Swagat. I have already sent the document explaining our module list to Ramssol, and it will be forwarded to them.",
-   "headcount": "1,300",
+   "headcount": 1300,
    "industry": "Retail and E-commerce",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605",
    "stage_id": "280510160",
@@ -4469,7 +5528,15 @@
    "conv_prob": "Low",
    "conv_reason": "TBC after the meeting",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 0.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "15464612560",
@@ -4493,7 +5560,7 @@
     }
    ],
    "remarks": "05.07.24 : Meeting was done, they currently using on premise, multi system and self-develop. 12 people from POS Indonesia were attend at the meeting including : Bu Endang - SPV Digitalization , Bu chandra - SPV HC, Bu Yuni - CHRO,Pak Eka - SPV HRBP will have another session with users and Bu Endang for technical. 29.07.24 : update from Bu Heni, that once we have succession planning, POS indonesia will re-invite us to meet them",
-   "headcount": "19,000",
+   "headcount": 19000,
    "industry": "Transportation and Logistics",
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15464612560",
    "stage_id": "280510160",
@@ -4504,7 +5571,15 @@
    "conv_prob": "Low",
    "conv_reason": "project postponed",
    "cta": "No",
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "22012789185",
@@ -4543,46 +5618,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
-  },
-  {
-   "id": "22012789185",
-   "deal": "Metrobank",
-   "country": "Philippines",
-   "amount": null,
-   "close_date": "2025-03-01",
-   "created": "2024-10-09",
-   "deal_owner": "Prielle Seandrè Tactacan",
-   "company": "Metrobank",
-   "account_owner": null,
-   "source": "Others/Referrals (Other)",
-   "contacts": [
-    {
-     "name": "Carol Arjonillo",
-     "title": null
-    },
-    {
-     "name": "Paulo  Rulona",
-     "title": null
-    },
-    {
-     "name": "Riza Tan",
-     "title": "Lead, Compensation and Benefits"
-    }
-   ],
-   "remarks": null,
-   "headcount": null,
-   "industry": null,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "probability": 0.5,
-   "next_step": null,
-   "last_activity": "2026-02-06",
-   "conv_prob": null,
-   "conv_reason": null,
-   "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   },
   {
    "id": "15599173102",
@@ -4613,7 +5657,15 @@
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
-   "cta_reason": null
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": null,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null
   }
  ],
  "leads": [

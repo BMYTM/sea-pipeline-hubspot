@@ -21,7 +21,15 @@
   const plusDays = (n) => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
   const inFY = (d, k) => d && FY[k] && d >= FY[k][0] && d < FY[k][1];
 
-  let D = null;
+  let D = null, FX = null;
+  const drawer = document.querySelector('#drawer');
+  const ccyOf = (country) => (FX && FX.country_currency[country]) || null;
+  const fmtCcy = (v, ccy) => v == null || isNaN(v) || !ccy ? '—' : new Intl.NumberFormat('en', {style: 'currency', currency: ccy, currencyDisplay: 'narrowSymbol', notation: 'compact', maximumFractionDigits: 1}).format(v);
+  const toLocal = (usd, country) => { const c = ccyOf(country); return usd == null || !c || !FX.rates[c] ? null : usd * FX.rates[c]; };
+  const localTxt = (usd, country) => { const v = toLocal(usd, country); return v == null ? '' : fmtCcy(v, ccyOf(country)); };
+  // USD on top, local currency underneath
+  const dual = (usd, r, td) => { if (usd == null) return el('span', 'm', '—'); const f = document.createDocumentFragment(); f.append(el('span', 'usd', money(usd))); const l = localTxt(usd, r.country); if (l) f.append(el('small', 'loc', l)); return f; };
+  const withLocal = (usd) => S.f.country && ccyOf(S.f.country) ? ' · ' + localTxt(usd, S.f.country) : '';
   const S = {tab: 'overview', f: {}};
   const sort = {closures: {k: 'close_date', dir: -1}, active: {k: 'amount', dir: -1}, leads: {k: 'latest', dir: -1}};
 
@@ -37,11 +45,11 @@
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.closures).map((o) => [o, o])}],
     active: [
-      {k: 'status', label: 'Status', opts: () => [['active', 'Active (Demo → Contracting)']].concat(STAGES.map((s) => [s, s]))},
       {k: 'prob', label: 'Conversion probability', opts: () => [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low'], ['none', 'Not rated']]},
       {k: 'close', label: 'Closure date', opts: () => [['past', 'Close date passed'], ['30', 'Next 30 days'], ['90', 'Next 90 days'], ['fy27', 'By 31 Mar 2027'], ['later', 'After Mar 2027'], ['none', 'No close date']]},
       {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
+      {k: 'proposal', label: 'Proposal sent', opts: () => [['30', 'In the last 30 days'], ['90', 'In the last 90 days'], ['fy27', 'In FY27'], ['any', 'Any date'], ['none', 'No proposal date']]},
       {k: 'health', label: 'Follow-up', opts: () => [['stale', 'Last activity 90+ days ago'], ['never', 'No activity logged'], ['cta', 'Call to action: Yes'], ['nocontact', 'No contact linked'], ['noamount', 'No amount']]}],
     leads: [
       {k: 'type', label: 'Stage', opts: () => [['mql', 'Reached MQL'], ['sql', 'Reached SQL'], ['nowmql', 'Currently MQL'], ['nowsql', 'Currently SQL'], ['converted', 'MQL that became SQL']]},
@@ -49,7 +57,7 @@
       {k: 'owner', label: 'Contact owner', dyn: true, opts: () => ownersOf(D.leads).map((o) => [o, o])},
       {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.leads).map((o) => [o, o])}]
   };
-  const PILL = {month: (v) => 'Month: ' + fmonth(v), quarter: (v) => 'Quarter: ' + qLabel(v), q: (v) => 'Search: “' + v + '”', country: (v) => v};
+  const PILL = {status: (v) => 'Status: ' + statusList(v).join(' + '), month: (v) => 'Month: ' + fmonth(v), quarter: (v) => 'Quarter: ' + qLabel(v), q: (v) => 'Search: “' + v + '”', country: (v) => v};
 
   // ---------- URL state ----------
   function readHash() {
@@ -62,14 +70,14 @@
     history.replaceState(null, '', '#' + S.tab + (qs ? '?' + qs : ''));
   }
   function set(patch) { Object.assign(S.f, patch); Object.keys(S.f).forEach((k) => { if (!S.f[k]) delete S.f[k]; }); writeHash(); render(); }
-  function go(tab, filters) { S.tab = tab; S.f = Object.assign({}, filters || {}); writeHash(); render(); window.scrollTo({top: $('.tabs').offsetTop - 8, behavior: 'smooth'}); }
+  function go(tab, filters) { if (drawer.classList.contains('open')) closeDrawer(); S.tab = tab; S.f = Object.assign({}, filters || {}); writeHash(); render(); window.scrollTo({top: $('.tabs').offsetTop - 8, behavior: 'smooth'}); }
   window.SEA_UI = {go, openDeal: (id) => D && openDeal(id)};
 
   document.querySelectorAll('.tabs [data-tab]').forEach((b) => b.addEventListener('click', () => {
     const keep = S.f.country ? {country: S.f.country} : {}; // country carries across tabs
     S.tab = b.dataset.tab; S.f = keep; writeHash(); render();
   }));
-  window.addEventListener('hashchange', () => { readHash(); render(); });
+  window.addEventListener('hashchange', () => { if (drawer.classList.contains('open')) closeDrawer(); readHash(); render(); });
 
   // ---------- filtering ----------
   const match = (q, ...parts) => !q || parts.join(' ').toLowerCase().includes(q.toLowerCase());
@@ -82,7 +90,9 @@
   }
   function rowsActive(f = S.f) {
     return D.active.filter((r) => (!f.country || r.country === f.country) &&
-      (!f.status || (f.status === 'active' ? r.stage !== 'On-Hold' : r.stage === f.status)) &&
+      (!f.status || statusList(f.status).includes(r.stage)) &&
+      (!f.proposal || (f.proposal === 'none' ? !r.proposal_sent : f.proposal === 'any' ? !!r.proposal_sent :
+        f.proposal === 'fy27' ? inFY(r.proposal_sent, 'fy27') : r.proposal_sent && r.proposal_sent >= plusDays(-Number(f.proposal)))) &&
       (!f.prob || (f.prob === 'none' ? !r.conv_prob : r.conv_prob === f.prob)) &&
       (!f.close || (f.close === 'past' ? r.close_date && r.close_date < today : f.close === 'none' ? !r.close_date :
         f.close === 'fy27' ? r.close_date >= today && r.close_date < '2027-04-01' : f.close === 'later' ? r.close_date >= '2027-04-01' :
@@ -104,6 +114,7 @@
     });
   }
   const ROWS = {closures: rowsClosures, active: rowsActive, leads: rowsLeads};
+  function statusList(v) { return (v || '').split(',').filter(Boolean).flatMap((x) => x === 'active' ? STAGES.filter((s) => s !== 'On-Hold') : [x]); }
 
   // ---------- filter bar ----------
   let searchTimer;
@@ -121,6 +132,19 @@
     }));
     const ctr = $('#fb-controls'); const focused = document.activeElement && document.activeElement.id === 'fb-q';
     ctr.replaceChildren();
+    if (S.tab === 'active') {
+      const grp = el('div', 'multi'); grp.setAttribute('role', 'group'); grp.setAttribute('aria-label', 'Status (pick one or more)');
+      grp.appendChild(el('span', 'multi-lbl', 'Status'));
+      const cur = statusList(S.f.status);
+      STAGES.forEach((st) => {
+        const n = ROWS.active(Object.assign({}, S.f, {status: st})).length;
+        const b = el('button', 'tog'); b.type = 'button'; b.setAttribute('aria-pressed', String(cur.includes(st))); b.disabled = !n && !cur.includes(st);
+        b.append(st, el('span', 'n', num(n)));
+        b.addEventListener('click', () => { const next = cur.includes(st) ? cur.filter((x) => x !== st) : cur.concat(st); set({status: STAGES.filter((x) => next.includes(x)).join(',')}); });
+        grp.appendChild(b);
+      });
+      ctr.appendChild(grp);
+    }
     FILTERS[S.tab].forEach((def) => {
       const s = el('select'); s.setAttribute('aria-label', def.label); if (S.f[def.k]) s.classList.add('on');
       const allN = ROWS[S.tab](Object.assign({}, S.f, {[def.k]: ''})).length;
@@ -270,7 +294,7 @@
   const countryCell = (v) => { const s = el('span', 'ctry'); const i = el('i', 'dot'); i.style.background = col(v); s.append(i, v || '—'); return s; };
 
   // ---------- drawer ----------
-  const drawer = $('#drawer'), scrim = $('#scrim');
+  const scrim = $('#scrim');
   let lastFocus = null;
   function openDrawer(kicker, title, build) {
     lastFocus = document.activeElement;
@@ -292,11 +316,18 @@
     openDrawer(r.country + ' · ' + (won ? 'Closed won' : r.stage), r.deal, (b) => {
       const top = el('div', 'dr-top');
       top.append(el('div', 'dr-val', money(r.amount)));
+      const lt = localTxt(r.amount, r.country); if (lt) top.append(el('span', 'dr-loc', lt));
       if (r.conv_prob) top.append(el('span', 'tag ' + r.conv_prob, r.conv_prob + ' conversion'));
       if (!won && r.close_date && r.close_date < today) top.append(el('span', 'tag Low', 'Close date passed'));
       b.appendChild(top);
+      if (FX && ccyOf(r.country)) b.appendChild(el('p', 'm fxnote', ccyOf(r.country) + ' converted from USD at ' + FX.as_of + ' rates (1 USD = ' + d3.format(',.2f')(FX.rates[ccyOf(r.country)]) + ' ' + ccyOf(r.country) + ').'));
       facts(b, [[won ? 'Closed' : 'Closure date', fdate(r.close_date)], ['Created', fdate(r.created)], ['Deal owner', r.deal_owner && filterLink(r.deal_owner, won ? 'closures' : 'active', {owner: r.deal_owner})],
-        ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Source', r.source], ['Headcount', r.headcount], ['Industry', r.industry],
+        ['Year-1 total', r.year1_total != null ? money(r.year1_total) + (localTxt(r.year1_total, r.country) ? ' · ' + localTxt(r.year1_total, r.country) : '') : null],
+        ['Subscription (annual)', r.subscription != null ? money(r.subscription) + (localTxt(r.subscription, r.country) ? ' · ' + localTxt(r.subscription, r.country) : '') : null],
+        ['Implementation', r.implementation != null ? money(r.implementation) + (localTxt(r.implementation, r.country) ? ' · ' + localTxt(r.implementation, r.country) : '') : null],
+        ['Split check', r.split_note], ['Booked in HubSpot as', r.booked_amount != null ? new Intl.NumberFormat('en', {style: 'currency', currency: r.booked_currency, maximumFractionDigits: 0}).format(r.booked_amount) : null],
+        ['Proposal sent', r.proposal_sent ? fdate(r.proposal_sent) + (r.proposal_sent_source && r.proposal_sent_source !== 'Proposal sent Date field' ? ' (date it entered Proposal Sent)' : '') : null],
+        ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Source', r.source], ['Employee headcount', r.headcount != null ? num(r.headcount) : null], ['Industry', r.industry],
         ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
       section(b, 'Contacts');
       if ((r.contacts || []).length) { const ul = el('ul', 'people'); r.contacts.forEach((p) => { const li = el('li', null, p.name); if (p.title) li.append(el('small', null, ' · ' + p.title)); ul.appendChild(li); }); b.appendChild(ul); }
@@ -321,12 +352,12 @@
   // ---------- CSV ----------
   function downloadCsv() {
     const spec = {
-      closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['amount', 'Value USD'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Source'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
-      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['conv_prob', 'Conversion probability'], ['conv_reason', 'Probability reason'], ['close_date', 'Closure date'], ['amount', 'Value USD'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
+      closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Source'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
+      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['conv_prob', 'Conversion probability'], ['conv_reason', 'Probability reason'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
       leads: [['country', 'Country'], ['name', 'Contact'], ['title', 'Job title'], ['company', 'Company'], ['stage', 'Stage now'], ['mql_date', 'MQL date'], ['sql_date', 'SQL date'], ['owner', 'Owner'], ['source', 'Source'], ['deals', 'Deals'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']]
     }[S.tab];
     const esc = (v) => { if (Array.isArray(v)) v = v.map((p) => p.name + (p.title ? ' (' + p.title + ')' : '')).join('; '); return v == null ? '' : /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v); };
-    const csv = [spec.map((s) => s[1]).join(',')].concat(ROWS[S.tab]().map((r) => spec.map((s) => esc(r[s[0]])).join(','))).join('\n');
+    const csv = [spec.map((s) => s[1]).join(',')].concat(ROWS[S.tab]().map((r) => Object.assign({}, r, {_ccy: ccyOf(r.country), _loc: toLocal(r.year1_total, r.country) != null ? Math.round(toLocal(r.year1_total, r.country)) : null})).map((r) => spec.map((s) => esc(r[s[0]])).join(','))).join('\n');
     const a = el('a'); a.href = URL.createObjectURL(new Blob(['﻿' + csv], {type: 'text/csv'}));
     a.download = 'sea-' + S.tab + (S.f.country ? '-' + S.f.country.toLowerCase() : '') + '-' + D.generated_at.slice(0, 10) + '.csv'; a.click(); URL.revokeObjectURL(a.href);
   }
@@ -346,9 +377,9 @@
     const scope = rowsClosures(Object.assign({}, f, {period: '', year: '', month: '', quarter: ''}));
     const fy27 = scope.filter((r) => inFY(r.close_date, 'fy27')), fy26 = scope.filter((r) => inFY(r.close_date, 'fy26'));
     kpis('#cl-kpis', [
-      ['Closures to date', num(scope.length), money(sum(scope, (r) => r.amount)) + ' total value', {period: '', year: '', month: '', quarter: ''}, !f.period && !f.year && !f.month && !f.quarter],
-      ['FY27 to date (Apr 2026 –)', num(fy27.length), money(sum(fy27, (r) => r.amount)), {period: 'fy27', year: '', month: '', quarter: ''}, f.period === 'fy27'],
-      ['FY26 (Apr 2025 – Mar 2026)', num(fy26.length), money(sum(fy26, (r) => r.amount)), {period: 'fy26', year: '', month: '', quarter: ''}, f.period === 'fy26'],
+      ['Closures to date', num(scope.length), money(sum(scope, (r) => r.amount)) + ' total value' + withLocal(sum(scope, (r) => r.amount)), {period: '', year: '', month: '', quarter: ''}, !f.period && !f.year && !f.month && !f.quarter],
+      ['FY27 to date (Apr 2026 –)', num(fy27.length), money(sum(fy27, (r) => r.amount)) + withLocal(sum(fy27, (r) => r.amount)), {period: 'fy27', year: '', month: '', quarter: ''}, f.period === 'fy27'],
+      ['FY26 (Apr 2025 – Mar 2026)', num(fy26.length), money(sum(fy26, (r) => r.amount)) + withLocal(sum(fy26, (r) => r.amount)), {period: 'fy26', year: '', month: '', quarter: ''}, f.period === 'fy26'],
       ['Latest closure', scope[0] ? fmonth(scope[0].close_date) : '—', scope[0] ? scope[0].deal : '']]);
     const noCY = Object.assign({}, f, {country: '', year: ''});
     const all = rowsClosures(noCY), years = yearsOf().slice().reverse();
@@ -366,14 +397,18 @@
       (m) => set({month: f.month === m ? '' : m, year: '', period: '', quarter: ''}), timeSel);
     const odd = rows.filter((r) => r.amount != null && r.amount < 100).length;
     const mis = rows.filter((r) => r.region_note).length;
-    $('#cl-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + (mis ? ' · ' + mis + ' filed under a non-SEA region in HubSpot (tagged)' : '') + (odd ? ' · ' + odd + ' with a value under $100 in HubSpot (marked “check”, likely local currency)' : '');
+    $('#cl-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + withLocal(sum(rows, (r) => r.amount)) + (mis ? ' · ' + mis + ' filed under a non-SEA region in HubSpot (tagged)' : '') + (odd ? ' · ' + odd + ' with a value under $100 in HubSpot (marked “check”, likely local currency)' : '');
     list('#cl-tbl', 'closures', [
       {k: 'country', label: 'Country', f: countryCell},
       {k: 'close_date', label: 'Closed', f: (v) => v ? d3.utcFormat('%b %Y')(new Date(v + 'T00:00:00Z')) : '—'},
       {k: 'deal', label: 'Deal', f: (v, r) => { const f = nameCell(v, r); if (r.region_note) { const t = el('span', 'tag warn', 'region not SEA'); t.title = r.region_note + ' — counted as ' + r.country + ' here'; f.append(' ', t); } return f; }},
-      {k: 'amount', label: 'Value', cls: 'num', num: true, f: (v, r, td) => { if (v != null && v < 100) { td.classList.add('flag'); return money(v) + ' check'; } return money(v); }},
-      {k: 'company', label: 'Account'}, {k: 'deal_owner', label: 'Deal owner'}, {k: 'account_owner', label: 'Account owner'},
-      {k: 'contacts', label: 'Contacts', sort: false, f: people}, {k: 'source', label: 'Source'}], rows, {open: (r) => openDeal(r.id)});
+      {k: 'headcount', label: 'Headcount', cls: 'num', num: true, f: (v) => v != null ? num(v) : el('span', 'm', '—')},
+      {k: 'subscription', label: 'Subscrip\u00adtion', cls: 'num', num: true, f: dual},
+      {k: 'implementation', label: 'Implemen\u00adtation', cls: 'num', num: true, f: dual},
+      {k: 'year1_total', label: 'Year-1 total', cls: 'num', num: true, f: (v, r, td) => { if (v != null && v < 100) { td.classList.add('flag'); const x = el('span', null, money(v) + ' check'); return x; } return dual(v, r, td); }},
+      {k: 'company', label: 'Account'}, {k: 'deal_owner', label: 'Deal owner'},
+      {k: 'contacts', label: 'Contacts', sort: false, f: people}, {k: 'source', label: 'Source'}], rows,
+      {open: (r) => openDeal(r.id), widths: ['8%', '7%', '14%', '7%', '8%', '8%', '8%', '11%', '9%', '13%', '7%']});
   }
 
   // ---------- Active pipeline ----------
@@ -384,9 +419,9 @@
     const fyc = scope.filter((r) => r.close_date >= today && r.close_date < '2027-04-01'), past = scope.filter((r) => r.close_date && r.close_date < today);
     const reset = {status: '', close: '', prob: '', health: ''};
     kpis('#ac-kpis', [
-      ['Active (Demo → Contracting)', money(sum(act, (r) => r.amount)), num(act.length) + ' deals', Object.assign({}, reset, {status: 'active'}), f.status === 'active' && !f.close],
-      ['On hold', money(sum(hold, (r) => r.amount)), num(hold.length) + ' deals', Object.assign({}, reset, {status: 'On-Hold'}), f.status === 'On-Hold' && !f.close],
-      ['Closing by 31 Mar 2027', money(sum(fyc, (r) => r.amount)), num(fyc.length) + ' deals with a FY27 close date', Object.assign({}, reset, {close: 'fy27'}), f.close === 'fy27' && !f.status],
+      ['Active (Demo → Contracting)', money(sum(act, (r) => r.amount)), num(act.length) + ' deals' + withLocal(sum(act, (r) => r.amount)), Object.assign({}, reset, {status: 'active'}), statusList(f.status).join() === statusList('active').join() && !f.close],
+      ['On hold', money(sum(hold, (r) => r.amount)), num(hold.length) + ' deals' + withLocal(sum(hold, (r) => r.amount)), Object.assign({}, reset, {status: 'On-Hold'}), f.status === 'On-Hold' && !f.close],
+      ['Closing by 31 Mar 2027', money(sum(fyc, (r) => r.amount)), num(fyc.length) + ' deals with a FY27 close date' + withLocal(sum(fyc, (r) => r.amount)), Object.assign({}, reset, {close: 'fy27'}), f.close === 'fy27' && !f.status],
       ['Close date passed', num(past.length), money(sum(past, (r) => r.amount)) + ' · dates need updating', Object.assign({}, reset, {close: 'past'}), f.close === 'past' && !f.status]]);
     const all = rowsActive(Object.assign({}, f, {country: '', status: ''}));
     const cs = ORDER;
@@ -396,15 +431,20 @@
     const rowsM = cs.map((c) => line(c, all.filter((r) => r.country === c)));
     rowsM.push(line('', all, 'total'));
     matrix('#ac-sum', [['Country']].concat(STAGES.map((s) => [s, 'num'])).concat([['Total open', 'num'], ['Close date passed', 'num']]), rowsM);
-    $('#ac-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + ' · notes under each deal come from HubSpot Deal Status and Next step';
+    $('#ac-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + withLocal(sum(rows, (r) => r.amount)) + ' · notes under each deal come from HubSpot Deal Status and Next step';
     list('#ac-tbl', 'active', [
       {k: 'country', label: 'Country', f: countryCell}, {k: 'deal', label: 'Deal', f: nameCell}, {k: 'stage', label: 'Status'},
       {k: 'conv_prob', label: 'Conv. prob.', f: (v) => v ? el('span', 'tag ' + v, v) : el('span', 'm', '—')},
+      {k: 'proposal_sent', label: 'Proposal sent', f: (v) => v ? fdate(v) : el('span', 'm', '—')},
       {k: 'close_date', label: 'Closure date', f: (v, r, td) => { if (v && v < today) td.classList.add('flag'); return fdate(v); }},
-      {k: 'amount', label: 'Value', cls: 'num', num: true, f: money}, {k: 'deal_owner', label: 'Deal owner'}, {k: 'account_owner', label: 'Account owner'},
+      {k: 'headcount', label: 'Headcount', cls: 'num', num: true, f: (v) => v != null ? num(v) : el('span', 'm', '—')},
+      {k: 'subscription', label: 'Subscrip\u00adtion', cls: 'num', num: true, f: dual},
+      {k: 'implementation', label: 'Implemen\u00adtation', cls: 'num', num: true, f: dual},
+      {k: 'year1_total', label: 'Year-1 total', cls: 'num', num: true, f: dual},
+      {k: 'deal_owner', label: 'Deal owner'},
       {k: 'contacts', label: 'Contacts', sort: false, f: people},
       {k: 'last_activity', label: 'Last activity', f: (v, r, td) => { if (!v || v < plusDays(-90)) td.classList.add('flag'); return v ? fdate(v) : 'never'; }}], rows,
-    {open: (r) => openDeal(r.id), widths: ['9%', '14%', '11%', '7%', '9%', '7%', '9%', '9%', '16%', '9%'],
+    {open: (r) => openDeal(r.id), widths: ['7%', '11%', '9%', '6%', '7%', '7%', '6%', '7%', '7%', '7%', '7%', '12%', '7%'],
       after: (r, n) => {
         const parts = [['', r.remarks], ['Next:', r.next_step], ['Why:', r.conv_reason], ['Action:', [r.cta, r.cta_reason].filter(Boolean).join(' — ')]].filter((p) => p[1]);
         const tr = el('tr', 'note-row'), td = el('td', 'notes'); td.colSpan = n;
@@ -455,6 +495,7 @@
 
   // ---------- boot ----------
   readHash(); render();
+  fetch('data/fx.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : null).then((x) => { FX = x; if (D) render(); }).catch(() => {});
   fetch('data/details.json', {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((d) => { D = d; render(); })
     .catch((e) => ['closures', 'active', 'leads'].forEach((t) => $('#tab-' + t).replaceChildren(el('div', 'err', 'Could not load data/details.json (' + e.message + ').'))));

@@ -38,7 +38,13 @@ def exp_active(f):
         cd, la = r["close_date"], r["last_activity"]
         if f.get("country") and r["country"] != f["country"]: continue
         st = f.get("status")
-        if st and not (r["stage"] != "On-Hold" if st == "active" else r["stage"] == st): continue
+        if st:
+            want = set()
+            for x in st.split(","):
+                want |= {"Demo/Developing", "Proposal Sent", "Commercial/Contracting"} if x == "active" else {x}
+            if r["stage"] not in want: continue
+        pp, ps = f.get("proposal"), r.get("proposal_sent")
+        if pp and not ({"none": not ps, "any": bool(ps), "fy27": in_fy(ps, "fy27")}.get(pp, bool(ps) and ps >= plus(-int(pp) if pp.isdigit() else 0))): continue
         pr = f.get("prob")
         if pr and not (not r["conv_prob"] if pr == "none" else r["conv_prob"] == pr): continue
         c = f.get("close")
@@ -91,7 +97,7 @@ def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get
 OPTS = {
     "closures": {"period": list(FY), "year": sorted({r["year"] for r in D["closures"]}), "owner": owners(D["closures"], ["deal_owner"]), "acct": owners(D["closures"], ["account_owner"]),
                  "source": sorted({r["source"] for r in D["closures"] if r["source"]}), "month": sorted({r["month"] for r in D["closures"]})},
-    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold"], "prob": ["High", "Medium", "Low", "none"],
+    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "prob": ["High", "Medium", "Low", "none"],
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "cta", "nocontact", "noamount"]},
     "leads": {"type": ["mql", "sql", "nowmql", "nowsql", "converted"], "period": ["30", "90", "fy27", "fy26"], "owner": owners(D["leads"], ["owner"]),
@@ -99,7 +105,7 @@ OPTS = {
               "month": sorted({d[:7] for r in D["leads"] for d in (r["mql_date"], r["sql_date"]) if d})[-18:]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "Partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "On-Hold", "close": "past"}, {"status": "active", "prob": "Medium", "close": "fy27"}, {"health": "stale", "owner": "Jun de Dios"}],
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "prob": "Medium", "close": "fy27"}, {"health": "stale", "owner": "Jun de Dios"}],
           "leads": [{"type": "mql", "period": "fy27"}, {"type": "sql", "period": "90"}, {"type": "nowmql", "owner": "Soranan Natejan"}, {"type": "mql", "month": "2026-09"}]}
 
 
@@ -136,10 +142,10 @@ async def main():
             for k, v in f.items():
                 if not v: continue
                 pills = await pg.inner_text("#fb-pills")
-                if k != "country" and k != "month" and k != "quarter":
+                if k not in ("country", "month", "quarter", "status"):
                     sel_val = await pg.evaluate("(lbl) => { const s=[...document.querySelectorAll('#fb-controls select')].find(x=>x.getAttribute('aria-label')===lbl); return s ? s.value : null; }",
                                                 {"period": "Financial year" if tab == "closures" else "When", "year": "Calendar year", "owner": "Contact owner" if tab == "leads" else "Deal owner", "acct": "Account owner", "source": "Source",
-                                                 "status": "Status", "prob": "Conversion probability", "close": "Closure date", "health": "Follow-up", "type": "Stage"}[k])
+                                                 "proposal": "Proposal sent", "prob": "Conversion probability", "close": "Closure date", "health": "Follow-up", "type": "Stage"}[k])
                     if sel_val != v: fails.append(f"{tab} {f}: dropdown for {k} shows {sel_val!r}")
                 if "×" not in pills: fails.append(f"{tab} {f}: no filter pill shown")
 
@@ -161,7 +167,7 @@ async def main():
                 opts = await pg.evaluate("""() => [...document.querySelectorAll('#fb-controls select')].map(s => ({lbl: s.getAttribute('aria-label'),
                     opts: [...s.options].map(o => ({v: o.value, t: o.text, d: o.disabled}))}))""")
                 keymap = {"Financial year": "period", "When": "period", "Calendar year": "year", "Deal owner": "owner", "Contact owner": "owner", "Account owner": "acct",
-                          "Source": "source", "Status": "status", "Conversion probability": "prob", "Closure date": "close", "Follow-up": "health", "Stage": "type"}
+                          "Source": "source", "Conversion probability": "prob", "Proposal sent": "proposal", "Closure date": "close", "Follow-up": "health", "Stage": "type"}
                 for sel in opts:
                     k = keymap[sel["lbl"]]
                     for o in sel["opts"]:
@@ -173,6 +179,25 @@ async def main():
                         if claimed != n: fails.append(f"{tab} {base} option '{o['t']}' -> list {n}")
                         if n != len(EXP[tab](f)): fails.append(f"{tab} {f}: list {n} vs expected {len(EXP[tab](f))}")
                         if n == 0 and o["v"] and not o["d"] and base.get(k) != o["v"]: fails.append(f"{tab} {base} option '{o['t']}' is empty but selectable")
+
+        # 1c. status toggles: count on each toggle == list after pressing it; toggles combine
+        for c in COUNTRIES:
+            for start in ["", "On-Hold", "Demo/Developing"]:
+                await view("active", {"country": c, "status": start})
+                for i in range(await pg.locator("#fb-controls .tog").count()):
+                    await view("active", {"country": c, "status": start})
+                    tog = pg.locator("#fb-controls .tog").nth(i)
+                    if await tog.is_disabled(): continue
+                    claimed = int((await tog.locator(".n").inner_text()).replace(",", ""))
+                    name = (await tog.inner_text()).rsplit("\n", 1)[0].strip()
+                    await tog.click(); await pg.wait_for_timeout(40)
+                    h = await pg.evaluate("location.hash"); qs = (h[1:].split("?") + [""])[1]
+                    from urllib.parse import unquote_plus
+                    f = {k: unquote_plus(v) for k, v in (x.split("=", 1) for x in qs.split("&") if x)}
+                    n, rows, _ = await view("active", f); checks += 1
+                    if n != len(EXP["active"](f)): fails.append(f"toggle {name} from {start!r} {c}: list {n} vs expected {len(EXP['active'](f))} ({f})")
+                    only = len(EXP["active"]({"country": c, "status": name}))
+                    if claimed != only: fails.append(f"toggle {name} {c}: shows {claimed}, alone gives {only}")
 
         # 2. chips: count on chip == rows after clicking it (with a filter active)
         for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "On-Hold"}), ("leads", {"type": "mql"})]:

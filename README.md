@@ -13,8 +13,8 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 - Country scorecard (win rate) and a by-owner view
 - Every open SEA deal: filter, search, sort, download CSV, and open the deal in HubSpot
 - Top of funnel (Qualification pipeline) and a data-health check
-- **Closures** tab: every closed-won deal by country, year and month, with account, deal owner, account owner and linked contacts
-- **Active pipeline** tab: every open deal by country with status, conversion probability, closure date, notes (Deal Status remarks, next step, call to action), owners and contacts
+- **Closures** tab: every closed-won deal by country, year and month, with headcount, subscription, implementation, year-1 total (USD and local currency), account, owners and linked contacts
+- **Active pipeline** tab: every open deal by country with status (pick several at once), conversion probability, proposal-sent date, closure date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
 - **MQL & SQL** tab: contacts that reached MQL or SQL by country, monthly trend, conversion, and the contact list
 - Every tab filters by country and downloads as CSV
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
@@ -45,6 +45,10 @@ HubSpot ──(daily GitHub Action, token in repo secret)──> data/sea.json �
 - SEA = HubSpot `region` in "Thailand & Others", Indonesia, Philippines, Malaysia, Singapore; **Sales Pipeline** only.
 - Active = Demo/Developing, Proposal Sent, Commercial/Contracting. On hold = On-Hold. Weighted = value × HubSpot stage probability.
 - Values are HubSpot's company-currency amount (USD). FY27 = 1 Apr 2026 – 31 Mar 2027.
+- Year-1 total = the HubSpot deal amount in USD. Subscription and implementation come from Annual Subscription Fee + Implementation Fee (or Recurring + One-time Amount) when they add up to the total; the detail panel flags splits that don't.
+- Local currency = USD converted at the daily rate in `data/fx.json` (THB, PHP, IDR, MYR, SGD). HubSpot stores almost every SEA deal in USD, so there is no booked local amount to show; the few legacy deals booked in INR show that amount in the detail panel.
+- Proposal sent = the deal's Proposal sent Date field, or the date it entered the Proposal Sent stage when that field is empty.
+- Employee headcount = the deal's Number of Employees (or the headcount in its Deal Status remarks).
 - MQL / SQL = the contact's lifecycle stage history (date entered MQL / SQL), grouped by the contact's Country field.
 - Notes = the deal's "Deal Status" remarks plus Next step. Conversion probability is the owner's own rating in those remarks.
 - `data/sea_overrides.json` lists SEA closed-won deals that HubSpot files under a non-SEA Region (mostly 2022–2023 deals tagged India-North, e.g. AG&P). They are counted under the country given there and tagged "region not SEA" on the page. Fix the Region in HubSpot, then remove the entry.
