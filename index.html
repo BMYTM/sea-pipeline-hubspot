@@ -20,6 +20,15 @@
     <p class="take" id="takeaway"></p>
   </header>
 
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="closures" aria-selected="false">Closures</button>
+    <button role="tab" data-tab="active" aria-selected="false">Active pipeline</button>
+    <button role="tab" data-tab="leads" aria-selected="false">MQL &amp; SQL</button>
+  </nav>
+  <div class="chips" id="chips" hidden></div>
+
+  <div class="pane" id="tab-overview">
   <section class="kpis" id="kpis"></section>
 
   <section class="grid">
@@ -86,10 +95,108 @@
     </div>
   </section>
 
+  </div>
+
+  <!-- ===== Closures ===== -->
+  <div class="pane" id="tab-closures" hidden>
+    <section class="kpis" id="cl-kpis"></section>
+    <section class="grid">
+      <div class="card">
+        <h2>Closures by country and year</h2>
+        <div class="note">Closed-won deals, Sales Pipeline, all time · count and value</div>
+        <div class="tbl-wrap"><table id="cl-year"><thead></thead><tbody></tbody></table></div>
+      </div>
+      <div class="card">
+        <h2>Closures by month</h2>
+        <div class="note">Closed-won value by close month, last 24 months</div>
+        <div class="legend" id="cl-legend"></div>
+        <div class="chart" id="cl-chart"></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Closed-won deals</h2>
+      <div class="note" id="cl-note"></div>
+      <div class="controls">
+        <select id="cl-year-f" aria-label="Year"><option value="">All years</option></select>
+        <select id="cl-owner-f" aria-label="Owner"><option value="">All owners</option></select>
+        <input id="cl-q" type="search" placeholder="Search deal, account or contact" aria-label="Search closures">
+        <button class="btn" type="button" data-csv="closures">Download CSV</button>
+      </div>
+      <div class="tbl-wrap tall"><table id="cl-tbl"><thead><tr>
+        <th>Country</th><th>Year</th><th>Month</th><th>Deal</th><th class="num">Value</th><th>Account</th>
+        <th>Deal owner</th><th>Account owner</th><th>Contacts</th><th>Source</th>
+      </tr></thead><tbody></tbody></table></div>
+    </section>
+  </div>
+
+  <!-- ===== Active pipeline ===== -->
+  <div class="pane" id="tab-active" hidden>
+    <section class="kpis" id="ac-kpis"></section>
+    <section class="card">
+      <h2>Active pipeline by country and status</h2>
+      <div class="note">Open Sales Pipeline deals · count and value per HubSpot stage</div>
+      <div class="tbl-wrap"><table id="ac-sum"><thead></thead><tbody></tbody></table></div>
+    </section>
+    <section class="card">
+      <h2>Active deals</h2>
+      <div class="note" id="ac-note"></div>
+      <div class="controls">
+        <select id="ac-stage-f" aria-label="Status"><option value="">All statuses</option></select>
+        <select id="ac-prob-f" aria-label="Conversion probability"><option value="">Any conversion probability</option><option>High</option><option>Medium</option><option>Low</option><option value="-">Not set</option></select>
+        <select id="ac-owner-f" aria-label="Owner"><option value="">All owners</option></select>
+        <select id="ac-close-f" aria-label="Closure date"><option value="">Any closure date</option><option value="past">Close date passed</option><option value="q">Next 90 days</option><option value="fy">By 31 Mar 2027 (FY27)</option></select>
+        <input id="ac-q" type="search" placeholder="Search deal, account, contact or notes" aria-label="Search active deals">
+        <button class="btn" type="button" data-csv="active">Download CSV</button>
+      </div>
+      <div class="tbl-wrap tall"><table id="ac-tbl" class="wide"><colgroup><col style="width:8%"><col style="width:13%"><col style="width:11%"><col style="width:7%"><col style="width:9%"><col style="width:7%"><col style="width:9%"><col style="width:9%"><col style="width:18%"><col style="width:9%"></colgroup><thead><tr>
+        <th>Country</th><th>Deal</th><th>Status</th><th>Conv. prob.</th><th>Closure date</th><th class="num">Value</th>
+        <th>Deal owner</th><th>Account owner</th><th>Contacts</th><th>Last activity</th>
+      </tr></thead><tbody></tbody></table></div>
+    </section>
+  </div>
+
+  <!-- ===== MQL & SQL ===== -->
+  <div class="pane" id="tab-leads" hidden>
+    <section class="kpis" id="ld-kpis"></section>
+    <section class="stack">
+      <div class="card">
+        <h2>MQL and SQL by country</h2>
+        <div class="note">Contacts that ever reached each lifecycle stage, and where they sit today</div>
+        <div class="tbl-wrap"><table id="ld-sum"><thead><tr>
+          <th>Country</th><th class="num">MQL (ever)</th><th class="num">SQL (ever)</th><th class="num">MQL FY27</th><th class="num">SQL FY27</th>
+          <th class="num">Now MQL</th><th class="num">Now SQL</th><th class="num">MQL → SQL</th>
+        </tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="card">
+        <h2>New MQLs and SQLs by month</h2>
+        <div class="note">Date each contact entered the stage, last 18 months</div>
+        <div class="legend" id="ld-legend"></div>
+        <div class="chart" id="ld-chart"></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>MQL and SQL contacts</h2>
+      <div class="note" id="ld-note"></div>
+      <div class="controls">
+        <select id="ld-type-f" aria-label="Type"><option value="">MQL or SQL</option><option value="mql">Reached MQL</option><option value="sql">Reached SQL</option><option value="nowmql">Currently MQL</option><option value="nowsql">Currently SQL</option></select>
+        <select id="ld-period-f" aria-label="Period"><option value="">Any time</option><option value="90">Last 90 days</option><option value="fy">FY27 (since 1 Apr 2026)</option></select>
+        <select id="ld-owner-f" aria-label="Owner"><option value="">All owners</option></select>
+        <input id="ld-q" type="search" placeholder="Search name, title or company" aria-label="Search contacts">
+        <button class="btn" type="button" data-csv="leads">Download CSV</button>
+      </div>
+      <div class="tbl-wrap tall"><table id="ld-tbl"><thead><tr>
+        <th>Country</th><th>Contact</th><th>Job title</th><th>Company</th><th>Stage now</th><th>MQL date</th><th>SQL date</th>
+        <th>Owner</th><th>Source</th><th class="num">Deals</th><th>Last activity</th>
+      </tr></thead><tbody></tbody></table></div>
+      <p class="foot">MQL/SQL come from the HubSpot contact lifecycle stage, by the contact's Country field. Deal-level MQLs in the Qualification pipeline are on the Overview tab under Top of funnel.</p>
+    </section>
+  </div>
+
   <p class="foot">Values are HubSpot's company-currency amounts (USD). SEA = HubSpot regions "Thailand &amp; Others", Indonesia, Philippines, Malaysia and Singapore, Sales Pipeline only. Closed-lost values are left out of every total because some look like local-currency entries (see Data health). FY27 = 1 Apr 2026 – 31 Mar 2027. Data refreshes daily from HubSpot.</p>
 </main>
 <div class="tip" id="tip"></div>
 <script src="vendor/d3.min.js"></script>
 <script src="app.js"></script>
+<script src="details.js"></script>
 </body>
 </html>

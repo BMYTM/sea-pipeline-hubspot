@@ -1,0 +1,156 @@
+"""One-off: builds data/details.json (and refreshes data/sea.json deal rows) from the
+HubSpot exports pulled on 24 Oct 2026 into raw/. The daily GitHub Action
+(scripts/fetch_hubspot.py) produces the same files straight from the HubSpot API."""
+import json, re, pathlib
+from collections import defaultdict
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+RAW, DATA = ROOT / "raw", ROOT / "data"
+PORTAL = 25298601
+REG = {"Thailand & Others": "Thailand", "Indonesia": "Indonesia", "Philippines": "Philippines", "Malaysia": "Malaysia", "Singapore": "Singapore"}
+OPEN = {"280510157", "280510158", "280510159", "280510160"}
+WON = "280510161"
+OWNERS = {
+ "1401897672": "Boonchoo Malhotra", "29741979": "Jun de Dios", "34133357": "Suntisuk Kulpiya", "1894277595": "Soranan Natejan",
+ "33612211": "Allyssa Ruazol", "1856128718": "Prielle Seandrè Tactacan", "955171236": "Natthaya Areekul", "1107393774": "Reina Manlangit",
+ "848583669": "Anuj Malik", "1714721271": "Arvind Balakrishnan", "533079233": "Nova Sinulingga", "682725058": "Bimo Haryotejo",
+ "553393638": "Marta Gultom", "194032851": "Georgie Antony Chunkath", "33933207": "Sonu Kumar", "34182343": "Akash Kumar",
+ "34182323": "Sonal Yadav", "31558294": "Prerna Taneja", "985326785": "Sakshi Kashyap", "75694492": "Shruti Malhotra",
+ "32832438": "Sammy William Wamalwa", "487550599": "Amiel Sabangan", "333210046": "Sambhav Jain", "192531917": "HONO HR",
+ "193254103": "Ajay Kadian", "29473190": "HONO", "38941506": "Vinay Dua", "193253359": "Mukul Jain",
+}
+
+
+def table(name):
+    c = json.loads((RAW / name).read_text())["results"][0]["content"]
+    lines = c[c.find("Dataset TSV:") + 12:].strip("\n").split("\n")
+    head = [re.search(r"\[([^\]]+)\]\s*$", h).group(1) if "[" in h else h for h in lines[0].split("\t")]
+    # two columns are both named hubspot_owner_id: the first is the record's, the second the company's
+    seen = set(); cols = []
+    for h in head:
+        cols.append(("company_" + h) if h in seen else h); seen.add(h)
+    rows = []
+    for l in lines[1:]:
+        if not l or l.startswith("Showing "): continue
+        cells = l.split("\t")
+        rows.append({k: (None if v in ("Unassigned", "") else v) for k, v in zip(cols, cells)})
+    return rows
+
+
+def stage_id(v):
+    m = re.search(r"\(([^()]+)\)$", v or ""); return m.group(1) if m else v
+
+
+def stage_label(v):
+    return re.sub(r"\s*\([^()]+\)$", "", v or "")
+
+
+def num(v):
+    try: return float(v) if v is not None else None
+    except ValueError: return None
+
+
+def owner(i):
+    return OWNERS.get(i, i) if i else None
+
+
+def parse_status(t):
+    """The team's 'Deal Status' field: Remarks ... 5. Conversion Probability: X Reason: Y 6. Call to Action: Z Reason: W"""
+    if not t: return {}
+    t = re.sub(r"\s+", " ", t).strip()
+    g = lambda p: (re.search(p, t) or [None, None])[1]
+    out = {
+        "remarks": (g(r"Remarks:\s*(.*?)\s*1\. Head Count") or "").strip(),
+        "headcount": (g(r"Head Count:\s*([\d,]*)") or "").strip(", ") or None,
+        "industry": (g(r"Industry:\s*(.*?),\s*3\.") or "").strip() or None,
+        "conv_prob": (g(r"Conversion Probability:\s*(?!Reason)(\w*)") or "").strip() or None,
+        "conv_reason": (g(r"Conversion Probability:\s*(?:(?!Reason)\w+)?\s*Reason:\s*(.*?)\s*6\. Call to Action") or "").strip(" -") or None,
+        "cta": (g(r"Call to Action:\s*(?!Reason)(\w*)") or "").strip() or None,
+        "cta_reason": (g(r"Call to Action:\s*(?:(?!Reason)\w+)?\s*Reason:\s*(.*)$") or "").strip() or None,
+    }
+    if not out["remarks"] and "1. Head Count" not in t: out["remarks"] = t
+    return out
+
+
+def url(kind, i):
+    return f"https://app.hubspot.com/contacts/{PORTAL}/record/{kind}/{i}"
+
+
+def main():
+    deals = table("deals.txt")
+    contacts_by_deal = defaultdict(list)
+    for r in table("deal_contacts.txt"):
+        name = " ".join(x for x in [r.get("firstname"), r.get("lastname")] if x)
+        if not name: continue
+        c = {"name": name, "title": r.get("jobtitle")}
+        if c not in contacts_by_deal[r["hs_object_id"]]: contacts_by_deal[r["hs_object_id"]].append(c)
+
+    closures, active = [], []
+    for d in deals:
+        if d.get("region") not in REG: continue
+        sid = stage_id(d["dealstage"]); st = parse_status(d.get("test"))
+        base = {"id": d["hs_object_id"], "deal": (d.get("dealname") or "").strip(), "country": REG[d["region"]],
+                "amount": num(d.get("amount_in_home_currency")), "close_date": d.get("closedate"), "created": d.get("createdate"),
+                "deal_owner": owner(d.get("hubspot_owner_id")), "company": d.get("name"), "account_owner": owner(d.get("company_hubspot_owner_id")),
+                "source": d.get("new_deal_source"), "contacts": contacts_by_deal.get(d["hs_object_id"], []),
+                "remarks": st.get("remarks") or None, "headcount": st.get("headcount"), "industry": st.get("industry"),
+                "url": url("0-3", d["hs_object_id"])}
+        if sid == WON:
+            cd = d.get("closedate") or ""
+            closures.append(dict(base, year=cd[:4] or None, month=cd[:7] or None))
+        elif sid in OPEN:
+            active.append(dict(base, stage_id=sid, stage=stage_label(d["dealstage"]), probability=num(d.get("hs_deal_stage_probability")),
+                               next_step=d.get("hs_next_step"), last_activity=d.get("notes_last_updated"),
+                               conv_prob=st.get("conv_prob"), conv_reason=st.get("conv_reason"), cta=st.get("cta"), cta_reason=st.get("cta_reason")))
+
+    leads = {}
+    for r in table("contacts.txt") + json.loads((RAW / "contacts_pre2024.json").read_text()):
+        mql, sql = r.get("hs_v2_date_entered_marketingqualifiedlead"), r.get("hs_v2_date_entered_salesqualifiedlead")
+        if not (mql or sql) or r.get("country__hono_") not in REG.values(): continue
+        i = r["hs_object_id"]
+        if i in leads:
+            if not leads[i]["company"] and (r.get("company") or r.get("name")): leads[i]["company"] = r.get("company") or r.get("name")
+            continue
+        leads[i] = {"id": i, "name": " ".join(x for x in [r.get("firstname"), r.get("lastname")] if x) or None,
+                    "title": r.get("jobtitle"), "company": r.get("company") or r.get("name"), "country": r["country__hono_"],
+                    "stage": stage_label(r.get("lifecyclestage")), "lead_status": stage_label(r.get("hs_lead_status")),
+                    "mql_date": mql, "sql_date": sql, "opp_date": r.get("hs_v2_date_entered_opportunity"),
+                    "customer_date": r.get("hs_v2_date_entered_customer"), "owner": owner(r.get("hubspot_owner_id")),
+                    "source": stage_label(r.get("hs_analytics_source")), "created": r.get("createdate"),
+                    "last_activity": r.get("notes_last_updated"), "deals": int(num(r.get("num_associated_deals")) or 0),
+                    "url": url("0-1", i)}
+
+    out = {"generated_at": "2026-10-24T05:00:00Z", "source": "HubSpot (seed snapshot)",
+           "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),
+           "active": sorted(active, key=lambda x: -(x["amount"] or 0)),
+           "leads": sorted(leads.values(), key=lambda x: max(x["mql_date"] or "", x["sql_date"] or ""), reverse=True)}
+    (DATA / "details.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    print("closures", len(closures), "active", len(active), "leads", len(leads),
+          "with contacts", sum(1 for x in closures + active if x["contacts"]))
+
+    # keep the Overview tab on the same snapshot as the new tabs
+    sea = json.loads((DATA / "sea.json").read_text())
+    sea["generated_at"] = out["generated_at"]
+    sea["open_deals"] = [{"id": a["id"], "deal": a["deal"], "stage_id": a["stage_id"], "stage": a["stage"],
+                          "region": next(k for k, v in REG.items() if v == a["country"]), "amount": a["amount"],
+                          "close_date": a["close_date"], "owner": a["deal_owner"] or "Unassigned", "last_contacted": a["last_activity"],
+                          "probability": a["probability"], "url": a["url"]} for a in out["active"]]
+    agg = defaultdict(lambda: [0, 0.0])
+    for a in out["active"]: agg[(a["country"], a["stage_id"])][0] += 1; agg[(a["country"], a["stage_id"])][1] += a["amount"] or 0
+    for c in closures: agg[(c["country"], WON)][0] += 1; agg[(c["country"], WON)][1] += c["amount"] or 0
+    keep = [r for r in sea["pipeline_stage"] if r["stage_id"] not in OPEN | {WON}]
+    inv = {v: k for k, v in REG.items()}
+    labels = {"280510157": "Demo/Developing", "280510158": "Proposal Sent", "280510159": "Commercial/Contracting", "280510160": "On-Hold", WON: "Closed won"}
+    sea["pipeline_stage"] = keep + [{"region": inv[c], "stage_id": s, "stage": labels[s], "count": n, "amount": round(a, 2)} for (c, s), (n, a) in sorted(agg.items())]
+    wq = defaultdict(lambda: [0, 0.0])
+    for c in closures:
+        if (c["close_date"] or "") >= "2025-04-01":
+            y, m = int(c["close_date"][:4]), int(c["close_date"][5:7]); q = f"{y}-{((m - 1) // 3) * 3 + 1:02d}-01"
+            wq[(inv[c["country"]], q)][0] += 1; wq[(inv[c["country"]], q)][1] += c["amount"] or 0
+    sea["won_quarterly"] = [{"region": r, "quarter": q, "count": n, "amount": round(a, 2)} for (r, q), (n, a) in sorted(wq.items())]
+    (DATA / "sea.json").write_text(json.dumps(sea, indent=1, ensure_ascii=False))
+    print("sea.json open deals", len(sea["open_deals"]))
+
+
+if __name__ == "__main__":
+    main()
