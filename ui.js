@@ -43,9 +43,11 @@
       {k: 'year', label: 'Calendar year', dyn: true, opts: () => yearsOf().map((y) => [y, y])},
       {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
-      {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.closures).map((o) => [o, o])}],
+      {k: 'source', label: 'Deal source', dyn: true, opts: () => [['partner', 'Partner'], ['direct', 'Direct (non-partner)']].concat(sourcesOf(D.closures).filter((o) => o !== 'Partner').map((o) => [o, o]))},
+      {k: 'partner', label: 'Partner', dyn: true, opts: () => [...new Set(D.closures.map((r) => r.partner).filter(Boolean))].sort().map((o) => [o, o])}],
     active: [
-      {k: 'prob', label: 'Conversion probability', opts: () => [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low'], ['none', 'Not rated']]},
+      {k: 'source', label: 'Deal source', dyn: true, opts: () => [['partner', 'Partner'], ['direct', 'Direct (non-partner)']].concat(sourcesOf(D.active).filter((o) => o !== 'Partner').map((o) => [o, o]))},
+      {k: 'partner', label: 'Partner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.partner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'close', label: 'Closure date', opts: () => [['past', 'Close date passed'], ['30', 'Next 30 days'], ['90', 'Next 90 days'], ['fy27', 'By 31 Mar 2027'], ['later', 'After Mar 2027'], ['none', 'No close date']]},
       {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
@@ -85,22 +87,22 @@
   function rowsClosures(f = S.f) {
     return D.closures.filter((r) => (!f.country || r.country === f.country) && (!f.year || r.year === f.year) && (!f.period || inFY(r.close_date, f.period)) &&
       (!f.month || r.month === f.month) && (!f.quarter || (r.close_date >= qRange(f.quarter)[0] && r.close_date < qRange(f.quarter)[1])) &&
-      (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) && (!f.source || r.source === f.source) &&
-      match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, ppl(r)));
+      (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) && (!f.source || (f.source === 'partner' ? r.source === 'Partner' : f.source === 'direct' ? r.source !== 'Partner' : r.source === f.source)) && (!f.partner || r.partner === f.partner) &&
+      match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.sub_source, ppl(r)));
   }
   function rowsActive(f = S.f) {
     return D.active.filter((r) => (!f.country || r.country === f.country) &&
       (!f.status || statusList(f.status).includes(r.stage)) &&
       (!f.proposal || (f.proposal === 'none' ? !r.proposal_sent : f.proposal === 'any' ? !!r.proposal_sent :
         f.proposal === 'fy27' ? inFY(r.proposal_sent, 'fy27') : r.proposal_sent && r.proposal_sent >= plusDays(-Number(f.proposal)))) &&
-      (!f.prob || (f.prob === 'none' ? !r.conv_prob : r.conv_prob === f.prob)) &&
+      (!f.source || (f.source === 'partner' ? r.source === 'Partner' : f.source === 'direct' ? r.source !== 'Partner' : r.source === f.source)) && (!f.partner || r.partner === f.partner) &&
       (!f.close || (f.close === 'past' ? r.close_date && r.close_date < today : f.close === 'none' ? !r.close_date :
         f.close === 'fy27' ? r.close_date >= today && r.close_date < '2027-04-01' : f.close === 'later' ? r.close_date >= '2027-04-01' :
         r.close_date >= today && r.close_date <= plusDays(Number(f.close)))) &&
       (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) &&
       (!f.health || (f.health === 'stale' ? (r.last_activity && r.last_activity < plusDays(-90)) : f.health === 'never' ? !r.last_activity :
         f.health === 'cta' ? r.cta === 'Yes' : f.health === 'nocontact' ? !(r.contacts || []).length : !r.amount)) &&
-      match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.remarks, r.next_step, r.conv_reason, ppl(r)));
+      match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.sub_source, r.remarks, r.next_step, r.conv_reason, ppl(r)));
   }
   function rowsLeads(f = S.f) {
     const from = f.period === '30' ? plusDays(-30) : f.period === '90' ? plusDays(-90) : f.period && FY[f.period] ? FY[f.period][0] : '';
@@ -291,6 +293,7 @@
     if (v.length > 2) f.appendChild(el('small', 'm', '+' + (v.length - 2) + ' more'));
     return f;
   };
+  const sourceCell = (v, r) => { if (!v) return el('span', 'm', '—'); const f = document.createDocumentFragment(); f.append(el('span', v === 'Partner' ? 'src partner' : 'src', v)); if (r.sub_source) f.append(el('small', 'loc', r.sub_source)); return f; };
   const countryCell = (v) => { const s = el('span', 'ctry'); const i = el('i', 'dot'); i.style.background = col(v); s.append(i, v || '—'); return s; };
 
   // ---------- drawer ----------
@@ -317,7 +320,6 @@
       const top = el('div', 'dr-top');
       top.append(el('div', 'dr-val', money(r.amount)));
       const lt = localTxt(r.amount, r.country); if (lt) top.append(el('span', 'dr-loc', lt));
-      if (r.conv_prob) top.append(el('span', 'tag ' + r.conv_prob, r.conv_prob + ' conversion'));
       if (!won && r.close_date && r.close_date < today) top.append(el('span', 'tag Low', 'Close date passed'));
       b.appendChild(top);
       if (FX && ccyOf(r.country)) b.appendChild(el('p', 'm fxnote', ccyOf(r.country) + ' converted from USD at ' + FX.as_of + ' rates (1 USD = ' + d3.format(',.2f')(FX.rates[ccyOf(r.country)]) + ' ' + ccyOf(r.country) + ').'));
@@ -327,13 +329,13 @@
         ['Implementation', r.implementation != null ? money(r.implementation) + (localTxt(r.implementation, r.country) ? ' · ' + localTxt(r.implementation, r.country) : '') : null],
         ['Split check', r.split_note], ['Booked in HubSpot as', r.booked_amount != null ? new Intl.NumberFormat('en', {style: 'currency', currency: r.booked_currency, maximumFractionDigits: 0}).format(r.booked_amount) : null],
         ['Proposal sent', r.proposal_sent ? fdate(r.proposal_sent) + (r.proposal_sent_source && r.proposal_sent_source !== 'Proposal sent Date field' ? ' (date it entered Proposal Sent)' : '') : null],
-        ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Source', r.source], ['Employee headcount', r.headcount != null ? num(r.headcount) : null], ['Industry', r.industry],
+        ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Deal source', r.source ? r.source + (r.sub_source ? ' · ' + r.sub_source : '') : null], ['Employee headcount', r.headcount != null ? num(r.headcount) : null], ['Industry', r.industry],
         ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
       section(b, 'Contacts');
       if ((r.contacts || []).length) { const ul = el('ul', 'people'); r.contacts.forEach((p) => { const li = el('li', null, p.name); if (p.title) li.append(el('small', null, ' · ' + p.title)); ul.appendChild(li); }); b.appendChild(ul); }
       else b.appendChild(el('p', 'm', 'No contact linked to this deal in HubSpot.'));
       section(b, 'Notes');
-      const notes = [['Remarks', r.remarks], ['Next step', r.next_step], ['Why this rating', r.conv_reason], ['Call to action', [r.cta, r.cta_reason].filter(Boolean).join(' — ')]].filter((x) => x[1]);
+      const notes = [['Remarks', r.remarks], ['Next step', r.next_step], ['Assessment', r.conv_reason], ['Call to action', [r.cta, r.cta_reason].filter(Boolean).join(' — ')]].filter((x) => x[1]);
       if (notes.length) facts(b, notes); else b.appendChild(el('p', 'm', 'No notes in HubSpot.'));
       const a = el('a', 'btn primary', 'Open in HubSpot ↗'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; b.appendChild(a);
     });
@@ -352,8 +354,8 @@
   // ---------- CSV ----------
   function downloadCsv() {
     const spec = {
-      closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Source'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
-      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['conv_prob', 'Conversion probability'], ['conv_reason', 'Probability reason'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
+      closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
+      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['conv_reason', 'Assessment'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
       leads: [['country', 'Country'], ['name', 'Contact'], ['title', 'Job title'], ['company', 'Company'], ['stage', 'Stage now'], ['mql_date', 'MQL date'], ['sql_date', 'SQL date'], ['owner', 'Owner'], ['source', 'Source'], ['deals', 'Deals'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']]
     }[S.tab];
     const esc = (v) => { if (Array.isArray(v)) v = v.map((p) => p.name + (p.title ? ' (' + p.title + ')' : '')).join('; '); return v == null ? '' : /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v); };
@@ -407,17 +409,17 @@
       {k: 'implementation', label: 'Implemen\u00adtation', cls: 'num', num: true, f: dual},
       {k: 'year1_total', label: 'Year-1 total', cls: 'num', num: true, f: (v, r, td) => { if (v != null && v < 100) { td.classList.add('flag'); const x = el('span', null, money(v) + ' check'); return x; } return dual(v, r, td); }},
       {k: 'company', label: 'Account'}, {k: 'deal_owner', label: 'Deal owner'},
-      {k: 'contacts', label: 'Contacts', sort: false, f: people}, {k: 'source', label: 'Source'}], rows,
+      {k: 'contacts', label: 'Contacts', sort: false, f: people}, {k: 'source', label: 'Deal source', f: sourceCell}], rows,
       {open: (r) => openDeal(r.id), widths: ['8%', '7%', '14%', '7%', '8%', '8%', '8%', '11%', '9%', '13%', '7%']});
   }
 
   // ---------- Active pipeline ----------
   function drawActive() {
     const f = S.f, rows = rowsActive();
-    const scope = rowsActive(Object.assign({}, f, {status: '', close: '', prob: '', health: ''}));
+    const scope = rowsActive(Object.assign({}, f, {status: '', close: '', health: ''}));
     const act = scope.filter((r) => r.stage !== 'On-Hold'), hold = scope.filter((r) => r.stage === 'On-Hold');
     const fyc = scope.filter((r) => r.close_date >= today && r.close_date < '2027-04-01'), past = scope.filter((r) => r.close_date && r.close_date < today);
-    const reset = {status: '', close: '', prob: '', health: ''};
+    const reset = {status: '', close: '', health: ''};
     kpis('#ac-kpis', [
       ['Active (Demo → Contracting)', money(sum(act, (r) => r.amount)), num(act.length) + ' deals' + withLocal(sum(act, (r) => r.amount)), Object.assign({}, reset, {status: 'active'}), statusList(f.status).join() === statusList('active').join() && !f.close],
       ['On hold', money(sum(hold, (r) => r.amount)), num(hold.length) + ' deals' + withLocal(sum(hold, (r) => r.amount)), Object.assign({}, reset, {status: 'On-Hold'}), f.status === 'On-Hold' && !f.close],
@@ -434,7 +436,7 @@
     $('#ac-note').textContent = num(rows.length) + ' deals · ' + money(sum(rows, (r) => r.amount)) + withLocal(sum(rows, (r) => r.amount)) + ' · notes under each deal come from HubSpot Deal Status and Next step';
     list('#ac-tbl', 'active', [
       {k: 'country', label: 'Country', f: countryCell}, {k: 'deal', label: 'Deal', f: nameCell}, {k: 'stage', label: 'Status'},
-      {k: 'conv_prob', label: 'Conv. prob.', f: (v) => v ? el('span', 'tag ' + v, v) : el('span', 'm', '—')},
+      {k: 'source', label: 'Deal source', f: sourceCell},
       {k: 'proposal_sent', label: 'Proposal sent', f: (v) => v ? fdate(v) : el('span', 'm', '—')},
       {k: 'close_date', label: 'Closure date', f: (v, r, td) => { if (v && v < today) td.classList.add('flag'); return fdate(v); }},
       {k: 'headcount', label: 'Headcount', cls: 'num', num: true, f: (v) => v != null ? num(v) : el('span', 'm', '—')},
@@ -446,7 +448,7 @@
       {k: 'last_activity', label: 'Last activity', f: (v, r, td) => { if (!v || v < plusDays(-90)) td.classList.add('flag'); return v ? fdate(v) : 'never'; }}], rows,
     {open: (r) => openDeal(r.id), widths: ['7%', '11%', '9%', '6%', '7%', '7%', '6%', '7%', '7%', '7%', '7%', '12%', '7%'],
       after: (r, n) => {
-        const parts = [['', r.remarks], ['Next:', r.next_step], ['Why:', r.conv_reason], ['Action:', [r.cta, r.cta_reason].filter(Boolean).join(' — ')]].filter((p) => p[1]);
+        const parts = [['', r.remarks], ['Next:', r.next_step], ['Assessment:', r.conv_reason], ['Action:', [r.cta, r.cta_reason].filter(Boolean).join(' — ')]].filter((p) => p[1]);
         const tr = el('tr', 'note-row'), td = el('td', 'notes'); td.colSpan = n;
         if (parts.length) parts.forEach(([l, t]) => { const s = el('span', 'np'); if (l) s.appendChild(el('span', 'lbl', l + ' ')); s.append(t); td.appendChild(s); });
         else td.appendChild(el('span', 'lbl', 'No notes in HubSpot'));

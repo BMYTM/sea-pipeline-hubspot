@@ -27,7 +27,9 @@ def exp_closures(f):
         if f.get("month") and r["month"] != f["month"]: continue
         if f.get("owner") and r["deal_owner"] != f["owner"]: continue
         if f.get("acct") and r["account_owner"] != f["acct"]: continue
-        if f.get("source") and r["source"] != f["source"]: continue
+        sf = f.get("source")
+        if sf and not (r["source"] == "Partner" if sf == "partner" else r["source"] != "Partner" if sf == "direct" else r["source"] == sf): continue
+        if f.get("partner") and r.get("partner") != f["partner"]: continue
         out.append(r)
     return out
 
@@ -45,8 +47,9 @@ def exp_active(f):
             if r["stage"] not in want: continue
         pp, ps = f.get("proposal"), r.get("proposal_sent")
         if pp and not ({"none": not ps, "any": bool(ps), "fy27": in_fy(ps, "fy27")}.get(pp, bool(ps) and ps >= plus(-int(pp) if pp.isdigit() else 0))): continue
-        pr = f.get("prob")
-        if pr and not (not r["conv_prob"] if pr == "none" else r["conv_prob"] == pr): continue
+        sf = f.get("source")
+        if sf and not (r["source"] == "Partner" if sf == "partner" else r["source"] != "Partner" if sf == "direct" else r["source"] == sf): continue
+        if f.get("partner") and r.get("partner") != f["partner"]: continue
         c = f.get("close")
         if c:
             ok = {"past": bool(cd) and cd < TODAY, "none": not cd, "fy27": bool(cd) and TODAY <= cd < "2027-04-01",
@@ -96,16 +99,16 @@ def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get
 
 OPTS = {
     "closures": {"period": list(FY), "year": sorted({r["year"] for r in D["closures"]}), "owner": owners(D["closures"], ["deal_owner"]), "acct": owners(D["closures"], ["account_owner"]),
-                 "source": sorted({r["source"] for r in D["closures"] if r["source"]}), "month": sorted({r["month"] for r in D["closures"]})},
-    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "prob": ["High", "Medium", "Low", "none"],
+                 "source": ["partner", "direct"] + sorted({r["source"] for r in D["closures"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["closures"] if r.get("partner")}), "month": sorted({r["month"] for r in D["closures"]})},
+    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "cta", "nocontact", "noamount"]},
     "leads": {"type": ["mql", "sql", "nowmql", "nowsql", "converted"], "period": ["30", "90", "fy27", "fy26"], "owner": owners(D["leads"], ["owner"]),
               "source": sorted({r["source"] for r in D["leads"] if r["source"]}),
               "month": sorted({d[:7] for r in D["leads"] for d in (r["mql_date"], r["sql_date"]) if d})[-18:]},
 }
-COMBOS = {"closures": [{"period": "fy26", "source": "Partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "prob": "Medium", "close": "fy27"}, {"health": "stale", "owner": "Jun de Dios"}],
+COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}],
           "leads": [{"type": "mql", "period": "fy27"}, {"type": "sql", "period": "90"}, {"type": "nowmql", "owner": "Soranan Natejan"}, {"type": "mql", "month": "2026-09"}]}
 
 
@@ -144,8 +147,8 @@ async def main():
                 pills = await pg.inner_text("#fb-pills")
                 if k not in ("country", "month", "quarter", "status"):
                     sel_val = await pg.evaluate("(lbl) => { const s=[...document.querySelectorAll('#fb-controls select')].find(x=>x.getAttribute('aria-label')===lbl); return s ? s.value : null; }",
-                                                {"period": "Financial year" if tab == "closures" else "When", "year": "Calendar year", "owner": "Contact owner" if tab == "leads" else "Deal owner", "acct": "Account owner", "source": "Source",
-                                                 "proposal": "Proposal sent", "prob": "Conversion probability", "close": "Closure date", "health": "Follow-up", "type": "Stage"}[k])
+                                                {"period": "Financial year" if tab == "closures" else "When", "year": "Calendar year", "owner": "Contact owner" if tab == "leads" else "Deal owner", "acct": "Account owner", "source": "Source" if tab == "leads" else "Deal source", "partner": "Partner",
+                                                 "proposal": "Proposal sent", "close": "Closure date", "health": "Follow-up", "type": "Stage"}[k])
                     if sel_val != v: fails.append(f"{tab} {f}: dropdown for {k} shows {sel_val!r}")
                 if "×" not in pills: fails.append(f"{tab} {f}: no filter pill shown")
 
@@ -167,7 +170,7 @@ async def main():
                 opts = await pg.evaluate("""() => [...document.querySelectorAll('#fb-controls select')].map(s => ({lbl: s.getAttribute('aria-label'),
                     opts: [...s.options].map(o => ({v: o.value, t: o.text, d: o.disabled}))}))""")
                 keymap = {"Financial year": "period", "When": "period", "Calendar year": "year", "Deal owner": "owner", "Contact owner": "owner", "Account owner": "acct",
-                          "Source": "source", "Conversion probability": "prob", "Proposal sent": "proposal", "Closure date": "close", "Follow-up": "health", "Stage": "type"}
+                          "Source": "source", "Deal source": "source", "Partner": "partner", "Proposal sent": "proposal", "Closure date": "close", "Follow-up": "health", "Stage": "type"}
                 for sel in opts:
                     k = keymap[sel["lbl"]]
                     for o in sel["opts"]:

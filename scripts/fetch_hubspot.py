@@ -7,7 +7,7 @@ written to the repo or to the site. Standard library only, so the Action needs n
 """
 import json, os, re, sys, time, pathlib, urllib.request, urllib.error
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from money_fields import money_fields, MONEY_PROPS, fix_all
+from money_fields import money_fields, MONEY_PROPS, fix_all, source_fields
 from collections import defaultdict
 from datetime import datetime, timezone
 
@@ -199,6 +199,7 @@ def main():
                 "source": p.get("new_deal_source"), "contacts": people, "remarks": st.get("remarks") or None,
                 "headcount": st.get("headcount"), "industry": st.get("industry"), "url": link("0-3", i)}
         base.update(money_fields(p, base["amount"], st.get("headcount")))
+        base.update(source_fields(p))
         if s == WON:
             cd = base["close_date"] or ""
             closures.append(dict(base, year=cd[:4] or None, month=cd[:7] or None, **({"region_note": region_note[i]} if i in region_note else {})))

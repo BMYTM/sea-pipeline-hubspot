@@ -140,6 +140,16 @@ def main():
             if k.endswith("_iso"): money[pr["hs_object_id"]][k[:-4]] = v
     for row in closures + active:
         row.update(money_fields(money.get(row["id"], {}), row["amount"], row.get("headcount")))
+    from money_fields import source_fields
+    srcj = json.loads((RAW / "sources.txt").read_text())
+    srcs = {}
+    for r in srcj["results"]:
+        if not r.get("content", "").startswith("{"): continue
+        pr = json.loads(r["content"])["properties"]
+        srcs[pr["hs_object_id"]] = pr
+    for row in closures + active:
+        sp = srcs.get(row["id"]) or {"new_deal_source": row.get("source")}
+        row.update(source_fields(sp))
 
     # a deal linked to two companies comes back as two rows: keep one
     def dedupe(rows):

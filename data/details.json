@@ -32,7 +32,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-12-08",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "205288072422",
@@ -68,7 +70,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-12-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Jingo Fermin",
+   "partner": "Jingo Fermin"
   },
   {
    "id": "368986032325",
@@ -100,7 +104,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-12-01",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "320947549392",
@@ -132,7 +138,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-10-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "16379514562",
@@ -164,7 +172,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-09-26",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "252393171178",
@@ -196,7 +206,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "275627029734",
@@ -228,7 +240,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-09-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "306935125184",
@@ -240,7 +254,7 @@
    "deal_owner": "Natthaya Areekul",
    "company": "Thonburi Group",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Phairat Petcharatphaisan",
@@ -260,7 +274,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "15556360902",
@@ -292,7 +308,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-08-22",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sunil Narang",
+   "partner": "Sunil Narang"
   },
   {
    "id": "147539004622",
@@ -319,7 +337,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-03-06",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sunil Narang",
+   "partner": "Sunil Narang"
   },
   {
    "id": "15556281337",
@@ -351,7 +371,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-07-25",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sunil Narang",
+   "partner": "Sunil Narang"
   },
   {
    "id": "242673491163",
@@ -383,7 +405,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-07-17",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "193938140397",
@@ -395,7 +419,7 @@
    "deal_owner": "Natthaya Areekul",
    "company": "Remax International Inc.",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Harry Tan",
@@ -415,7 +439,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "10463855043",
@@ -427,7 +453,7 @@
    "deal_owner": "Nova Sinulingga",
    "company": "G4S",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Niky Sujudi",
@@ -447,7 +473,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-04-23",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "15903832256",
@@ -479,7 +507,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-12-27",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "51507301621",
@@ -511,7 +541,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-01-13",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "16547209197",
@@ -543,7 +575,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-09-29",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Integre",
+   "partner": "Integre"
   },
   {
    "id": "15903832804",
@@ -575,7 +609,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-09-12",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "11994935748",
@@ -587,7 +623,7 @@
    "deal_owner": "Nova Sinulingga",
    "company": "Triveni Engineering & Industries Limited",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Dina Murtiningrum",
@@ -607,7 +643,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-09-19",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "14534411223",
@@ -619,7 +657,7 @@
    "deal_owner": "Natthaya Areekul",
    "company": "PSD Construction 2011",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Mallika Ploymaklum",
@@ -639,7 +677,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-09-23",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "15006161387",
@@ -651,7 +691,7 @@
    "deal_owner": "Natthaya Areekul",
    "company": "Federal Electric Corp.",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Suwannee",
@@ -671,7 +711,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-07-25",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "12053443059",
@@ -703,7 +745,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-05-20",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Anuj Malik",
+   "partner": "Anuj Malik"
   },
   {
    "id": "10454330568",
@@ -715,7 +759,7 @@
    "deal_owner": "Boonchoo Malhotra",
    "company": "Thai Reinsurance Public Company Limited",
    "account_owner": "Boonchoo Malhotra",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Kanpanut Phuttharaksa",
@@ -755,7 +799,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "11658044392",
@@ -787,7 +833,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-03-28",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "7008906475",
@@ -819,7 +867,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "8548783062",
@@ -859,7 +909,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Direct",
+   "partner": null
   },
   {
    "id": "9185986552",
@@ -895,7 +947,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-11-21",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Integre",
+   "partner": "Integre"
   },
   {
    "id": "7274568152",
@@ -922,7 +976,9 @@
    "booked_currency": "INR",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "7476199668",
@@ -954,7 +1010,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "6855461323",
@@ -990,7 +1048,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Website Direct",
+   "partner": null
   },
   {
    "id": "7293114850",
@@ -1022,7 +1082,9 @@
    "booked_currency": "IDR",
    "booked_amount": 500000000.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Anuj Malik",
+   "partner": "Anuj Malik"
   },
   {
    "id": "6930423249",
@@ -1054,7 +1116,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "7086527725",
@@ -1065,7 +1129,7 @@
    "deal_owner": "Sumit Sabharwal",
    "company": "LF Logistics Thailand",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "industry": null,
    "contacts": [
     {
@@ -1087,7 +1151,9 @@
    "booked_currency": "INR",
    "booked_amount": 403400.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "7492992461",
@@ -1098,7 +1164,7 @@
    "deal_owner": "Anshu Bali",
    "company": "Indorama Polymers Public Company Limited",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "industry": "Industrial and Manufacturing",
    "contacts": [
     {
@@ -1120,7 +1186,9 @@
    "booked_currency": "INR",
    "booked_amount": 239590.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "6347482069",
@@ -1152,7 +1220,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "6500894404",
@@ -1188,7 +1258,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "6562678998",
@@ -1221,7 +1293,9 @@
    "booked_currency": "INR",
    "booked_amount": 430000.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "4427906798",
@@ -1262,7 +1336,9 @@
    "booked_currency": "INR",
    "booked_amount": 12000000.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "4155854806",
@@ -1315,7 +1391,9 @@
    "booked_currency": "INR",
    "booked_amount": 3200000.0,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   }
  ],
  "active": [
@@ -1356,7 +1434,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-05-02",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "14900636152",
@@ -1368,7 +1448,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Bank of the Philippine Islands (BPI)",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "El Ferdinand L. Fano",
@@ -1395,7 +1475,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "216255209695",
@@ -1434,7 +1516,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-09-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "496653097202",
@@ -1446,7 +1530,7 @@
    "deal_owner": "Jun de Dios",
    "company": "inspiro",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Ivan Cequena",
@@ -1473,7 +1557,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Customer Refferal",
+   "partner": null
   },
   {
    "id": "515111097585",
@@ -1485,7 +1571,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Philippine Transmarine Carriers, Inc.",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Julio Rivero",
@@ -1512,7 +1598,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "8213541081",
@@ -1524,7 +1612,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT. Mega Central Finance",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Dyah Paramita",
@@ -1551,7 +1639,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "267197143227",
@@ -1590,7 +1680,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Website Direct",
+   "partner": null
   },
   {
    "id": "529589966018",
@@ -1629,7 +1721,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "112816249045",
@@ -1668,7 +1762,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-01-28",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sunil Narang",
+   "partner": "Sunil Narang"
   },
   {
    "id": "427315168501",
@@ -1707,7 +1803,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-01-13",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "15487249117",
@@ -1746,7 +1844,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-09-24",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "432363985137",
@@ -1785,7 +1885,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Email Outreach",
+   "partner": null
   },
   {
    "id": "511204612323",
@@ -1824,7 +1926,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-21",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "515113098451",
@@ -1863,7 +1967,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Email Outreach",
+   "partner": null
   },
   {
    "id": "258180625649",
@@ -1906,7 +2012,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "501831430334",
@@ -1945,7 +2053,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Website Organic",
+   "partner": null
   },
   {
    "id": "511204612302",
@@ -1984,7 +2094,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "129537318081",
@@ -1996,7 +2108,7 @@
    "deal_owner": "Suntisuk Kulpiya",
    "company": "Double A (1991) Public Company Limited",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Phatcharin",
@@ -2023,7 +2135,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "339992582371",
@@ -2062,7 +2176,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Remax International",
+   "partner": "Remax International"
   },
   {
    "id": "47123630325",
@@ -2074,7 +2190,7 @@
    "deal_owner": "Suntisuk Kulpiya",
    "company": "Restaurants Development Company Limited",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Pisit Sittichocktrakul",
@@ -2101,7 +2217,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-12-27",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "127892441278",
@@ -2140,7 +2258,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-02-21",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "CTG+ Consulting",
+   "partner": "CTG+ Consulting"
   },
   {
    "id": "413524599027",
@@ -2179,7 +2299,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "502402814191",
@@ -2218,7 +2340,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "472986056894",
@@ -2257,7 +2381,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-22",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "G-Able Group",
+   "partner": "G-Able Group"
   },
   {
    "id": "6777413058",
@@ -2269,7 +2395,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT. Tunas Ridean Tbk . (Tunas Group)",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Feby Silaen",
@@ -2304,7 +2430,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-03-12",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "116068228296",
@@ -2343,7 +2471,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "500640783600",
@@ -2382,7 +2512,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-07-01",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "512459995376",
@@ -2421,7 +2553,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "527356129501",
@@ -2433,7 +2567,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Security Bank Corporation",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Maria Eunice Fajardo",
@@ -2460,7 +2594,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "286017173691",
@@ -2499,7 +2635,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-08-28",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "502454590697",
@@ -2538,7 +2676,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "291510272192",
@@ -2572,7 +2712,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "9301752250",
@@ -2584,7 +2726,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Tripatra",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Hellen Isabel",
@@ -2619,7 +2761,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-02-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "379729670388",
@@ -2631,7 +2775,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Cognizant",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Joey Marques",
@@ -2658,7 +2802,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-04-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "515111037159",
@@ -2697,7 +2843,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Jingo Fermin",
+   "partner": "Jingo Fermin"
   },
   {
    "id": "193935600873",
@@ -2736,7 +2884,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "ABP",
+   "partner": "ABP"
   },
   {
    "id": "509448217802",
@@ -2775,7 +2925,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Jingo Fermin",
+   "partner": "Jingo Fermin"
   },
   {
    "id": "322791746798",
@@ -2818,7 +2970,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "LinkedIn Outreach",
+   "partner": null
   },
   {
    "id": "499826487512",
@@ -2830,7 +2984,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Mitra Jaya Group",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "R Srikanth",
@@ -2857,7 +3011,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Customer Refferal",
+   "partner": null
   },
   {
    "id": "60864294079",
@@ -2896,7 +3052,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-12-03",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "403846554863",
@@ -2908,7 +3066,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT Dua Delapan Resources",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Orlando Sinaga",
@@ -2939,7 +3097,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-12-24",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "508099332323",
@@ -2951,7 +3111,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Asia Link Finance Corporation",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Apples Mangubat",
@@ -2982,7 +3142,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-06-25",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "21071258827",
@@ -3021,7 +3183,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "ABP",
+   "partner": "ABP"
   },
   {
    "id": "499552206030",
@@ -3033,7 +3197,7 @@
    "deal_owner": "Jun de Dios",
    "company": "MAKA (Makna Angan Karya Andanu)",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Siti Cut Balkis Putri",
@@ -3060,7 +3224,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "135770848467",
@@ -3099,7 +3265,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "276560500965",
@@ -3142,7 +3310,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "126359758029",
@@ -3181,7 +3351,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-03-07",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "ABP",
+   "partner": "ABP"
   },
   {
    "id": "116068228306",
@@ -3220,7 +3392,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "174721274089",
@@ -3259,7 +3433,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-09-08",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "57476230342",
@@ -3298,7 +3474,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Email Outreach",
+   "partner": null
   },
   {
    "id": "453127862504",
@@ -3310,7 +3488,7 @@
    "deal_owner": "Jun de Dios",
    "company": "M.O.S.E.S ((Manpower Outsourcing Systems for Excellent Service)",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Gabby Barretto",
@@ -3337,7 +3515,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "361874262218",
@@ -3376,7 +3556,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-18",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "295427044579",
@@ -3415,7 +3597,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "523343584494",
@@ -3454,7 +3638,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "508879036615",
@@ -3493,7 +3679,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-21",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "526802138353",
@@ -3532,7 +3720,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "500196369598",
@@ -3571,7 +3761,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "351130684663",
@@ -3583,7 +3775,7 @@
    "deal_owner": "Jun de Dios",
    "company": "NutriAsia",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Jaymar Mata",
@@ -3610,7 +3802,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "526799803625",
@@ -3649,7 +3843,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "187781578939",
@@ -3661,7 +3857,7 @@
    "deal_owner": "Suntisuk Kulpiya",
    "company": "LEARN Corporation",
    "account_owner": "Suntisuk Kulpiya",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Thaiyathorn Suebin",
@@ -3688,7 +3884,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-04-29",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "193935600872",
@@ -3727,7 +3925,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-04-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "ABP",
+   "partner": "ABP"
   },
   {
    "id": "6829809341",
@@ -3766,7 +3966,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "349110390001",
@@ -3805,7 +4007,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-10-30",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "G-Able Group",
+   "partner": "G-Able Group"
   },
   {
    "id": "14806106567",
@@ -3844,7 +4048,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": null,
+   "partner": null
   },
   {
    "id": "216340267230",
@@ -3883,7 +4089,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-06-26",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "GinSight Technology, TH",
+   "partner": "GinSight Technology, TH"
   },
   {
    "id": "253765531860",
@@ -3922,7 +4130,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-09-08",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Organic",
+   "partner": null
   },
   {
    "id": "420946178244",
@@ -3961,7 +4171,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-03-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "335777782984",
@@ -4000,7 +4212,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "G-Able Group",
+   "partner": "G-Able Group"
   },
   {
    "id": "15184709348",
@@ -4047,7 +4261,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-07-29",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Direct",
+   "partner": null
   },
   {
    "id": "301579200725",
@@ -4086,7 +4302,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-10-06",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "499553621196",
@@ -4125,7 +4343,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "473244653777",
@@ -4164,7 +4384,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-02-19",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Sales Outreach",
+   "partner": null
   },
   {
    "id": "416188364988",
@@ -4203,7 +4425,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-01-13",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Organic",
+   "partner": null
   },
   {
    "id": "7766005467",
@@ -4215,7 +4439,7 @@
    "deal_owner": "Jun de Dios",
    "company": "MPI Group",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Dedi Iskandar",
@@ -4246,7 +4470,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-13",
-   "proposal_sent_source": "Proposal sent Date field"
+   "proposal_sent_source": "Proposal sent Date field",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "7896846064",
@@ -4285,7 +4511,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Direct",
+   "partner": null
   },
   {
    "id": "351254128830",
@@ -4297,7 +4525,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Yazaki Corporation",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Mico Torres",
@@ -4324,7 +4552,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "10474922962",
@@ -4363,7 +4593,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-01-17",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "12941865974",
@@ -4375,7 +4607,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Badan Eksekutif Mahasiswa FTUI",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Daru W. Kusumo",
@@ -4402,7 +4634,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "505742381258",
@@ -4441,7 +4675,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "513634997475",
@@ -4480,7 +4716,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "515193189573",
@@ -4492,7 +4730,7 @@
    "deal_owner": "Jun de Dios",
    "company": "La Laiterie Du Berger",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Peter Garbes, Jr.",
@@ -4519,7 +4757,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "21821524182",
@@ -4558,7 +4798,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-10-08",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "499153227970",
@@ -4601,7 +4843,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "240815360208",
@@ -4613,7 +4857,7 @@
    "deal_owner": "Suntisuk Kulpiya",
    "company": null,
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Third Domingo",
@@ -4640,7 +4884,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-08-20",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "502011290855",
@@ -4683,7 +4929,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-06-17",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "10353093575",
@@ -4695,7 +4943,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Pattaya Modus Beachfront Resort",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Ayu Yanthika",
@@ -4722,7 +4970,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-01-15",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "496652367053",
@@ -4761,7 +5011,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   },
   {
    "id": "13273431268",
@@ -4773,7 +5025,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT Pos Indonesia (Persero)",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Paul Hendrikus",
@@ -4800,7 +5052,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "129173185755",
@@ -4839,7 +5093,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-03-05",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "LinkedIn Outreach",
+   "partner": null
   },
   {
    "id": "6721684977",
@@ -4851,7 +5107,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT Sarana Multigriya Finansial (Persero)",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Bayu Priyandika",
@@ -4878,7 +5134,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "405250335942",
@@ -4912,7 +5170,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-12-24",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Website Organic",
+   "partner": null
   },
   {
    "id": "10739612118",
@@ -4924,7 +5184,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Pattaya Modus Beachfront Resort",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Nanik Hermawati",
@@ -4951,7 +5211,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-02-13",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "126689552596",
@@ -4990,7 +5252,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2025-02-18",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "LinkedIn Outreach",
+   "partner": null
   },
   {
    "id": "21275029723",
@@ -5002,7 +5266,7 @@
    "deal_owner": "Jun de Dios",
    "company": "KLAAI Jasa Terintegrasi",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Hilma Nurhilma",
@@ -5029,7 +5293,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-11-05",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "517313274045",
@@ -5068,7 +5334,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "519366681792",
@@ -5107,7 +5375,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Mukul Jain",
+   "partner": null
   },
   {
    "id": "512054574282",
@@ -5146,7 +5416,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-22",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "9353324753",
@@ -5158,7 +5430,7 @@
    "deal_owner": "Jun de Dios",
    "company": "L'Oréal",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Bayu Winarko",
@@ -5185,7 +5457,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "14534873577",
@@ -5197,7 +5471,7 @@
    "deal_owner": "Jun de Dios",
    "company": "Octal Technical Solutions",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Lelly Puspitasari",
@@ -5224,7 +5498,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "493651891403",
@@ -5263,7 +5539,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "LinkedIn Outreach",
+   "partner": null
   },
   {
    "id": "10679387097",
@@ -5275,7 +5553,7 @@
    "deal_owner": "Jun de Dios",
    "company": "PT Sreeya Sewu Indonesia Tbk",
    "account_owner": "Jun de Dios",
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Monica Puspita",
@@ -5302,7 +5580,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2024-02-15",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Internal Refferal",
+   "partner": null
   },
   {
    "id": "502452980924",
@@ -5341,7 +5621,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage"
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "sub_source": "Cold-Call",
+   "partner": null
   },
   {
    "id": "334969359605",
@@ -5380,7 +5662,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Ramssol",
+   "partner": "Ramssol"
   },
   {
    "id": "486351587557",
@@ -5419,7 +5703,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Cold Call",
+   "partner": null
   },
   {
    "id": "15464612560",
@@ -5462,7 +5748,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "ABP",
+   "partner": "ABP"
   },
   {
    "id": "22012789185",
@@ -5474,7 +5762,7 @@
    "deal_owner": "Prielle Seandrè Tactacan",
    "company": "Metrobank Card Corporation",
    "account_owner": null,
-   "source": "Others/Referrals (Other)",
+   "source": "Others/Referrals",
    "contacts": [
     {
      "name": "Carol Arjonillo",
@@ -5509,7 +5797,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Self Refferal",
+   "partner": null
   },
   {
    "id": "15599173102",
@@ -5548,7 +5838,9 @@
    "booked_currency": "USD",
    "booked_amount": null,
    "proposal_sent": null,
-   "proposal_sent_source": null
+   "proposal_sent_source": null,
+   "sub_source": "Event",
+   "partner": null
   }
  ],
  "leads": [

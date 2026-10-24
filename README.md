@@ -14,7 +14,7 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 - Every open SEA deal: filter, search, sort, download CSV, and open the deal in HubSpot
 - Top of funnel (Qualification pipeline) and a data-health check
 - **Closures** tab: every closed-won deal by country, year and month, with headcount, subscription, implementation, year-1 total (USD and local currency), account, owners and linked contacts
-- **Active pipeline** tab: every open deal by country with status (pick several at once), conversion probability, proposal-sent date, closure date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
+- **Active pipeline** tab: every open deal by country with status (pick several at once), deal source (Partner and partner name, or the direct source), proposal-sent date, closure date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
 - **MQL & SQL** tab: contacts that reached MQL or SQL by country, monthly trend, conversion, and the contact list
 - Every tab filters by country and downloads as CSV
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
@@ -50,7 +50,8 @@ HubSpot ──(daily GitHub Action, token in repo secret)──> data/sea.json �
 - Proposal sent = the deal's Proposal sent Date field, or the date it entered the Proposal Sent stage when that field is empty.
 - Employee headcount = the deal's Number of Employees (or the headcount in its Deal Status remarks).
 - MQL / SQL = the contact's lifecycle stage history (date entered MQL / SQL), grouped by the contact's Country field.
-- Notes = the deal's "Deal Status" remarks plus Next step. Conversion probability is the owner's own rating in those remarks.
+- Notes = the deal's "Deal Status" remarks plus Next step. 
+- Deal source = HubSpot Deal Source; the name under it is the Deal Sub-source (the partner's name for Partner deals). The Deal source filter has Partner, Direct (non-partner) and each direct source; the Partner filter picks one partner.
 - `data/sea_overrides.json` lists SEA closed-won deals that HubSpot files under a non-SEA Region (mostly 2022–2023 deals tagged India-North, e.g. AG&P). They are counted under the country given there and tagged "region not SEA" on the page. Fix the Region in HubSpot, then remove the entry.
 - Closed-lost values are left out of every total: some Thailand and Philippines lost deals look like local-currency entries.
 

@@ -182,3 +182,4 @@ td small.loc{display:block;color:var(--muted);font-size:11px;white-space:nowrap}
 #cl-tbl td{overflow-wrap:break-word}
 #ac-tbl th,#cl-tbl th{white-space:normal;vertical-align:bottom;line-height:1.25}
 #ac-tbl{min-width:1320px}
+.src.partner{color:var(--c3);font-weight:500}

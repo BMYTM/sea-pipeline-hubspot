@@ -1,7 +1,18 @@
 """Shared logic: headcount, subscription / implementation split, year-1 total, booked currency, proposal sent date."""
 from datetime import datetime, timezone
 
-MONEY_PROPS = ["amount", "deal_currency_code", "hs_exchange_rate", "annual_subscription_fee", "implementation_fee",
+SOURCE_LABEL = {"Other": "Others/Referrals", "Others/Referrals (Other)": "Others/Referrals"}
+
+
+def source_fields(p):
+    src = p.get("new_deal_source")
+    src = SOURCE_LABEL.get(src, src) if src else None
+    sub = p.get("new_deal_subsource") or p.get("internal_reference__sub_sources") or None
+    if sub and "@" in sub: sub = None  # email-valued options are not partner names
+    return {"source": src, "sub_source": sub, "partner": sub if src == "Partner" else None}
+
+
+MONEY_PROPS = ["new_deal_subsource", "internal_reference__sub_sources", "amount", "deal_currency_code", "hs_exchange_rate", "annual_subscription_fee", "implementation_fee",
                "recurring_amount", "onetime_amount", "number_of_employees", "proposal_sent_date", "hs_v2_date_entered_280510158"]
 
 
