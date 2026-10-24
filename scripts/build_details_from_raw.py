@@ -153,7 +153,9 @@ def main():
     closures, active = fix_all(closures), fix_all(active)
     leads = {k: fix_all(v) for k, v in leads.items()}
 
-    out = {"generated_at": "2026-10-24T05:00:00Z", "source": "HubSpot (seed snapshot)",
+    from datetime import datetime, timezone
+    pulled = datetime.fromtimestamp((RAW / "deals.txt").stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    out = {"generated_at": pulled, "source": "HubSpot (manual pull)",
            "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),
            "active": sorted(active, key=lambda x: -(x["amount"] or 0)),
            "leads": sorted(leads.values(), key=lambda x: max(x["mql_date"] or "", x["sql_date"] or ""), reverse=True)}
@@ -172,6 +174,22 @@ def main():
     for a in out["active"]: agg[(a["country"], a["stage_id"])][0] += 1; agg[(a["country"], a["stage_id"])][1] += a["amount"] or 0
     for c in closures: agg[(c["country"], WON)][0] += 1; agg[(c["country"], WON)][1] += c["amount"] or 0
     keep = [r for r in sea["pipeline_stage"] if r["stage_id"] not in OPEN | {WON}]
+    # closed-lost / failed-assessment rows and the Qualification-pipeline funnel, when a fresh pull exists
+    if (RAW / "lost_qual.txt").exists():
+        lq, seen_ = [], set()
+        for r in table("lost_qual.txt"):
+            if r["hs_object_id"] in seen_ or r.get("region") not in REG: continue
+            seen_.add(r["hs_object_id"]); lq.append(r)
+        la = defaultdict(lambda: [0, 0.0]); qa = defaultdict(int)
+        for r in lq:
+            sid = stage_id(r["dealstage"])
+            if sid in ("280510162", "286129884"):
+                la[(r["region"], sid)][0] += 1; la[(r["region"], sid)][1] += num(r.get("amount_in_home_currency")) or 0
+            else:
+                qa[(r["region"], stage_label(r["dealstage"]))] += 1
+        lbl = {"280510162": "Closed lost", "286129884": "Failed Assessment"}
+        keep = [{"region": rg, "stage_id": sid, "stage": lbl[sid], "count": n, "amount": round(a, 2)} for (rg, sid), (n, a) in sorted(la.items())]
+        sea["qual_stage"] = [{"region": rg, "stage": st, "count": n} for (rg, st), n in sorted(qa.items())]
     inv = {v: k for k, v in REG.items()}
     labels = {"280510157": "Demo/Developing", "280510158": "Proposal Sent", "280510159": "Commercial/Contracting", "280510160": "On-Hold", WON: "Closed won"}
     sea["pipeline_stage"] = keep + [{"region": inv[c], "stage_id": s, "stage": labels[s], "count": n, "amount": round(a, 2)} for (c, s), (n, a) in sorted(agg.items())]

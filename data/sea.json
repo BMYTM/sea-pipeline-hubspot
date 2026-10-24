@@ -1,23 +1,9 @@
 {
- "generated_at": "2026-10-24T05:00:00Z",
+ "generated_at": "2026-10-24T07:59:04Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
  "pipeline_stage": [
-  {
-   "region": "Thailand & Others",
-   "stage_id": "280510162",
-   "stage": "Closed lost",
-   "count": 115,
-   "amount": 109331113
-  },
-  {
-   "region": "Thailand & Others",
-   "stage_id": "286129884",
-   "stage": "Failed Assessment",
-   "count": 4,
-   "amount": 673520
-  },
   {
    "region": "Indonesia",
    "stage_id": "280510162",
@@ -33,25 +19,39 @@
    "amount": 77650.56
   },
   {
+   "region": "Malaysia",
+   "stage_id": "280510162",
+   "stage": "Closed lost",
+   "count": 5,
+   "amount": 513182.0
+  },
+  {
    "region": "Philippines",
    "stage_id": "280510162",
    "stage": "Closed lost",
-   "count": 51,
-   "amount": 119870503.88
+   "count": 52,
+   "amount": 119984059.88
   },
   {
    "region": "Philippines",
    "stage_id": "286129884",
    "stage": "Failed Assessment",
    "count": 11,
-   "amount": 9400
+   "amount": 9400.0
   },
   {
-   "region": "Malaysia",
+   "region": "Thailand & Others",
    "stage_id": "280510162",
    "stage": "Closed lost",
-   "count": 5,
-   "amount": 513182
+   "count": 115,
+   "amount": 109331113.0
+  },
+  {
+   "region": "Thailand & Others",
+   "stage_id": "286129884",
+   "stage": "Failed Assessment",
+   "count": 4,
+   "amount": 673520.0
   },
   {
    "region": "Indonesia",
@@ -113,8 +113,8 @@
    "region": "Philippines",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 15,
-   "amount": 1718156.0
+   "count": 12,
+   "amount": 1598156.0
   },
   {
    "region": "Philippines",
@@ -237,9 +237,69 @@
  ],
  "qual_stage": [
   {
-   "region": "Thailand & Others",
+   "region": "Indonesia",
+   "stage": "Disqualified",
+   "count": 10
+  },
+  {
+   "region": "Indonesia",
    "stage": "Engaged",
-   "count": 16
+   "count": 6
+  },
+  {
+   "region": "Indonesia",
+   "stage": "In Progress",
+   "count": 4
+  },
+  {
+   "region": "Indonesia",
+   "stage": "Marketing Nurture",
+   "count": 2
+  },
+  {
+   "region": "Indonesia",
+   "stage": "New Lead",
+   "count": 15
+  },
+  {
+   "region": "Indonesia",
+   "stage": "No Response",
+   "count": 2
+  },
+  {
+   "region": "Malaysia",
+   "stage": "Disqualified",
+   "count": 10
+  },
+  {
+   "region": "Malaysia",
+   "stage": "MQL Lost",
+   "count": 3
+  },
+  {
+   "region": "Malaysia",
+   "stage": "Marketing Nurture",
+   "count": 1
+  },
+  {
+   "region": "Philippines",
+   "stage": "Disqualified",
+   "count": 4
+  },
+  {
+   "region": "Philippines",
+   "stage": "Engaged",
+   "count": 6
+  },
+  {
+   "region": "Philippines",
+   "stage": "In Progress",
+   "count": 8
+  },
+  {
+   "region": "Philippines",
+   "stage": "New Lead",
+   "count": 4
   },
   {
    "region": "Thailand & Others",
@@ -248,8 +308,18 @@
   },
   {
    "region": "Thailand & Others",
+   "stage": "Engaged",
+   "count": 16
+  },
+  {
+   "region": "Thailand & Others",
    "stage": "In Progress",
    "count": 3
+  },
+  {
+   "region": "Thailand & Others",
+   "stage": "MQL Lost",
+   "count": 15
   },
   {
    "region": "Thailand & Others",
@@ -260,76 +330,6 @@
    "region": "Thailand & Others",
    "stage": "Marketing Nurture",
    "count": 13
-  },
-  {
-   "region": "Thailand & Others",
-   "stage": "MQL Lost",
-   "count": 15
-  },
-  {
-   "region": "Indonesia",
-   "stage": "New Lead",
-   "count": 15
-  },
-  {
-   "region": "Indonesia",
-   "stage": "Engaged",
-   "count": 6
-  },
-  {
-   "region": "Indonesia",
-   "stage": "Disqualified",
-   "count": 10
-  },
-  {
-   "region": "Indonesia",
-   "stage": "In Progress",
-   "count": 4
-  },
-  {
-   "region": "Indonesia",
-   "stage": "No Response",
-   "count": 2
-  },
-  {
-   "region": "Indonesia",
-   "stage": "Marketing Nurture",
-   "count": 2
-  },
-  {
-   "region": "Philippines",
-   "stage": "New Lead",
-   "count": 3
-  },
-  {
-   "region": "Philippines",
-   "stage": "Engaged",
-   "count": 2
-  },
-  {
-   "region": "Philippines",
-   "stage": "Disqualified",
-   "count": 4
-  },
-  {
-   "region": "Philippines",
-   "stage": "In Progress",
-   "count": 7
-  },
-  {
-   "region": "Malaysia",
-   "stage": "Disqualified",
-   "count": 10
-  },
-  {
-   "region": "Malaysia",
-   "stage": "Marketing Nurture",
-   "count": 1
-  },
-  {
-   "region": "Malaysia",
-   "stage": "MQL Lost",
-   "count": 3
   }
  ],
  "open_deals": [
@@ -841,19 +841,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499826487512"
   },
   {
-   "id": "509154906305",
-   "deal": "Ace Promotion and Marketing Corporation",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 76000.0,
-   "close_date": "2027-02-26",
-   "owner": "Jun de Dios",
-   "last_contacted": null,
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/509154906305"
-  },
-  {
    "id": "60864294079",
    "deal": "Globe Tronic",
    "stage_id": "280510160",
@@ -1322,19 +1309,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/7896846064"
   },
   {
-   "id": "513628486851",
-   "deal": "Shangri-La Manila - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 24000.0,
-   "close_date": "2026-12-29",
-   "owner": "Allyssa Ruazol",
-   "last_contacted": "2026-08-13",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/513628486851"
-  },
-  {
    "id": "351254128830",
    "deal": "Yazaki-Torres",
    "stage_id": "280510157",
@@ -1385,19 +1359,6 @@
    "last_contacted": "2026-09-04",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/505742381258"
-  },
-  {
-   "id": "515690307786",
-   "deal": "UNO Digital Bank - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 20000.0,
-   "close_date": "2027-02-25",
-   "owner": "Jun de Dios",
-   "last_contacted": null,
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515690307786"
   },
   {
    "id": "513634997475",
@@ -1634,19 +1595,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512054574282"
   },
   {
-   "id": "10679387097",
-   "deal": "Sreeya Sewu Indonesia",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": null,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10679387097"
-  },
-  {
    "id": "9353324753",
    "deal": "Loreal Indonesia",
    "stage_id": "280510160",
@@ -1658,19 +1606,6 @@
    "last_contacted": "2026-02-06",
    "probability": 0.1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/9353324753"
-  },
-  {
-   "id": "493651891403",
-   "deal": "Polytron Indonesia",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Indonesia",
-   "amount": 0.0,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": null,
-   "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403"
   },
   {
    "id": "14534873577",
@@ -1686,6 +1621,32 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/14534873577"
   },
   {
+   "id": "493651891403",
+   "deal": "Polytron Indonesia",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Indonesia",
+   "amount": 0.0,
+   "close_date": "2026-12-31",
+   "owner": "Jun de Dios",
+   "last_contacted": null,
+   "probability": 0.3,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403"
+  },
+  {
+   "id": "10679387097",
+   "deal": "Sreeya Sewu Indonesia",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Indonesia",
+   "amount": null,
+   "close_date": "2026-12-31",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-02-06",
+   "probability": 0.3,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10679387097"
+  },
+  {
    "id": "502452980924",
    "deal": "The Union Mosaic Industry PLC (Duragres Tiles) - New Deal",
    "stage_id": "280510158",
@@ -1699,19 +1660,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502452980924"
   },
   {
-   "id": "486351587557",
-   "deal": "INTEQC Group - New Deal",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2026-06-30",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-05-27",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/486351587557"
-  },
-  {
    "id": "334969359605",
    "deal": "Kurnia Ciptamoda Gemilang",
    "stage_id": "280510160",
@@ -1723,6 +1671,19 @@
    "last_contacted": "2026-07-15",
    "probability": 0.3,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605"
+  },
+  {
+   "id": "486351587557",
+   "deal": "INTEQC Group - New Deal",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Thailand & Others",
+   "amount": 0.0,
+   "close_date": "2026-06-30",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-05-27",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/486351587557"
   },
   {
    "id": "15464612560",
