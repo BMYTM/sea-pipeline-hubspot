@@ -52,7 +52,6 @@
       {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'proposal', label: 'Proposal sent', opts: () => [['30', 'In the last 30 days'], ['90', 'In the last 90 days'], ['fy27', 'In FY27'], ['any', 'Any date'], ['none', 'No proposal date']]},
-      {k: 'meeting', label: 'Last meeting', opts: () => [['30', 'In the last 30 days'], ['90', 'In the last 90 days'], ['old', 'More than 90 days ago'], ['none', 'No meeting logged']]},
       {k: 'health', label: 'Follow-up', opts: () => [['stale', 'Last activity 90+ days ago'], ['never', 'No activity logged'], ['cta', 'Call to action: Yes'], ['nocontact', 'No contact linked'], ['noamount', 'No amount']]}],
     leads: [
       {k: 'type', label: 'Stage', opts: () => [['mql', 'Reached MQL'], ['sql', 'Reached SQL'], ['nowmql', 'Currently MQL'], ['nowsql', 'Currently SQL'], ['converted', 'MQL that became SQL']]},
@@ -101,7 +100,6 @@
         f.close === 'fy27' ? r.close_date >= today && r.close_date < '2027-04-01' : f.close === 'later' ? r.close_date >= '2027-04-01' :
         r.close_date >= today && r.close_date <= plusDays(Number(f.close)))) &&
       (!f.owner || r.deal_owner === f.owner) && (!f.acct || r.account_owner === f.acct) &&
-      (!f.meeting || (f.meeting === 'none' ? !r.last_meeting : f.meeting === 'old' ? (!!r.last_meeting && r.last_meeting < plusDays(-90)) : (!!r.last_meeting && r.last_meeting >= plusDays(-Number(f.meeting))))) &&
       (!f.health || (f.health === 'stale' ? (r.last_activity && r.last_activity < plusDays(-90)) : f.health === 'never' ? !r.last_activity :
         f.health === 'cta' ? r.cta === 'Yes' : f.health === 'nocontact' ? !(r.contacts || []).length : !r.amount)) &&
       match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.sub_source, r.remarks, r.next_step, r.conv_reason, ppl(r)));
@@ -332,7 +330,7 @@
         ['Split check', r.split_note], ['Booked in HubSpot as', r.booked_amount != null ? new Intl.NumberFormat('en', {style: 'currency', currency: r.booked_currency, maximumFractionDigits: 0}).format(r.booked_amount) : null],
         ['Proposal sent', r.proposal_sent ? fdate(r.proposal_sent) + (r.proposal_sent_source && r.proposal_sent_source !== 'Proposal sent Date field' ? ' (date it entered Proposal Sent)' : '') : null],
         ['Account', r.company], ['Account owner', r.account_owner && filterLink(r.account_owner, won ? 'closures' : 'active', {acct: r.account_owner})], ['Deal source', r.source ? r.source + (r.sub_source ? ' · ' + r.sub_source : '') : null], ['Employee headcount', r.headcount != null ? num(r.headcount) : null], ['Industry', r.industry],
-        ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Last meeting', won ? null : (r.last_meeting ? fdate(r.last_meeting) + (r.last_meeting_title ? ' · ' + r.last_meeting_title : '') + (r.meetings > 1 ? ' (' + r.meetings + ' meetings logged)' : '') : 'None logged on this deal')], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
+        ['HubSpot probability', r.probability != null ? pct(r.probability) : null], ['Last meeting', won ? null : (r.last_meeting ? fdate(r.last_meeting) : 'None logged')], ['Region check', r.region_note ? r.region_note + ' — counted as ' + r.country + ' here. Fix the Region in HubSpot.' : null], ['Last activity', r.last_activity ? fdate(r.last_activity) : (won ? null : 'None logged')]]);
       section(b, 'Contacts');
       if ((r.contacts || []).length) { const ul = el('ul', 'people'); r.contacts.forEach((p) => { const li = el('li', null, p.name); if (p.title) li.append(el('small', null, ' · ' + p.title)); ul.appendChild(li); }); b.appendChild(ul); }
       else b.appendChild(el('p', 'm', 'No contact linked to this deal in HubSpot.'));
@@ -357,7 +355,7 @@
   function downloadCsv() {
     const spec = {
       closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
-      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['conv_reason', 'Assessment'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_meeting', 'Last meeting'], ['last_meeting_title', 'Last meeting title'], ['meetings', 'Meetings logged'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
+      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['conv_reason', 'Assessment'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_meeting', 'Last meeting'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
       leads: [['country', 'Country'], ['name', 'Contact'], ['title', 'Job title'], ['company', 'Company'], ['stage', 'Stage now'], ['mql_date', 'MQL date'], ['sql_date', 'SQL date'], ['owner', 'Owner'], ['source', 'Source'], ['deals', 'Deals'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']]
     }[S.tab];
     const esc = (v) => { if (Array.isArray(v)) v = v.map((p) => p.name + (p.title ? ' (' + p.title + ')' : '')).join('; '); return v == null ? '' : /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v); };
@@ -418,10 +416,10 @@
   // ---------- Active pipeline ----------
   function drawActive() {
     const f = S.f, rows = rowsActive();
-    const scope = rowsActive(Object.assign({}, f, {status: '', close: '', meeting: '', health: ''}));
+    const scope = rowsActive(Object.assign({}, f, {status: '', close: '', health: ''}));
     const act = scope.filter((r) => r.stage !== 'On-Hold'), hold = scope.filter((r) => r.stage === 'On-Hold');
     const fyc = scope.filter((r) => r.close_date >= today && r.close_date < '2027-04-01'), past = scope.filter((r) => r.close_date && r.close_date < today);
-    const reset = {status: '', close: '', meeting: '', health: ''};
+    const reset = {status: '', close: '', health: ''};
     kpis('#ac-kpis', [
       ['Active (Demo → Contracting)', money(sum(act, (r) => r.amount)), num(act.length) + ' deals' + withLocal(sum(act, (r) => r.amount)), Object.assign({}, reset, {status: 'active'}), statusList(f.status).join() === statusList('active').join() && !f.close],
       ['On hold', money(sum(hold, (r) => r.amount)), num(hold.length) + ' deals' + withLocal(sum(hold, (r) => r.amount)), Object.assign({}, reset, {status: 'On-Hold'}), f.status === 'On-Hold' && !f.close],
@@ -441,7 +439,7 @@
       {k: 'source', label: 'Deal source', f: sourceCell},
       {k: 'proposal_sent', label: 'Proposal sent', f: (v) => v ? fdate(v) : el('span', 'm', '—')},
       {k: 'close_date', label: 'Closure date', f: (v, r, td) => { if (v && v < today) td.classList.add('flag'); return fdate(v); }},
-      {k: 'last_meeting', label: 'Last meeting', f: (v, r, td) => { if (!v || v < plusDays(-90)) td.classList.add('flag'); if (r.last_meeting_title) td.title = r.last_meeting_title; return v ? fdate(v) : 'none'; }},
+      {k: 'last_meeting', label: 'Last meeting', f: (v, r, td) => { if (!v || v < plusDays(-90)) td.classList.add('flag'); return v ? fdate(v) : 'none'; }},
       {k: 'headcount', label: 'Headcount', cls: 'num', num: true, f: (v) => v != null ? num(v) : el('span', 'm', '—')},
       {k: 'subscription', label: 'Subscrip\u00adtion', cls: 'num', num: true, f: dual},
       {k: 'implementation', label: 'Implemen\u00adtation', cls: 'num', num: true, f: dual},

@@ -51,7 +51,7 @@ HubSpot ──(daily GitHub Action, token in repo secret)──> data/sea.json �
 - Employee headcount = the deal's Number of Employees (or the headcount in its Deal Status remarks).
 - MQL / SQL = the contact's lifecycle stage history (date entered MQL / SQL), grouped by the contact's Country field.
 - Notes = the deal's "Deal Status" remarks plus Next step. 
-- Last meeting = the latest meeting (on or before today) associated with the deal in HubSpot. Meetings logged only on the contact or company, not the deal, don't count. Filter by last 30 / 90 days, more than 90 days ago, or none.
+- Last meeting = the latest meeting (on or before today) associated with the deal in HubSpot. Meetings logged only on the contact or company, not the deal, don't count.
 - Deal source = HubSpot Deal Source; the name under it is the Deal Sub-source (the partner's name for Partner deals). The Deal source filter has Partner, Direct (non-partner) and each direct source; the Partner filter picks one partner.
 - `data/sea_overrides.json` lists SEA closed-won deals that HubSpot files under a non-SEA Region (mostly 2022–2023 deals tagged India-North, e.g. AG&P). They are counted under the country given there and tagged "region not SEA" on the page. Fix the Region in HubSpot, then remove the entry.
 - Closed-lost values are left out of every total: some Thailand and Philippines lost deals look like local-currency entries.

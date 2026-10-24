@@ -50,8 +50,6 @@ def exp_active(f):
         sf = f.get("source")
         if sf and not (r["source"] == "Partner" if sf == "partner" else r["source"] != "Partner" if sf == "direct" else r["source"] == sf): continue
         if f.get("partner") and r.get("partner") != f["partner"]: continue
-        mf, lm = f.get("meeting"), r.get("last_meeting")
-        if mf and not ((not lm) if mf == "none" else (bool(lm) and lm < plus(-90)) if mf == "old" else (bool(lm) and lm >= plus(-int(mf)))): continue
         c = f.get("close")
         if c:
             ok = {"past": bool(cd) and cd < TODAY, "none": not cd, "fy27": bool(cd) and TODAY <= cd < "2027-04-01",
@@ -102,7 +100,7 @@ def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get
 OPTS = {
     "closures": {"period": list(FY), "year": sorted({r["year"] for r in D["closures"]}), "owner": owners(D["closures"], ["deal_owner"]), "acct": owners(D["closures"], ["account_owner"]),
                  "source": ["partner", "direct"] + sorted({r["source"] for r in D["closures"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["closures"] if r.get("partner")}), "month": sorted({r["month"] for r in D["closures"]})},
-    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "meeting": ["30", "90", "old", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
+    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "cta", "nocontact", "noamount"]},
     "leads": {"type": ["mql", "sql", "nowmql", "nowsql", "converted"], "period": ["30", "90", "fy27", "fy26"], "owner": owners(D["leads"], ["owner"]),
@@ -110,7 +108,7 @@ OPTS = {
               "month": sorted({d[:7] for r in D["leads"] for d in (r["mql_date"], r["sql_date"]) if d})[-18:]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}, {"status": "active", "meeting": "old"}, {"status": "Proposal Sent", "meeting": "90", "source": "partner"}],
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}],
           "leads": [{"type": "mql", "period": "fy27"}, {"type": "sql", "period": "90"}, {"type": "nowmql", "owner": "Soranan Natejan"}, {"type": "mql", "month": "2026-09"}]}
 
 
