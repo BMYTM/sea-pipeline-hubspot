@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T10:07:27Z",
+ "generated_at": "2026-10-26T10:35:32Z",
  "source": "HubSpot (manual pull)",
  "closures": [
   {
@@ -2047,15 +2047,15 @@
    "conv_reason": "Need is there but take long time for deciding",
    "cta": null,
    "cta_reason": null,
-   "subscription": 140000.0,
-   "implementation": 60000.0,
+   "subscription": null,
+   "implementation": null,
    "split_note": null,
    "year1_total": 200000.0,
    "booked_currency": "USD",
    "booked_amount": null,
-   "proposal_sent": "2025-11-10",
-   "proposal_sent_source": "Date entered Proposal Sent stage",
-   "sub_source": "Cold Call",
+   "proposal_sent": null,
+   "proposal_sent_source": null,
+   "sub_source": null,
    "partner": null,
    "last_meeting": null,
    "last_meeting_title": null,
