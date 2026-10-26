@@ -1,0 +1,12 @@
+[
+ {"id":"4427906798","deal":"AG&P","close_date":"2022-12-31","created":"2022-03-21","amount":137490.696,"deal_owner":"Ajay Kadian","company":"Atlantic, Gulf & Pacific Company (AG&P)","account_owner":"Ajay Kadian","source":"Marketing","industry":"Industrial and Manufacturing",
+  "contacts":[{"name":"Bharat Mehta","title":"SVP- SCM"},{"name":"Onkar Kapoor Kapoor","title":"Head"},{"name":"Richard B. Riego","title":null}]},
+ {"id":"4155854806","deal":"Kanmo Group","close_date":"2022-04-01","created":"2022-01-17","amount":36664.1856,"deal_owner":"Ajay Kadian","company":"Kanmo Group","account_owner":null,"source":"Marketing","industry":null,
+  "contacts":[{"name":"Baskoro Oktianto","title":"Information Technology Manager"},{"name":"Satriadi Kurniawan","title":"IT & Ecommerce Deputy General Manager"},{"name":"Willy Soedjono","title":"Chief Technology Officer"},{"name":"Muhamad Prabowo","title":"Talent Acquisition Manager"},{"name":"Sandeep Kumar","title":"Director DTC - International Distributor Markets (APAC | MEA | Latam)"},{"name":"Anuj Maheshwari","title":"Partner - Advisory Deals (IPO & Investor Relations) at PwC"}]},
+ {"id":"6562678998","deal":"Indorama","close_date":"2023-03-05","created":"2023-01-31","amount":4926.74994,"deal_owner":null,"company":"Indorama Polymers Public Company Limited","account_owner":null,"source":"Management","industry":"Industrial and Manufacturing",
+  "contacts":[{"name":"Biresh Das","title":"HR head"}]},
+ {"id":"7492992461","deal":"Indorama","close_date":"2023-07-10","created":"2023-05-19","amount":2745.11632122,"deal_owner":"Anshu Bali","company":"Indorama Polymers Public Company Limited","account_owner":null,"source":"Others/Referrals (Other)","industry":"Industrial and Manufacturing",
+  "contacts":[{"name":"Biresh Das","title":"HR head"}]},
+ {"id":"7086527725","deal":"LF Logistics - New Deal","close_date":"2023-08-01","created":"2023-04-05","amount":4621.9788972,"deal_owner":"Sumit Sabharwal","company":"LF Logistics Thailand","account_owner":null,"source":"Others/Referrals (Other)","industry":null,
+  "contacts":[{"name":"Akansha Srivastava","title":"HR"}]}
+]

@@ -33,7 +33,11 @@ HubSpot ──(daily GitHub Action, token in repo secret)──> data/sea.json �
 - The browser only reads `data/sea.json`. **No HubSpot token is ever in the code or on the site.**
 - `scripts/seed_snapshot.py` and `scripts/build_details_from_raw.py` wrote the first snapshots (23–24 Oct 2026); the daily job replaces them.
 
-## One-time setup: connect HubSpot
+## Daily refresh without IT
+
+A scheduled Claude task refreshes the data every morning through the HubSpot connector, following `REFRESH.md`. No API token is needed. The token setup below is an alternative if IT can create a HubSpot private app.
+
+## Optional: connect HubSpot with a private-app token
 
 1. In HubSpot: **Settings → Integrations → Private Apps → Create a private app** (name it "SEA dashboard").
 2. Scopes: `crm.objects.deals.read`, `crm.objects.contacts.read`, `crm.objects.companies.read`, `crm.objects.owners.read`. Create it and copy the access token.
