@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T10:52:28Z",
+ "generated_at": "2026-10-26T23:34:07Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -43,8 +43,8 @@
    "region": "Thailand & Others",
    "stage_id": "280510162",
    "stage": "Closed lost",
-   "count": 115,
-   "amount": 109331113.0
+   "count": 116,
+   "amount": 109531113.0
   },
   {
    "region": "Thailand & Others",
