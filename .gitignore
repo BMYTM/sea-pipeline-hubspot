@@ -2,3 +2,5 @@ __pycache__/
 .DS_Store
 .env
 raw/
+raw_new/
+raw_backup_*/

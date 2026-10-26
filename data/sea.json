@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T07:59:04Z",
+ "generated_at": "2026-10-26T09:30:55Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -113,15 +113,15 @@
    "region": "Philippines",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 12,
-   "amount": 1598156.0
+   "count": 7,
+   "amount": 934100.0
   },
   {
    "region": "Philippines",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 1,
-   "amount": 73880.0
+   "count": 6,
+   "amount": 737936.0
   },
   {
    "region": "Philippines",
@@ -375,14 +375,14 @@
   {
    "id": "496653097202",
    "deal": "Inspiro - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 450000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
    "last_contacted": "2026-04-24",
-   "probability": 0.4,
+   "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/496653097202"
   },
   {
@@ -412,19 +412,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/8213541081"
   },
   {
-   "id": "267197143227",
-   "deal": "Bank Rakyat Malaysia - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Malaysia",
-   "amount": 300000.0,
-   "close_date": "2027-04-29",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-03-06",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/267197143227"
-  },
-  {
    "id": "529589966018",
    "deal": "Kenanga Investment Bank Berhad (KIBB)",
    "stage_id": "280510157",
@@ -436,6 +423,19 @@
    "last_contacted": null,
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/529589966018"
+  },
+  {
+   "id": "267197143227",
+   "deal": "Bank Rakyat Malaysia - New Deal",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Malaysia",
+   "amount": 300000.0,
+   "close_date": "2027-04-29",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-03-06",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/267197143227"
   },
   {
    "id": "112816249045",
@@ -687,14 +687,14 @@
   {
    "id": "512459995376",
    "deal": "TOA Global - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 128256.0,
    "close_date": "2027-02-27",
    "owner": "Allyssa Ruazol",
    "last_contacted": "2026-08-28",
-   "probability": 0.4,
+   "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512459995376"
   },
   {
@@ -789,19 +789,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111037159"
   },
   {
-   "id": "193935600873",
-   "deal": "Okada",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Philippines",
-   "amount": 90000.0,
-   "close_date": "2027-03-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193935600873"
-  },
-  {
    "id": "509448217802",
    "deal": "Bestoptions Assistance Inc. - New Deal",
    "stage_id": "280510157",
@@ -813,6 +800,19 @@
    "last_contacted": "2026-07-10",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/509448217802"
+  },
+  {
+   "id": "193935600873",
+   "deal": "Okada",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Philippines",
+   "amount": 90000.0,
+   "close_date": "2027-03-31",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-02-06",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193935600873"
   },
   {
    "id": "322791746798",
@@ -1077,14 +1077,14 @@
   {
    "id": "351130684663",
    "deal": "Nutriasia",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 47000.0,
    "close_date": "2026-11-27",
    "owner": "Jun de Dios",
    "last_contacted": "2026-02-06",
-   "probability": 0.4,
+   "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/351130684663"
   },
   {
@@ -1311,8 +1311,8 @@
   {
    "id": "351254128830",
    "deal": "Yazaki-Torres",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 23000.0,
    "close_date": "2027-02-26",
@@ -1454,14 +1454,14 @@
   {
    "id": "496652367053",
    "deal": "Digital Workforce PH - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 15800.0,
    "close_date": "2026-12-18",
    "owner": "Jun de Dios",
    "last_contacted": "2026-08-04",
-   "probability": 0.4,
+   "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/496652367053"
   },
   {
@@ -1569,32 +1569,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/517313274045"
   },
   {
-   "id": "519366681792",
-   "deal": "Mega LifeSciences - New Deal",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2027-02-28",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": null,
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792"
-  },
-  {
-   "id": "512054574282",
-   "deal": "SHERA Public Company Limited - New Deal",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2027-01-31",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-08-11",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512054574282"
-  },
-  {
    "id": "9353324753",
    "deal": "Loreal Indonesia",
    "stage_id": "280510160",
@@ -1621,17 +1595,17 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/14534873577"
   },
   {
-   "id": "493651891403",
-   "deal": "Polytron Indonesia",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
+   "id": "15464612560",
+   "deal": "PT. Pos Indonesia",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
    "region": "Indonesia",
-   "amount": 0.0,
-   "close_date": "2026-12-31",
+   "amount": null,
+   "close_date": "2025-12-31",
    "owner": "Jun de Dios",
-   "last_contacted": null,
+   "last_contacted": "2026-02-06",
    "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15464612560"
   },
   {
    "id": "10679387097",
@@ -1647,6 +1621,58 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/10679387097"
   },
   {
+   "id": "334969359605",
+   "deal": "Kurnia Ciptamoda Gemilang",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Indonesia",
+   "amount": 0.0,
+   "close_date": "2026-06-30",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-07-15",
+   "probability": 0.3,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605"
+  },
+  {
+   "id": "493651891403",
+   "deal": "Polytron Indonesia",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Indonesia",
+   "amount": 0.0,
+   "close_date": "2026-12-31",
+   "owner": "Jun de Dios",
+   "last_contacted": null,
+   "probability": 0.3,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403"
+  },
+  {
+   "id": "519366681792",
+   "deal": "Mega LifeSciences - New Deal",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Thailand & Others",
+   "amount": 0.0,
+   "close_date": "2027-02-28",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": null,
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792"
+  },
+  {
+   "id": "512054574282",
+   "deal": "SHERA Public Company Limited - New Deal",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Thailand & Others",
+   "amount": 0.0,
+   "close_date": "2027-01-31",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-08-11",
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512054574282"
+  },
+  {
    "id": "502452980924",
    "deal": "The Union Mosaic Industry PLC (Duragres Tiles) - New Deal",
    "stage_id": "280510158",
@@ -1660,17 +1686,17 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502452980924"
   },
   {
-   "id": "334969359605",
-   "deal": "Kurnia Ciptamoda Gemilang",
+   "id": "15599173102",
+   "deal": "Home Product Center Public Company Limited - New Deal",
    "stage_id": "280510160",
    "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": 0.0,
-   "close_date": "2026-06-30",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-07-15",
-   "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605"
+   "region": "Thailand & Others",
+   "amount": null,
+   "close_date": null,
+   "owner": "Soranan Natejan",
+   "last_contacted": "2026-02-06",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15599173102"
   },
   {
    "id": "486351587557",
@@ -1686,19 +1712,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/486351587557"
   },
   {
-   "id": "15464612560",
-   "deal": "PT. Pos Indonesia",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": null,
-   "close_date": "2025-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15464612560"
-  },
-  {
    "id": "22012789185",
    "deal": "Metrobank",
    "stage_id": "280510160",
@@ -1710,19 +1723,6 @@
    "last_contacted": "2026-02-06",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185"
-  },
-  {
-   "id": "15599173102",
-   "deal": "Home Product Center Public Company Limited - New Deal",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Thailand & Others",
-   "amount": null,
-   "close_date": null,
-   "owner": "Soranan Natejan",
-   "last_contacted": "2026-02-06",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15599173102"
   }
  ]
 }
