@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T10:35:32Z",
+ "generated_at": "2026-10-26T10:52:28Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -155,15 +155,15 @@
    "region": "Thailand & Others",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 7,
-   "amount": 567454.0
+   "count": 5,
+   "amount": 280000.0
   },
   {
    "region": "Thailand & Others",
    "stage_id": "280510160",
    "stage": "On-Hold",
-   "count": 19,
-   "amount": 1535417.0
+   "count": 20,
+   "amount": 1672871.0
   },
   {
    "region": "Thailand & Others",
@@ -516,19 +516,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515113098451"
   },
   {
-   "id": "258180625649",
-   "deal": "McDonald's Thailand (McThai Co.,Ltd.)",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 200000.0,
-   "close_date": "2026-12-18",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-04-02",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/258180625649"
-  },
-  {
    "id": "501831430334",
    "deal": "Security Bank - New Deal Payroll",
    "stage_id": "280510157",
@@ -635,14 +622,14 @@
   {
    "id": "472986056894",
    "deal": "Trax Intertrade",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
    "region": "Thailand & Others",
    "amount": 137454.0,
    "close_date": "2026-06-30",
    "owner": "Suntisuk Kulpiya",
    "last_contacted": "2026-04-23",
-   "probability": 0.6,
+   "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/472986056894"
   },
   {
@@ -1047,6 +1034,19 @@
    "last_contacted": null,
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508879036615"
+  },
+  {
+   "id": "502452980924",
+   "deal": "The Union Mosaic Industry PLC (Duragres Tiles) - New Deal",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Thailand & Others",
+   "amount": 50000.0,
+   "close_date": "2026-12-17",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-07-27",
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502452980924"
   },
   {
    "id": "526802138353",
@@ -1671,19 +1671,6 @@
    "last_contacted": "2026-08-11",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512054574282"
-  },
-  {
-   "id": "502452980924",
-   "deal": "The Union Mosaic Industry PLC (Duragres Tiles) - New Deal",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2026-11-30",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-07-27",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502452980924"
   },
   {
    "id": "15599173102",

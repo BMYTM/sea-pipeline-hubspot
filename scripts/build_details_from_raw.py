@@ -2,11 +2,13 @@
 HubSpot exports pulled on 24 Oct 2026 into raw/. The daily GitHub Action
 (scripts/fetch_hubspot.py) produces the same files straight from the HubSpot API."""
 import json, time, re, pathlib
+from datetime import datetime, timedelta
 from collections import defaultdict
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW, DATA = ROOT / "raw", ROOT / "data"
 PORTAL = 25298601
+PORTAL_UTC_OFFSET = 7  # HubSpot account time zone (Bangkok)
 REG = {"Thailand & Others": "Thailand", "Indonesia": "Indonesia", "Philippines": "Philippines", "Malaysia": "Malaysia", "Singapore": "Singapore"}
 OPEN = {"280510157", "280510158", "280510159", "280510160"}
 WON = "280510161"
@@ -85,6 +87,22 @@ def main():
         c = {"name": name, "title": r.get("jobtitle")}
         if c not in contacts_by_deal[r["hs_object_id"]]: contacts_by_deal[r["hs_object_id"]].append(c)
 
+    # the SQL export can lag HubSpot by hours: take stage, owner, dates and amounts from the live record
+    live = json.loads((RAW / "live.json").read_text()) if (RAW / "live.json").exists() else {}
+    LBL = {"280510157": "Demo/Developing", "280510158": "Proposal Sent", "280510159": "Commercial/Contracting", "280510160": "On-Hold", WON: "Closed won"}
+    if live:
+        fresh = []
+        for d in deals:
+            L = live.get(d["hs_object_id"])
+            if not L: continue  # moved out of SEA open/won since the export (e.g. lost today)
+            d = dict(d, dealstage=f"{LBL.get(L['dealstage'], L['dealstage'])} ({L['dealstage']})")
+            for k in ["hubspot_owner_id", "hs_deal_stage_probability", "hs_next_step", "amount_in_home_currency"]:
+                if k in L: d[k] = L[k]
+            for k in ["closedate", "notes_last_updated"]:  # live values are UTC timestamps; the export uses the portal's day
+                if L.get(k): d[k] = (datetime.fromisoformat(L[k].replace("Z", "+00:00")) + timedelta(hours=PORTAL_UTC_OFFSET)).strftime("%Y-%m-%d")
+            if L.get("amount_in_home_currency") not in (None, ""): d["amount_in_home_currency"] = str(round(float(L["amount_in_home_currency"]), 8))
+            fresh.append(d)
+        deals = fresh
     closures, active = [], []
     for d in deals:
         if d.get("region") not in REG: continue
@@ -176,7 +194,7 @@ def main():
     closures, active = fix_all(closures), fix_all(active)
     leads = {k: fix_all(v) for k, v in leads.items()}
 
-    from datetime import datetime, timezone
+    from datetime import timezone
     pulled = datetime.fromtimestamp((RAW / "deals.txt").stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     out = {"generated_at": pulled, "source": "HubSpot (manual pull)",
            "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),

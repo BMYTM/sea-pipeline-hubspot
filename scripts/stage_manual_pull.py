@@ -31,4 +31,6 @@ for f in ["money", "sources"]:
     old = [r for r in json.loads((STATIC / f"legacy_{f}.json").read_text())["results"]
            if json.loads(r["content"])["properties"]["hs_object_id"] not in have]
     (RAW / f"{f}.txt").write_text(json.dumps({"results": new + old}, ensure_ascii=False))
+# the live record (search API) is current to the minute; the SQL reporting copy can lag by hours
+(RAW / "live.json").write_text(json.dumps({r["properties"]["hs_object_id"]: r["properties"] for r in recs}, ensure_ascii=False))
 print("staged", len(recs), "deals into raw/")
