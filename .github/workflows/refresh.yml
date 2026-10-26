@@ -1,8 +1,10 @@
 name: Refresh HubSpot data
 
 on:
-  schedule:
-    - cron: "17 23 * * *"   # 07:17 Manila / 06:17 Bangkok, daily
+  # Daily schedule is off until a HUBSPOT_TOKEN secret exists (see README); the scheduled
+  # Claude task in REFRESH.md refreshes the data instead. To turn it back on, uncomment:
+  # schedule:
+  #   - cron: "17 23 * * *"   # 07:17 Manila / 06:17 Bangkok, daily
   workflow_dispatch: {}      # "Run workflow" button for an on-demand refresh
 
 permissions:
