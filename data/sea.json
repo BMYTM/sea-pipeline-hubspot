@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T23:34:07Z",
+ "generated_at": "2026-10-27T03:48:07Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -15,8 +15,8 @@
    "region": "Indonesia",
    "stage_id": "286129884",
    "stage": "Failed Assessment",
-   "count": 9,
-   "amount": 77650.56
+   "count": 12,
+   "amount": 366100.56
   },
   {
    "region": "Malaysia",
@@ -55,17 +55,10 @@
   },
   {
    "region": "Indonesia",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "count": 1,
-   "amount": 0.0
-  },
-  {
-   "region": "Indonesia",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 4,
-   "amount": 1044242.0
+   "count": 2,
+   "amount": 755792.0
   },
   {
    "region": "Indonesia",
@@ -340,7 +333,7 @@
    "stage": "Proposal Sent",
    "region": "Indonesia",
    "amount": 633392.0,
-   "close_date": "2026-12-15",
+   "close_date": "2026-12-20",
    "owner": "Jun de Dios",
    "last_contacted": "2026-06-04",
    "probability": 0.7,
@@ -449,19 +442,6 @@
    "last_contacted": "2026-08-31",
    "probability": 0.3,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/112816249045"
-  },
-  {
-   "id": "427315168501",
-   "deal": "Busana Remaja Agaracipta",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Indonesia",
-   "amount": 259200.0,
-   "close_date": "2026-11-30",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-03-24",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/427315168501"
   },
   {
    "id": "15487249117",
@@ -704,7 +684,7 @@
    "stage": "Proposal Sent",
    "region": "Indonesia",
    "amount": 122400.0,
-   "close_date": "2027-03-31",
+   "close_date": "2027-03-30",
    "owner": "Jun de Dios",
    "last_contacted": "2026-07-15",
    "probability": 0.7,
@@ -1057,7 +1037,7 @@
    "amount": 50000.0,
    "close_date": "2027-01-31",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-10-22",
+   "last_contacted": "2026-10-27",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526802138353"
   },
@@ -1255,19 +1235,6 @@
    "last_contacted": "2026-04-28",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499553621196"
-  },
-  {
-   "id": "473244653777",
-   "deal": "Otten coffee",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Indonesia",
-   "amount": 29250.0,
-   "close_date": "2026-10-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-19",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/473244653777"
   },
   {
    "id": "416188364988",
@@ -1632,19 +1599,6 @@
    "last_contacted": "2026-07-15",
    "probability": 0.3,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605"
-  },
-  {
-   "id": "493651891403",
-   "deal": "Polytron Indonesia",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Indonesia",
-   "amount": 0.0,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": null,
-   "probability": 0.3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/493651891403"
   },
   {
    "id": "519366681792",
