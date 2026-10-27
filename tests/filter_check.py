@@ -8,6 +8,7 @@ from playwright.async_api import async_playwright
 
 ROOT = sys.argv[1]
 D = json.load(open(ROOT + "/data/details.json"))
+D["active"] = [r for r in D["active"] if r["stage"] != "On-Hold"]  # dashboard hides on-hold deals
 TODAY = date.today().isoformat()
 plus = lambda n: (date.today() + timedelta(days=n)).isoformat()
 FY = {"fy27": ("2026-04-01", "2027-04-01"), "fy26": ("2025-04-01", "2026-04-01"), "fy25": ("2024-04-01", "2025-04-01"), "fy24": ("2023-04-01", "2024-04-01")}
@@ -77,12 +78,12 @@ def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get
 OPTS = {
     "closures": {"period": list(FY), "year": sorted({r["year"] for r in D["closures"]}), "owner": owners(D["closures"], ["deal_owner"]), "acct": owners(D["closures"], ["account_owner"]),
                  "source": ["partner", "direct"] + sorted({r["source"] for r in D["closures"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["closures"] if r.get("partner")}), "month": sorted({r["month"] for r in D["closures"]})},
-    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
+    "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "Demo/Developing,Proposal Sent", "Proposal Sent,Commercial/Contracting"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "cta", "nocontact", "noamount"]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}]}
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent", "proposal": "any"}, {"status": "Demo/Developing", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}]}
 
 
 def money(v):
@@ -136,7 +137,7 @@ async def main():
                 for c in COUNTRIES: await check(tab, dict(combo, country=c))
 
         # 1b. every dropdown option's count matches the list after picking it (with each country, and with a second filter)
-        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "On-Hold"})]:
+        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "Proposal Sent"})]:
             for c in COUNTRIES:
                 base = dict(extra, country=c)
                 await view(tab, base)
@@ -158,7 +159,7 @@ async def main():
 
         # 1c. status toggles: count on each toggle == list after pressing it; toggles combine
         for c in COUNTRIES:
-            for start in ["", "On-Hold", "Demo/Developing"]:
+            for start in ["", "Proposal Sent", "Demo/Developing"]:
                 await view("active", {"country": c, "status": start})
                 for i in range(await pg.locator("#fb-controls .tog").count()):
                     await view("active", {"country": c, "status": start})
@@ -176,7 +177,7 @@ async def main():
                     if claimed != only: fails.append(f"toggle {name} {c}: shows {claimed}, alone gives {only}")
 
         # 2. chips: count on chip == rows after clicking it (with a filter active)
-        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "On-Hold"})]:
+        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "Proposal Sent"})]:
             for i, c in enumerate(COUNTRIES):
                 await view(tab, f)
                 chip = pg.locator("#fb-chips .chip").nth(i)
@@ -228,39 +229,6 @@ async def main():
                         fails.append(f"tile {tab} {c or 'All'} '{val} / {sub}' -> {f}: list has {n}")
                     if n != len(EXP[tab](f)): fails.append(f"tile {tab} {f}: list {n} vs expected {len(EXP[tab](f))}")
 
-        # 5. overview -> drill targets land on the right numbers
-        await pg.goto("http://localhost:8770/index.html#overview"); await pg.wait_for_timeout(1200)
-        for i in range(await pg.locator("#country-tbl tbody tr.row").count()):
-            await pg.goto("http://localhost:8770/index.html#overview"); await pg.wait_for_timeout(500)
-            row = pg.locator("#country-tbl tbody tr.row").nth(i)
-            cells = await row.locator("td").all_inner_texts()
-            await row.click(); await pg.wait_for_timeout(200)
-            n, rows, _ = await view("active", {"country": cells[0]}); checks += 1
-            exp_open = int(cells[2]) + int(cells[4])
-            if n != exp_open: fails.append(f"overview country row {cells[0]}: active {cells[2]} + on-hold {cells[4]} = {exp_open}, list {n}")
-        for i in range(await pg.locator("#q-tbl tbody tr.row").count()):
-            await pg.goto("http://localhost:8770/index.html#overview"); await pg.wait_for_timeout(500)
-            row = pg.locator("#q-tbl tbody tr.row").nth(i)
-            cells = await row.locator("td").all_inner_texts()
-            await row.click(); await pg.wait_for_timeout(200)
-            h = await pg.evaluate("location.hash"); n = int(re.match(r"([\d,]+)", await pg.inner_text("#ac-note")).group(1)); checks += 1
-            if int(cells[1]) != n: fails.append(f"overview data-health '{cells[0]}' shows {cells[1]}, list {n} ({h})")
-        for i in range(await pg.locator("#owner-tbl tbody tr.row").count()):
-            await pg.goto("http://localhost:8770/index.html#overview"); await pg.wait_for_timeout(500)
-            row = pg.locator("#owner-tbl tbody tr.row").nth(i)
-            cells = await row.locator("td").all_inner_texts()
-            await row.click(); await pg.wait_for_timeout(200)
-            n = int(re.match(r"([\d,]+)", await pg.inner_text("#ac-note")).group(1)); checks += 1
-            if int(cells[1]) != n: fails.append(f"overview owner '{cells[0]}' shows {cells[1]} open deals, list {n}")
-        for i in range(await pg.locator("#kpis .kpi").count()):
-            await pg.goto("http://localhost:8770/index.html#overview"); await pg.wait_for_timeout(500)
-            t = pg.locator("#kpis .kpi").nth(i); sub = await t.locator(".k-sub").inner_text(); lab = await t.locator(".k-lab").inner_text()
-            await t.click(); await pg.wait_for_timeout(200)
-            h = await pg.evaluate("location.hash"); note_sel = "#cl-note" if h.startswith("#closures") else "#ac-note"
-            n = int(re.match(r"([\d,]+)", await pg.inner_text(note_sel)).group(1)); checks += 1
-            m = re.search(r"([\d,]+) deals", sub)
-            if m and int(m.group(1)) != n: fails.append(f"overview tile '{lab}' says {m.group(1)} deals, list {n} ({h})")
-            print(f"  overview tile '{lab}' -> {h} -> {n}")
         await b.close()
     srv.terminate()
     print(f"\nChecks run: {checks}\nPage errors: {errs}\nFailures: {len(fails)}")

@@ -8,18 +8,15 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 
 ## What's on the page
 
-- FY27 closed-won vs the USD 3M target, active pipeline, weighted pipeline, on-hold value and the gap to target
-- Open pipeline by country and stage, plus closed-won by quarter
-- Country scorecard (win rate) and a by-owner view
-- Every open SEA deal: filter, search, sort, download CSV, and open the deal in HubSpot
-- Top of funnel (Qualification pipeline) and a data-health check
+Two tabs only. On-hold deals are left out of the dashboard.
+
 - **Closures** tab: every closed-won deal by country, year and month, with headcount, subscription, implementation, year-1 total (USD and local currency), account, owners and linked contacts
-- **Active pipeline** tab: every open deal by country with status (pick several at once), deal source (Partner and partner name, or the direct source), proposal-sent date, closure date, last meeting date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
+- **Active pipeline** tab: every open deal (excluding On-Hold) by country with status (pick several at once), deal source (Partner and partner name, or the direct source), proposal-sent date, closure date, last meeting date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
 - Every tab filters by country and downloads as CSV
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
 - Every dropdown shows how many rows each choice gives, and hides choices with none
 - `tests/filter_check.py` re-checks every filter, dropdown count, summary number and tile against the data (about 2,000 checks)
-- Filters are kept in the link (e.g. `#active?country=Thailand&status=On-Hold`), so a filtered view can be shared
+- Filters are kept in the link (e.g. `#active?country=Thailand&status=Proposal%20Sent`), so a filtered view can be shared
 
 ## How the data gets here
 
@@ -46,7 +43,7 @@ A scheduled Claude task refreshes the data every morning through the HubSpot con
 ## Definitions
 
 - SEA = HubSpot `region` in "Thailand & Others", Indonesia, Philippines, Malaysia, Singapore; **Sales Pipeline** only.
-- Active = Demo/Developing, Proposal Sent, Commercial/Contracting. On hold = On-Hold. Weighted = value × HubSpot stage probability.
+- Active = Demo/Developing, Proposal Sent, Commercial/Contracting. On-Hold deals are not shown. Weighted = value × HubSpot stage probability.
 - Values are HubSpot's company-currency amount (USD). FY27 = 1 Apr 2026 – 31 Mar 2027.
 - Year-1 total = the HubSpot deal amount in USD. Subscription and implementation come from Annual Subscription Fee + Implementation Fee (or Recurring + One-time Amount) when they add up to the total; the detail panel flags splits that don't.
 - Local currency = USD converted at the daily rate in `data/fx.json` (THB, PHP, IDR, MYR, SGD). HubSpot stores almost every SEA deal in USD, so there is no booked local amount to show; the few legacy deals booked in INR show that amount in the detail panel.

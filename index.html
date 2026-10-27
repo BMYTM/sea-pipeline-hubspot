@@ -17,12 +17,10 @@
       <div class="asof" id="asof">Loading HubSpot data…</div>
     </div>
     <div class="sub">HubSpot Sales Pipeline · Thailand, Philippines, Indonesia, Malaysia, Singapore · USD</div>
-    <p class="take" id="takeaway"></p>
   </header>
 
   <nav class="tabs" role="tablist" aria-label="Views">
-    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
-    <button role="tab" data-tab="closures" aria-selected="false">Closures</button>
+    <button role="tab" data-tab="closures" aria-selected="true">Closures</button>
     <button role="tab" data-tab="active" aria-selected="false">Active pipeline</button>
   </nav>
 
@@ -31,59 +29,8 @@
     <div class="fb-row" id="fb-controls"></div>
     <div class="fb-row fb-pills" id="fb-pills"></div>
   </section>
-  <p class="hint" id="ov-hint">Tip: click any tile, bar or row to drill into the matching deals.</p>
 
-  <div class="pane" id="tab-overview">
-  <section class="kpis" id="kpis"></section>
-
-  <section class="grid">
-    <div class="card">
-      <h2>Open pipeline by country</h2>
-      <div class="note">Deal value now sitting in each open stage · click a bar to see those deals</div>
-      <div class="legend" id="pipe-legend"></div>
-      <div class="chart" id="pipe-chart"></div>
-    </div>
-    <div class="card">
-      <h2>Closed-won by quarter</h2>
-      <div class="note">Won deal value by close-date quarter, since Apr 2025 · click a bar to see those deals</div>
-      <div class="legend" id="won-legend"></div>
-      <div class="chart" id="won-chart"></div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Country scorecard</h2>
-    <div class="note">Win rate = won ÷ (won + lost) by deal count, all time in the Sales Pipeline · click a row to open that country</div>
-    <div class="tbl-wrap"><table id="country-tbl" class="clickable"><thead><tr>
-      <th>Country</th><th class="num">Active value</th><th class="num">Active deals</th><th class="num">On-hold value</th>
-      <th class="num">On-hold deals</th><th class="num">Won FY27</th><th class="num">Won (all time)</th><th class="num">Lost (all time)</th><th class="num">Win rate</th>
-    </tr></thead><tbody></tbody></table></div>
-  </section>
-
-  <section class="card">
-    <h2>By deal owner</h2>
-    <div class="note">Open SEA deals per owner; "stale" = never contacted or no logged contact in 90+ days · click a row for that owner's deals</div>
-    <div class="tbl-wrap"><table id="owner-tbl" class="clickable"><thead><tr>
-      <th>Owner</th><th class="num">Open deals</th><th class="num">Active value</th><th class="num">Weighted</th><th class="num">On-hold value</th><th class="num">Stale deals</th>
-    </tr></thead><tbody></tbody></table></div>
-  </section>
-
-  <section class="grid">
-    <div class="card">
-      <h2>Top of funnel</h2>
-      <div class="note">SEA deals in the Qualification pipeline, by stage (all time)</div>
-      <div id="funnel"></div>
-    </div>
-    <div class="card">
-      <h2>Data health</h2>
-      <div class="note">HubSpot hygiene items that distort the numbers above · click a row to see the deals</div>
-      <table id="q-tbl" class="clickable"><thead><tr><th>Item</th><th class="num">Count</th><th>Detail</th></tr></thead><tbody></tbody></table>
-    </div>
-  </section>
-  </div>
-
-  <!-- ===== Closures ===== -->
-  <div class="pane" id="tab-closures" hidden>
+  <div class="pane" id="tab-closures">
     <section class="kpis" id="cl-kpis"></section>
     <section class="grid">
       <div class="card">
@@ -118,7 +65,7 @@
     </section>
   </div>
 
-  <p class="foot">Values are HubSpot's company-currency amounts (USD). SEA = HubSpot regions "Thailand &amp; Others", Indonesia, Philippines, Malaysia and Singapore, Sales Pipeline only. Closed-lost values are left out of every total because some look like local-currency entries (see Data health). FY27 = 1 Apr 2026 – 31 Mar 2027. Data refreshes daily from HubSpot.</p>
+  <p class="foot">Values are HubSpot's company-currency amounts (USD). SEA = HubSpot regions "Thailand &amp; Others", Indonesia, Philippines, Malaysia and Singapore, Sales Pipeline only. Closed-lost values are left out of every total because some look like local-currency entries. On-hold deals are not shown. FY27 = 1 Apr 2026 – 31 Mar 2027. Data refreshes daily from HubSpot.</p>
 </main>
 <div class="tip" id="tip"></div>
 <div class="scrim" id="scrim" hidden></div>
@@ -128,7 +75,6 @@
   <div class="dr-body" id="dr-body"></div>
 </aside>
 <script src="vendor/d3.min.js"></script>
-<script src="app.js"></script>
 <script src="ui.js"></script>
 </body>
 </html>

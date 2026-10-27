@@ -1,9 +1,9 @@
 /* SEA pipeline: tabs, shared filters (kept in the link), click-to-drill, detail drawer.
-   Overview drawing lives in app.js and calls window.SEA_UI.go(tab, filters) on clicks. */
+   On-hold deals are left out of the dashboard. */
 (() => {
   const ORDER = ['Thailand', 'Philippines', 'Indonesia', 'Malaysia', 'Singapore'];
   const CC = ['--c1', '--c2', '--c3', '--c4', '--c5'];
-  const STAGES = ['Demo/Developing', 'Proposal Sent', 'Commercial/Contracting', 'On-Hold'];
+  const STAGES = ['Demo/Developing', 'Proposal Sent', 'Commercial/Contracting'];
   const FY = {fy27: ['2026-04-01', '2027-04-01', 'FY27 (Apr 2026 – Mar 2027)'], fy26: ['2025-04-01', '2026-04-01', 'FY26 (Apr 2025 – Mar 2026)'], fy25: ['2024-04-01', '2025-04-01', 'FY25 (Apr 2024 – Mar 2025)'], fy24: ['2023-04-01', '2024-04-01', 'FY24 (Apr 2023 – Mar 2024)']};
   const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
   const col = (c) => css(CC[ORDER.indexOf(c)] || '--hold');
@@ -30,7 +30,7 @@
   // USD on top, local currency underneath
   const dual = (usd, r, td) => { if (usd == null) return el('span', 'm', '—'); const f = document.createDocumentFragment(); f.append(el('span', 'usd', money(usd))); const l = localTxt(usd, r.country); if (l) f.append(el('small', 'loc', l)); return f; };
   const withLocal = (usd) => S.f.country && ccyOf(S.f.country) ? ' · ' + localTxt(usd, S.f.country) : '';
-  const S = {tab: 'overview', f: {}};
+  const S = {tab: 'closures', f: {}};
   const sort = {closures: {k: 'close_date', dir: -1}, active: {k: 'amount', dir: -1}};
 
   // ---------- filter definitions ----------
@@ -59,7 +59,7 @@
   // ---------- URL state ----------
   function readHash() {
     const [t, qs] = location.hash.slice(1).split('?');
-    S.tab = ['overview', 'closures', 'active'].includes(t) ? t : 'overview';
+    S.tab = ['closures', 'active'].includes(t) ? t : 'closures';
     S.f = Object.fromEntries(new URLSearchParams(qs || ''));
   }
   function writeHash() {
@@ -100,13 +100,12 @@
       match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.sub_source, r.remarks, r.next_step, r.conv_reason, ppl(r)));
   }
   const ROWS = {closures: rowsClosures, active: rowsActive};
-  function statusList(v) { return (v || '').split(',').filter(Boolean).flatMap((x) => x === 'active' ? STAGES.filter((s) => s !== 'On-Hold') : [x]); }
+  function statusList(v) { return (v || '').split(',').filter(Boolean).flatMap((x) => x === 'active' ? STAGES : [x]); }
 
   // ---------- filter bar ----------
   let searchTimer;
   function drawFilterBar() {
-    const bar = $('#filterbar'); bar.hidden = S.tab === 'overview'; $('#ov-hint').hidden = S.tab !== 'overview';
-    if (S.tab === 'overview') return;
+    $('#filterbar').hidden = false;
     const noCountry = Object.assign({}, S.f, {country: ''});
     const base = ROWS[S.tab](noCountry);
     $('#fb-chips').replaceChildren(...[''].concat(ORDER).map((c) => {
@@ -389,12 +388,11 @@
   function drawActive() {
     const f = S.f, rows = rowsActive();
     const scope = rowsActive(Object.assign({}, f, {status: '', close: '', health: ''}));
-    const act = scope.filter((r) => r.stage !== 'On-Hold'), hold = scope.filter((r) => r.stage === 'On-Hold');
+    const act = scope;
     const fyc = scope.filter((r) => r.close_date >= today && r.close_date < '2027-04-01'), past = scope.filter((r) => r.close_date && r.close_date < today);
     const reset = {status: '', close: '', health: ''};
     kpis('#ac-kpis', [
       ['Active (Demo → Contracting)', money(sum(act, (r) => r.amount)), num(act.length) + ' deals' + withLocal(sum(act, (r) => r.amount)), Object.assign({}, reset, {status: 'active'}), statusList(f.status).join() === statusList('active').join() && !f.close],
-      ['On hold', money(sum(hold, (r) => r.amount)), num(hold.length) + ' deals' + withLocal(sum(hold, (r) => r.amount)), Object.assign({}, reset, {status: 'On-Hold'}), f.status === 'On-Hold' && !f.close],
       ['Closing by 31 Mar 2027', money(sum(fyc, (r) => r.amount)), num(fyc.length) + ' deals with a FY27 close date' + withLocal(sum(fyc, (r) => r.amount)), Object.assign({}, reset, {close: 'fy27'}), f.close === 'fy27' && !f.status],
       ['Close date passed', num(past.length), money(sum(past, (r) => r.amount)) + ' · dates need updating', Object.assign({}, reset, {close: 'past'}), f.close === 'past' && !f.status]]);
     const all = rowsActive(Object.assign({}, f, {country: '', status: ''}));
@@ -429,11 +427,17 @@
       }});
   }
 
+  function drawHead() {
+    const at = new Date(D.generated_at), hrs = (Date.now() - at) / 36e5, a = $('#asof');
+    a.textContent = 'HubSpot data as of ' + at.toLocaleString('en-GB', {day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'}) + (hrs > 48 ? ' · not refreshed in ' + Math.round(hrs / 24) + ' days' : '');
+    a.classList.toggle('stale', hrs > 48);
+  }
+
   // ---------- boot ----------
   readHash(); render();
   fetch('data/fx.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : null).then((x) => { FX = x; if (D) render(); }).catch(() => {});
   fetch('data/details.json', {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => { D = d; render(); })
+    .then((d) => { d.active = d.active.filter((r) => r.stage !== 'On-Hold'); D = d; drawHead(); render(); })
     .catch((e) => ['closures', 'active'].forEach((t) => $('#tab-' + t).replaceChildren(el('div', 'err', 'Could not load data/details.json (' + e.message + ').'))));
   let w = window.innerWidth;
   window.addEventListener('resize', () => { if (Math.abs(window.innerWidth - w) > 30) { w = window.innerWidth; render(); } });
