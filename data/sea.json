@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T03:48:07Z",
+ "generated_at": "2026-10-27T23:34:07Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -106,8 +106,8 @@
    "region": "Philippines",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 7,
-   "amount": 934100.0
+   "count": 6,
+   "amount": 844100.0
   },
   {
    "region": "Philippines",
@@ -267,12 +267,7 @@
   {
    "region": "Malaysia",
    "stage": "MQL Lost",
-   "count": 3
-  },
-  {
-   "region": "Malaysia",
-   "stage": "Marketing Nurture",
-   "count": 1
+   "count": 4
   },
   {
    "region": "Philippines",
@@ -302,17 +297,17 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 16
+   "count": 15
   },
   {
    "region": "Thailand & Others",
    "stage": "In Progress",
-   "count": 3
+   "count": 4
   },
   {
    "region": "Thailand & Others",
    "stage": "MQL Lost",
-   "count": 15
+   "count": 16
   },
   {
    "region": "Thailand & Others",
@@ -322,7 +317,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Marketing Nurture",
-   "count": 13
+   "count": 12
   }
  ],
  "open_deals": [
@@ -743,7 +738,7 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/379729670388"
   },
   {
-   "id": "515111037159",
+   "id": "531677642992",
    "deal": "Best Options Assistance",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
@@ -753,20 +748,7 @@
    "owner": "Jun de Dios",
    "last_contacted": "2026-07-10",
    "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111037159"
-  },
-  {
-   "id": "509448217802",
-   "deal": "Bestoptions Assistance Inc. - New Deal",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 90000.0,
-   "close_date": "2026-12-15",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-07-10",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/509448217802"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/531677642992"
   },
   {
    "id": "193935600873",
@@ -842,7 +824,7 @@
    "amount": 73880.0,
    "close_date": "2026-11-20",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-09-14",
+   "last_contacted": "2026-10-27",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
   },
