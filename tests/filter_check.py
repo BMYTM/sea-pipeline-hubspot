@@ -67,31 +67,8 @@ def exp_active(f):
     return out
 
 
-def exp_leads(f):
-    p = f.get("period", "")
-    frm = plus(-30) if p == "30" else plus(-90) if p == "90" else FY[p][0] if p in FY else ""
-    to = FY[p][1] if p in FY else "9999"
-    m = f.get("month", "")
-    inp = lambda d: bool(d) and (not frm or frm <= d < to) and (not m or d[:7] == m)
-    out = []
-    for r in D["leads"]:
-        t = f.get("type", "")
-        if t == "mql": ok = inp(r["mql_date"])
-        elif t == "sql": ok = inp(r["sql_date"])
-        elif t == "converted": ok = bool(r["mql_date"]) and inp(r["sql_date"])
-        else:
-            ok = (r["stage"] == "Marketing Qualified Lead" if t == "nowmql" else r["stage"] == "Sales Qualified Lead" if t == "nowsql" else True)
-            ok = ok and (not (frm or m) or inp(r["mql_date"]) or inp(r["sql_date"]))
-        if not ok: continue
-        if f.get("country") and r["country"] != f["country"]: continue
-        if f.get("owner") and r["owner"] != f["owner"]: continue
-        if f.get("source") and r["source"] != f["source"]: continue
-        out.append(r)
-    return out
-
-
-EXP = {"closures": exp_closures, "active": exp_active, "leads": exp_leads}
-NOTE = {"closures": "#cl-note", "active": "#ac-note", "leads": "#ld-note"}
+EXP = {"closures": exp_closures, "active": exp_active}
+NOTE = {"closures": "#cl-note", "active": "#ac-note"}
 
 
 def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get(k)})
@@ -103,13 +80,9 @@ OPTS = {
     "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "On-Hold", "Demo/Developing,On-Hold", "Proposal Sent,On-Hold", "Demo/Developing,Proposal Sent"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "cta", "nocontact", "noamount"]},
-    "leads": {"type": ["mql", "sql", "nowmql", "nowsql", "converted"], "period": ["30", "90", "fy27", "fy26"], "owner": owners(D["leads"], ["owner"]),
-              "source": sorted({r["source"] for r in D["leads"] if r["source"]}),
-              "month": sorted({d[:7] for r in D["leads"] for d in (r["mql_date"], r["sql_date"]) if d})[-18:]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}],
-          "leads": [{"type": "mql", "period": "fy27"}, {"type": "sql", "period": "90"}, {"type": "nowmql", "owner": "Soranan Natejan"}, {"type": "mql", "month": "2026-09"}]}
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent,On-Hold", "proposal": "any"}, {"status": "On-Hold", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}]}
 
 
 def money(v):
@@ -163,7 +136,7 @@ async def main():
                 for c in COUNTRIES: await check(tab, dict(combo, country=c))
 
         # 1b. every dropdown option's count matches the list after picking it (with each country, and with a second filter)
-        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "On-Hold"}), ("leads", {}), ("leads", {"type": "mql"})]:
+        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "On-Hold"})]:
             for c in COUNTRIES:
                 base = dict(extra, country=c)
                 await view(tab, base)
@@ -203,7 +176,7 @@ async def main():
                     if claimed != only: fails.append(f"toggle {name} {c}: shows {claimed}, alone gives {only}")
 
         # 2. chips: count on chip == rows after clicking it (with a filter active)
-        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "On-Hold"}), ("leads", {"type": "mql"})]:
+        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "On-Hold"})]:
             for i, c in enumerate(COUNTRIES):
                 await view(tab, f)
                 chip = pg.locator("#fb-chips .chip").nth(i)
@@ -213,7 +186,7 @@ async def main():
                 if shown != n: fails.append(f"chip {tab} {c or 'All'} with {f}: chip says {shown}, list {n}")
 
         # 3. every clickable number in the summary tables
-        for tab, tbl in [("closures", "#cl-year"), ("active", "#ac-sum"), ("leads", "#ld-sum")]:
+        for tab, tbl in [("closures", "#cl-year"), ("active", "#ac-sum")]:
             await view(tab, {})
             cnt = await pg.locator(tbl + " .cell").count()
             for i in range(cnt):
@@ -237,7 +210,7 @@ async def main():
                     if k != n: fails.append(f"cell {tbl} #{i} shows '{txt}' but list has {n}")
 
         # 4. KPI tiles on each tab
-        for tab, sel in [("closures", "#cl-kpis"), ("active", "#ac-kpis"), ("leads", "#ld-kpis")]:
+        for tab, sel in [("closures", "#cl-kpis"), ("active", "#ac-kpis")]:
             for c in COUNTRIES:
                 await view(tab, {"country": c})
                 cnt = await pg.locator(sel + " .kpi.click").count()

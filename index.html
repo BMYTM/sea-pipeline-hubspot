@@ -24,7 +24,6 @@
     <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
     <button role="tab" data-tab="closures" aria-selected="false">Closures</button>
     <button role="tab" data-tab="active" aria-selected="false">Active pipeline</button>
-    <button role="tab" data-tab="leads" aria-selected="false">MQL &amp; SQL</button>
   </nav>
 
   <section class="filterbar" id="filterbar" hidden>
@@ -116,29 +115,6 @@
     <section class="card">
       <div class="list-head"><h2>Active deals</h2><div class="note" id="ac-note"></div></div>
       <div class="tbl-wrap tall"><table id="ac-tbl" class="list"><thead></thead><tbody></tbody></table></div>
-    </section>
-  </div>
-
-  <!-- ===== MQL & SQL ===== -->
-  <div class="pane" id="tab-leads" hidden>
-    <section class="kpis" id="ld-kpis"></section>
-    <section class="stack">
-      <div class="card">
-        <h2>MQL and SQL by country</h2>
-        <div class="note">Contacts that ever reached each lifecycle stage, and where they sit today. Click a number to filter.</div>
-        <div class="tbl-wrap"><table id="ld-sum" class="matrix"><thead></thead><tbody></tbody></table></div>
-      </div>
-      <div class="card">
-        <h2>New MQLs and SQLs by month</h2>
-        <div class="note">Date each contact entered the stage, last 18 months · click a bar to filter</div>
-        <div class="legend" id="ld-legend"></div>
-        <div class="chart" id="ld-chart"></div>
-      </div>
-    </section>
-    <section class="card">
-      <div class="list-head"><h2>MQL and SQL contacts</h2><div class="note" id="ld-note"></div></div>
-      <div class="tbl-wrap tall"><table id="ld-tbl" class="list"><thead></thead><tbody></tbody></table></div>
-      <p class="foot">MQL/SQL come from the HubSpot contact lifecycle stage, by the contact's Country field. Only names and job titles are shown; email and phone stay in HubSpot.</p>
     </section>
   </div>
 

@@ -15,7 +15,6 @@ This is a separate project from the existing SEA Dashboard (`sea-dashboard`) and
 - Top of funnel (Qualification pipeline) and a data-health check
 - **Closures** tab: every closed-won deal by country, year and month, with headcount, subscription, implementation, year-1 total (USD and local currency), account, owners and linked contacts
 - **Active pipeline** tab: every open deal by country with status (pick several at once), deal source (Partner and partner name, or the direct source), proposal-sent date, closure date, last meeting date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
-- **MQL & SQL** tab: contacts that reached MQL or SQL by country, monthly trend, conversion, and the contact list
 - Every tab filters by country and downloads as CSV
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link
 - Every dropdown shows how many rows each choice gives, and hides choices with none
@@ -53,7 +52,6 @@ A scheduled Claude task refreshes the data every morning through the HubSpot con
 - Local currency = USD converted at the daily rate in `data/fx.json` (THB, PHP, IDR, MYR, SGD). HubSpot stores almost every SEA deal in USD, so there is no booked local amount to show; the few legacy deals booked in INR show that amount in the detail panel.
 - Proposal sent = the deal's Proposal sent Date field, or the date it entered the Proposal Sent stage when that field is empty.
 - Employee headcount = the deal's Number of Employees (or the headcount in its Deal Status remarks).
-- MQL / SQL = the contact's lifecycle stage history (date entered MQL / SQL), grouped by the contact's Country field.
 - Notes = the deal's "Deal Status" remarks plus Next step. 
 - Last meeting = the latest meeting (on or before today) associated with the deal in HubSpot. Meetings logged only on the contact or company, not the deal, don't count.
 - Deal source = HubSpot Deal Source; the name under it is the Deal Sub-source (the partner's name for Partner deals). The Deal source filter has Partner, Direct (non-partner) and each direct source; the Partner filter picks one partner.

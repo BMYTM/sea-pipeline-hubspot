@@ -31,7 +31,7 @@
   const dual = (usd, r, td) => { if (usd == null) return el('span', 'm', '—'); const f = document.createDocumentFragment(); f.append(el('span', 'usd', money(usd))); const l = localTxt(usd, r.country); if (l) f.append(el('small', 'loc', l)); return f; };
   const withLocal = (usd) => S.f.country && ccyOf(S.f.country) ? ' · ' + localTxt(usd, S.f.country) : '';
   const S = {tab: 'overview', f: {}};
-  const sort = {closures: {k: 'close_date', dir: -1}, active: {k: 'amount', dir: -1}, leads: {k: 'latest', dir: -1}};
+  const sort = {closures: {k: 'close_date', dir: -1}, active: {k: 'amount', dir: -1}};
 
   // ---------- filter definitions ----------
   const ownersOf = (rows) => [...new Set(rows.flatMap((r) => [r.deal_owner, r.account_owner, r.owner]).filter(Boolean))].sort();
@@ -52,19 +52,14 @@
       {k: 'owner', label: 'Deal owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.deal_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'acct', label: 'Account owner', dyn: true, opts: () => [...new Set(D.active.map((r) => r.account_owner).filter(Boolean))].sort().map((o) => [o, o])},
       {k: 'proposal', label: 'Proposal sent', opts: () => [['30', 'In the last 30 days'], ['90', 'In the last 90 days'], ['fy27', 'In FY27'], ['any', 'Any date'], ['none', 'No proposal date']]},
-      {k: 'health', label: 'Follow-up', opts: () => [['stale', 'Last activity 90+ days ago'], ['never', 'No activity logged'], ['cta', 'Call to action: Yes'], ['nocontact', 'No contact linked'], ['noamount', 'No amount']]}],
-    leads: [
-      {k: 'type', label: 'Stage', opts: () => [['mql', 'Reached MQL'], ['sql', 'Reached SQL'], ['nowmql', 'Currently MQL'], ['nowsql', 'Currently SQL'], ['converted', 'MQL that became SQL']]},
-      {k: 'period', label: 'When', opts: () => [['30', 'Last 30 days'], ['90', 'Last 90 days'], ['fy27', 'FY27 (since Apr 2026)'], ['fy26', 'FY26']]},
-      {k: 'owner', label: 'Contact owner', dyn: true, opts: () => ownersOf(D.leads).map((o) => [o, o])},
-      {k: 'source', label: 'Source', dyn: true, opts: () => sourcesOf(D.leads).map((o) => [o, o])}]
+      {k: 'health', label: 'Follow-up', opts: () => [['stale', 'Last activity 90+ days ago'], ['never', 'No activity logged'], ['cta', 'Call to action: Yes'], ['nocontact', 'No contact linked'], ['noamount', 'No amount']]}]
   };
   const PILL = {status: (v) => 'Status: ' + statusList(v).join(' + '), month: (v) => 'Month: ' + fmonth(v), quarter: (v) => 'Quarter: ' + qLabel(v), q: (v) => 'Search: “' + v + '”', country: (v) => v};
 
   // ---------- URL state ----------
   function readHash() {
     const [t, qs] = location.hash.slice(1).split('?');
-    S.tab = ['overview', 'closures', 'active', 'leads'].includes(t) ? t : 'overview';
+    S.tab = ['overview', 'closures', 'active'].includes(t) ? t : 'overview';
     S.f = Object.fromEntries(new URLSearchParams(qs || ''));
   }
   function writeHash() {
@@ -104,18 +99,7 @@
         f.health === 'cta' ? r.cta === 'Yes' : f.health === 'nocontact' ? !(r.contacts || []).length : !r.amount)) &&
       match(f.q, r.deal, r.company, r.deal_owner, r.account_owner, r.sub_source, r.remarks, r.next_step, r.conv_reason, ppl(r)));
   }
-  function rowsLeads(f = S.f) {
-    const from = f.period === '30' ? plusDays(-30) : f.period === '90' ? plusDays(-90) : f.period && FY[f.period] ? FY[f.period][0] : '';
-    const to = f.period && FY[f.period] ? FY[f.period][1] : '9999';
-    const inP = (d) => d && (!from || (d >= from && d < to)) && (!f.month || d.slice(0, 7) === f.month);
-    return D.leads.filter((r) => {
-      const t = f.type;
-      const ok = t === 'mql' ? inP(r.mql_date) : t === 'sql' ? inP(r.sql_date) : t === 'converted' ? r.mql_date && inP(r.sql_date) :
-        (t === 'nowmql' ? r.stage === 'Marketing Qualified Lead' : t === 'nowsql' ? r.stage === 'Sales Qualified Lead' : true) && (!(from || f.month) || inP(r.mql_date) || inP(r.sql_date));
-      return ok && (!f.country || r.country === f.country) && (!f.owner || r.owner === f.owner) && (!f.source || r.source === f.source) && match(f.q, r.name, r.title, r.company);
-    });
-  }
-  const ROWS = {closures: rowsClosures, active: rowsActive, leads: rowsLeads};
+  const ROWS = {closures: rowsClosures, active: rowsActive};
   function statusList(v) { return (v || '').split(',').filter(Boolean).flatMap((x) => x === 'active' ? STAGES.filter((s) => s !== 'On-Hold') : [x]); }
 
   // ---------- filter bar ----------
@@ -160,7 +144,7 @@
       s.addEventListener('change', () => set({[def.k]: s.value}));
       ctr.appendChild(s);
     });
-    const q = el('input'); q.type = 'search'; q.id = 'fb-q'; q.placeholder = S.tab === 'leads' ? 'Search name, title or company' : 'Search deal, account, contact or notes';
+    const q = el('input'); q.type = 'search'; q.id = 'fb-q'; q.placeholder = 'Search deal, account, contact or notes';
     q.value = S.f.q || ''; q.setAttribute('aria-label', 'Search');
     q.addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(() => set({q: q.value.trim()}), 200); });
     ctr.appendChild(q);
@@ -340,23 +324,11 @@
       const a = el('a', 'btn primary', 'Open in HubSpot ↗'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; b.appendChild(a);
     });
   }
-  function openLead(r) {
-    openDrawer(r.country + ' · ' + (r.stage || 'Contact'), r.name || 'Contact', (b) => {
-      if (r.title || r.company) b.appendChild(el('p', 'dr-sub', [r.title, r.company].filter(Boolean).join(' · ')));
-      facts(b, [['Stage now', r.stage], ['Lead status', r.lead_status], ['Became MQL', r.mql_date && fdate(r.mql_date)], ['Became SQL', r.sql_date && fdate(r.sql_date)],
-        ['Became opportunity', r.opp_date && fdate(r.opp_date)], ['Became customer', r.customer_date && fdate(r.customer_date)],
-        ['Owner', r.owner && filterLink(r.owner, 'leads', {owner: r.owner})], ['Source', r.source], ['Created', fdate(r.created)],
-        ['Last activity', r.last_activity ? fdate(r.last_activity) : 'None logged'], ['Linked deals', num(r.deals)]]);
-      const a = el('a', 'btn primary', 'Open in HubSpot ↗'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; b.appendChild(a);
-    });
-  }
-
   // ---------- CSV ----------
   function downloadCsv() {
     const spec = {
       closures: [['country', 'Country'], ['year', 'Year'], ['month', 'Month'], ['deal', 'Deal'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['company', 'Account'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['contacts', 'Contacts'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['close_date', 'Close date'], ['url', 'HubSpot link']],
-      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['conv_reason', 'Assessment'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_meeting', 'Last meeting'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']],
-      leads: [['country', 'Country'], ['name', 'Contact'], ['title', 'Job title'], ['company', 'Company'], ['stage', 'Stage now'], ['mql_date', 'MQL date'], ['sql_date', 'SQL date'], ['owner', 'Owner'], ['source', 'Source'], ['deals', 'Deals'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']]
+      active: [['country', 'Country'], ['deal', 'Deal'], ['stage', 'Status'], ['source', 'Deal source'], ['sub_source', 'Sub-source / partner'], ['conv_reason', 'Assessment'], ['proposal_sent', 'Proposal sent'], ['close_date', 'Closure date'], ['headcount', 'Employee headcount'], ['subscription', 'Subscription USD'], ['implementation', 'Implementation USD'], ['year1_total', 'Year-1 total USD'], ['_ccy', 'Local currency'], ['_loc', 'Year-1 total local'], ['deal_owner', 'Deal owner'], ['account_owner', 'Account owner'], ['company', 'Account'], ['contacts', 'Contacts'], ['remarks', 'Remarks'], ['next_step', 'Next step'], ['cta', 'Call to action'], ['cta_reason', 'CTA reason'], ['last_meeting', 'Last meeting'], ['last_activity', 'Last activity'], ['url', 'HubSpot link']]
     }[S.tab];
     const esc = (v) => { if (Array.isArray(v)) v = v.map((p) => p.name + (p.title ? ' (' + p.title + ')' : '')).join('; '); return v == null ? '' : /[",\n]/.test(String(v)) ? '"' + String(v).replace(/"/g, '""') + '"' : String(v); };
     const csv = [spec.map((s) => s[1]).join(',')].concat(ROWS[S.tab]().map((r) => Object.assign({}, r, {_ccy: ccyOf(r.country), _loc: toLocal(r.year1_total, r.country) != null ? Math.round(toLocal(r.year1_total, r.country)) : null})).map((r) => spec.map((s) => esc(r[s[0]])).join(','))).join('\n');
@@ -370,7 +342,7 @@
     document.querySelectorAll('.pane').forEach((p) => { p.hidden = p.id !== 'tab-' + S.tab; });
     if (!D) { $('#filterbar').hidden = true; return; }
     drawFilterBar();
-    if (S.tab === 'closures') drawClosures(); else if (S.tab === 'active') drawActive(); else if (S.tab === 'leads') drawLeads();
+    if (S.tab === 'closures') drawClosures(); else if (S.tab === 'active') drawActive();
   }
 
   // ---------- Closures ----------
@@ -457,51 +429,12 @@
       }});
   }
 
-  // ---------- MQL & SQL ----------
-  function drawLeads() {
-    const f = S.f, rows = rowsLeads().map((r) => Object.assign(r, {latest: [r.mql_date, r.sql_date].filter(Boolean).sort().pop() || null}));
-    const scope = rowsLeads(Object.assign({}, f, {type: '', period: '', month: ''}));
-    const fy = (r, k) => inFY(r[k], 'fy27');
-    const nowM = scope.filter((r) => r.stage === 'Marketing Qualified Lead'), nowS = scope.filter((r) => r.stage === 'Sales Qualified Lead');
-    const reset = {type: '', period: '', month: ''};
-    kpis('#ld-kpis', [
-      ['MQLs, FY27 to date', num(scope.filter((r) => fy(r, 'mql_date')).length), num(scope.filter((r) => r.mql_date >= plusDays(-90)).length) + ' in the last 90 days', Object.assign({}, reset, {type: 'mql', period: 'fy27'}), f.type === 'mql' && f.period === 'fy27'],
-      ['SQLs, FY27 to date', num(scope.filter((r) => fy(r, 'sql_date')).length), num(scope.filter((r) => r.sql_date >= plusDays(-90)).length) + ' in the last 90 days', Object.assign({}, reset, {type: 'sql', period: 'fy27'}), f.type === 'sql' && f.period === 'fy27'],
-      ['Currently at MQL', num(nowM.length), 'Waiting to be worked to SQL', Object.assign({}, reset, {type: 'nowmql'}), f.type === 'nowmql'],
-      ['Currently at SQL', num(nowS.length), 'Sales-accepted, not yet opportunity', Object.assign({}, reset, {type: 'nowsql'}), f.type === 'nowsql']]);
-    const all = rowsLeads(Object.assign({}, f, {country: '', type: '', period: '', month: ''}));
-    const cs = ORDER;
-    const c = (n, patch) => ({n: n ? num(n) : null, v: n ? 1 : '', cls: 'num', patch});
-    const line = (cty, a, cls) => {
-      const m = a.filter((r) => r.mql_date), s = a.filter((r) => r.sql_date), both = m.filter((r) => r.sql_date);
-      return {cls, cells: [{v: cty || 'All SEA', patch: cty ? {country: cty} : null},
-        c(m.length, {country: cty, type: 'mql', period: ''}), c(s.length, {country: cty, type: 'sql', period: ''}),
-        c(m.filter((r) => fy(r, 'mql_date')).length, {country: cty, type: 'mql', period: 'fy27'}), c(s.filter((r) => fy(r, 'sql_date')).length, {country: cty, type: 'sql', period: 'fy27'}),
-        c(a.filter((r) => r.stage === 'Marketing Qualified Lead').length, {country: cty, type: 'nowmql', period: ''}), c(a.filter((r) => r.stage === 'Sales Qualified Lead').length, {country: cty, type: 'nowsql', period: ''}),
-        {v: m.length ? pct(both.length / m.length) + ' (' + both.length + ')' : '—', cls: 'num', patch: both.length ? {country: cty, type: 'converted', period: ''} : null}]};
-    };
-    const rowsM = cs.map((x) => line(x, all.filter((r) => r.country === x)));
-    rowsM.push(line('', all, 'total'));
-    matrix('#ld-sum', [['Country'], ['MQL (ever)', 'num'], ['SQL (ever)', 'num'], ['MQL FY27', 'num'], ['SQL FY27', 'num'], ['Now MQL', 'num'], ['Now SQL', 'num'], ['MQL → SQL', 'num']], rowsM);
-    const chartRows = rowsLeads(Object.assign({}, f, {month: '', period: '', type: ''}));
-    const series = [{key: 'mql', label: 'MQL', color: css('--c1')}, {key: 'sql', label: 'SQL', color: css('--c2')}];
-    legend('#ld-legend', series.map((s) => [s.color, s.label]));
-    monthBars('#ld-chart', lastMonths(18), series, (m, k) => chartRows.filter((r) => (r[k + '_date'] || '').slice(0, 7) === m).length, (v) => d3.format(',')(v), true,
-      (m) => set({month: f.month === m ? '' : m, period: ''}),
-      f.month || f.period ? (m) => (!f.month || m === f.month) && (!f.period || (f.period === '30' ? m >= plusDays(-30).slice(0, 7) : f.period === '90' ? m >= plusDays(-90).slice(0, 7) : inFY(m + '-01', f.period))) : null);
-    $('#ld-note').textContent = num(rows.length) + ' contacts';
-    list('#ld-tbl', 'leads', [
-      {k: 'country', label: 'Country', f: countryCell}, {k: 'name', label: 'Contact', f: nameCell}, {k: 'title', label: 'Job title'}, {k: 'company', label: 'Company'},
-      {k: 'stage', label: 'Stage now'}, {k: 'mql_date', label: 'MQL date', f: fdate}, {k: 'sql_date', label: 'SQL date', f: fdate},
-      {k: 'owner', label: 'Owner'}, {k: 'source', label: 'Source'}, {k: 'last_activity', label: 'Last activity', f: (v) => v ? fdate(v) : '—'}], rows, {open: openLead});
-  }
-
   // ---------- boot ----------
   readHash(); render();
   fetch('data/fx.json', {cache: 'no-cache'}).then((r) => r.ok ? r.json() : null).then((x) => { FX = x; if (D) render(); }).catch(() => {});
   fetch('data/details.json', {cache: 'no-cache'}).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((d) => { D = d; render(); })
-    .catch((e) => ['closures', 'active', 'leads'].forEach((t) => $('#tab-' + t).replaceChildren(el('div', 'err', 'Could not load data/details.json (' + e.message + ').'))));
+    .catch((e) => ['closures', 'active'].forEach((t) => $('#tab-' + t).replaceChildren(el('div', 'err', 'Could not load data/details.json (' + e.message + ').'))));
   let w = window.innerWidth;
   window.addEventListener('resize', () => { if (Math.abs(window.innerWidth - w) > 30) { w = window.innerWidth; render(); } });
 })();
