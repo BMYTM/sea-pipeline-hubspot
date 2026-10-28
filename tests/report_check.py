@@ -43,9 +43,10 @@ for s in prs.slides:
     texts.append("\n".join(t))
 alltext = "\n".join(texts)
 print(f"slides: {len(prs.slides)}")
-checks = [(f"{len(won)} contracts signed in FY{str(fy0 + 1)[2:]}", "contracts title"),
-          (f"{len(props)} proposals out", "proposals title"),
-          (f"Open pipeline: {len(active)} deals", "pipeline title"),
+fy = f"FY{str(fy0 + 1)[2:]}"
+checks = [(f"Contracts Signed – {fy}", "contracts sheet"), (f"{len(props)} open deals in Proposal Sent", "proposals sheet"),
+          (f"{len(active)} open deals (Demo → Contracting)", "pipeline sheet"), ("Overview – Annual", "overview sheet"), ("Meetings Scheduled", "meetings scheduled sheet"),
+          ("Contracts Signed This Year", "contracts count box"),
           (f"{round(sum(val(r) for r in active)):,}", "pipeline total"),
           (f"{round(sum(val(r) for r in won)):,}", "contracts total")]
 for needle, what in checks:
