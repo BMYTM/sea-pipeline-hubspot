@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T03:55:42Z",
+ "generated_at": "2026-10-28T04:19:53Z",
  "source": "HubSpot (manual pull)",
  "closures": [
   {
@@ -6651,6 +6651,12 @@
    "deal_id": "379729670388",
    "date": "2026-11-19",
    "title": "Cognizant x HONO Meeting"
+  },
+  {
+   "id": "534532876509",
+   "deal_id": "508099332323",
+   "date": "2026-11-03",
+   "title": "Meeting with Asialink Finance and Mark"
   },
   {
    "id": "520193699054",
