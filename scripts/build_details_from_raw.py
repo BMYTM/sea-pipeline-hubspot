@@ -19,7 +19,7 @@ OWNERS = {
  "553393638": "Marta Gultom", "194032851": "Georgie Antony Chunkath", "33933207": "Sonu Kumar", "34182343": "Akash Kumar",
  "34182323": "Sonal Yadav", "31558294": "Prerna Taneja", "985326785": "Sakshi Kashyap", "75694492": "Shruti Malhotra",
  "32832438": "Sammy William Wamalwa", "487550599": "Amiel Sabangan", "333210046": "Sambhav Jain", "192531917": "HONO HR",
- "193254103": "Ajay Kadian", "29473190": "HONO", "38941506": "Vinay Dua", "193253359": "Mukul Jain",
+ "193254103": "Ajay Kadian", "29473190": "HONO", "38941506": "Vinay Dua", "193253359": "Mukul Jain", "1038973941": "Sheetal Gulati",
 }
 
 
@@ -178,15 +178,19 @@ def main():
     mt = json.loads((RAW / "meetings.txt").read_text())["results"][0]["content"].split("Dataset TSV:\n")[1].strip().split("\n")
     hdr = mt[0].split("\t"); di = [k for k, h in enumerate(hdr) if h.startswith("Deal [")][0]
     ti = [k for k, h in enumerate(hdr) if "hs_meeting_title" in h][0]; si = [k for k, h in enumerate(hdr) if "hs_meeting_start_time" in h][0]
-    meet = defaultdict(dict)
+    oi = next((k for k, h in enumerate(hdr) if "[hubspot_owner_id]" in h), None)  # meeting owner (Activity assigned to)
+    meet, mowner = defaultdict(dict), {}
     for line in mt[1:]:
         c = line.split("\t")
-        if len(c) == len(hdr): meet[c[di]][c[[k for k, h in enumerate(hdr) if h.startswith("Record ID")][0]]] = (c[si][:10], c[ti])
+        if len(c) == len(hdr):
+            mid_ = c[[k for k, h in enumerate(hdr) if h.startswith("Record ID")][0]]
+            meet[c[di]][mid_] = (c[si][:10], c[ti])
+            if oi is not None: mowner[mid_] = owner(c[oi]) if c[oi] not in ("", "Unassigned") else None
     mday = time.strftime("%Y-%m-%d", time.localtime((RAW / "meetings.txt").stat().st_mtime))
     for row in active:
         row.update(last_meeting(list(meet.get(row["id"], {}).values()), mday))
     deal_ids = {r["id"] for r in closures + active}
-    meetings = sorted(({"id": mid, "deal_id": did, "date": d_, "title": (t if t and t != "Unassigned" else None)}
+    meetings = sorted(({"id": mid, "deal_id": did, "date": d_, "title": (t if t and t != "Unassigned" else None), "owner": mowner.get(mid)}
                        for did, ms in meet.items() if did in deal_ids for mid, (d_, t) in ms.items()),
                       key=lambda x: (x["date"], x["id"]), reverse=True)
 

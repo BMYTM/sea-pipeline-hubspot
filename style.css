@@ -197,3 +197,4 @@ td small.loc{display:block;color:var(--muted);font-size:11px;white-space:nowrap}
 .up-when{flex:none;font-size:12px;color:var(--c1);font-weight:500}
 td .tag.up{color:var(--c1);border-color:currentColor}
 ul.meets li.up{color:var(--c1)}
+.up-owner{font-weight:500;color:var(--fg)}

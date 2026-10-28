@@ -76,7 +76,7 @@ for m in D.get("meetings", []):
     r = _deals.get(m["deal_id"])
     if not r: continue
     row = {"date": m["date"], "title": m["title"] or "Untitled meeting", "internal": "internal" in (m["title"] or "").lower(), "country": r["country"],
-           "stage": r["stage"] if r.get("stage_id") else "Closed won", "deal_owner": r["deal_owner"]}
+           "stage": r["stage"] if r.get("stage_id") else "Closed won", "deal_owner": r["deal_owner"], "owner": m.get("owner")}
     if m["id"] not in MT or (MT[m["id"]]["stage"] == "Closed won" and r.get("stage_id")): MT[m["id"]] = row
 MT = list(MT.values())
 
@@ -89,7 +89,7 @@ def exp_meetings(f):
         if w in FY: return d < TODAY and in_fy(d, w)
         return plus(-int(w)) <= d < TODAY
     return [r for r in MT if (not f.get("country") or r["country"] == f["country"]) and in_when(r["date"]) and (not f.get("month") or r["date"][:7] == f["month"])
-            and (not f.get("stage") or r["stage"] == f["stage"]) and (not f.get("owner") or r["deal_owner"] == f["owner"])
+            and (not f.get("stage") or r["stage"] == f["stage"]) and (not f.get("owner") or r["deal_owner"] == f["owner"]) and (not f.get("mowner") or r["owner"] == f["mowner"])
             and (not f.get("kind") or (f["kind"] == "internal") == r["internal"])]
 
 
@@ -107,7 +107,7 @@ OPTS = {
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
                "health": ["stale", "never", "nomeet", "cta", "nocontact", "noamount"]},
     "meetings": {"when": ["upcoming", "7", "30", "90", "fy27", "fy26"], "stage": ["Demo/Developing", "Proposal Sent", "Commercial/Contracting", "Closed won"],
-                 "owner": sorted({r["deal_owner"] for r in MT if r["deal_owner"]}), "kind": ["client", "internal"], "month": sorted({r["date"][:7] for r in MT})[-15:]},
+                 "owner": sorted({r["deal_owner"] for r in MT if r["deal_owner"]}), "mowner": sorted({r["owner"] for r in MT if r["owner"]}), "kind": ["client", "internal"], "month": sorted({r["date"][:7] for r in MT})[-15:]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
           "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent", "proposal": "any"}, {"status": "Demo/Developing", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}],
@@ -151,7 +151,7 @@ async def main():
                     sel_val = await pg.evaluate("(lbl) => { const s=[...document.querySelectorAll('#fb-controls select')].find(x=>x.getAttribute('aria-label')===lbl); return s ? s.value : null; }",
                                                 {"period": "Financial year" if tab == "closures" else "When", "year": "Calendar year", "owner": "Contact owner" if tab == "leads" else "Deal owner", "acct": "Account owner", "source": "Source" if tab == "leads" else "Deal source", "partner": "Partner",
                                                  "proposal": "Proposal sent", "meeting": "Last meeting", "close": "Closure date", "health": "Follow-up", "type": "Stage",
-                                                 "when": "When", "stage": "Deal stage", "kind": "Meeting type"}[k])
+                                                 "when": "When", "stage": "Deal stage", "kind": "Meeting type", "mowner": "Meeting owner"}[k])
                     if sel_val != v: fails.append(f"{tab} {f}: dropdown for {k} shows {sel_val!r}")
                 if "×" not in pills: fails.append(f"{tab} {f}: no filter pill shown")
 
@@ -174,7 +174,7 @@ async def main():
                     opts: [...s.options].map(o => ({v: o.value, t: o.text, d: o.disabled}))}))""")
                 keymap = {"Financial year": "period", "When": "period", "Calendar year": "year", "Deal owner": "owner", "Contact owner": "owner", "Account owner": "acct",
                           "Source": "source", "Deal source": "source", "Partner": "partner", "Proposal sent": "proposal", "Last meeting": "meeting", "Closure date": "close", "Follow-up": "health", "Stage": "type",
-                          "When": "when", "Deal stage": "stage", "Meeting type": "kind"}
+                          "When": "when", "Deal stage": "stage", "Meeting type": "kind", "Meeting owner": "mowner"}
                 for sel in opts:
                     k = keymap[sel["lbl"]]
                     for o in sel["opts"]:

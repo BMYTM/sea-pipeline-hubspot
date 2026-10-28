@@ -25,7 +25,8 @@ for f in ["deals.txt", "deal_contacts.txt"]:
 # meetings: the big pull, plus any per-deal pulls saved as meetings_extra*.txt (same columns). HubSpot's
 # reporting copy can take hours to show a meeting that was only just linked to a deal; a per-deal pull shows it sooner.
 h, rows = tsv("meetings.txt")
-key = lambda r: tuple(r.split("\t")[1:4])  # meeting id, title, deal id
+cols = h.split("\t"); kix = [i for i, c in enumerate(cols) if c.startswith(("Record ID", "Deal ["))]
+key = lambda r: tuple(r.split("\t")[i] for i in kix)  # meeting id, deal id
 have_m = {key(r) for r in rows}
 for extra in sorted(NEW.glob("meetings_extra*.txt")):
     eh, erows = tsv(extra.name)
