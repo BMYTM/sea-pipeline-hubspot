@@ -158,6 +158,10 @@ def main():
             if k.endswith("_iso"): money[pr["hs_object_id"]][k[:-4]] = v
     for row in closures + active:
         row.update(money_fields(money.get(row["id"], {}), row["amount"], row.get("headcount")))
+        # contract and finance fields for the weekly review (blank until the team fills them in HubSpot)
+        m = money.get(row["id"], {})
+        row.update({"tcv": num(m.get("hs_tcv")), "acv": num(m.get("hs_acv")), "invoice_date": (m.get("invoice_raised_date") or None),
+                    "payment_status": m.get("payment_status") or None, "paid_date": (m.get("amount_received_date") or None)})
     from money_fields import source_fields
     srcj = json.loads((RAW / "sources.txt").read_text())
     srcs = {}
@@ -181,6 +185,10 @@ def main():
     mday = time.strftime("%Y-%m-%d", time.localtime((RAW / "meetings.txt").stat().st_mtime))
     for row in active:
         row.update(last_meeting(list(meet.get(row["id"], {}).values()), mday))
+    deal_ids = {r["id"] for r in closures + active}
+    meetings = sorted(({"id": mid, "deal_id": did, "date": d_, "title": (t if t and t != "Unassigned" else None)}
+                       for did, ms in meet.items() if did in deal_ids for mid, (d_, t) in ms.items()),
+                      key=lambda x: (x["date"], x["id"]), reverse=True)
 
     # a deal linked to two companies comes back as two rows: keep one
     def dedupe(rows):
@@ -199,6 +207,7 @@ def main():
     out = {"generated_at": pulled, "source": "HubSpot (manual pull)",
            "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),
            "active": sorted(active, key=lambda x: -(x["amount"] or 0)),
+           "meetings": meetings,
            "leads": sorted(leads.values(), key=lambda x: max(x["mql_date"] or "", x["sql_date"] or ""), reverse=True)}
     (DATA / "details.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
     print("closures", len(closures), "active", len(active), "leads", len(leads),

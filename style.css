@@ -16,6 +16,8 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-
 .head-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
 h1{font-family:var(--serif);font-weight:400;font-size:30px;margin:0}
 .asof{font-size:12px;color:var(--muted)}
+.head-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#wsr-btn:disabled{opacity:.6;cursor:wait}
 .asof.stale{color:var(--warn)}
 .sub{color:var(--muted);font-size:12px;margin-top:4px}
 .take{margin:10px 0 0;max-width:62rem;font-size:15px}
