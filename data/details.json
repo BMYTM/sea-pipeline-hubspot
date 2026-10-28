@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T23:34:07Z",
+ "generated_at": "2026-10-27T23:56:58Z",
  "source": "HubSpot (manual pull)",
  "closures": [
   {
@@ -33,6 +33,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-12-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null
   },
@@ -71,6 +76,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-12-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Jingo Fermin",
    "partner": "Jingo Fermin"
   },
@@ -105,6 +115,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-12-01",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null
   },
@@ -139,6 +154,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-10-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol"
   },
@@ -173,6 +193,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-09-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Mukul Jain",
    "partner": null
   },
@@ -207,6 +232,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Mukul Jain",
    "partner": null
   },
@@ -241,6 +271,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-09-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol"
   },
@@ -275,6 +310,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -309,6 +349,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-08-22",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sunil Narang",
    "partner": "Sunil Narang"
   },
@@ -343,6 +388,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-07-25",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sunil Narang",
    "partner": "Sunil Narang"
   },
@@ -372,6 +422,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-03-06",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sunil Narang",
    "partner": "Sunil Narang"
   },
@@ -406,6 +461,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-07-17",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol"
   },
@@ -440,6 +500,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -474,6 +539,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-04-23",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null
   },
@@ -508,6 +578,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-12-27",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -542,6 +617,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-01-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -576,6 +656,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-09-29",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Integre",
    "partner": "Integre"
   },
@@ -610,6 +695,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-09-12",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null
   },
@@ -644,6 +734,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-09-19",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null
   },
@@ -678,6 +773,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-09-23",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -712,6 +812,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-07-25",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -746,6 +851,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-05-20",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Anuj Malik",
    "partner": "Anuj Malik"
   },
@@ -800,6 +910,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -834,6 +949,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-03-28",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Mukul Jain",
    "partner": null
   },
@@ -868,6 +988,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -910,6 +1035,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Direct",
    "partner": null
   },
@@ -948,6 +1078,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-11-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": 0.0,
+   "acv": 0.0,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Integre",
    "partner": "Integre"
   },
@@ -977,6 +1112,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -1011,6 +1151,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -1049,6 +1194,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Direct",
    "partner": null
   },
@@ -1083,6 +1233,11 @@
    "booked_amount": 500000000.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Anuj Malik",
    "partner": "Anuj Malik"
   },
@@ -1117,6 +1272,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null
   },
@@ -1152,6 +1312,11 @@
    "booked_amount": 403400.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -1187,6 +1352,11 @@
    "booked_amount": 239590.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -1225,6 +1395,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -1259,6 +1434,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -1294,6 +1474,11 @@
    "booked_amount": 430000.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   },
@@ -1337,6 +1522,11 @@
    "booked_amount": 12000000.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null
   },
@@ -1392,6 +1582,11 @@
    "booked_amount": 3200000.0,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null
   }
@@ -1435,6 +1630,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-05-02",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2025-02-25",
@@ -1479,6 +1679,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2024-12-03",
@@ -1523,6 +1728,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-09-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-08-12",
@@ -1567,6 +1777,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Customer Refferal",
    "partner": null,
    "last_meeting": null,
@@ -1611,6 +1826,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2026-09-21",
@@ -1655,6 +1875,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2023-10-12",
@@ -1699,6 +1924,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": null,
@@ -1743,6 +1973,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Direct",
    "partner": null,
    "last_meeting": null,
@@ -1787,6 +2022,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-01-28",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sunil Narang",
    "partner": "Sunil Narang",
    "last_meeting": "2026-08-31",
@@ -1831,6 +2071,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-09-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": "2026-07-16",
@@ -1875,6 +2120,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Email Outreach",
    "partner": null,
    "last_meeting": "2026-06-05",
@@ -1919,6 +2169,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-08-12",
@@ -1963,6 +2218,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Email Outreach",
    "partner": null,
    "last_meeting": null,
@@ -2007,6 +2267,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Organic",
    "partner": null,
    "last_meeting": "2026-07-14",
@@ -2051,6 +2316,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": null,
@@ -2095,6 +2365,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -2139,6 +2414,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Remax International",
    "partner": "Remax International",
    "last_meeting": null,
@@ -2183,6 +2463,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-12-27",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -2227,6 +2512,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-02-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "CTG+ Consulting",
    "partner": "CTG+ Consulting",
    "last_meeting": null,
@@ -2271,6 +2561,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -2315,6 +2610,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": null,
@@ -2359,6 +2659,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-22",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "G-Able Group",
    "partner": "G-Able Group",
    "last_meeting": "2026-04-23",
@@ -2411,6 +2716,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-03-12",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2024-03-18",
@@ -2455,6 +2765,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": "2025-07-07",
@@ -2499,6 +2814,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-07-01",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-05-29",
@@ -2543,6 +2863,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-08-13",
@@ -2587,6 +2912,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": null,
@@ -2631,6 +2961,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-08-28",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-07-15",
@@ -2675,6 +3010,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": null,
@@ -2714,6 +3054,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -2766,6 +3111,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-02-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2023-12-11",
@@ -2810,6 +3160,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-04-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -2854,6 +3209,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Jingo Fermin",
    "partner": "Jingo Fermin",
    "last_meeting": null,
@@ -2898,6 +3258,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "ABP",
    "partner": "ABP",
    "last_meeting": null,
@@ -2946,6 +3311,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "LinkedIn Outreach",
    "partner": null,
    "last_meeting": "2025-11-12",
@@ -2990,6 +3360,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Customer Refferal",
    "partner": null,
    "last_meeting": "2026-07-13",
@@ -3034,6 +3409,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-12-03",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-08-12",
@@ -3082,6 +3462,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-12-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2025-12-09",
@@ -3130,6 +3515,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-06-25",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2026-08-24",
@@ -3174,6 +3564,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "ABP",
    "partner": "ABP",
    "last_meeting": "2024-09-26",
@@ -3218,6 +3613,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2026-06-03",
@@ -3262,6 +3662,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -3310,6 +3715,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": null,
@@ -3354,6 +3764,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-03-07",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "ABP",
    "partner": "ABP",
    "last_meeting": "2026-02-26",
@@ -3398,6 +3813,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -3442,6 +3862,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-09-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -3486,6 +3911,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Email Outreach",
    "partner": null,
    "last_meeting": null,
@@ -3530,6 +3960,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -3574,6 +4009,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-11-18",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": "2025-11-07",
@@ -3618,6 +4058,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-08-12",
@@ -3662,6 +4107,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -3706,6 +4156,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-21",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": null,
@@ -3750,6 +4205,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -3794,6 +4254,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -3838,6 +4303,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-06-10",
@@ -3882,6 +4352,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -3926,6 +4401,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -3970,6 +4450,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-04-29",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": null,
@@ -4014,6 +4499,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-04-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "ABP",
    "partner": "ABP",
    "last_meeting": null,
@@ -4058,6 +4548,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2023-03-16",
@@ -4102,6 +4597,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-10-30",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "G-Able Group",
    "partner": "G-Able Group",
    "last_meeting": "2026-04-23",
@@ -4146,6 +4646,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": null,
    "partner": null,
    "last_meeting": "2024-06-25",
@@ -4190,6 +4695,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-06-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "GinSight Technology, TH",
    "partner": "GinSight Technology, TH",
    "last_meeting": "2026-01-08",
@@ -4234,6 +4744,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-09-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Organic",
    "partner": null,
    "last_meeting": null,
@@ -4278,6 +4793,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-03-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-08-12",
@@ -4322,6 +4842,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-11-10",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "G-Able Group",
    "partner": "G-Able Group",
    "last_meeting": "2026-04-23",
@@ -4374,6 +4899,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-07-29",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Direct",
    "partner": null,
    "last_meeting": "2024-08-28",
@@ -4418,6 +4948,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-10-06",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": "2025-09-16",
@@ -4462,6 +4997,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-04-28",
@@ -4506,6 +5046,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-01-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Organic",
    "partner": null,
    "last_meeting": "2026-01-07",
@@ -4554,6 +5099,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-13",
    "proposal_sent_source": "Proposal sent Date field",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2023-08-01",
@@ -4598,6 +5148,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Direct",
    "partner": null,
    "last_meeting": "2023-08-15",
@@ -4642,6 +5197,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": null,
@@ -4686,6 +5246,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-01-17",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Mukul Jain",
    "partner": null,
    "last_meeting": "2024-10-01",
@@ -4730,6 +5295,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": null,
@@ -4774,6 +5344,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -4818,6 +5393,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-08-11",
@@ -4862,6 +5442,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -4906,6 +5491,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-10-08",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": "2024-10-07",
@@ -4954,6 +5544,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-05-06",
@@ -4998,6 +5593,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-08-20",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -5046,6 +5646,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-06-17",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-07-06",
@@ -5090,6 +5695,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-01-15",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2024-01-10",
@@ -5134,6 +5744,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-26",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2026-04-01",
@@ -5178,6 +5793,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": null,
@@ -5222,6 +5842,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-03-05",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "LinkedIn Outreach",
    "partner": null,
    "last_meeting": "2025-02-25",
@@ -5266,6 +5891,11 @@
    "booked_amount": null,
    "proposal_sent": "2023-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2023-05-29",
@@ -5305,6 +5935,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-12-24",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Website Organic",
    "partner": null,
    "last_meeting": "2025-12-17",
@@ -5349,6 +5984,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-02-13",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2024-02-13",
@@ -5393,6 +6033,11 @@
    "booked_amount": null,
    "proposal_sent": "2025-02-18",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "LinkedIn Outreach",
    "partner": null,
    "last_meeting": null,
@@ -5437,6 +6082,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-11-05",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2024-10-04",
@@ -5481,6 +6131,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -5525,6 +6180,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2023-10-16",
@@ -5569,6 +6229,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2024-06-07",
@@ -5617,6 +6282,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "ABP",
    "partner": "ABP",
    "last_meeting": "2024-07-05",
@@ -5661,6 +6331,11 @@
    "booked_amount": null,
    "proposal_sent": "2024-02-15",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Internal Refferal",
    "partner": null,
    "last_meeting": "2024-02-01",
@@ -5705,6 +6380,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Ramssol",
    "partner": "Ramssol",
    "last_meeting": "2026-07-15",
@@ -5749,6 +6429,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-09",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Mukul Jain",
    "partner": null,
    "last_meeting": null,
@@ -5793,6 +6478,11 @@
    "booked_amount": null,
    "proposal_sent": "2026-10-22",
    "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold-Call",
    "partner": null,
    "last_meeting": null,
@@ -5837,6 +6527,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Event",
    "partner": null,
    "last_meeting": "2024-07-23",
@@ -5881,6 +6576,11 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Cold Call",
    "partner": null,
    "last_meeting": null,
@@ -5933,11 +6633,1788 @@
    "booked_amount": null,
    "proposal_sent": null,
    "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
    "sub_source": "Self Refferal",
    "partner": null,
    "last_meeting": "2024-10-15",
    "last_meeting_title": "Intro/Payroll Demo Hono x Metrobank",
    "meetings": 1
+  }
+ ],
+ "meetings": [
+  {
+   "id": "527569461443",
+   "deal_id": "379729670388",
+   "date": "2026-11-19",
+   "title": "Cognizant x HONO Meeting"
+  },
+  {
+   "id": "520193699054",
+   "deal_id": "515111097585",
+   "date": "2026-09-21",
+   "title": "HONO x PTC Ceremonial Signing"
+  },
+  {
+   "id": "514759608558",
+   "deal_id": "515111097585",
+   "date": "2026-09-08",
+   "title": "HONO x PTC/FMSS: Payroll demo"
+  },
+  {
+   "id": "515432911074",
+   "deal_id": "112816249045",
+   "date": "2026-08-31",
+   "title": "Short Catch up on Inspiro Proposal"
+  },
+  {
+   "id": "515426936018",
+   "deal_id": "112816249045",
+   "date": "2026-08-31",
+   "title": "Call with Sunil on Inspiro Proposal"
+  },
+  {
+   "id": "513941525742",
+   "deal_id": "515111097585",
+   "date": "2026-08-27",
+   "title": "Hono x PTC/FMSS: System Demo Part 1"
+  },
+  {
+   "id": "513756425422",
+   "deal_id": "112816249045",
+   "date": "2026-08-24",
+   "title": "Short Catch Up On Inspiro"
+  },
+  {
+   "id": "513178345672",
+   "deal_id": "508099332323",
+   "date": "2026-08-24",
+   "title": "Meeting with Ms. Apples / Asialink Finance"
+  },
+  {
+   "id": "512460675287",
+   "deal_id": "112816249045",
+   "date": "2026-08-18",
+   "title": "Meeting with Sunil and Boonchoo on Inspiro"
+  },
+  {
+   "id": "510306187454",
+   "deal_id": "512459995376",
+   "date": "2026-08-13",
+   "title": "Hono x TOA global: Payroll demo"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "60864294079",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "295427044579",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "216255209695",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "511204612323",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "420946178244",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project"
+  },
+  {
+   "id": "510911156453",
+   "deal_id": "112816249045",
+   "date": "2026-08-11",
+   "title": "Meeting with Inspiro"
+  },
+  {
+   "id": "510634759362",
+   "deal_id": "112816249045",
+   "date": "2026-08-11",
+   "title": "Internal Meeting for the INSPIRO Discussion"
+  },
+  {
+   "id": "508637319407",
+   "deal_id": "513634997475",
+   "date": "2026-08-11",
+   "title": "Initial Meeting: Hono x Anta PH"
+  },
+  {
+   "id": "509913505015",
+   "deal_id": "515111097585",
+   "date": "2026-08-07",
+   "title": "HRIS Project Kick-off"
+  },
+  {
+   "id": "508667933896",
+   "deal_id": "112816249045",
+   "date": "2026-08-05",
+   "title": "Hono Product Overview x Ramco: Part 2"
+  },
+  {
+   "id": "509500184786",
+   "deal_id": "515111097585",
+   "date": "2026-08-03",
+   "title": "MSA Quick discussion"
+  },
+  {
+   "id": "507584720105",
+   "deal_id": "515111097585",
+   "date": "2026-07-28",
+   "title": "MSA Discussion"
+  },
+  {
+   "id": "506159466718",
+   "deal_id": "112816249045",
+   "date": "2026-07-27",
+   "title": "HONO introduction and Product Overview x Ramco"
+  },
+  {
+   "id": "504203679967",
+   "deal_id": "515111097585",
+   "date": "2026-07-17",
+   "title": "FMSS x HONO Meeting: Partnership Discussion and Crew Payroll Scope / Workflows"
+  },
+  {
+   "id": "503637942515",
+   "deal_id": "515111097585",
+   "date": "2026-07-17",
+   "title": "FMSS x HONO Meeting: Partnership Discussion and Crew Payroll Scope / Workflows"
+  },
+  {
+   "id": "503532676339",
+   "deal_id": "508099332323",
+   "date": "2026-07-16",
+   "title": "HONO x Asialink Courtesy Call"
+  },
+  {
+   "id": "503388552438",
+   "deal_id": "15487249117",
+   "date": "2026-07-16",
+   "title": "HONO HCM Demo & Evaluation Session — Kapal Api Group"
+  },
+  {
+   "id": "503410290924",
+   "deal_id": "286017173691",
+   "date": "2026-07-15",
+   "title": "Pak Herry x Pak Mukul - Ritz Carlton Kuningan"
+  },
+  {
+   "id": "503410290924",
+   "deal_id": "334969359605",
+   "date": "2026-07-15",
+   "title": "Pak Herry x Pak Mukul - Ritz Carlton Kuningan"
+  },
+  {
+   "id": "502056781045",
+   "deal_id": "515111097585",
+   "date": "2026-07-15",
+   "title": "HRIS Project: Meeting with HONO (Executive Alignment)"
+  },
+  {
+   "id": "502175020248",
+   "deal_id": "501831430334",
+   "date": "2026-07-14",
+   "title": "[PLACEHOLDER] HONO PAYROLL DEMO PART2"
+  },
+  {
+   "id": "503024998588",
+   "deal_id": "499826487512",
+   "date": "2026-07-13",
+   "title": "Mr. Srikanth (Supra Bara Energi)x Mr. Mukul (HONO) Introduction"
+  },
+  {
+   "id": "502974598359",
+   "deal_id": "508099332323",
+   "date": "2026-07-10",
+   "title": "HONO Presentation"
+  },
+  {
+   "id": "500578515174",
+   "deal_id": "508099332323",
+   "date": "2026-07-06",
+   "title": "Follow up Meeting on Asialink x HONO Payroll Outsourcing"
+  },
+  {
+   "id": "500026494194",
+   "deal_id": "502011290855",
+   "date": "2026-07-06",
+   "title": "HONO x Unioil: Alignment  "
+  },
+  {
+   "id": "501086791866",
+   "deal_id": "501831430334",
+   "date": "2026-07-01",
+   "title": "HONO Payroll Demo [F2F]"
+  },
+  {
+   "id": "499273856203",
+   "deal_id": "501831430334",
+   "date": "2026-07-01",
+   "title": "[Onsite] Hono x Security Bank"
+  },
+  {
+   "id": "496192512213",
+   "deal_id": "295427044579",
+   "date": "2026-06-10",
+   "title": "Brian x Mr Mukul and Mr Amit "
+  },
+  {
+   "id": "496192512213",
+   "deal_id": "420946178244",
+   "date": "2026-06-10",
+   "title": "Brian x Mr Mukul and Mr Amit "
+  },
+  {
+   "id": "493867071694",
+   "deal_id": "500196369598",
+   "date": "2026-06-10",
+   "title": "HONO HRMS Demo with SoDrama! Media"
+  },
+  {
+   "id": "495751280889",
+   "deal_id": "432363985137",
+   "date": "2026-06-05",
+   "title": null
+  },
+  {
+   "id": "495382931666",
+   "deal_id": "432363985137",
+   "date": "2026-06-05",
+   "title": "HONO – Nippon Indosari Corpindo (Sari Roti) Demo Discussion "
+  },
+  {
+   "id": "494935918806",
+   "deal_id": "295427044579",
+   "date": "2026-06-04",
+   "title": "Mr. Brian x Mr. Mukul"
+  },
+  {
+   "id": "494935918806",
+   "deal_id": "420946178244",
+   "date": "2026-06-04",
+   "title": "Mr. Brian x Mr. Mukul"
+  },
+  {
+   "id": "494510696641",
+   "deal_id": "499552206030",
+   "date": "2026-06-03",
+   "title": "Invitation for HONO – MAKA Group Discussion Meeting"
+  },
+  {
+   "id": "493877901543",
+   "deal_id": "502011290855",
+   "date": "2026-05-29",
+   "title": "HONO.ai x Unioil"
+  },
+  {
+   "id": "493477743812",
+   "deal_id": "500640783600",
+   "date": "2026-05-29",
+   "title": "Hono.AI - Singapore Institute of management"
+  },
+  {
+   "id": "492920502521",
+   "deal_id": "499552206030",
+   "date": "2026-05-20",
+   "title": null
+  },
+  {
+   "id": "492267730160",
+   "deal_id": "295427044579",
+   "date": "2026-05-19",
+   "title": "Internal Invitation for JAS Meeting (JASA ANGKASA SEMESTA)"
+  },
+  {
+   "id": "492267730160",
+   "deal_id": "420946178244",
+   "date": "2026-05-19",
+   "title": "Internal Invitation for JAS Meeting (JASA ANGKASA SEMESTA)"
+  },
+  {
+   "id": "490689495263",
+   "deal_id": "295427044579",
+   "date": "2026-05-08",
+   "title": "HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "490689495263",
+   "deal_id": "420946178244",
+   "date": "2026-05-08",
+   "title": "HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "489794672862",
+   "deal_id": "499153227970",
+   "date": "2026-05-06",
+   "title": "HONO.AI - Commonwealth Group"
+  },
+  {
+   "id": "486894395581",
+   "deal_id": "499553621196",
+   "date": "2026-04-28",
+   "title": "WWF x HONO Demo Part 2"
+  },
+  {
+   "id": "493625342146",
+   "deal_id": "499826487512",
+   "date": "2026-04-23",
+   "title": "HONO HCMS Demo for Supra Bara Energi"
+  },
+  {
+   "id": "486785297633",
+   "deal_id": "499826487512",
+   "date": "2026-04-23",
+   "title": null
+  },
+  {
+   "id": "486778158279",
+   "deal_id": "472986056894",
+   "date": "2026-04-23",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "486778158279",
+   "deal_id": "349110390001",
+   "date": "2026-04-23",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "486778158279",
+   "deal_id": "335777782984",
+   "date": "2026-04-23",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "483810102475",
+   "deal_id": "334969359605",
+   "date": "2026-04-14",
+   "title": "Invitation: HCMS Follow Up Discussion with JAS"
+  },
+  {
+   "id": "483823994067",
+   "deal_id": "334969359605",
+   "date": "2026-04-08",
+   "title": "(Internal): JAS HCMS Discussions"
+  },
+  {
+   "id": "483433589985",
+   "deal_id": "334969359605",
+   "date": "2026-04-07",
+   "title": "(Internal) : HONO POC Review for Panin Bank"
+  },
+  {
+   "id": "483274524858",
+   "deal_id": "334969359605",
+   "date": "2026-04-06",
+   "title": "(Internal) Panin Bank: Summary & Material Discussion"
+  },
+  {
+   "id": "482517822686",
+   "deal_id": "334969359605",
+   "date": "2026-04-02",
+   "title": "Panin Bank Dry Run W/ Ramssol"
+  },
+  {
+   "id": "482479667422",
+   "deal_id": "334969359605",
+   "date": "2026-04-02",
+   "title": "Internal Meeting Discussion for Panin Bank"
+  },
+  {
+   "id": "482033413313",
+   "deal_id": "334969359605",
+   "date": "2026-04-02",
+   "title": "Panin Bank: POC Payroll dan Comben Finalization"
+  },
+  {
+   "id": "482140804323",
+   "deal_id": "496652367053",
+   "date": "2026-04-01",
+   "title": "Presentation and Demo for Digital Workforce"
+  },
+  {
+   "id": "481558685918",
+   "deal_id": "334969359605",
+   "date": "2026-03-31",
+   "title": "Breakfast meeting with Pak Herry"
+  },
+  {
+   "id": "481051385032",
+   "deal_id": "295427044579",
+   "date": "2026-03-27",
+   "title": "Canceled: HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "481051385032",
+   "deal_id": "420946178244",
+   "date": "2026-03-27",
+   "title": "Canceled: HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "481037064440",
+   "deal_id": "334969359605",
+   "date": "2026-03-27",
+   "title": "Panin Bank:MOM Result Review"
+  },
+  {
+   "id": "480845981914",
+   "deal_id": "334969359605",
+   "date": "2026-03-27",
+   "title": "Panin Bank Discussion"
+  },
+  {
+   "id": "480352053495",
+   "deal_id": "472986056894",
+   "date": "2026-03-27",
+   "title": "HONO Demo for Trax Intertrade"
+  },
+  {
+   "id": "480352053495",
+   "deal_id": "349110390001",
+   "date": "2026-03-27",
+   "title": "HONO Demo for Trax Intertrade"
+  },
+  {
+   "id": "480352053495",
+   "deal_id": "335777782984",
+   "date": "2026-03-27",
+   "title": "HONO Demo for Trax Intertrade"
+  },
+  {
+   "id": "480412385482",
+   "deal_id": "472986056894",
+   "date": "2026-03-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "480412385482",
+   "deal_id": "349110390001",
+   "date": "2026-03-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "480412385482",
+   "deal_id": "335777782984",
+   "date": "2026-03-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "479770872046",
+   "deal_id": "295427044579",
+   "date": "2026-03-23",
+   "title": "Mr Mukul x Brian"
+  },
+  {
+   "id": "479770872046",
+   "deal_id": "420946178244",
+   "date": "2026-03-23",
+   "title": "Mr Mukul x Brian"
+  },
+  {
+   "id": "479100821723",
+   "deal_id": "334969359605",
+   "date": "2026-03-18",
+   "title": "Panin internal discussion"
+  },
+  {
+   "id": "478170405069",
+   "deal_id": "334969359605",
+   "date": "2026-03-17",
+   "title": "Panin Bank:Payroll System Demo Presentation"
+  },
+  {
+   "id": "477422348527",
+   "deal_id": "334969359605",
+   "date": "2026-03-11",
+   "title": "Panin Bank:Dashboard Analytics Insight"
+  },
+  {
+   "id": "476759955648",
+   "deal_id": "334969359605",
+   "date": "2026-03-10",
+   "title": "Panin Bank:Dashboard Analytics Review "
+  },
+  {
+   "id": "473243624650",
+   "deal_id": "334969359605",
+   "date": "2026-03-07",
+   "title": "Panin Bank "
+  },
+  {
+   "id": "473116020973",
+   "deal_id": "334969359605",
+   "date": "2026-03-06",
+   "title": "Panin Bank:WTW List Review"
+  },
+  {
+   "id": "469370708156",
+   "deal_id": "334969359605",
+   "date": "2026-03-05",
+   "title": "Panin Bank:Recruitment System Trial"
+  },
+  {
+   "id": "464643589364",
+   "deal_id": "420946178244",
+   "date": "2026-02-27",
+   "title": "Canceled: HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "463962559679",
+   "deal_id": "334969359605",
+   "date": "2026-02-26",
+   "title": "Bank Panin Material Discussion"
+  },
+  {
+   "id": "463907822785",
+   "deal_id": "472986056894",
+   "date": "2026-02-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "463907822785",
+   "deal_id": "349110390001",
+   "date": "2026-02-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "463907822785",
+   "deal_id": "335777782984",
+   "date": "2026-02-26",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "458267812032",
+   "deal_id": "126359758029",
+   "date": "2026-02-26",
+   "title": "FW: Diskusi rencana pengembangan aplikasi HRIS"
+  },
+  {
+   "id": "461433743549",
+   "deal_id": "334969359605",
+   "date": "2026-02-25",
+   "title": "Panin Bank – Final Material Alignment"
+  },
+  {
+   "id": "459796660456",
+   "deal_id": "334969359605",
+   "date": "2026-02-23",
+   "title": "PSN internal discussion"
+  },
+  {
+   "id": "458339427518",
+   "deal_id": "334969359605",
+   "date": "2026-02-20",
+   "title": "Invitation: Presentation and Demo for PT Pasifik Satelit Nusantara"
+  },
+  {
+   "id": "457115309289",
+   "deal_id": "334969359605",
+   "date": "2026-02-18",
+   "title": "Alignment of Manual Book Guidelines with Hono"
+  },
+  {
+   "id": "451850602685",
+   "deal_id": "349110390001",
+   "date": "2026-02-12",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "451850602685",
+   "deal_id": "335777782984",
+   "date": "2026-02-12",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "449047039205",
+   "deal_id": "334969359605",
+   "date": "2026-02-10",
+   "title": "Panin loan discussion"
+  },
+  {
+   "id": "447973744857",
+   "deal_id": "334969359605",
+   "date": "2026-02-10",
+   "title": "PANIN technical discussion"
+  },
+  {
+   "id": "447962441915",
+   "deal_id": "334969359605",
+   "date": "2026-02-09",
+   "title": "Panin executive summary and pricing discussion"
+  },
+  {
+   "id": "443744264405",
+   "deal_id": "334969359605",
+   "date": "2026-02-06",
+   "title": "Panin Bank: Request Review and Alignment Session"
+  },
+  {
+   "id": "443103857860",
+   "deal_id": "15487249117",
+   "date": "2026-02-05",
+   "title": "Discussion HONO-Kapal Api"
+  },
+  {
+   "id": "442958938318",
+   "deal_id": "334969359605",
+   "date": "2026-02-04",
+   "title": "PANIN Dry Run"
+  },
+  {
+   "id": "434503527667",
+   "deal_id": "420946178244",
+   "date": "2026-02-02",
+   "title": "Brian x Mr Mukul "
+  },
+  {
+   "id": "436980254958",
+   "deal_id": "420946178244",
+   "date": "2026-01-30",
+   "title": "HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "423668889840",
+   "deal_id": "420946178244",
+   "date": "2026-01-30",
+   "title": "HONO x Ramssol TH: Monthly Cadence Call"
+  },
+  {
+   "id": "436094413006",
+   "deal_id": "349110390001",
+   "date": "2026-01-29",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "436094413006",
+   "deal_id": "335777782984",
+   "date": "2026-01-29",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "433615608004",
+   "deal_id": "334969359605",
+   "date": "2026-01-29",
+   "title": "Meeting with Ramssol Indonesia"
+  },
+  {
+   "id": "433003494595",
+   "deal_id": "334969359605",
+   "date": "2026-01-26",
+   "title": "Panin succession planning discussion"
+  },
+  {
+   "id": "426013890799",
+   "deal_id": "334969359605",
+   "date": "2026-01-26",
+   "title": "Panin Bank: Demo Account Alignment Session"
+  },
+  {
+   "id": "426707387604",
+   "deal_id": "334969359605",
+   "date": "2026-01-23",
+   "title": "Panin:POC Scenarios"
+  },
+  {
+   "id": "418934991059",
+   "deal_id": "334969359605",
+   "date": "2026-01-23",
+   "title": "Panin Final Run"
+  },
+  {
+   "id": "425904190693",
+   "deal_id": "334969359605",
+   "date": "2026-01-21",
+   "title": "PANIN additional POC list from Ramssol"
+  },
+  {
+   "id": "418598878410",
+   "deal_id": "334969359605",
+   "date": "2026-01-20",
+   "title": "Panin Dry Run"
+  },
+  {
+   "id": "463689139420",
+   "deal_id": "432363985137",
+   "date": "2026-01-14",
+   "title": "HONO Introduction for Sari Roti"
+  },
+  {
+   "id": "416705528015",
+   "deal_id": "334969359605",
+   "date": "2026-01-14",
+   "title": "Hono ramssol discussion"
+  },
+  {
+   "id": "414641525978",
+   "deal_id": "420946178244",
+   "date": "2026-01-13",
+   "title": "HONO x Ramssol: Introduction HCM solution to Apex Security [420946178244]"
+  },
+  {
+   "id": "406666186963",
+   "deal_id": "334969359605",
+   "date": "2026-01-09",
+   "title": "Panin POC Discussion"
+  },
+  {
+   "id": "409130637561",
+   "deal_id": "112816249045",
+   "date": "2026-01-08",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "409130637561",
+   "deal_id": "216340267230",
+   "date": "2026-01-08",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "378849818829",
+   "deal_id": "112816249045",
+   "date": "2026-01-08",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "378849818829",
+   "deal_id": "216340267230",
+   "date": "2026-01-08",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "406635242738",
+   "deal_id": "334969359605",
+   "date": "2026-01-07",
+   "title": "Panin POC -Indonesia"
+  },
+  {
+   "id": "403983516879",
+   "deal_id": "416188364988",
+   "date": "2026-01-07",
+   "title": "HONO introduction for YUPI"
+  },
+  {
+   "id": "405365964995",
+   "deal_id": "334969359605",
+   "date": "2026-01-05",
+   "title": "KCU Organizational Structure Discussion - Panin Bank"
+  },
+  {
+   "id": "402954928328",
+   "deal_id": "349110390001",
+   "date": "2026-01-01",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "402954928328",
+   "deal_id": "335777782984",
+   "date": "2026-01-01",
+   "title": "Canceled: Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "393769488595",
+   "deal_id": "334969359605",
+   "date": "2025-12-22",
+   "title": "Panin Bank:Demo Account Overview & Clarification Session"
+  },
+  {
+   "id": "390181974249",
+   "deal_id": "334969359605",
+   "date": "2025-12-18",
+   "title": "HONO training phase 4"
+  },
+  {
+   "id": "387054851296",
+   "deal_id": "349110390001",
+   "date": "2025-12-18",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "387054851296",
+   "deal_id": "335777782984",
+   "date": "2025-12-18",
+   "title": "Cadence Call: HONO x G Able"
+  },
+  {
+   "id": "392548755684",
+   "deal_id": "334969359605",
+   "date": "2025-12-17",
+   "title": "Panin Bank:Strategic Alignment Meeting on HR System Implementation"
+  },
+  {
+   "id": "391590828245",
+   "deal_id": "405250335942",
+   "date": "2025-12-17",
+   "title": "HONO introduction to Wangsasequoia"
+  },
+  {
+   "id": "390232469743",
+   "deal_id": "334969359605",
+   "date": "2025-12-17",
+   "title": "PANIN PMS Discussion"
+  },
+  {
+   "id": "391600353485",
+   "deal_id": "334969359605",
+   "date": "2025-12-16",
+   "title": "Panin Bank PMS"
+  },
+  {
+   "id": "390677711082",
+   "deal_id": "334969359605",
+   "date": "2025-12-16",
+   "title": "Panin PMS Discussion"
+  },
+  {
+   "id": "390181973234",
+   "deal_id": "334969359605",
+   "date": "2025-12-16",
+   "title": "HONO Traning phase 2"
+  },
+  {
+   "id": "390149786872",
+   "deal_id": "334969359605",
+   "date": "2025-12-15",
+   "title": "Panin Bank – Timeline & Requirements Discussion"
+  },
+  {
+   "id": "386095648986",
+   "deal_id": "334969359605",
+   "date": "2025-12-12",
+   "title": "Alignment on Panin Discussion Result"
+  },
+  {
+   "id": "384493950138",
+   "deal_id": "334969359605",
+   "date": "2025-12-11",
+   "title": "HONO detail demo with RAMSSol Indonesia"
+  },
+  {
+   "id": "463681375457",
+   "deal_id": "334969359605",
+   "date": "2025-12-10",
+   "title": "Ramssol Pipeline Update"
+  },
+  {
+   "id": "463823484132",
+   "deal_id": "403846554863",
+   "date": "2025-12-09",
+   "title": "HONO introduction for Dua Delapan Resources"
+  },
+  {
+   "id": "383940142284",
+   "deal_id": "334969359605",
+   "date": "2025-12-09",
+   "title": "Internal Alignment for Panin Bank Inquiry"
+  },
+  {
+   "id": "381367581926",
+   "deal_id": "334969359605",
+   "date": "2025-12-08",
+   "title": "Panin bank"
+  },
+  {
+   "id": "378893356218",
+   "deal_id": "334969359605",
+   "date": "2025-12-05",
+   "title": "Discussion Technical Panin Bank"
+  },
+  {
+   "id": "378712825043",
+   "deal_id": "334969359605",
+   "date": "2025-12-05",
+   "title": "Demo meeting with PANIN"
+  },
+  {
+   "id": "379440813302",
+   "deal_id": "334969359605",
+   "date": "2025-12-04",
+   "title": "test link"
+  },
+  {
+   "id": "375223494904",
+   "deal_id": "112816249045",
+   "date": "2025-12-04",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "375223494904",
+   "deal_id": "216340267230",
+   "date": "2025-12-04",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "371842467019",
+   "deal_id": "334969359605",
+   "date": "2025-12-02",
+   "title": "Invitation 2nd Meeting Onsite:Details Demo Product with PT Kurnia Ciptamoda Gemilang"
+  },
+  {
+   "id": "485300481225",
+   "deal_id": "403846554863",
+   "date": "2025-12-01",
+   "title": "Interview Sr. SM- Indonesia (Wahyu)"
+  },
+  {
+   "id": "485399817420",
+   "deal_id": "403846554863",
+   "date": "2025-11-30",
+   "title": "Canceled: Interview Sr. SM-Indonesia (Wahyu)"
+  },
+  {
+   "id": "368851569853",
+   "deal_id": "334969359605",
+   "date": "2025-11-28",
+   "title": "Invitation:General Demo Meeting with PT Kurnia Ciptamoda Gemilang"
+  },
+  {
+   "id": "368739550394",
+   "deal_id": "112816249045",
+   "date": "2025-11-27",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "368739550394",
+   "deal_id": "216340267230",
+   "date": "2025-11-27",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "463692736758",
+   "deal_id": "334969359605",
+   "date": "2025-11-26",
+   "title": "Ramssol Pipeline Update"
+  },
+  {
+   "id": "351890612454",
+   "deal_id": "334969359605",
+   "date": "2025-11-12",
+   "title": "HONO-Ramssol [In-person] for Panin Bank and JAS"
+  },
+  {
+   "id": "319099957481",
+   "deal_id": "322791746798",
+   "date": "2025-11-12",
+   "title": "Hono - The introduction session -  [In-person]"
+  },
+  {
+   "id": "351788098806",
+   "deal_id": "334969359605",
+   "date": "2025-11-11",
+   "title": "Panin Bank HR Solution Overview"
+  },
+  {
+   "id": "350180690118",
+   "deal_id": "334969359605",
+   "date": "2025-11-10",
+   "title": "Discussion Panin Update"
+  },
+  {
+   "id": "342549714136",
+   "deal_id": "361874262218",
+   "date": "2025-11-07",
+   "title": "HONO introduction to Bank Neo Commerce"
+  },
+  {
+   "id": "344485430490",
+   "deal_id": "112816249045",
+   "date": "2025-11-06",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "344485430490",
+   "deal_id": "216340267230",
+   "date": "2025-11-06",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "330519441624",
+   "deal_id": "112816249045",
+   "date": "2025-10-30",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "330519441624",
+   "deal_id": "216340267230",
+   "date": "2025-10-30",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "329891648724",
+   "deal_id": "334969359605",
+   "date": "2025-10-30",
+   "title": "Discussion Calculation Panasonic Gobel IDN"
+  },
+  {
+   "id": "320598842572",
+   "deal_id": "112816249045",
+   "date": "2025-10-23",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "320598842572",
+   "deal_id": "216340267230",
+   "date": "2025-10-23",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "319128989923",
+   "deal_id": "334969359605",
+   "date": "2025-10-21",
+   "title": "RamssolxHono Event"
+  },
+  {
+   "id": "314863717587",
+   "deal_id": "286017173691",
+   "date": "2025-10-15",
+   "title": "RAMSSOL-HONO BRF"
+  },
+  {
+   "id": "314806108384",
+   "deal_id": "286017173691",
+   "date": "2025-10-15",
+   "title": "Ramssol-Hono Meeting"
+  },
+  {
+   "id": "311859160312",
+   "deal_id": "286017173691",
+   "date": "2025-10-14",
+   "title": "Disccussion HONO-Ramssol on Bank Panin Cost Saving"
+  },
+  {
+   "id": "311489743069",
+   "deal_id": "286017173691",
+   "date": "2025-10-13",
+   "title": "Discussion Finalization Budget for Event"
+  },
+  {
+   "id": "308045981910",
+   "deal_id": "286017173691",
+   "date": "2025-10-09",
+   "title": "Meeting with Hono for JAS"
+  },
+  {
+   "id": "308032017605",
+   "deal_id": "112816249045",
+   "date": "2025-10-09",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "308032017605",
+   "deal_id": "216340267230",
+   "date": "2025-10-09",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "307605299449",
+   "deal_id": "286017173691",
+   "date": "2025-10-08",
+   "title": "Invitation-Presentation for PT Jasa Angkasa Semesta"
+  },
+  {
+   "id": "307729673438",
+   "deal_id": "286017173691",
+   "date": "2025-10-07",
+   "title": "meeting with Ramssol"
+  },
+  {
+   "id": "306160842987",
+   "deal_id": "286017173691",
+   "date": "2025-10-06",
+   "title": "JAS custom list"
+  },
+  {
+   "id": "302293211347",
+   "deal_id": "286017173691",
+   "date": "2025-10-03",
+   "title": "JAS Update meeting"
+  },
+  {
+   "id": "299909488882",
+   "deal_id": "286017173691",
+   "date": "2025-10-02",
+   "title": "Invitation: Meeting 2 - Presentation and Demo for PT Jasa Angkasa Semesta"
+  },
+  {
+   "id": "299834498256",
+   "deal_id": "112816249045",
+   "date": "2025-10-02",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "299834498256",
+   "deal_id": "216340267230",
+   "date": "2025-10-02",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "300596639938",
+   "deal_id": "286017173691",
+   "date": "2025-10-01",
+   "title": "Ramssol Pipeline Update"
+  },
+  {
+   "id": "299122913470",
+   "deal_id": "286017173691",
+   "date": "2025-10-01",
+   "title": "Event Progress Discussion"
+  },
+  {
+   "id": "297465594096",
+   "deal_id": "286017173691",
+   "date": "2025-09-29",
+   "title": "Discussion of Event Central Java"
+  },
+  {
+   "id": "296487368927",
+   "deal_id": "295427044579",
+   "date": "2025-09-26",
+   "title": "Canceled: HONO x Ramssol: Cadence Call for Malaysia team"
+  },
+  {
+   "id": "294938495198",
+   "deal_id": "286017173691",
+   "date": "2025-09-25",
+   "title": "Meeting With SENA "
+  },
+  {
+   "id": "293805015277",
+   "deal_id": "112816249045",
+   "date": "2025-09-25",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "293805015277",
+   "deal_id": "216340267230",
+   "date": "2025-09-25",
+   "title": "Canceled: Weekly Cadence call: HONO x GinSight"
+  },
+  {
+   "id": "294497253622",
+   "deal_id": "286017173691",
+   "date": "2025-09-24",
+   "title": "Meeting with PT. Jasa Angkasa Semesta"
+  },
+  {
+   "id": "290953561315",
+   "deal_id": "295427044579",
+   "date": "2025-09-19",
+   "title": "Ramssol x HONO: HR transformation project discussion with ITMax"
+  },
+  {
+   "id": "289714188487",
+   "deal_id": "286017173691",
+   "date": "2025-09-18",
+   "title": "Ramssol Pipeline meeting"
+  },
+  {
+   "id": "289676986558",
+   "deal_id": "112816249045",
+   "date": "2025-09-17",
+   "title": "Dry Run ( Max Group) "
+  },
+  {
+   "id": "281660069104",
+   "deal_id": "286017173691",
+   "date": "2025-09-17",
+   "title": "Ramssol Pipeline Update"
+  },
+  {
+   "id": "286315696368",
+   "deal_id": "301579200725",
+   "date": "2025-09-16",
+   "title": "HONO Introduction for Great Eastern Life"
+  },
+  {
+   "id": "287671154887",
+   "deal_id": "295427044579",
+   "date": "2025-09-15",
+   "title": "Panin Bank hardware specs"
+  },
+  {
+   "id": "284781381849",
+   "deal_id": "286017173691",
+   "date": "2025-09-10",
+   "title": "Invitation:Presentation and Demo Product for Panasonic Gobel Indonesia"
+  },
+  {
+   "id": "283943510229",
+   "deal_id": "286017173691",
+   "date": "2025-09-08",
+   "title": "Panin discussion "
+  },
+  {
+   "id": "281829930185",
+   "deal_id": "286017173691",
+   "date": "2025-09-04",
+   "title": "Ramssol Pipeline update"
+  },
+  {
+   "id": "275026972920",
+   "deal_id": "286017173691",
+   "date": "2025-08-27",
+   "title": "JAS discussion"
+  },
+  {
+   "id": "274317127924",
+   "deal_id": "286017173691",
+   "date": "2025-08-26",
+   "title": "JAS and Panin discussion"
+  },
+  {
+   "id": "258482363612",
+   "deal_id": "126359758029",
+   "date": "2025-08-05",
+   "title": null
+  },
+  {
+   "id": "248117558508",
+   "deal_id": "126359758029",
+   "date": "2025-08-05",
+   "title": "Hono Infrastructure and IT Security"
+  },
+  {
+   "id": "478430677196",
+   "deal_id": "472986056894",
+   "date": "2025-08-01",
+   "title": "HONO x G-Able"
+  },
+  {
+   "id": "478430677196",
+   "deal_id": "349110390001",
+   "date": "2025-08-01",
+   "title": "HONO x G-Able"
+  },
+  {
+   "id": "478430677196",
+   "deal_id": "335777782984",
+   "date": "2025-08-01",
+   "title": "HONO x G-Able"
+  },
+  {
+   "id": "255985126615",
+   "deal_id": "15487249117",
+   "date": "2025-08-01",
+   "title": null
+  },
+  {
+   "id": "254593737916",
+   "deal_id": "112816249045",
+   "date": "2025-07-31",
+   "title": "Dole contract finalization "
+  },
+  {
+   "id": "242332852414",
+   "deal_id": "126359758029",
+   "date": "2025-07-23",
+   "title": "FW: Lanjutan Hono"
+  },
+  {
+   "id": "245481158842",
+   "deal_id": "112816249045",
+   "date": "2025-07-21",
+   "title": "Dole Contract Review"
+  },
+  {
+   "id": "241659677917",
+   "deal_id": "126359758029",
+   "date": "2025-07-17",
+   "title": "FW: HR System (Hono) by Asean Business Partner"
+  },
+  {
+   "id": "241466279141",
+   "deal_id": "112816249045",
+   "date": "2025-07-16",
+   "title": "Dole Contract Review"
+  },
+  {
+   "id": "227027388642",
+   "deal_id": "116068228296",
+   "date": "2025-07-07",
+   "title": "Hono - The introduction session - Thantawan Industry [In-person]"
+  },
+  {
+   "id": "208686681288",
+   "deal_id": "15487249117",
+   "date": "2025-05-26",
+   "title": "Demo Kapal Api Group to ICT team and HR"
+  },
+  {
+   "id": "205833770218",
+   "deal_id": "112816249045",
+   "date": "2025-05-22",
+   "title": "Dole discussion"
+  },
+  {
+   "id": "485370214617",
+   "deal_id": "334969359605",
+   "date": "2025-05-20",
+   "title": "Canceled: HONO-RAMSSOL ( Discuss on Panin Bank)"
+  },
+  {
+   "id": "178721517772",
+   "deal_id": "112816249045",
+   "date": "2025-04-20",
+   "title": "DOLE Legal & Commercial Review"
+  },
+  {
+   "id": "175961834682",
+   "deal_id": "112816249045",
+   "date": "2025-04-13",
+   "title": "Dole Reports clarifications call"
+  },
+  {
+   "id": "173930725617",
+   "deal_id": "112816249045",
+   "date": "2025-04-09",
+   "title": "Dole SOW Review"
+  },
+  {
+   "id": "157219453150",
+   "deal_id": "126359758029",
+   "date": "2025-03-12",
+   "title": "FW: Pembahasan lanjutan HR System Hono"
+  },
+  {
+   "id": "155361665220",
+   "deal_id": "112816249045",
+   "date": "2025-03-06",
+   "title": "Wasco updated meeting link"
+  },
+  {
+   "id": "155294368973",
+   "deal_id": "112816249045",
+   "date": "2025-03-06",
+   "title": "Canceled: HONO x Wasco meeting"
+  },
+  {
+   "id": "140942671048",
+   "deal_id": "112816249045",
+   "date": "2025-03-06",
+   "title": "Canceled: Book for Wasco Presentation"
+  },
+  {
+   "id": "151747524842",
+   "deal_id": "112816249045",
+   "date": "2025-03-05",
+   "title": "Wasco - Final Dry Run "
+  },
+  {
+   "id": "151664067781",
+   "deal_id": "112816249045",
+   "date": "2025-03-04",
+   "title": "Wasco Dry Run - 1"
+  },
+  {
+   "id": "151648776414",
+   "deal_id": "112816249045",
+   "date": "2025-03-04",
+   "title": "Wasco Pre Dry Run "
+  },
+  {
+   "id": "150711492847",
+   "deal_id": "103713977545",
+   "date": "2025-02-25",
+   "title": null
+  },
+  {
+   "id": "143052160222",
+   "deal_id": "129173185755",
+   "date": "2025-02-25",
+   "title": "HONO introduction for Wincheez"
+  },
+  {
+   "id": "150721905864",
+   "deal_id": "126359758029",
+   "date": "2025-02-24",
+   "title": null
+  },
+  {
+   "id": "140053972158",
+   "deal_id": "126359758029",
+   "date": "2025-02-24",
+   "title": "HR System (Hono) by Asean Business Partner"
+  },
+  {
+   "id": "145084521692",
+   "deal_id": "112816249045",
+   "date": "2025-02-21",
+   "title": "Dole pricing "
+  },
+  {
+   "id": "143129610478",
+   "deal_id": "112816249045",
+   "date": "2025-02-20",
+   "title": "Preparation call for Wasco demo meeting"
+  },
+  {
+   "id": "141609647307",
+   "deal_id": "112816249045",
+   "date": "2025-02-15",
+   "title": "Dole Syncup "
+  },
+  {
+   "id": "87103281351",
+   "deal_id": "14900636152",
+   "date": "2024-12-03",
+   "title": "Early Breakfast Catch Up: BPI x HONO"
+  },
+  {
+   "id": "77143440574",
+   "deal_id": "14900636152",
+   "date": "2024-11-14",
+   "title": "Lunch Meet with BPI - Bong"
+  },
+  {
+   "id": "38312677607",
+   "deal_id": "22012789185",
+   "date": "2024-10-15",
+   "title": "Intro/Payroll Demo Hono x Metrobank"
+  },
+  {
+   "id": "38515833541",
+   "deal_id": "21821524182",
+   "date": "2024-10-07",
+   "title": null
+  },
+  {
+   "id": "38498513655",
+   "deal_id": "21275029723",
+   "date": "2024-10-04",
+   "title": null
+  },
+  {
+   "id": "36541190624",
+   "deal_id": "10474922962",
+   "date": "2024-10-01",
+   "title": "Dinner with Mr Naresh"
+  },
+  {
+   "id": "37339402973",
+   "deal_id": "21071258827",
+   "date": "2024-09-26",
+   "title": null
+  },
+  {
+   "id": "31403625161",
+   "deal_id": "15184709348",
+   "date": "2024-08-28",
+   "title": "HONO discussion with Pintu (Payroll, PMS)"
+  },
+  {
+   "id": "31408406219",
+   "deal_id": "14900636152",
+   "date": "2024-08-26",
+   "title": "HONO AI Sharing Session - ABY x BPI"
+  },
+  {
+   "id": "31404142069",
+   "deal_id": "14900636152",
+   "date": "2024-08-26",
+   "title": "HONO AI sharing session - Harvest Group x BPI"
+  },
+  {
+   "id": "31416786918",
+   "deal_id": "14900636152",
+   "date": "2024-08-22",
+   "title": "Canceled: Meeting Catch up with BPI"
+  },
+  {
+   "id": "31054527438",
+   "deal_id": "15184709348",
+   "date": "2024-08-01",
+   "title": "HONO quick discussion with PINTU"
+  },
+  {
+   "id": "30954066680",
+   "deal_id": "10474922962",
+   "date": "2024-08-01",
+   "title": "Mr Naresh x Mr Mukul meeting "
+  },
+  {
+   "id": "30483137736",
+   "deal_id": "15599173102",
+   "date": "2024-07-23",
+   "title": "Hono - The introduction session - Home Product Center"
+  },
+  {
+   "id": "29812441335",
+   "deal_id": "15184709348",
+   "date": "2024-07-11",
+   "title": "HONO discussion with PINTU"
+  },
+  {
+   "id": "30214430184",
+   "deal_id": "15464612560",
+   "date": "2024-07-05",
+   "title": null
+  },
+  {
+   "id": "29543969005",
+   "deal_id": "14806106567",
+   "date": "2024-06-25",
+   "title": "Hono - The introduction session - Siam@siam Design Hotel"
+  },
+  {
+   "id": "28753446641",
+   "deal_id": "14534873577",
+   "date": "2024-06-07",
+   "title": "HONO introduction for YAKKUM"
+  },
+  {
+   "id": "25742303701",
+   "deal_id": "6777413058",
+   "date": "2024-03-18",
+   "title": null
+  },
+  {
+   "id": "24464793072",
+   "deal_id": "10739612118",
+   "date": "2024-02-13",
+   "title": null
+  },
+  {
+   "id": "24250675387",
+   "deal_id": "10739612118",
+   "date": "2024-02-13",
+   "title": "HONO introduction for Maybank Asset Management"
+  },
+  {
+   "id": "24261044452",
+   "deal_id": "10679387097",
+   "date": "2024-02-01",
+   "title": null
+  },
+  {
+   "id": "24041192411",
+   "deal_id": "10679387097",
+   "date": "2024-02-01",
+   "title": "SREEYA SEWU-HONO ATS Demo Meeting"
+  },
+  {
+   "id": "23479705827",
+   "deal_id": "10353093575",
+   "date": "2024-01-10",
+   "title": null
+  },
+  {
+   "id": "22378131690",
+   "deal_id": "9301752250",
+   "date": "2023-12-11",
+   "title": "[HCIS] Hono.Ai - Organization Development Demo"
+  },
+  {
+   "id": "22377838323",
+   "deal_id": "9301752250",
+   "date": "2023-12-11",
+   "title": "[HCIS] Hono.Ai - Travel Demo"
+  },
+  {
+   "id": "22016735461",
+   "deal_id": "9301752250",
+   "date": "2023-11-21",
+   "title": null
+  },
+  {
+   "id": "21825044723",
+   "deal_id": "9301752250",
+   "date": "2023-11-21",
+   "title": "[HCIS] Hono.Ai - Organization & Talent Development Demo "
+  },
+  {
+   "id": "21824889841",
+   "deal_id": "9301752250",
+   "date": "2023-11-21",
+   "title": "[HCIS] Hono.Ai - Talent Acquisition Demo"
+  },
+  {
+   "id": "21824686315",
+   "deal_id": "9301752250",
+   "date": "2023-11-21",
+   "title": "[HCIS] Hono.Ai - HCS Demo"
+  },
+  {
+   "id": "21801970937",
+   "deal_id": "9301752250",
+   "date": "2023-11-21",
+   "title": "[Blocking Time] Hono.Ai HCIS - Demo Session"
+  },
+  {
+   "id": "21030709974",
+   "deal_id": "6777413058",
+   "date": "2023-10-23",
+   "title": "Meeting with HONO - HRIS Phase 2"
+  },
+  {
+   "id": "20865133804",
+   "deal_id": "9301752250",
+   "date": "2023-10-18",
+   "title": "Introduction Hono.AI HCIS (Human Capital Information System)"
+  },
+  {
+   "id": "20961779934",
+   "deal_id": "9353324753",
+   "date": "2023-10-16",
+   "title": null
+  },
+  {
+   "id": "20890890225",
+   "deal_id": "8213541081",
+   "date": "2023-10-12",
+   "title": null
+  },
+  {
+   "id": "20807225588",
+   "deal_id": "8213541081",
+   "date": "2023-10-12",
+   "title": "HONO meeting with MAF IT team"
+  },
+  {
+   "id": "20775226823",
+   "deal_id": "8213541081",
+   "date": "2023-10-05",
+   "title": null
+  },
+  {
+   "id": "20326107073",
+   "deal_id": "8213541081",
+   "date": "2023-09-20",
+   "title": null
+  },
+  {
+   "id": "20281128380",
+   "deal_id": "8213541081",
+   "date": "2023-09-20",
+   "title": "HONO meeting with MAF"
+  },
+  {
+   "id": "19988398832",
+   "deal_id": "8213541081",
+   "date": "2023-09-04",
+   "title": null
+  },
+  {
+   "id": "19908182467",
+   "deal_id": "8213541081",
+   "date": "2023-08-31",
+   "title": null
+  },
+  {
+   "id": "19806129885",
+   "deal_id": "8213541081",
+   "date": "2023-08-31",
+   "title": "Demo Discussion with ODTM Team at MAF (Onsite)"
+  },
+  {
+   "id": "19799526889",
+   "deal_id": "8213541081",
+   "date": "2023-08-30",
+   "title": null
+  },
+  {
+   "id": "19504269518",
+   "deal_id": "7896846064",
+   "date": "2023-08-15",
+   "title": null
+  },
+  {
+   "id": "19251628237",
+   "deal_id": "7896846064",
+   "date": "2023-08-15",
+   "title": "HONO meeting with Pilmico and Gold Coin Group"
+  },
+  {
+   "id": "19268781276",
+   "deal_id": "7766005467",
+   "date": "2023-08-01",
+   "title": null
+  },
+  {
+   "id": "19187895015",
+   "deal_id": "7766005467",
+   "date": "2023-08-01",
+   "title": "HONO price and feature discussion with MPI"
+  },
+  {
+   "id": "19001297654",
+   "deal_id": "7896846064",
+   "date": "2023-07-26",
+   "title": "HONO meeting with Pilmico and Gold Coin Group"
+  },
+  {
+   "id": "18887087838",
+   "deal_id": "8213541081",
+   "date": "2023-07-14",
+   "title": null
+  },
+  {
+   "id": "18813639926",
+   "deal_id": "8213541081",
+   "date": "2023-07-14",
+   "title": null
+  },
+  {
+   "id": "18456778729",
+   "deal_id": "7896846064",
+   "date": "2023-06-28",
+   "title": null
+  },
+  {
+   "id": "18278750394",
+   "deal_id": "7896846064",
+   "date": "2023-06-27",
+   "title": null
+  },
+  {
+   "id": "18225454015",
+   "deal_id": "7766005467",
+   "date": "2023-06-16",
+   "title": null
+  },
+  {
+   "id": "18222189030",
+   "deal_id": "7766005467",
+   "date": "2023-06-16",
+   "title": "HONO introduction to Mandiri Pratama Intilogam"
+  },
+  {
+   "id": "17860758213",
+   "deal_id": "6721684977",
+   "date": "2023-05-29",
+   "title": null
+  },
+  {
+   "id": "16898885071",
+   "deal_id": "6829809341",
+   "date": "2023-03-16",
+   "title": null
+  },
+  {
+   "id": "17930931959",
+   "deal_id": "6829809341",
+   "date": "2023-03-15",
+   "title": "HONO discussion with Sirclo"
+  },
+  {
+   "id": "16132914422",
+   "deal_id": "6721684977",
+   "date": "2023-03-03",
+   "title": null
   }
  ],
  "leads": [
