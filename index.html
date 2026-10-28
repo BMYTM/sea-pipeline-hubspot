@@ -22,6 +22,7 @@
   <nav class="tabs" role="tablist" aria-label="Views">
     <button role="tab" data-tab="closures" aria-selected="true">Closures</button>
     <button role="tab" data-tab="active" aria-selected="false">Active pipeline</button>
+    <button role="tab" data-tab="meetings" aria-selected="false">Meetings</button>
   </nav>
 
   <section class="filterbar" id="filterbar" hidden>
@@ -62,6 +63,29 @@
     <section class="card">
       <div class="list-head"><h2>Active deals</h2><div class="note" id="ac-note"></div></div>
       <div class="tbl-wrap tall"><table id="ac-tbl" class="list"><thead></thead><tbody></tbody></table></div>
+    </section>
+  </div>
+
+  <!-- ===== Meetings ===== -->
+  <div class="pane" id="tab-meetings" hidden>
+    <section class="kpis" id="mt-kpis"></section>
+    <section class="grid">
+      <div class="card">
+        <h2>Upcoming meetings</h2>
+        <div class="note">Next meetings on open SEA deals · click one to open the deal</div>
+        <div class="up-list" id="mt-up"></div>
+      </div>
+      <div class="card">
+        <h2>Meetings by month</h2>
+        <div class="note">Last 12 months and the next 3 · click a bar to filter</div>
+        <div class="legend" id="mt-legend"></div>
+        <div class="chart" id="mt-chart"></div>
+      </div>
+    </section>
+    <section class="card">
+      <div class="list-head"><h2>Meetings</h2><div class="note" id="mt-note"></div></div>
+      <div class="tbl-wrap tall"><table id="mt-tbl" class="list"><thead></thead><tbody></tbody></table></div>
+      <p class="foot">Meetings come from HubSpot meetings linked to a SEA Sales Pipeline deal (open or won; On-Hold excluded). A meeting linked to several deals is listed once. "Internal" means the meeting title says internal.</p>
     </section>
   </div>
 

@@ -61,15 +61,40 @@ def exp_active(f):
         if f.get("acct") and r["account_owner"] != f["acct"]: continue
         h = f.get("health")
         if h:
-            ok = {"stale": bool(la) and la < plus(-90), "never": not la, "cta": r["cta"] == "Yes",
+            lm = r.get("last_meeting")
+            ok = {"stale": bool(la) and la < plus(-90), "never": not la, "cta": r["cta"] == "Yes", "nomeet": not lm or lm < plus(-90),
                   "nocontact": not r["contacts"], "noamount": not r["amount"]}[h]
             if not ok: continue
         out.append(r)
     return out
 
 
-EXP = {"closures": exp_closures, "active": exp_active}
-NOTE = {"closures": "#cl-note", "active": "#ac-note"}
+# meetings: one row per meeting, shown under its first open deal (a won deal only if no open deal is linked)
+_deals = {r["id"]: r for r in D["active"] + D["closures"]}
+MT = {}
+for m in D.get("meetings", []):
+    r = _deals.get(m["deal_id"])
+    if not r: continue
+    row = {"date": m["date"], "title": m["title"] or "Untitled meeting", "internal": "internal" in (m["title"] or "").lower(), "country": r["country"],
+           "stage": r["stage"] if r.get("stage_id") else "Closed won", "deal_owner": r["deal_owner"]}
+    if m["id"] not in MT or (MT[m["id"]]["stage"] == "Closed won" and r.get("stage_id")): MT[m["id"]] = row
+MT = list(MT.values())
+
+
+def exp_meetings(f):
+    w = f.get("when", "")
+    def in_when(d):
+        if not w: return True
+        if w == "upcoming": return d >= TODAY
+        if w in FY: return d < TODAY and in_fy(d, w)
+        return plus(-int(w)) <= d < TODAY
+    return [r for r in MT if (not f.get("country") or r["country"] == f["country"]) and in_when(r["date"]) and (not f.get("month") or r["date"][:7] == f["month"])
+            and (not f.get("stage") or r["stage"] == f["stage"]) and (not f.get("owner") or r["deal_owner"] == f["owner"])
+            and (not f.get("kind") or (f["kind"] == "internal") == r["internal"])]
+
+
+EXP = {"closures": exp_closures, "active": exp_active, "meetings": exp_meetings}
+NOTE = {"closures": "#cl-note", "active": "#ac-note", "meetings": "#mt-note"}
 
 
 def owners(rows, keys): return sorted({r[k] for r in rows for k in keys if r.get(k)})
@@ -80,10 +105,13 @@ OPTS = {
                  "source": ["partner", "direct"] + sorted({r["source"] for r in D["closures"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["closures"] if r.get("partner")}), "month": sorted({r["month"] for r in D["closures"]})},
     "active": {"status": ["active", "Demo/Developing", "Proposal Sent", "Commercial/Contracting", "Demo/Developing,Proposal Sent", "Proposal Sent,Commercial/Contracting"], "proposal": ["30", "90", "fy27", "any", "none"], "source": ["partner", "direct"] + sorted({r["source"] for r in D["active"] if r["source"] and r["source"] != "Partner"}), "partner": sorted({r["partner"] for r in D["active"] if r.get("partner")}),
                "close": ["past", "30", "90", "fy27", "later", "none"], "owner": owners(D["active"], ["deal_owner"]), "acct": owners(D["active"], ["account_owner"]),
-               "health": ["stale", "never", "cta", "nocontact", "noamount"]},
+               "health": ["stale", "never", "nomeet", "cta", "nocontact", "noamount"]},
+    "meetings": {"when": ["upcoming", "7", "30", "90", "fy27", "fy26"], "stage": ["Demo/Developing", "Proposal Sent", "Commercial/Contracting", "Closed won"],
+                 "owner": sorted({r["deal_owner"] for r in MT if r["deal_owner"]}), "kind": ["client", "internal"], "month": sorted({r["date"][:7] for r in MT})[-15:]},
 }
 COMBOS = {"closures": [{"period": "fy26", "source": "partner"}, {"year": "2023", "owner": "Nova Sinulingga"}],
-          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent", "proposal": "any"}, {"status": "Demo/Developing", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}]}
+          "active": [{"status": "Demo/Developing,Proposal Sent", "close": "fy27"}, {"status": "Proposal Sent", "proposal": "any"}, {"status": "Demo/Developing", "close": "past"}, {"status": "active", "source": "partner", "close": "fy27"}, {"status": "Proposal Sent,Commercial/Contracting", "source": "direct"}, {"health": "stale", "owner": "Jun de Dios"}],
+          "meetings": [{"when": "fy27", "kind": "client"}, {"when": "90", "stage": "Proposal Sent"}, {"when": "upcoming", "kind": "client"}]}
 
 
 def money(v):
@@ -122,7 +150,8 @@ async def main():
                 if k not in ("country", "month", "quarter", "status"):
                     sel_val = await pg.evaluate("(lbl) => { const s=[...document.querySelectorAll('#fb-controls select')].find(x=>x.getAttribute('aria-label')===lbl); return s ? s.value : null; }",
                                                 {"period": "Financial year" if tab == "closures" else "When", "year": "Calendar year", "owner": "Contact owner" if tab == "leads" else "Deal owner", "acct": "Account owner", "source": "Source" if tab == "leads" else "Deal source", "partner": "Partner",
-                                                 "proposal": "Proposal sent", "meeting": "Last meeting", "close": "Closure date", "health": "Follow-up", "type": "Stage"}[k])
+                                                 "proposal": "Proposal sent", "meeting": "Last meeting", "close": "Closure date", "health": "Follow-up", "type": "Stage",
+                                                 "when": "When", "stage": "Deal stage", "kind": "Meeting type"}[k])
                     if sel_val != v: fails.append(f"{tab} {f}: dropdown for {k} shows {sel_val!r}")
                 if "×" not in pills: fails.append(f"{tab} {f}: no filter pill shown")
 
@@ -137,14 +166,15 @@ async def main():
                 for c in COUNTRIES: await check(tab, dict(combo, country=c))
 
         # 1b. every dropdown option's count matches the list after picking it (with each country, and with a second filter)
-        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "Proposal Sent"})]:
+        for tab, extra in [("closures", {}), ("closures", {"period": "fy26"}), ("active", {}), ("active", {"status": "Proposal Sent"}), ("meetings", {}), ("meetings", {"when": "fy27"})]:
             for c in COUNTRIES:
                 base = dict(extra, country=c)
                 await view(tab, base)
                 opts = await pg.evaluate("""() => [...document.querySelectorAll('#fb-controls select')].map(s => ({lbl: s.getAttribute('aria-label'),
                     opts: [...s.options].map(o => ({v: o.value, t: o.text, d: o.disabled}))}))""")
                 keymap = {"Financial year": "period", "When": "period", "Calendar year": "year", "Deal owner": "owner", "Contact owner": "owner", "Account owner": "acct",
-                          "Source": "source", "Deal source": "source", "Partner": "partner", "Proposal sent": "proposal", "Last meeting": "meeting", "Closure date": "close", "Follow-up": "health", "Stage": "type"}
+                          "Source": "source", "Deal source": "source", "Partner": "partner", "Proposal sent": "proposal", "Last meeting": "meeting", "Closure date": "close", "Follow-up": "health", "Stage": "type",
+                          "When": "when", "Deal stage": "stage", "Meeting type": "kind"}
                 for sel in opts:
                     k = keymap[sel["lbl"]]
                     for o in sel["opts"]:
@@ -177,7 +207,7 @@ async def main():
                     if claimed != only: fails.append(f"toggle {name} {c}: shows {claimed}, alone gives {only}")
 
         # 2. chips: count on chip == rows after clicking it (with a filter active)
-        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "Proposal Sent"})]:
+        for tab, f in [("closures", {"period": "fy26"}), ("active", {"status": "Proposal Sent"}), ("meetings", {"when": "fy27"})]:
             for i, c in enumerate(COUNTRIES):
                 await view(tab, f)
                 chip = pg.locator("#fb-chips .chip").nth(i)
@@ -211,7 +241,7 @@ async def main():
                     if k != n: fails.append(f"cell {tbl} #{i} shows '{txt}' but list has {n}")
 
         # 4. KPI tiles on each tab
-        for tab, sel in [("closures", "#cl-kpis"), ("active", "#ac-kpis")]:
+        for tab, sel in [("closures", "#cl-kpis"), ("active", "#ac-kpis"), ("meetings", "#mt-kpis")]:
             for c in COUNTRIES:
                 await view(tab, {"country": c})
                 cnt = await pg.locator(sel + " .kpi.click").count()

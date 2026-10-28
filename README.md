@@ -12,6 +12,7 @@ Two tabs only. On-hold deals are left out of the dashboard.
 
 - **Closures** tab: every closed-won deal by country, year and month, with headcount, subscription, implementation, year-1 total (USD and local currency), account, owners and linked contacts
 - **Active pipeline** tab: every open deal (excluding On-Hold) by country with status (pick several at once), deal source (Partner and partner name, or the direct source), proposal-sent date, closure date, last meeting date, employee headcount, subscription, implementation and year-1 total (USD and local currency), notes, owners and contacts
+- **Meetings** tab: upcoming meetings (next on top, click to open the deal), meetings by month, and the full list of past and upcoming meetings, filterable by when, deal stage, deal owner and client vs internal. Each deal's detail panel also lists its meetings. Only meetings linked to a deal in HubSpot are included.
 - Every tab filters by country and downloads as CSV
 - **Download weekly review (PPT)** (top right) builds the weekly review deck in the browser from the latest data: FY target and YTD vs last FY, monthly and quarterly ACV, contracts signed, proposals, open pipeline, meetings completed and scheduled, and a list of HubSpot fields the team still needs to fill in. `tests/report_check.py` checks the deck against the data.
 - Click anything to drill down: tiles, chart bars and summary numbers filter the list; rows open a detail panel with contacts, notes and a HubSpot link

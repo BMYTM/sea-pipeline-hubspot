@@ -185,3 +185,15 @@ td small.loc{display:block;color:var(--muted);font-size:11px;white-space:nowrap}
 #ac-tbl th,#cl-tbl th{white-space:normal;vertical-align:bottom;line-height:1.25}
 #ac-tbl{min-width:1400px}
 .src.partner{color:var(--c3);font-weight:500}
+/* meetings tab */
+.up-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.up-item{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer;width:100%}
+.up-item:hover{border-color:var(--axis);box-shadow:var(--shadow)}
+.up-item:focus-visible{outline:2px solid var(--c1);outline-offset:2px}
+.up-cal{flex:none;width:44px;text-align:center;border-radius:6px;background:var(--bg);padding:4px 0;line-height:1.1}
+.up-cal b{display:block;font-size:18px}.up-cal span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.up-txt{flex:1;min-width:0}.up-title{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.up-meta{font-size:12px;color:var(--muted);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.up-when{flex:none;font-size:12px;color:var(--c1);font-weight:500}
+td .tag.up{color:var(--c1);border-color:currentColor}
+ul.meets li.up{color:var(--c1)}
