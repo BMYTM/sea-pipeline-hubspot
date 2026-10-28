@@ -20,8 +20,19 @@ def write_tsv(name, head, rows):
 # fixed inputs: 2022-23 SEA wins filed under a non-SEA region, and pre-2024 MQL/SQL contacts
 for f in ["legacy_closures.json", "contacts_pre2024.json"]:
     shutil.copy(STATIC / f, RAW / f)
-for f in ["deals.txt", "deal_contacts.txt", "meetings.txt"]:
+for f in ["deals.txt", "deal_contacts.txt"]:
     h, rows = tsv(f); write_tsv(f, h, rows)
+# meetings: the big pull, plus any per-deal pulls saved as meetings_extra*.txt (same columns). HubSpot's
+# reporting copy can take hours to show a meeting that was only just linked to a deal; a per-deal pull shows it sooner.
+h, rows = tsv("meetings.txt")
+key = lambda r: tuple(r.split("\t")[1:4])  # meeting id, title, deal id
+have_m = {key(r) for r in rows}
+for extra in sorted(NEW.glob("meetings_extra*.txt")):
+    eh, erows = tsv(extra.name)
+    if eh != h: raise SystemExit(f"{extra.name}: columns differ from meetings.txt")
+    add = [r for r in erows if key(r) not in have_m]; rows += add; have_m |= {key(r) for r in add}
+    print(f"{extra.name}: +{len(add)} meetings")
+write_tsv("meetings.txt", h, rows)
 h, a = tsv("mql.txt"); _, b = tsv("sql.txt"); write_tsv("contacts.txt", h, a + b)
 h, a = tsv("qual.txt"); _, b = tsv("lost_sales.txt"); write_tsv("lost_qual.txt", h, a + b)
 recs = json.loads((NEW / "money.txt").read_text())["results"]

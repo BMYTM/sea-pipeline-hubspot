@@ -15,6 +15,8 @@ Today's date goes where `TODAY` appears (YYYY-MM-DD). Each pull must be saved to
 | `meetings.txt` (past and upcoming) | query_crm_data, HIGH | `SELECT hs_object_id, hs_meeting_start_time, hs_meeting_title, DEAL.hs_object_id, DEAL.region FROM MEETING WHERE DEAL.pipeline = '144168382' AND DEAL.hs_is_closed = 'false' ORDER BY hs_meeting_start_time DESC LIMIT 1000` |
 | `money.txt` | search_crm_objects | objectType DEAL, limit 200, one filter group: pipeline EQ 144168382, region IN the 5 SEA regions, dealstage IN 280510157/158/159/160/161. Properties: dealname, dealstage, region, amount, amount_in_home_currency, closedate, deal_currency_code, hs_exchange_rate, annual_subscription_fee, implementation_fee, recurring_amount, onetime_amount, number_of_employees, proposal_sent_date, hs_v2_date_entered_280510158, new_deal_source, new_deal_subsource, internal_reference__sub_sources, hubspot_owner_id, hs_deal_stage_probability, hs_next_step, notes_last_updated, hs_tcv, hs_acv, invoice_raised_date, payment_status, amount_received_date. This live record overrides the SQL export (which can lag HubSpot by hours) for stage, owner, dates and amounts. |
 
+Optional: a meeting that was only just linked to a deal can take hours to reach `meetings.txt`. To include it now, run the same meetings SELECT with `WHERE DEAL.hs_object_id = '<deal id>'` and save the raw result as `raw_new/meetings_extra.txt` (or `meetings_extra_2.txt`, …); `stage_manual_pull.py` merges it without duplicates.
+
 Checks before publishing: every TSV ends with "Showing N of N total results" (N equal on both sides), and `money.txt` has `total` equal to the number of results.
 
 Then:
