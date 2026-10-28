@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T07:54:37Z",
+ "generated_at": "2026-10-28T23:34:17Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -85,8 +85,8 @@
    "region": "Malaysia",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 2,
-   "amount": 754000.0
+   "count": 3,
+   "amount": 934000.0
   },
   {
    "region": "Malaysia",
@@ -148,8 +148,8 @@
    "region": "Thailand & Others",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "count": 5,
-   "amount": 280000.0
+   "count": 4,
+   "amount": 100000.0
   },
   {
    "region": "Thailand & Others",
@@ -297,7 +297,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 15
+   "count": 16
   },
   {
    "region": "Thailand & Others",
@@ -408,7 +408,7 @@
    "amount": 300000.0,
    "close_date": "2027-01-19",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": null,
+   "last_contacted": "2026-10-28",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/529589966018"
   },
@@ -508,7 +508,7 @@
    "deal": "One Doc",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
-   "region": "Thailand & Others",
+   "region": "Malaysia",
    "amount": 180000.0,
    "close_date": "2026-12-18",
    "owner": "Suntisuk Kulpiya",
@@ -589,7 +589,7 @@
    "region": "Philippines",
    "amount": 142500.0,
    "close_date": "2026-11-27",
-   "owner": "Allyssa Ruazol",
+   "owner": "Jun de Dios",
    "last_contacted": "2026-06-02",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502402814191"
@@ -654,7 +654,7 @@
    "region": "Philippines",
    "amount": 128256.0,
    "close_date": "2027-02-27",
-   "owner": "Allyssa Ruazol",
+   "owner": "Jun de Dios",
    "last_contacted": "2026-08-28",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512459995376"
@@ -1317,7 +1317,7 @@
    "region": "Philippines",
    "amount": 19000.0,
    "close_date": "2027-03-31",
-   "owner": "Allyssa Ruazol",
+   "owner": "Jun de Dios",
    "last_contacted": "2026-10-19",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/513634997475"
