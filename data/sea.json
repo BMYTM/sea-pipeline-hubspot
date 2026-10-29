@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T23:34:17Z",
+ "generated_at": "2026-10-29T23:33:45Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -297,12 +297,12 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 16
+   "count": 17
   },
   {
    "region": "Thailand & Others",
    "stage": "In Progress",
-   "count": 4
+   "count": 5
   },
   {
    "region": "Thailand & Others",
