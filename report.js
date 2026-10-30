@@ -67,7 +67,7 @@
   }
 
   function build(M) {
-    // One slide per sheet of WSR_Leaders.xlsx, in the same order, in the HONO house style (purple/magenta, Arial, six-square logo).
+    // One slide per sheet of WSR_Leaders.xlsx, in the same order, in the HONO house style (purple/magenta, Arial, HONO logo).
     const pres = new window.PptxGenJS();
     pres.layout = 'LAYOUT_WIDE';
     pres.theme = {headFontFace: 'Arial', bodyFontFace: 'Arial'};
@@ -79,11 +79,8 @@
     const neg = (t) => typeof t === 'string' && /^-\$?\d/.test(t.trim());
 
     // ---------- brand helpers ----------
-    const honoLogo = (s, x, y, sq) => {
-      const cols = ['E6007E', '00A99D', 'FDB913', '27AAE1', '662D91', '8DC63F'];
-      cols.forEach((c, i) => s.addShape(pres.shapes.RECTANGLE, {x: x + (i % 3) * sq * 1.15, y: y + Math.floor(i / 3) * sq * 1.15, w: sq, h: sq, fill: {color: c}, line: {type: 'none'}}));
-      s.addText('HONO.', {x: x + 3 * sq * 1.15 + 0.05, y: y - sq * 0.55, w: sq * 14, h: sq * 3, fontSize: Math.round(sq * 175), bold: true, color: HB.deep, fontFace: FONT, align: 'left', valign: 'middle', margin: 0});
-    };
+    // HONO logo (assets/hono_logo.png, transparent PNG, 115×32 px)
+    const honoLogo = (s, x, y, w) => s.addImage({path: 'assets/hono_logo.png', x, y, w, h: w * 32 / 115, altText: 'HONO logo'});
     const gradBar = (s, x, y, w, h) => { const n = 16, rgb = (hex) => [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16)), c0 = rgb(HB.purple), c1 = rgb(HB.mag);
       for (let i = 0; i < n; i++) { const t = i / (n - 1), col = c0.map((v, j) => Math.round(v + (c1[j] - v) * t).toString(16).padStart(2, '0')).join('');
         s.addShape(pres.shapes.RECTANGLE, {x: x + (w / n) * i, y, w: w / n + 0.02, h, fill: {color: col}, line: {type: 'none'}}); } };
@@ -95,7 +92,7 @@
       gradBar(s, 0.52, 0.84, 7.4, 0.045);
       if (sub) s.addText(sub, {x: 0.5, y: 0.92, w: 12.3, h: 0.28, fontSize: 11.5, color: HB.mute, fontFace: FONT, margin: 0});
       s.addText('Source: ' + source + ' · ' + asOf, {x: 0.5, y: 6.98, w: 9.6, h: 0.42, fontSize: 8.5, color: HB.mute, fontFace: FONT, margin: 0, valign: 'middle'});
-      honoLogo(s, 11.25, 7.07, 0.085);
+      honoLogo(s, 11.55, 7.04, 1.25);
       return s; };
     const H = (t, o = {}) => ({text: t, options: Object.assign({bold: true, color: 'FFFFFF', fill: {color: HB.purple}, align: 'center', valign: 'middle'}, o)});
     const C = (t, align = 'left', o = {}) => { const tx = t == null || t === '' ? '—' : String(t);
@@ -121,15 +118,13 @@
 
     // Cover
     let s = pres.addSlide(); s.background = {color: HB.purple};
-    s.addShape(pres.shapes.OVAL, {x: 4.4, y: -2.2, w: 5.2, h: 5.2, fill: {color: HB.soft}, line: {type: 'none'}});
-    s.addShape(pres.shapes.OVAL, {x: -1.6, y: 4.7, w: 4.6, h: 4.6, fill: {color: HB.soft}, line: {type: 'none'}});
     s.addText('SEA Weekly\nStatus Report', {x: 0.75, y: 1.3, w: 6.4, h: 2.4, fontSize: 48, bold: true, color: 'FFFFFF', fontFace: FONT, valign: 'bottom', margin: 0, lineSpacingMultiple: 0.95});
     s.addText('Thailand · Philippines · Indonesia · Malaysia · Singapore', {x: 0.8, y: 3.95, w: 6.3, h: 0.5, fontSize: 18, color: 'E7DEF5', fontFace: FONT, margin: 0});
     s.addText(M.fy + ' (Apr ' + M.fy0 + ' – Mar ' + (M.fy0 + 1) + ') vs ' + M.pfy + ' · All amounts in USD', {x: 0.8, y: 4.5, w: 6.3, h: 0.45, fontSize: 15, color: 'D9CCF0', fontFace: FONT, margin: 0});
     s.addText('Source: HubSpot (SEA Sales Pipeline) · ' + asOf, {x: 0.8, y: 6.65, w: 6.3, h: 0.4, fontSize: 12, color: 'C9BBE6', fontFace: FONT, margin: 0});
     s.addShape(pres.shapes.RECTANGLE, {x: 7.35, y: 0, w: 5.98, h: 7.5, fill: {color: 'FFFFFF'}, line: {type: 'none'}});
-    honoLogo(s, 8.55, 3.3, 0.16);
-    gradBar(s, 8.55, 4.2, 3.6, 0.05);
+    honoLogo(s, 8.85, 3.25, 2.9);
+    gradBar(s, 8.85, 4.35, 2.9, 0.05);
 
     // 1. Overview- Annual
     s = sheet('Overview – Annual', M.fy + ' · YTD = ' + ytdLabel + ' (' + M.elapsed + ' of 12 months) · USD', SRC.won + '; ' + SRC.target);
@@ -183,14 +178,14 @@
     });
 
     // 5. Proposals Sent
-    const pr = M.props.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(dt(r.close_date)), C(pc(r.probability), 'right'),
+    const pr = M.props.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(dt(r.close_date)), C(pc(r.probability), 'right'),
       C(n0(r.implementation), 'right'), C(n0(r.subscription), 'right'), C(n0(val(r)), 'right')]);
     pages(pr, 15).forEach((pg, pi, all) => {
-      s = sheet('Proposals Sent' + part(pi, all), M.props.length + ' open deals in Proposal Sent · USD', 'HubSpot SEA Sales Pipeline – open deals in the Proposal Sent stage; Close date, Deal probability, Number of employees, fees (USD)');
-      const rows = [[H('S.No.'), H('Clients Name'), H('Location'), H('Headcount'), H('Expected Date of Closure'), H('Closure Probability %'), H('Implementation'), H('Subscription'), H('ACV')]]
-        .concat(pg.length ? pg : [[C('No open deals in Proposal Sent', 'left', {colspan: 9})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 6}), T(n0(sumOf(M.props, (r) => r.implementation)), 'right'), T(n0(sumOf(M.props, (r) => r.subscription)), 'right'), T(n0(sumOf(M.props, val)), 'right')]);
-      grid(s, rows, {colW: [0.6, 3.4, 1.15, 1.05, 1.5, 1.25, 1.35, 1.1, 0.9], fs: 10.5, rowH: 0.3});
+      s = sheet('Proposals Sent' + part(pi, all), M.props.length + ' open deals in Proposal Sent · USD', 'HubSpot SEA Sales Pipeline – open deals in the Proposal Sent stage; Deal source and sub-source (partner name), Close date, Deal probability, Number of employees, fees (USD)');
+      const rows = [[H('S.No.'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Expected Date of Closure'), H('Closure Probability %'), H('Implementation'), H('Subscription'), H('ACV')]]
+        .concat(pg.length ? pg : [[C('No open deals in Proposal Sent', 'left', {colspan: 10})]]);
+      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 7}), T(n0(sumOf(M.props, (r) => r.implementation)), 'right'), T(n0(sumOf(M.props, (r) => r.subscription)), 'right'), T(n0(sumOf(M.props, val)), 'right')]);
+      grid(s, rows, {colW: [0.5, 2.6, 1.05, 0.95, 1.75, 1.2, 1.05, 1.25, 1.05, 0.9], fs: 10, rowH: 0.3});
     });
 
     // 6. Pipeline
