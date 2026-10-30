@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T23:33:45Z",
+ "generated_at": "2026-10-30T23:34:01Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -400,19 +400,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/8213541081"
   },
   {
-   "id": "529589966018",
-   "deal": "Kenanga Investment Bank Berhad (KIBB)",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Malaysia",
-   "amount": 300000.0,
-   "close_date": "2027-01-19",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-10-28",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/529589966018"
-  },
-  {
    "id": "267197143227",
    "deal": "Bank Rakyat Malaysia - New Deal",
    "stage_id": "280510157",
@@ -424,6 +411,19 @@
    "last_contacted": "2026-03-06",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/267197143227"
+  },
+  {
+   "id": "529589966018",
+   "deal": "Kenanga Investment Bank Berhad (KIBB)",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Malaysia",
+   "amount": 300000.0,
+   "close_date": "2027-01-19",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-10-28",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/529589966018"
   },
   {
    "id": "112816249045",
@@ -504,19 +504,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/501831430334"
   },
   {
-   "id": "511204612302",
-   "deal": "One Doc",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Malaysia",
-   "amount": 180000.0,
-   "close_date": "2026-12-18",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": null,
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/511204612302"
-  },
-  {
    "id": "129537318081",
    "deal": "National Power Supply",
    "stage_id": "280510160",
@@ -528,6 +515,19 @@
    "last_contacted": "2026-04-20",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/129537318081"
+  },
+  {
+   "id": "511204612302",
+   "deal": "One Doc",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Malaysia",
+   "amount": 180000.0,
+   "close_date": "2026-12-18",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": null,
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/511204612302"
   },
   {
    "id": "339992582371",
@@ -972,6 +972,19 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/295427044579"
   },
   {
+   "id": "526802138353",
+   "deal": "Advics Manufacturing",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Thailand & Others",
+   "amount": 50000.0,
+   "close_date": "2027-01-31",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-10-27",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526802138353"
+  },
+  {
    "id": "523343584494",
    "deal": "Amcor - New Deal",
    "stage_id": "280510157",
@@ -1009,19 +1022,6 @@
    "last_contacted": "2026-07-27",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502452980924"
-  },
-  {
-   "id": "526802138353",
-   "deal": "Advics Manufacturing",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Thailand & Others",
-   "amount": 50000.0,
-   "close_date": "2027-01-31",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-10-27",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526802138353"
   },
   {
    "id": "500196369598",
@@ -1063,19 +1063,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526799803625"
   },
   {
-   "id": "187781578939",
-   "deal": "Learn Corp",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Thailand & Others",
-   "amount": 44000.0,
-   "close_date": "2026-04-30",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-02-06",
-   "probability": 0.7,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/187781578939"
-  },
-  {
    "id": "193935600872",
    "deal": "Dynamic Outsource Solutions, Inc. (DOS-1)",
    "stage_id": "280510160",
@@ -1087,6 +1074,19 @@
    "last_contacted": "2026-02-06",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/193935600872"
+  },
+  {
+   "id": "187781578939",
+   "deal": "Learn Corp",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Thailand & Others",
+   "amount": 44000.0,
+   "close_date": "2026-04-30",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-02-06",
+   "probability": 0.7,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/187781578939"
   },
   {
    "id": "6829809341",
@@ -1336,19 +1336,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515193189573"
   },
   {
-   "id": "21821524182",
-   "deal": "Aneka Komkar Utama",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Indonesia",
-   "amount": 18000.0,
-   "close_date": "2026-12-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21821524182"
-  },
-  {
    "id": "499153227970",
    "deal": "Commonwealth Capital Group - New Deal",
    "stage_id": "280510160",
@@ -1360,6 +1347,19 @@
    "last_contacted": "2026-07-08",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499153227970"
+  },
+  {
+   "id": "21821524182",
+   "deal": "Aneka Komkar Utama",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Indonesia",
+   "amount": 18000.0,
+   "close_date": "2026-12-31",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-02-06",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21821524182"
   },
   {
    "id": "240815360208",
@@ -1505,6 +1505,45 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/21275029723"
   },
   {
+   "id": "15599173102",
+   "deal": "Home Product Center Public Company Limited - New Deal",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Thailand & Others",
+   "amount": null,
+   "close_date": null,
+   "owner": "Soranan Natejan",
+   "last_contacted": "2026-02-06",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15599173102"
+  },
+  {
+   "id": "486351587557",
+   "deal": "INTEQC Group - New Deal",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Thailand & Others",
+   "amount": 0.0,
+   "close_date": "2026-06-30",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": "2026-05-27",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/486351587557"
+  },
+  {
+   "id": "22012789185",
+   "deal": "Metrobank",
+   "stage_id": "280510160",
+   "stage": "On-Hold",
+   "region": "Philippines",
+   "amount": null,
+   "close_date": "2025-03-01",
+   "owner": "Prielle Seandrè Tactacan",
+   "last_contacted": "2026-02-06",
+   "probability": 0.5,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185"
+  },
+  {
    "id": "517313274045",
    "deal": "OWNDAYS CO LTD - New Deal",
    "stage_id": "280510157",
@@ -1607,45 +1646,6 @@
    "last_contacted": "2026-08-11",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512054574282"
-  },
-  {
-   "id": "15599173102",
-   "deal": "Home Product Center Public Company Limited - New Deal",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Thailand & Others",
-   "amount": null,
-   "close_date": null,
-   "owner": "Soranan Natejan",
-   "last_contacted": "2026-02-06",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/15599173102"
-  },
-  {
-   "id": "486351587557",
-   "deal": "INTEQC Group - New Deal",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2026-06-30",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-05-27",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/486351587557"
-  },
-  {
-   "id": "22012789185",
-   "deal": "Metrobank",
-   "stage_id": "280510160",
-   "stage": "On-Hold",
-   "region": "Philippines",
-   "amount": null,
-   "close_date": "2025-03-01",
-   "owner": "Prielle Seandrè Tactacan",
-   "last_contacted": "2026-02-06",
-   "probability": 0.5,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185"
   }
  ]
 }
