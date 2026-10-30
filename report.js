@@ -86,13 +86,13 @@
         s.addShape(pres.shapes.RECTANGLE, {x: x + (w / n) * i, y, w: w / n + 0.02, h, fill: {color: col}, line: {type: 'none'}}); } };
 
     pres.defineSlideMaster({title: 'Sheet', background: {color: 'FFFFFF'},
-      slideNumber: {x: 10.2, y: 7.05, w: 0.5, h: 0.3, fontSize: 9, color: HB.mute, align: 'right', fontFace: FONT}, objects: []});
+      slideNumber: {x: 12.35, y: 7.05, w: 0.5, h: 0.3, fontSize: 9, color: HB.mute, align: 'right', fontFace: FONT}, objects: []});
     const sheet = (title, sub, source) => { const s = pres.addSlide({masterName: 'Sheet'});
-      s.addText(title, {x: 0.5, y: 0.25, w: 12.3, h: 0.55, fontSize: 24, bold: true, color: HB.purple, fontFace: FONT, margin: 0, valign: 'middle'});
+      s.addText(title, {x: 0.5, y: 0.25, w: 10.8, h: 0.55, fontSize: 24, bold: true, color: HB.purple, fontFace: FONT, margin: 0, valign: 'middle'});
       gradBar(s, 0.52, 0.84, 7.4, 0.045);
       if (sub) s.addText(sub, {x: 0.5, y: 0.92, w: 12.3, h: 0.28, fontSize: 11.5, color: HB.mute, fontFace: FONT, margin: 0});
-      s.addText('Source: ' + source + ' · ' + asOf, {x: 0.5, y: 6.98, w: 9.6, h: 0.42, fontSize: 8.5, color: HB.mute, fontFace: FONT, margin: 0, valign: 'middle'});
-      honoLogo(s, 11.55, 7.04, 1.25);
+      s.addText('Source: ' + source + ' · ' + asOf, {x: 0.5, y: 6.98, w: 11.6, h: 0.42, fontSize: 8.5, color: HB.mute, fontFace: FONT, margin: 0, valign: 'middle'});
+      honoLogo(s, 11.55, 0.3, 1.3);
       return s; };
     const H = (t, o = {}) => ({text: t, options: Object.assign({bold: true, color: 'FFFFFF', fill: {color: HB.purple}, align: 'center', valign: 'middle'}, o)});
     const C = (t, align = 'left', o = {}) => { const tx = t == null || t === '' ? '—' : String(t);
