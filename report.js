@@ -103,15 +103,15 @@
     // 1. Overview- Annual
     s = sheet('Overview – Annual', M.fy + ' · YTD = ' + ytdLabel + ' (' + M.elapsed + ' of 12 months)');
     const ytdPct = M.ytdTarget ? M.ytd.cur / M.ytdTarget : null, annPct = M.target ? M.ytd.cur / M.target : null;
-    grid(s, [[H('Description'), H('ACV (LC)'), H('ACV ($)')],
-      [C('Annual Target'), C('—', 'right'), C(n0(M.target), 'right')],
-      [C('YTD Target'), C('—', 'right'), C(n0(M.ytdTarget), 'right')],
-      [C('No. of Contracts Signed'), C(String(M.won.length), 'center', {colspan: 2})],
-      [C('YTD ACV'), C('—', 'right'), C(n0(M.ytd.cur), 'right')],
-      [C('YTD Achievement'), C('—', 'right'), C(n0(M.ytd.cur), 'right')],
-      [C('YTD %'), C('—', 'right'), C(pc(ytdPct), 'right')],
-      [C('Annual %'), C('—', 'right'), C(pc(annPct), 'right')]], {y: 1.5, colW: [4.2, 2.6, 2.6], fs: 16, rowH: 0.55});
-    note(s, 'ACV (LC) is blank: SEA deals are booked in USD in HubSpot. Same months of ' + M.pfy + ': ' + n0(M.ytd.prev) + ' (' + sg(M.ytd.yoy) + ').', 6.2);
+    grid(s, [[H('Description'), H('ACV ($)')],
+      [C('Annual Target'), C(n0(M.target), 'right')],
+      [C('YTD Target'), C(n0(M.ytdTarget), 'right')],
+      [C('No. of Contracts Signed'), C(String(M.won.length), 'center')],
+      [C('YTD ACV'), C(n0(M.ytd.cur), 'right')],
+      [C('YTD Achievement'), C(n0(M.ytd.cur), 'right')],
+      [C('YTD %'), C(pc(ytdPct), 'right')],
+      [C('Annual %'), C(pc(annPct), 'right')]], {y: 1.5, colW: [5.0, 3.4], fs: 16, rowH: 0.55});
+    note(s, 'Same months of ' + M.pfy + ': ' + n0(M.ytd.prev) + ' (' + sg(M.ytd.yoy) + ').', 6.2);
 
     // 2. Sheet4: monthly ACV vs last year and target
     s = sheet('Monthly ACV – ' + M.fy + ' vs ' + M.pfy + ' and Target', 'Quarters are fiscal (Q1 = Apr–Jun) · YTD = ' + ytdLabel);
@@ -126,39 +126,39 @@
     grid(s, s4, {y: 1.25, colW: [1.7, 1.75, 1.45, 1.45, 1.45, 1.0, 1.55, 1.0], fs: 10.5, rowH: 0.255});
 
     // 3. Sheet3: contracts and ACV by month
-    s = sheet('Contracts and ACV by Month – ' + M.fy, 'TCV is shown once Total contract value is filled in on won deals in HubSpot');
-    const s3 = [[H('Month', {rowspan: 2}), H('Number of Contracts', {rowspan: 2}), H('TCV', {colspan: 3}), H('ACV', {colspan: 3})],
-      [H('Implementation'), H('Subscription'), H('Total'), H('Implementation'), H('Subscription '), H('Total')]];
+    s = sheet('Contracts and ACV by Month – ' + M.fy, 'Closed-won SEA deals by close month · USD');
+    const s3 = [[H('Month', {rowspan: 2}), H('Number of Contracts', {rowspan: 2}), H('ACV', {colspan: 3})],
+      [H('Implementation'), H('Subscription '), H('Total')]];
     const byM = M.months.map((x) => { const rs = M.won.filter((r) => r.close_date.slice(0, 7) === x.key);
-      return {label: MFULL[x.m - 1] + ' ' + x.y, n: rs.length, tcv: rs.some((r) => r.tcv != null) ? sumOf(rs, (r) => r.tcv) : null, impl: sumOf(rs, (r) => r.implementation), sub: sumOf(rs, (r) => r.subscription), acv: sumOf(rs, val)}; });
-    const agg = (label, rs) => ({label, n: sumOf(rs, (r) => r.n), tcv: rs.some((r) => r.tcv != null) ? sumOf(rs, (r) => r.tcv) : null, impl: sumOf(rs, (r) => r.impl), sub: sumOf(rs, (r) => r.sub), acv: sumOf(rs, (r) => r.acv)});
-    const v3 = (r, tot) => { const f = tot ? T : C; return [f(r.label), f(String(r.n), 'center'), f('—', 'right'), f('—', 'right'), f(r.tcv != null ? n0(r.tcv) : '—', 'right'), f(n0(r.impl), 'right'), f(n0(r.sub), 'right'), f(n0(r.acv), 'right')]; };
+      return {label: MFULL[x.m - 1] + ' ' + x.y, n: rs.length, impl: sumOf(rs, (r) => r.implementation), sub: sumOf(rs, (r) => r.subscription), acv: sumOf(rs, val)}; });
+    const agg = (label, rs) => ({label, n: sumOf(rs, (r) => r.n), impl: sumOf(rs, (r) => r.impl), sub: sumOf(rs, (r) => r.sub), acv: sumOf(rs, (r) => r.acv)});
+    const v3 = (r, tot) => { const f = tot ? T : C; return [f(r.label), f(String(r.n), 'center'), f(n0(r.impl), 'right'), f(n0(r.sub), 'right'), f(n0(r.acv), 'right')]; };
     byM.forEach((r) => s3.push(v3(r)));
     [0, 1, 2, 3].forEach((q) => s3.push(v3(agg('Q' + (q + 1), byM.slice(q * 3, q * 3 + 3)))));
     s3.push(v3(agg('Total', byM), true));
-    grid(s, s3, {y: 1.3, colW: [2.0, 1.7, 1.5, 1.35, 1.2, 1.5, 1.35, 1.4], fs: 11, rowH: 0.28});
+    grid(s, s3, {y: 1.3, colW: [2.6, 2.3, 2.4, 2.4, 2.4], fs: 11, rowH: 0.28});
 
     // 4. Sheet2: contracts signed this year
-    const wonRows = M.won.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(mon(r.close_date)), C(r.tcv != null ? n0(r.tcv) : '—', 'right'),
+    const wonRows = M.won.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(mon(r.close_date)),
       C(r.tcv != null && r.acv ? (r.tcv / r.acv).toFixed(1) + ' yrs' : '—', 'center'), C(n0(r.implementation), 'right'), C(n0(r.subscription), 'right'), C(n0(val(r)), 'right')]);
     pages(wonRows, 14).forEach((pg, pi, all) => {
       s = sheet('Contracts Signed – ' + M.fy + part(pi, all), 'Closed-won SEA deals with a close date in ' + M.fy);
-      const rows = [[H('S.No.'), H('Client Name'), H('Signed Month'), H('TCV'), H('Term'), H('Implementation '), H('Subscription'), H('Total ACV')]].concat(pg.length ? pg : [[C('No contracts signed yet in ' + M.fy, 'left', {colspan: 8})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 2}), T(''), T(M.won.some((r) => r.tcv != null) ? n0(sumOf(M.won, (r) => r.tcv)) : '—', 'right'), T(''),
+      const rows = [[H('S.No.'), H('Client Name'), H('Signed Month'), H('Term'), H('Implementation '), H('Subscription'), H('Total ACV')]].concat(pg.length ? pg : [[C('No contracts signed yet in ' + M.fy, 'left', {colspan: 7})]]);
+      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 2}), T(''), T(''),
         T(n0(sumOf(M.won, (r) => r.implementation)), 'right'), T(n0(sumOf(M.won, (r) => r.subscription)), 'right'), T(n0(M.wonTotal), 'right')]);
-      grid(s, rows, {colW: [0.6, 2.7, 1.2, 0.9, 0.8, 1.35, 1.05, 1.0], fs: 12, rowH: 0.42});
+      grid(s, rows, {colW: [0.6, 3.6, 1.2, 0.8, 1.35, 1.05, 1.0], fs: 12, rowH: 0.42});
       grid(s, [[H('Contracts Signed This Year')], [C(String(M.won.length), 'center', {bold: true, fontSize: 28})]], {x: 10.35, y: 1.3, colW: [2.45], fs: 12, rowH: 0.5});
     });
 
     // 5. Proposals Sent
-    const pr = M.props.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(dt(r.close_date)), C(pc(r.probability), 'right'),
+    const pr = M.props.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(dt(r.close_date)), C(pc(r.probability), 'right'),
       C(n0(r.implementation), 'right'), C(n0(r.subscription), 'right'), C(n0(val(r)), 'right')]);
     pages(pr, 15).forEach((pg, pi, all) => {
       s = sheet('Proposals Sent' + part(pi, all), M.props.length + ' open deals in Proposal Sent');
-      const rows = [[H('S.No.'), H('Clients Name'), H('Location'), H('Headcount'), H('Expected Date of Closure'), H('Closure Probability %'), H('Implementation'), H('Subscription'), H('ACV')]]
-        .concat(pg.length ? pg : [[C('No open deals in Proposal Sent', 'left', {colspan: 9})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 6}), T(n0(sumOf(M.props, (r) => r.implementation)), 'right'), T(n0(sumOf(M.props, (r) => r.subscription)), 'right'), T(n0(sumOf(M.props, val)), 'right')]);
-      grid(s, rows, {colW: [0.6, 3.6, 1.15, 1.05, 1.5, 1.25, 1.15, 1.1, 0.9], fs: 10.5, rowH: 0.3});
+      const rows = [[H('S.No.'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Expected Date of Closure'), H('Closure Probability %'), H('Implementation'), H('Subscription'), H('ACV')]]
+        .concat(pg.length ? pg : [[C('No open deals in Proposal Sent', 'left', {colspan: 10})]]);
+      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 7}), T(n0(sumOf(M.props, (r) => r.implementation)), 'right'), T(n0(sumOf(M.props, (r) => r.subscription)), 'right'), T(n0(sumOf(M.props, val)), 'right')]);
+      grid(s, rows, {colW: [0.5, 2.6, 1.0, 0.95, 1.6, 1.3, 1.1, 1.1, 1.05, 1.1], fs: 10, rowH: 0.3});
     });
 
     // 6. Pipeline
