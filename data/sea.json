@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T23:34:22Z",
+ "generated_at": "2026-11-02T05:05:58Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -107,7 +107,7 @@
    "stage_id": "280510157",
    "stage": "Demo/Developing",
    "count": 6,
-   "amount": 844100.0
+   "amount": 972100.0
   },
   {
    "region": "Philippines",
@@ -361,6 +361,19 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/216255209695"
   },
   {
+   "id": "515111097585",
+   "deal": "Philippine Transmarine Carriers - Crewing Allotment",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Philippines",
+   "amount": 513000.0,
+   "close_date": "2027-03-31",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-10-22",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111097585"
+  },
+  {
    "id": "496653097202",
    "deal": "Inspiro - New Deal",
    "stage_id": "280510158",
@@ -372,19 +385,6 @@
    "last_contacted": "2026-04-24",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/496653097202"
-  },
-  {
-   "id": "515111097585",
-   "deal": "Philippine Transmarine Carriers - Crewing Allotment",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 385000.0,
-   "close_date": "2027-03-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-10-22",
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111097585"
   },
   {
    "id": "8213541081",
@@ -744,9 +744,9 @@
    "stage": "Demo/Developing",
    "region": "Philippines",
    "amount": 96000.0,
-   "close_date": "2026-12-19",
+   "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-07-10",
+   "last_contacted": "2026-11-02",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/531677642992"
   },
@@ -822,9 +822,9 @@
    "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 73880.0,
-   "close_date": "2026-11-20",
+   "close_date": "2026-11-30",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-10-27",
+   "last_contacted": "2026-11-02",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
   },
