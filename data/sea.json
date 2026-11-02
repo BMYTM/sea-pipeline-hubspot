@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T05:05:58Z",
+ "generated_at": "2026-11-02T23:33:46Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -106,8 +106,8 @@
    "region": "Philippines",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 6,
-   "amount": 972100.0
+   "count": 5,
+   "amount": 846100.0
   },
   {
    "region": "Philippines",
@@ -307,7 +307,7 @@
   {
    "region": "Thailand & Others",
    "stage": "MQL Lost",
-   "count": 16
+   "count": 17
   },
   {
    "region": "Thailand & Others",
@@ -317,7 +317,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Marketing Nurture",
-   "count": 12
+   "count": 11
   }
  ],
  "open_deals": [
@@ -491,7 +491,7 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515113098451"
   },
   {
-   "id": "501831430334",
+   "id": "534672912612",
    "deal": "Security Bank - New Deal Payroll",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
@@ -501,7 +501,7 @@
    "owner": "Jun de Dios",
    "last_contacted": "2026-10-19",
    "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/501831430334"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/534672912612"
   },
   {
    "id": "129537318081",
@@ -658,19 +658,6 @@
    "last_contacted": "2026-08-28",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512459995376"
-  },
-  {
-   "id": "527356129501",
-   "deal": "Security Bank",
-   "stage_id": "280510157",
-   "stage": "Demo/Developing",
-   "region": "Philippines",
-   "amount": 126000.0,
-   "close_date": "2027-03-30",
-   "owner": "Jun de Dios",
-   "last_contacted": null,
-   "probability": 0.4,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/527356129501"
   },
   {
    "id": "286017173691",
