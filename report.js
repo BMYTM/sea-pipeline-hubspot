@@ -23,6 +23,9 @@
   const src = (r) => [r.source, r.sub_source && r.sub_source !== r.source ? r.sub_source : null].filter(Boolean).join(' · ') || '—';
   const stageLbl = (s) => s === 'Demo/Developing' ? 'Demo' : s;
   const pad = (n) => String(n).padStart(2, '0');
+  // Meetings owned by these people are left out of every meeting slide (HubSpot owner id or name)
+  const SKIP_OWNERS = [['1698206293', 'Abdul Khan'], ['34182343', 'Akash Kumar']];
+  const skipOwner = (m) => !!m.owner && SKIP_OWNERS.some(([id, name]) => m.owner.includes('(' + id + ')') || m.owner.startsWith(name));
 
   // sc = {label, country, target, targetNote}: country null = all of SEA
   function model(D, SEA, sc = {label: 'SEA', country: null}) {
@@ -52,14 +55,14 @@
     const props = pipe.filter((r) => r.stage === 'Proposal Sent');
     const deals = new Map(active.concat(D.closures.filter(inScope)).map((r) => [r.id, r]));
     const seen = new Set(), meets = [];
-    (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
+    (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id) || skipOwner(m)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
     // Customer & other meetings: meetings with SEA companies that are not on the sales slides above
     // (customer onboarding/go-live, reference calls, meetings not linked to a deal)
     const shown = new Set(meets.map((m) => m.id));
-    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && (!sc.country || (m.companies[0] || {}).country === sc.country));
+    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && !skipOwner(m) && (!sc.country || (m.companies[0] || {}).country === sc.country));
     const otherDone = other.filter((m) => m.date <= asof && m.date >= since), otherUp = other.filter((m) => m.date > asof).reverse();
     return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming, otherDone, otherUp,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
