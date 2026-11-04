@@ -247,18 +247,16 @@
       const [D, SEA] = await Promise.all([getJSON('data/details.json'), getJSON('data/sea.json'), loadLib()]);
       const M = model(D, SEA);
       window.SEA_REPORT_MODEL = M; // for tests
-      // Country targets: the SEA target is split across Thailand, Malaysia, Philippines and Indonesia only,
-      // by each one's share of last FY's closed-won ACV among the four. Singapore has no target of its own.
+      // Country targets: the SEA target is split equally across Thailand, Malaysia, Philippines and Indonesia.
+      // Singapore has no target of its own.
       const CTRY = ['Thailand', 'Philippines', 'Indonesia', 'Malaysia', 'Singapore'];
       const TGT = ['Thailand', 'Malaysia', 'Philippines', 'Indonesia'];
-      const prevFy = Object.fromEntries(TGT.map((c) => [c, model(D, SEA, {label: c, country: c, target: 0}).full.prev]));
-      const prevAll = TGT.reduce((t, c) => t + prevFy[c], 0), seaT = SEA.target_usd || 0;
-      const countries = CTRY.map((c) => {
-        if (!TGT.includes(c)) return model(D, SEA, {label: c, country: c, target: 0,
-          targetNote: c + ' has no target: the SEA FY target USD ' + n0(seaT) + ' is split across ' + TGT.join(', ')});
-        const share = prevAll ? prevFy[c] / prevAll : 1 / TGT.length;
-        return model(D, SEA, {label: c, country: c, target: seaT * share,
-          targetNote: c + ' target USD ' + n0(seaT * share) + ' = SEA FY target USD ' + n0(seaT) + ' × ' + c + ' share of ' + M.pfy + ' closed-won ACV among ' + TGT.join(', ') + ' (' + pc(share) + '), spread evenly by month'}); });
+      const seaT = SEA.target_usd || 0, each = seaT / TGT.length;
+      const countries = CTRY.map((c) => TGT.includes(c)
+        ? model(D, SEA, {label: c, country: c, target: each,
+            targetNote: c + ' target USD ' + n0(each) + ' = SEA FY target USD ' + n0(seaT) + ' split equally across ' + TGT.join(', ') + ', spread evenly by month'})
+        : model(D, SEA, {label: c, country: c, target: 0,
+            targetNote: c + ' has no target: the SEA FY target USD ' + n0(seaT) + ' is split equally across ' + TGT.join(', ')}));
       window.SEA_REPORT_COUNTRIES = countries; // for tests
       await build([M].concat(countries)).writeFile({fileName: 'SEA_Weekly_Status_Report_' + M.asof + '.pptx'});
     } catch (e) { alert('Could not build the weekly review: ' + e.message); }
