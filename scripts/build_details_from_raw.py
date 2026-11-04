@@ -194,27 +194,65 @@ def main():
                        for did, ms in meet.items() if did in deal_ids for mid, (d_, t) in ms.items()),
                       key=lambda x: (x["date"], x["id"]), reverse=True)
 
-    # meetings with SEA companies (raw/meetings_other.txt: one row per meeting and company). The report shows the ones
-    # that are not on an open sales deal (customer onboarding, reference calls, meetings not linked to a deal).
-    company_meetings = []
-    if (RAW / "meetings_other.txt").exists():
-        ot = json.loads((RAW / "meetings_other.txt").read_text())["results"][0]["content"].split("Dataset TSV:\n")[1].strip().split("\n")
-        oh = ot[0].split("\t"); col = lambda pre: next(k for k, h in enumerate(oh) if h.startswith(pre))
-        c_mid, c_start, c_title, c_own = col("Record ID"), col("Meeting start time"), col("Meeting name"), col("Activity assigned to")
-        c_cid, c_cname, c_ctry = col("Company ["), col("Company name"), col("Country/Region")
-        won_names = {(r.get("company") or "").strip().lower() for r in closures} - {""}
-        by_id = {}
-        for line in ot[1:]:
-            c = line.split("\t")
-            if len(c) != len(oh): continue
-            m = by_id.setdefault(c[c_mid], {"id": c[c_mid], "date": c[c_start][:10], "title": c[c_title] if c[c_title] not in ("", "Unassigned") else None,
-                                             "owner": owner(c[c_own]) if c[c_own] not in ("", "Unassigned") else None, "companies": []})
-            if c[c_cid] not in {x["id"] for x in m["companies"]}:
-                m["companies"].append({"id": c[c_cid], "name": c[c_cname], "country": c[c_ctry], "customer": c[c_cname].strip().lower() in won_names})
-        for m in by_id.values():
-            m["companies"].sort(key=lambda x: not x["customer"])  # a won customer first
-            m["customer"] = any(x["customer"] for x in m["companies"])
-        company_meetings = sorted(by_id.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
+    # meetings with SEA companies or contacts (raw/meetings_other.txt: one row per meeting and company;
+    # raw/meetings_contacts.txt: one row per meeting and contact). Meetings not linked to a deal are matched to an
+    # open SEA deal through the company (any company on the deal) or a contact on the deal; the report shows a
+    # matched meeting on that deal's sales slides, and the rest as Customer & Other Meetings.
+    def rows_of(name):
+        if not (RAW / name).exists(): return None, []
+        t = json.loads((RAW / name).read_text())["results"][0]["content"].split("Dataset TSV:\n")[1].strip().split("\n")
+        h = t[0].split("\t")
+        return h, [c for c in (l.split("\t") for l in t[1:]) if len(c) == len(h)]
+    norm = lambda x: re.sub(r"[^a-z0-9]+", " ", (x or "").lower()).strip()
+    won_names = {norm(r.get("company")) for r in closures} - {""}
+    open_by_company, open_by_contact = defaultdict(set), defaultdict(set)
+    open_ids = {r["id"] for r in active}
+    for d in deals:
+        if d["hs_object_id"] in open_ids and norm(d.get("name")): open_by_company[norm(d.get("name"))].add(d["hs_object_id"])
+    for r in active:
+        for c in r["contacts"]: open_by_contact[norm(c["name"])].add(r["id"])
+    on_hold = {r["id"] for r in active if r.get("stage") == "On-Hold"}
+    # a deal filed under a partner company (e.g. AmBank under Rams Solutions) still matches a company named like the deal
+    deal_names = [(norm(re.sub(r"\s*-\s*new deal.*$", "", r["deal"], flags=re.I)), r["id"]) for r in active]
+    def by_deal_name(cn):
+        return {i for dn, i in deal_names if len(dn) >= 4 and cn and (cn == dn or cn.startswith(dn + " ") or dn.startswith(cn + " "))}
+    # meetings already linked to an open SEA deal (raw/meetings.txt, On-Hold included) are handled by the sales slides
+    on_deal = {mid for ms in meet.values() for mid in ms}
+    by_id = {}
+    def meeting(c, col):
+        return by_id.setdefault(c[col("Record ID")], {"id": c[col("Record ID")], "date": c[col("Meeting start time")][:10],
+            "title": c[col("Meeting name")] if c[col("Meeting name")] not in ("", "Unassigned") else None,
+            "owner": owner(c[col("Activity assigned to")]) if c[col("Activity assigned to")] not in ("", "Unassigned") else None,
+            "companies": [], "contacts": []})
+    oh, orows = rows_of("meetings_other.txt")
+    if oh:
+        col = lambda pre: next(k for k, h in enumerate(oh) if h.startswith(pre))
+        for c in orows:
+            m = meeting(c, col)
+            if c[col("Company [")] not in {x["id"] for x in m["companies"]}:
+                m["companies"].append({"id": c[col("Company [")], "name": c[col("Company name")], "country": c[col("Country/Region")],
+                                       "customer": norm(c[col("Company name")]) in won_names})
+    ch, crows = rows_of("meetings_contacts.txt")
+    if ch:
+        col = lambda pre: next(k for k, h in enumerate(ch) if h.startswith(pre))
+        for c in crows:
+            m = meeting(c, col)
+            if c[col("Contact [")] not in {x["id"] for x in m["contacts"]}:
+                nm = " ".join(x for x in (c[col("First Name")], c[col("Last Name")]) if x and x != "Unassigned")
+                co = c[col("Company Name")] if c[col("Company Name")] != "Unassigned" else None
+                m["contacts"].append({"id": c[col("Contact [")], "name": nm, "company": co, "country": c[col("Country [")],
+                                      "customer": norm(co) in won_names})
+    for m in by_id.values():
+        m["companies"].sort(key=lambda x: not x["customer"])  # a won customer first
+        m["customer"] = any(x["customer"] for x in m["companies"] + m["contacts"])
+        m["on_deal"] = m["id"] in on_deal
+        cand = set()
+        for x in m["companies"]: cand |= open_by_company.get(norm(x["name"]), set()) | by_deal_name(norm(x["name"]))
+        for x in m["contacts"]:
+            cand |= open_by_company.get(norm(x["company"]), set()) | by_deal_name(norm(x["company"])) | open_by_contact.get(norm(x["name"]), set())
+        live_c = cand - on_hold
+        m["deal_id"] = next(iter(live_c)) if len(live_c) == 1 and not m["on_deal"] else None  # only when it points at one open deal
+    company_meetings = sorted(by_id.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
 
     # a deal linked to two companies comes back as two rows: keep one
     def dedupe(rows):

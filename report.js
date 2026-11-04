@@ -56,13 +56,18 @@
     const deals = new Map(active.concat(D.closures.filter(inScope)).map((r) => [r.id, r]));
     const seen = new Set(), meets = [];
     (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id) || skipOwner(m)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
+    // meetings logged only against a company or contact that the data matched to one open deal count as that deal's sales meetings
+    (D.company_meetings || []).forEach((m) => { if (!m.deal_id || seen.has(m.id) || !deals.has(m.deal_id) || skipOwner(m)) return;
+      seen.add(m.id); meets.push(Object.assign({}, m, {deal: deals.get(m.deal_id)})); });
+    meets.sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
     // Customer & other meetings: meetings with SEA companies that are not on the sales slides above
     // (customer onboarding/go-live, reference calls, meetings not linked to a deal)
     const shown = new Set(meets.map((m) => m.id));
-    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && !skipOwner(m) && (!sc.country || (m.companies[0] || {}).country === sc.country));
+    const where = (m) => (m.companies[0] || m.contacts && m.contacts[0] || {}).country;
+    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && !m.on_deal && !m.deal_id && !skipOwner(m) && (!sc.country || where(m) === sc.country));
     const otherDone = other.filter((m) => m.date <= asof && m.date >= since), otherUp = other.filter((m) => m.date > asof).reverse();
     return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming, otherDone, otherUp,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
@@ -127,8 +132,9 @@
     // Customer & Other Meetings (non-sales: customer onboarding/go-live, reference calls, meetings not linked to a deal),
     // shown inside each section after the sales meeting slides: completed (last 30 days) and scheduled
     function otherMeetings(M, sheet) {
-      const srcO = 'HubSpot meetings associated with companies in ' + (M.country || 'Thailand, Malaysia, Philippines, Indonesia or Singapore') + ' (Meeting start time, Activity assigned to), not linked to an open SEA sales deal; Customer = company has a closed-won SEA deal';
-      const row = (m, i) => { const c = m.companies[0] || {}, more = m.companies.length > 1 ? ' (+' + (m.companies.length - 1) + ')' : '';
+      const srcO = 'HubSpot meetings associated with companies or contacts in ' + (M.country || 'Thailand, Malaysia, Philippines, Indonesia or Singapore') + ' (Meeting start time, Activity assigned to) that do not match an open SEA sales deal; Customer = company has a closed-won SEA deal';
+      const row = (m, i) => { const ct = (m.contacts || [])[0], c = m.companies[0] || (ct ? {name: ct.company || ct.name, country: ct.country} : {});
+        const more = m.companies.length > 1 ? ' (+' + (m.companies.length - 1) + ')' : '';
         return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C((c.name || '—') + more), C(c.country), C(m.customer ? 'Customer' : 'Other', 'center'), C(m.title)]; };
       const head = (first) => [[H('S.No.'), H(first), H('Owner'), H('Company'), H('Country'), H('Type'), H('Meeting')]];
       const colW = [0.5, 1.1, 1.75, 2.75, 1.05, 0.95, 4.2];
@@ -165,7 +171,7 @@
       split: 'HubSpot SEA Sales Pipeline – closed-won deals; Implementation fee and Annual subscription fee (USD)',
       target: M.targetNote || 'FY target USD ' + n0(M.target) + ' from dashboard settings, spread evenly by month',
       open: 'HubSpot SEA Sales Pipeline – open deals (On-Hold deals excluded); Close date, Deal probability, Number of employees, fees (USD)',
-      meet: 'HubSpot meetings linked to SEA deals (Meeting start time, Activity assigned to); contact and Next step from the linked deal',
+      meet: 'HubSpot meetings linked to SEA deals, or logged against a company or contact of one open deal (Meeting start time, Activity assigned to); contact and Next step from the deal',
     };
 
     // 1. Overview- Annual
