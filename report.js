@@ -247,16 +247,12 @@
       const [D, SEA] = await Promise.all([getJSON('data/details.json'), getJSON('data/sea.json'), loadLib()]);
       const M = model(D, SEA);
       window.SEA_REPORT_MODEL = M; // for tests
-      // Country targets: the SEA target is split equally across Thailand, Malaysia, Philippines and Indonesia.
-      // Singapore has no target of its own.
-      const CTRY = ['Thailand', 'Philippines', 'Indonesia', 'Malaysia', 'Singapore'];
-      const TGT = ['Thailand', 'Malaysia', 'Philippines', 'Indonesia'];
-      const seaT = SEA.target_usd || 0, each = seaT / TGT.length;
-      const countries = CTRY.map((c) => TGT.includes(c)
-        ? model(D, SEA, {label: c, country: c, target: each,
-            targetNote: c + ' target USD ' + n0(each) + ' = SEA FY target USD ' + n0(seaT) + ' split equally across ' + TGT.join(', ') + ', spread evenly by month'})
-        : model(D, SEA, {label: c, country: c, target: 0,
-            targetNote: c + ' has no target: the SEA FY target USD ' + n0(seaT) + ' is split equally across ' + TGT.join(', ')}));
+      // Country sections, in this order, after SEA overall. Singapore has no section for now.
+      // Country targets: the SEA target is split equally across these countries.
+      const CTRY = ['Thailand', 'Malaysia', 'Philippines', 'Indonesia'];
+      const seaT = SEA.target_usd || 0, each = seaT / CTRY.length;
+      const countries = CTRY.map((c) => model(D, SEA, {label: c, country: c, target: each,
+        targetNote: c + ' target USD ' + n0(each) + ' = SEA FY target USD ' + n0(seaT) + ' split equally across ' + CTRY.join(', ') + ', spread evenly by month'}));
       window.SEA_REPORT_COUNTRIES = countries; // for tests
       await build([M].concat(countries)).writeFile({fileName: 'SEA_Weekly_Status_Report_' + M.asof + '.pptx'});
     } catch (e) { alert('Could not build the weekly review: ' + e.message); }
