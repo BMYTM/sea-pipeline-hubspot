@@ -8704,6 +8704,9 @@
      "name": "Murf de Leon",
      "company": "Bestoptions Assistance Inc.",
      "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8765,6 +8768,9 @@
      "name": "Rachel Majito-Cacabelos",
      "company": "Teleperformance",
      "country": "Philippines",
+     "title": "HR Vice President",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8791,6 +8797,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8817,6 +8826,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8843,6 +8855,9 @@
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8869,6 +8884,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8895,6 +8913,9 @@
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8921,6 +8942,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -8953,6 +8977,9 @@
      "name": "Rizzel Pascua",
      "company": "PDS Group",
      "country": "Philippines",
+     "title": "HR Partner",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9053,17 +9080,23 @@
    ],
    "contacts": [
     {
-     "id": "1124051",
-     "name": "Xandra Galang",
-     "company": "Ayala",
-     "country": "Philippines",
-     "customer": false
-    },
-    {
      "id": "34221150703",
      "name": "Pol Sangalang",
      "company": "Paladins Law",
      "country": "Philippines",
+     "title": "Founder",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "1124051",
+     "name": "Xandra Galang",
+     "company": "Ayala",
+     "country": "Philippines",
+     "title": "Strategic HR Talent Management Head",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9144,6 +9177,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9176,6 +9212,9 @@
      "name": "Devendra Pratap Singh",
      "company": "AG&P",
      "country": "Singapore",
+     "title": "CIO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9202,6 +9241,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9275,6 +9317,9 @@
      "name": "Murf de Leon",
      "company": "Bestoptions Assistance Inc.",
      "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9290,17 +9335,23 @@
    "companies": [],
    "contacts": [
     {
-     "id": "10900527855",
-     "name": "Robby Fachri",
-     "company": "Marriott International, Inc.",
-     "country": "Indonesia",
-     "customer": false
-    },
-    {
      "id": "17258842360",
      "name": "Hendra Wijaya",
      "company": "Marriott International",
      "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "10900527855",
+     "name": "Robby Fachri",
+     "company": "Marriott International, Inc.",
+     "country": "Indonesia",
+     "title": "Area Director Of Human Resources - Indonesia",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9327,6 +9378,9 @@
      "name": "Parisara Sae-Heng",
      "company": "Koko Global Hospitality",
      "country": "Thailand",
+     "title": "HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": true
     }
    ],
@@ -9353,6 +9407,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9379,6 +9436,9 @@
      "name": "Xandra Galang",
      "company": "Ayala",
      "country": "Philippines",
+     "title": "Strategic HR Talent Management Head",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9407,17 +9467,23 @@
    ],
    "contacts": [
     {
-     "id": "671389561048",
-     "name": "Julio Rivero",
-     "company": "First Maritime Shared Services",
-     "country": "Philippines",
-     "customer": false
-    },
-    {
      "id": "64795",
      "name": "Tony Apale",
      "company": "PTC",
      "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9437,6 +9503,9 @@
      "name": "Deepali Jain",
      "company": "Standard Chartered India",
      "country": "Singapore",
+     "title": "Global TA Partner",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9463,6 +9532,9 @@
      "name": "Tony Apale",
      "company": "PTC",
      "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9489,6 +9561,9 @@
      "name": "Rizzel Pascua",
      "company": "PDS Group",
      "country": "Philippines",
+     "title": "HR Partner",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9508,6 +9583,9 @@
      "name": "Mandira Ganguly",
      "company": "Tata Consultancy Services",
      "country": "Singapore",
+     "title": "GM- Total Rewards",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9552,6 +9630,9 @@
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9625,6 +9706,9 @@
      "name": "Hendra Wijaya",
      "company": "Marriott International",
      "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9651,6 +9735,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9677,6 +9764,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9714,6 +9804,9 @@
      "name": "Murf de Leon",
      "company": "Bestoptions Assistance Inc.",
      "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9733,6 +9826,9 @@
      "name": "Hendra Wijaya",
      "company": "Marriott International",
      "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9759,6 +9855,9 @@
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9785,6 +9884,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9847,6 +9949,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9873,6 +9978,9 @@
      "name": "Apples Mangubat",
      "company": "Asialink Finance",
      "country": "Philippines",
+     "title": "President & COO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9910,6 +10018,9 @@
      "name": "Hendra Wijaya",
      "company": "Marriott International",
      "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9936,6 +10047,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9962,6 +10076,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -9981,6 +10098,9 @@
      "name": "Murf de Leon",
      "company": "Bestoptions Assistance Inc.",
      "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10000,6 +10120,9 @@
      "name": "Bharat G",
      "company": "Cognizant",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10026,6 +10149,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10045,6 +10171,9 @@
      "name": "Lovelyn Poda",
      "company": "TOA Global",
      "country": "Philippines",
+     "title": "Site Human Resources Head",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10095,6 +10224,9 @@
      "name": "Maconcepcion Babon",
      "company": "inspiro",
      "country": "Philippines",
+     "title": null,
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     },
     {
@@ -10102,6 +10234,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     },
     {
@@ -10109,6 +10244,9 @@
      "name": "Paulo",
      "company": "inspiro",
      "country": "Philippines",
+     "title": "Associate Vice President, Human Resources Operations",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10135,6 +10273,9 @@
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
      "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10193,24 +10334,13 @@
    ],
    "contacts": [
     {
-     "id": "34278665939",
-     "name": "Rachelle Kho",
-     "company": "Northern Star Energy",
-     "country": "Philippines",
-     "customer": false
-    },
-    {
      "id": "64795",
      "name": "Tony Apale",
      "company": "PTC",
      "country": "Philippines",
-     "customer": false
-    },
-    {
-     "id": "671389561048",
-     "name": "Julio Rivero",
-     "company": "First Maritime Shared Services",
-     "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     },
     {
@@ -10218,6 +10348,29 @@
      "name": "Charmaine Balon",
      "company": "ACM Homes",
      "country": "Philippines",
+     "title": "Senior Manager - HR & Admin",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "34278665939",
+     "name": "Rachelle Kho",
+     "company": "Northern Star Energy",
+     "country": "Philippines",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],
@@ -10244,6 +10397,9 @@
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
      "customer": false
     }
    ],

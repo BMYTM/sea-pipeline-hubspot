@@ -65,8 +65,10 @@
     const where = (m) => (m.companies[0] || m.contacts && m.contacts[0] || {}).country;
     const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && !m.on_deal && !m.deal_id && !skipOwner(m) && (!sc.country || where(m) === sc.country));
     other.filter((m) => !m.customer).forEach((m) => { const ct = (m.contacts || [])[0], co = m.companies[0];
-      meets.push(Object.assign({}, m, {deal: {company: co ? co.name : (ct && (ct.company || ct.name)), country: where(m), headcount: null, source: null,
-        contacts: ct ? [{name: ct.name, title: null}] : [], next_step: null}})); });
+      // no deal: Source comes from the contact (Event Name, e.g. PMAP Tech HR 2026 – Booth, else Original Traffic Source)
+      const ce = (m.contacts || []).find((x) => x.event), cs = ce ? 'Event · ' + ce.event : (ct && ct.source) || null;
+      meets.push(Object.assign({}, m, {deal: {company: co ? co.name : (ct && (ct.company || ct.name)), country: where(m), headcount: null, source: cs,
+        contacts: ct ? [{name: ct.name, title: ct.title || null}] : [], next_step: null}})); });
     meets.sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);

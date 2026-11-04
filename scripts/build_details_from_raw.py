@@ -240,7 +240,11 @@ def main():
             if c[col("Contact [")] not in {x["id"] for x in m["contacts"]}:
                 nm = " ".join(x for x in (c[col("First Name")], c[col("Last Name")]) if x and x != "Unassigned")
                 co = c[col("Company Name")] if c[col("Company Name")] != "Unassigned" else None
+                opt = lambda pre: next((c[k] for k, h in enumerate(ch) if h.startswith(pre) and c[k] not in ("", "Unassigned")), None)
+                src_ = opt("Original Traffic Source")
                 m["contacts"].append({"id": c[col("Contact [")], "name": nm, "company": co, "country": c[col("Country [")],
+                                      "title": opt("Job Title"), "event": opt("Event Name"),
+                                      "source": re.sub(r"\s*\([A-Z_]+\)$", "", src_) if src_ else None,
                                       "customer": norm(co) in won_names})
     for m in by_id.values():
         m["companies"].sort(key=lambda x: not x["customer"])  # a won customer first
