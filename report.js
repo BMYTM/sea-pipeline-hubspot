@@ -24,7 +24,9 @@
   const stageLbl = (s) => s === 'Demo/Developing' ? 'Demo' : s;
   const pad = (n) => String(n).padStart(2, '0');
 
-  function model(D, SEA) {
+  // sc = {label, country, target, targetNote}: country null = all of SEA
+  function model(D, SEA, sc = {label: 'SEA', country: null}) {
+    const inScope = (r) => !sc.country || r.country === sc.country;
     const asof = new Date(Date.parse(D.generated_at) + 7 * 36e5).toISOString().slice(0, 10); // Bangkok date
     const [ay, am] = asof.split('-').map(Number);
     const fy0 = am >= 4 ? ay : ay - 1;
@@ -33,9 +35,9 @@
     const range = (y0) => [y0 + '-04-01', (y0 + 1) + '-04-01'];
     const [c0, c1] = range(fy0), [p0, p1] = range(fy0 - 1);
     const elapsed = months.filter((x) => x.key <= asof.slice(0, 7)).length;
-    const target = SEA.target_usd || 0;
-    const won = D.closures.filter((r) => r.close_date >= c0 && r.close_date < c1).sort((a, b) => a.close_date.localeCompare(b.close_date));
-    const prevWon = D.closures.filter((r) => r.close_date >= p0 && r.close_date < p1);
+    const target = sc.target != null ? sc.target : (SEA.target_usd || 0);
+    const won = D.closures.filter((r) => inScope(r) && r.close_date >= c0 && r.close_date < c1).sort((a, b) => a.close_date.localeCompare(b.close_date));
+    const prevWon = D.closures.filter((r) => inScope(r) && r.close_date >= p0 && r.close_date < p1);
     const byMonth = (rows, shiftYears) => { const o = {}; rows.forEach((r) => { const y = Number(r.close_date.slice(0, 4)) + shiftYears; const key = y + '-' + r.close_date.slice(5, 7); o[key] = (o[key] || 0) + val(r); }); return o; };
     const cur = byMonth(won, 0), prev = byMonth(prevWon, 1);
     const monthly = months.map((x) => ({label: MN[x.m - 1], prev: prev[x.key] || 0, cur: cur[x.key] || 0, target: target / 12}));
@@ -44,21 +46,22 @@
       return {label, prev: p, cur: c, target: t, yoy: p ? (c - p) / p : null, vt: t ? (c - t) / t : null}; };
     const quarters = [0, 1, 2, 3].map((q) => block('Q' + (q + 1), q * 3, q * 3 + 3));
     const ytd = block('YTD', 0, elapsed), full = block('Total', 0, 12);
-    const active = D.active.filter((r) => r.stage !== 'On-Hold');
+    const active = D.active.filter((r) => r.stage !== 'On-Hold' && inScope(r));
     const order = {'Commercial/Contracting': 0, 'Proposal Sent': 1, 'Demo/Developing': 2};
     const pipe = active.slice().sort((a, b) => (order[a.stage] ?? 9) - (order[b.stage] ?? 9) || (b.amount || 0) - (a.amount || 0));
     const props = pipe.filter((r) => r.stage === 'Proposal Sent');
-    const deals = new Map(active.concat(D.closures).map((r) => [r.id, r]));
+    const deals = new Map(active.concat(D.closures.filter(inScope)).map((r) => [r.id, r]));
     const seen = new Set(), meets = [];
     (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
-    return {asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming,
+    return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
   }
 
-  function build(M) {
+  function build(sections) {
+    const M = sections[0];
     // One slide per sheet of WSR_Leaders.xlsx, in the same order, in the HONO house style (purple/magenta, Arial, HONO logo).
     const pres = new window.PptxGenJS();
     pres.layout = 'LAYOUT_WIDE';
@@ -79,7 +82,7 @@
 
     pres.defineSlideMaster({title: 'Sheet', background: {color: 'FFFFFF'},
       slideNumber: {x: 12.35, y: 7.05, w: 0.5, h: 0.3, fontSize: 9, color: HB.mute, align: 'right', fontFace: FONT}, objects: []});
-    const sheet = (title, sub, source) => { const s = pres.addSlide({masterName: 'Sheet'});
+    const sheetBase = (title, sub, source) => { const s = pres.addSlide({masterName: 'Sheet'});
       s.addText(title, {x: 0.5, y: 0.25, w: 10.8, h: 0.55, fontSize: 24, bold: true, color: HB.purple, fontFace: FONT, margin: 0, valign: 'middle'});
       gradBar(s, 0.52, 0.84, 7.4, 0.045);
       if (sub) s.addText(sub, {x: 0.5, y: 0.92, w: 12.3, h: 0.28, fontSize: 11.5, color: HB.mute, fontFace: FONT, margin: 0});
@@ -98,15 +101,6 @@
     const pages = (rows, per) => { const out = []; for (let i = 0; i < rows.length; i += per) out.push(rows.slice(i, i + per)); return out.length ? out : [[]]; };
     const part = (pi, all) => all.length > 1 ? ' (' + (pi + 1) + ' of ' + all.length + ')' : '';
     const sumOf = (a, f) => a.reduce((t, r) => t + (f(r) || 0), 0);
-    const ytdLabel = 'Apr–' + MN[M.months[M.elapsed - 1].m - 1];
-    const qName = (q) => 'Q' + (q + 1) + ' (' + MN[M.months[q * 3].m - 1] + '–' + MN[M.months[q * 3 + 2].m - 1] + ')';
-    const SRC = {
-      won: 'HubSpot SEA Sales Pipeline – closed-won deals by close date; Amount in company currency (USD)',
-      split: 'HubSpot SEA Sales Pipeline – closed-won deals; Implementation fee and Annual subscription fee (USD)',
-      target: 'FY target USD ' + n0(M.target) + ' from dashboard settings, spread evenly by month',
-      open: 'HubSpot SEA Sales Pipeline – open deals (On-Hold deals excluded); Close date, Deal probability, Number of employees, fees (USD)',
-      meet: 'HubSpot meetings linked to SEA deals (Meeting start time, Activity assigned to); contact and Next step from the linked deal',
-    };
 
     // Cover
     let s = pres.addSlide(); s.background = {color: HB.purple};
@@ -117,6 +111,35 @@
     s.addShape(pres.shapes.RECTANGLE, {x: 7.35, y: 0, w: 5.98, h: 7.5, fill: {color: 'FFFFFF'}, line: {type: 'none'}});
     honoLogo(s, 8.85, 3.25, 2.9);
     gradBar(s, 8.85, 4.35, 2.9, 0.05);
+
+    // Divider + the same slides for SEA overall, then for each country
+    sections.forEach((M) => { divider(M); section(M); });
+    return pres;
+
+    function divider(M) {
+      const d = pres.addSlide(); d.background = {color: HB.purple};
+      d.addText(M.country ? M.label : 'SEA Overall', {x: 0.75, y: 2.2, w: 6.4, h: 1.3, fontSize: 44, bold: true, color: 'FFFFFF', fontFace: FONT, valign: 'bottom', margin: 0});
+      d.addText(M.country ? 'Country view · ' + M.fy + ' · USD' : 'Thailand · Philippines · Indonesia · Malaysia · Singapore · ' + M.fy + ' · USD', {x: 0.8, y: 3.65, w: 6.3, h: 0.45, fontSize: 15, color: 'E7DEF5', fontFace: FONT, margin: 0});
+      const pipeV = M.pipe.reduce((t, r) => t + (val(r) || 0), 0);
+      d.addText([M.fy + ' YTD ACV ' + k(M.ytd.cur) + ' · ' + M.won.length + ' contract' + (M.won.length === 1 ? '' : 's') + ' signed',
+        M.pipe.length + ' open deals · ' + k(pipeV) + ' pipeline ACV · ' + M.props.length + ' in Proposal Sent'].join('\n'),
+        {x: 0.8, y: 4.2, w: 6.3, h: 0.8, fontSize: 13, color: 'D9CCF0', fontFace: FONT, margin: 0, valign: 'top'});
+      d.addShape(pres.shapes.RECTANGLE, {x: 7.35, y: 0, w: 5.98, h: 7.5, fill: {color: 'FFFFFF'}, line: {type: 'none'}});
+      honoLogo(d, 8.85, 3.25, 2.9);
+      gradBar(d, 8.85, 4.35, 2.9, 0.05);
+    }
+
+    function section(M) {
+    const sheet = (title, sub, source) => sheetBase((M.country ? M.label + ' – ' : '') + title, sub, source);
+    const ytdLabel = 'Apr–' + MN[M.months[M.elapsed - 1].m - 1];
+    const qName = (q) => 'Q' + (q + 1) + ' (' + MN[M.months[q * 3].m - 1] + '–' + MN[M.months[q * 3 + 2].m - 1] + ')';
+    const SRC = {
+      won: 'HubSpot SEA Sales Pipeline – closed-won deals by close date; Amount in company currency (USD)',
+      split: 'HubSpot SEA Sales Pipeline – closed-won deals; Implementation fee and Annual subscription fee (USD)',
+      target: M.targetNote || 'FY target USD ' + n0(M.target) + ' from dashboard settings, spread evenly by month',
+      open: 'HubSpot SEA Sales Pipeline – open deals (On-Hold deals excluded); Close date, Deal probability, Number of employees, fees (USD)',
+      meet: 'HubSpot meetings linked to SEA deals (Meeting start time, Activity assigned to); contact and Next step from the linked deal',
+    };
 
     // 1. Overview- Annual
     s = sheet('Overview – Annual', M.fy + ' · YTD = ' + ytdLabel + ' (' + M.elapsed + ' of 12 months) · USD', SRC.won + '; ' + SRC.target);
@@ -162,7 +185,7 @@
     const wonRows = M.won.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(mon(r.close_date)),
       C(n0(r.implementation), 'right'), C(n0(r.subscription), 'right'), C(n0(val(r)), 'right')]);
     pages(wonRows, 14).forEach((pg, pi, all) => {
-      s = sheet('Contracts Signed – ' + M.fy + part(pi, all), 'Closed-won SEA deals with a close date in ' + M.fy + ' · USD', SRC.split);
+      s = sheet('Contracts Signed – ' + M.fy + part(pi, all), 'Closed-won ' + M.label + ' deals with a close date in ' + M.fy + ' · USD', SRC.split);
       const rows = [[H('S.No.'), H('Client Name'), H('Signed Month'), H('Implementation'), H('Subscription'), H('Total ACV')]].concat(pg.length ? pg : [[C('No contracts signed yet in ' + M.fy, 'left', {colspan: 6})]]);
       if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 3}), T(n0(sumOf(M.won, (r) => r.implementation)), 'right'), T(n0(sumOf(M.won, (r) => r.subscription)), 'right'), T(n0(M.wonTotal), 'right')]);
       grid(s, rows, {colW: [0.6, 3.3, 1.4, 1.45, 1.35, 1.35], fs: 12, rowH: 0.42});
@@ -196,9 +219,10 @@
     const mc = ml.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
       C(r.next_step || (m.title ? 'Meeting: ' + m.title : '—'))]; });
     pages(mc, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Completed' + part(pi, all), showRecent ? M.recent.length + ' meetings in the last 30 days' : 'None in the last 30 days · latest ' + ml.length + ' logged shown (last: ' + (ml[0] ? dt(ml[0].date) : '—') + ')', SRC.meet);
+      s = sheet('Meetings Completed' + part(pi, all), showRecent ? M.recent.length + ' meeting' + (M.recent.length === 1 ? '' : 's') + ' in the last 30 days'
+        : ml.length ? 'None in the last 30 days · latest ' + ml.length + ' logged shown (last: ' + dt(ml[0].date) + ')' : 'No meetings logged on ' + M.label + ' deals', SRC.meet);
       const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No meetings logged on open or won SEA deals', 'left', {colspan: 10})]]);
+        .concat(pg.length ? pg : [[C('No meetings logged on open or won ' + M.label + ' deals', 'left', {colspan: 10})]]);
       if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 9}), T(String(ml.length), 'center')]);
       grid(s, rows, {colW: [0.5, 1.05, 1.25, 1.9, 0.95, 0.95, 1.45, 1.35, 1.15, 1.8], fs: 9.5, rowH: 0.42});
     });
@@ -208,13 +232,13 @@
     const ms = up.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C('—', 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
       C(m.title ? 'Meeting: ' + m.title : r.next_step)]; });
     pages(ms, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Scheduled' + part(pi, all), up.length + ' upcoming meeting' + (up.length === 1 ? '' : 's') + ' on open SEA deals · Meeting Type is not recorded in HubSpot', SRC.meet);
+      s = sheet('Meetings Scheduled' + part(pi, all), up.length + ' upcoming meeting' + (up.length === 1 ? '' : 's') + ' on open ' + M.label + ' deals · Meeting Type is not recorded in HubSpot', SRC.meet);
       const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Meeting Type'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No upcoming meetings linked to open SEA deals in HubSpot', 'left', {colspan: 11})]]);
+        .concat(pg.length ? pg : [[C('No upcoming meetings linked to open ' + M.label + ' deals in HubSpot', 'left', {colspan: 11})]]);
       if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(up.length), 'center')]);
       grid(s, rows, {colW: [0.5, 1.05, 1.2, 0.85, 1.8, 0.95, 0.95, 1.35, 1.3, 1.1, 1.25], fs: 9.5, rowH: 0.42});
     });
-    return pres;
+    }
   }
 
   BTN.addEventListener('click', async () => {
@@ -223,7 +247,14 @@
       const [D, SEA] = await Promise.all([getJSON('data/details.json'), getJSON('data/sea.json'), loadLib()]);
       const M = model(D, SEA);
       window.SEA_REPORT_MODEL = M; // for tests
-      await build(M).writeFile({fileName: 'SEA_Weekly_Status_Report_' + M.asof + '.pptx'});
+      // Country sections, in this order, after SEA overall. Singapore has no section for now.
+      // Country targets: the SEA target is split equally across these countries.
+      const CTRY = ['Thailand', 'Malaysia', 'Philippines', 'Indonesia'];
+      const seaT = SEA.target_usd || 0, each = seaT / CTRY.length;
+      const countries = CTRY.map((c) => model(D, SEA, {label: c, country: c, target: each,
+        targetNote: c + ' target USD ' + n0(each) + ' = SEA FY target USD ' + n0(seaT) + ' split equally across ' + CTRY.join(', ') + ', spread evenly by month'}));
+      window.SEA_REPORT_COUNTRIES = countries; // for tests
+      await build([M].concat(countries)).writeFile({fileName: 'SEA_Weekly_Status_Report_' + M.asof + '.pptx'});
     } catch (e) { alert('Could not build the weekly review: ' + e.message); }
     finally { BTN.disabled = false; BTN.textContent = label; }
   });
