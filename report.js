@@ -129,23 +129,21 @@
     sections.forEach((M) => { divider(M); section(M); });
     return pres;
 
-    // Customer & Other Meetings (non-sales: customer onboarding/go-live, reference calls, meetings not linked to a deal),
-    // shown inside each section after the sales meeting slides: completed (last 30 days) and scheduled
+    // Existing Client Meetings (customer onboarding/go-live and other meetings that match no open sales deal),
+    // inside each section after New Client Meetings: one table, upcoming first, then completed in the last 30 days
     function otherMeetings(M, sheet) {
-      const srcO = 'HubSpot meetings associated with companies or contacts in ' + (M.country || 'Thailand, Malaysia, Philippines, Indonesia or Singapore') + ' (Meeting start time, Activity assigned to) that do not match an open SEA sales deal; Customer = company has a closed-won SEA deal';
-      const row = (m, i) => { const ct = (m.contacts || [])[0], c = m.companies[0] || (ct ? {name: ct.company || ct.name, country: ct.country} : {});
+      const srcO = 'HubSpot meetings associated with companies or contacts in ' + (M.country || 'Thailand, Malaysia, Philippines, Indonesia or Singapore') + ' (Meeting start time, Activity assigned to) that do not match an open SEA sales deal; Type Client = company has a closed-won SEA deal';
+      const list = M.otherUp.map((m) => [m, 'Upcoming']).concat(M.otherDone.map((m) => [m, 'Completed']));
+      const row = ([m, st], i) => { const ct = (m.contacts || [])[0], c = m.companies[0] || (ct ? {name: ct.company || ct.name, country: ct.country} : {});
         const more = m.companies.length > 1 ? ' (+' + (m.companies.length - 1) + ')' : '';
-        return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C((c.name || '—') + more), C(c.country), C(m.customer ? 'Customer' : 'Other', 'center'), C(m.title)]; };
-      const head = (first) => [[H('S.No.'), H(first), H('Owner'), H('Company'), H('Country'), H('Type'), H('Meeting')]];
-      const colW = [0.5, 1.1, 1.75, 2.75, 1.05, 0.95, 4.2];
-      [[M.otherDone, 'Completed', 'in the last 30 days', 'No customer or other ' + M.label + ' meetings in the last 30 days'],
-       [M.otherUp, 'Scheduled', 'upcoming', 'No upcoming customer or other ' + M.label + ' meetings']].forEach(([list, kind, when, empty]) => {
-        pages(list.map(row), 12).forEach((pg, pi, all) => {
-          const s = sheet('Customer & Other Meetings – ' + kind + part(pi, all), list.length + ' meeting' + (list.length === 1 ? '' : 's') + ' ' + when + ' · not on an open sales deal', srcO);
-          const rows = head('Meeting Date').concat(pg.length ? pg : [[C(empty, 'left', {colspan: 7})]]);
-          if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 6}), T(String(list.length), 'center')]);
-          grid(s, rows, {colW, fs: 10, rowH: 0.36});
-        });
+        return [C(String(i + 1), 'center'), C(st, 'center', st === 'Upcoming' ? {bold: true, color: HB.purple} : {}), C(dt(m.date)), C(m.owner), C((c.name || '—') + more), C(c.country),
+          C(m.customer ? 'Client' : 'Other', 'center'), C(m.title)]; };
+      pages(list.map(row), 12).forEach((pg, pi, all) => {
+        const s = sheet('Existing Client Meetings' + part(pi, all), M.otherUp.length + ' upcoming · ' + M.otherDone.length + ' completed in the last 30 days · not on an open sales deal', srcO);
+        const rows = [[H('S.No.'), H('Status'), H('Meeting Date'), H('Owner'), H('Company'), H('Country'), H('Type'), H('Meeting')]]
+          .concat(pg.length ? pg : [[C('No upcoming meetings, or meetings in the last 30 days, with existing ' + M.label + ' clients', 'left', {colspan: 8})]]);
+        if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 7}), T(String(list.length), 'center')]);
+        grid(s, rows, {colW: [0.5, 0.95, 1.05, 1.65, 2.6, 1.0, 0.75, 3.8], fs: 10, rowH: 0.36});
       });
     }
 
@@ -246,32 +244,21 @@
       grid(s, rows, {colW: [0.5, 2.2, 0.95, 0.9, 1.7, 1.1, 1.1, 0.85, 1.25, 0.95, 0.9], fs: 9.5, rowH: 0.3});
     });
 
-    // 7. Meetings Completed
-    const ml = M.recent.slice(0, 20);  // last 30 days only
+    // 7. New Client Meetings (open sales deals): one table, upcoming first, then completed in the last 30 days
     const person = (m) => (m.deal.contacts || [])[0] || {};
-    const mc = ml.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
-      C(r.next_step || (m.title ? 'Meeting: ' + m.title : '—'))]; });
-    pages(mc, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Completed' + part(pi, all), M.recent.length + ' meeting' + (M.recent.length === 1 ? '' : 's') + ' in the last 30 days on ' + M.label + ' deals', SRC.meet);
-      const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No meetings in the last 30 days on open or won ' + M.label + ' deals', 'left', {colspan: 10})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 9}), T(String(M.recent.length), 'center')]);
-      grid(s, rows, {colW: [0.5, 1.05, 1.25, 1.9, 0.95, 0.95, 1.45, 1.35, 1.15, 1.8], fs: 9.5, rowH: 0.42});
+    const nc = M.upcoming.slice(0, 20).map((m) => [m, 'Upcoming']).concat(M.recent.slice(0, 20).map((m) => [m, 'Completed']));
+    const ncRows = nc.map(([m, st], i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(st, 'center', st === 'Upcoming' ? {bold: true, color: HB.purple} : {}),
+      C(dt(m.date)), C(m.owner), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
+      C(st === 'Upcoming' ? (m.title ? 'Meeting: ' + m.title : r.next_step) : (r.next_step || (m.title ? 'Meeting: ' + m.title : '—')))]; });
+    pages(ncRows, 10).forEach((pg, pi, all) => {
+      s = sheet('New Client Meetings' + part(pi, all), M.upcoming.length + ' upcoming · ' + M.recent.length + ' completed in the last 30 days · on open ' + M.label + ' deals', SRC.meet);
+      const rows = [[H('S.No.'), H('Status'), H('Meeting Date'), H('Owner'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
+        .concat(pg.length ? pg : [[C('No upcoming meetings, or meetings in the last 30 days, on open ' + M.label + ' deals', 'left', {colspan: 11})]]);
+      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(nc.length), 'center')]);
+      grid(s, rows, {colW: [0.5, 0.95, 1.0, 1.2, 1.7, 0.9, 0.85, 1.3, 1.2, 1.0, 1.7], fs: 9.5, rowH: 0.42});
     });
 
-    // 8. Meetings Scheduled
-    const up = M.upcoming.slice(0, 20);
-    const ms = up.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C('—', 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
-      C(m.title ? 'Meeting: ' + m.title : r.next_step)]; });
-    pages(ms, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Scheduled' + part(pi, all), up.length + ' upcoming meeting' + (up.length === 1 ? '' : 's') + ' on open ' + M.label + ' deals · Meeting Type is not recorded in HubSpot', SRC.meet);
-      const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Meeting Type'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No upcoming meetings linked to open ' + M.label + ' deals in HubSpot', 'left', {colspan: 11})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(up.length), 'center')]);
-      grid(s, rows, {colW: [0.5, 1.05, 1.2, 0.85, 1.8, 0.95, 0.95, 1.35, 1.3, 1.1, 1.25], fs: 9.5, rowH: 0.42});
-    });
-
-    // 9. Customer & Other Meetings for this section
+    // 8. Existing Client Meetings for this section
     otherMeetings(M, sheet);
     }
   }
