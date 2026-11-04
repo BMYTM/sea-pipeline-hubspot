@@ -8721,19 +8721,30 @@
    "owner": "Jun de Dios (29741979)",
    "companies": [
     {
-     "id": "4988769214",
-     "name": "Aboitiz Power Group",
-     "country": "Philippines",
-     "customer": false
-    },
-    {
      "id": "136893503732",
      "name": "Aboitiz Group",
      "country": "Philippines",
      "customer": false
+    },
+    {
+     "id": "4988769214",
+     "name": "Aboitiz Power Group",
+     "country": "Philippines",
+     "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "713561277636",
+     "name": "Monette Lasala",
+     "company": "Aboitiz Power Corporation",
+     "country": "Philippines",
+     "title": "Chief Human Resources Officer",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": null
@@ -8751,7 +8762,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": true,
    "deal_id": null
@@ -8822,6 +8844,16 @@
    ],
    "contacts": [
     {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
@@ -8888,6 +8920,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -8938,6 +8980,16 @@
    ],
    "contacts": [
     {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
@@ -8981,6 +9033,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -9000,7 +9062,48 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "618135392491",
+     "name": "Himanshu Shah",
+     "company": "Sudarshan Chemicals Industries",
+     "country": "Thailand",
+     "title": "Global Head of Total Rewards, HR Technology & HR Service Delivery",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "46089739463",
+     "name": "Parte Parte",
+     "company": "FIZA HEALTHCARE PRIVATE LIMITED",
+     "country": "Thailand",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": "519366681792"
@@ -9018,7 +9121,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "848809052399",
+     "name": "Neha Khurana",
+     "company": "QUALFON PHILIPPINES, INC.",
+     "country": "Philippines",
+     "title": "Country Head - Human Resources",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": null
@@ -9080,21 +9194,21 @@
    ],
    "contacts": [
     {
-     "id": "34221150703",
-     "name": "Pol Sangalang",
-     "company": "Paladins Law",
-     "country": "Philippines",
-     "title": "Founder",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "1124051",
      "name": "Xandra Galang",
      "company": "Ayala",
      "country": "Philippines",
      "title": "Strategic HR Talent Management Head",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "34221150703",
+     "name": "Pol Sangalang",
+     "company": "Paladins Law",
+     "country": "Philippines",
+     "title": "Founder",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9181,6 +9295,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -9208,10 +9332,20 @@
    ],
    "contacts": [
     {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Singapore",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
      "id": "572001",
      "name": "Devendra Pratap Singh",
      "company": "AG&P",
-     "country": "Singapore",
+     "country": "Philippines",
      "title": "CIO",
      "event": null,
      "source": "Offline Sources",
@@ -9245,6 +9379,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -9264,7 +9408,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": "508099332323"
@@ -9300,7 +9455,38 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "46089739463",
+     "name": "Parte Parte",
+     "company": "FIZA HEALTHCARE PRIVATE LIMITED",
+     "country": "Thailand",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": "519366681792"
@@ -9402,6 +9588,16 @@
     }
    ],
    "contacts": [
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
     {
      "id": "31276004288",
      "name": "Frances Padilla",
@@ -9606,7 +9802,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "841519352032",
+     "name": "Adeline Edward",
+     "company": "Indorama Corporation",
+     "country": "Indonesia",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": null
@@ -9689,7 +9896,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": "508099332323"
@@ -9787,7 +10005,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "38384575183",
+     "name": "Whardana Caramia",
+     "company": "ASEAN Business Partners",
+     "country": "Singapore",
+     "title": "COUNTRY MANAGER",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": null
@@ -9888,6 +10117,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -9907,7 +10146,28 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": "519366681792"
@@ -9925,7 +10185,18 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "850235265230",
+     "name": "Vijay Kumar",
+     "company": "Ivy Mobility",
+     "country": "Singapore",
+     "title": "HR Manager-Payroll",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": false,
    "deal_id": null
@@ -10051,6 +10322,16 @@
      "event": null,
      "source": "Offline Sources",
      "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
     }
    ],
    "customer": true,
@@ -10145,6 +10426,16 @@
    ],
    "contacts": [
     {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
@@ -10194,7 +10485,18 @@
      "customer": true
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "116500372689",
+     "name": "Brian Liew Liew",
+     "company": "RAMSSOL",
+     "country": "Malaysia",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": true,
    "on_deal": true,
    "deal_id": null
@@ -10206,15 +10508,15 @@
    "owner": "Allyssa Ruazol (33612211)",
    "companies": [
     {
-     "id": "12672070846",
-     "name": "JaiHo Consulting Group",
-     "country": "Singapore",
-     "customer": false
-    },
-    {
      "id": "4988745203",
      "name": "inspiro",
      "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
      "customer": false
     }
    ],
@@ -10233,7 +10535,7 @@
      "id": "22401184499",
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
-     "country": "Singapore",
+     "country": "Philippines",
      "title": "Director HR",
      "event": null,
      "source": "Offline Sources",
@@ -10296,7 +10598,28 @@
      "customer": false
     }
    ],
-   "contacts": [],
+   "contacts": [
+    {
+     "id": "758117493950",
+     "name": "Paula Martina Montalban",
+     "company": "Anta Sports Philippines inc",
+     "country": "Philippines",
+     "title": "Compensation and Benefits Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "759335905469",
+     "name": "Rizza Casino",
+     "company": "dotPH",
+     "country": "Philippines",
+     "title": "HR Head / Acting CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
    "customer": false,
    "on_deal": true,
    "deal_id": null
@@ -10314,12 +10637,6 @@
      "customer": true
     },
     {
-     "id": "381672495335",
-     "name": "First Maritime Shared Services, Inc.",
-     "country": "Philippines",
-     "customer": false
-    },
-    {
      "id": "13769093306",
      "name": "Northern Star Energy Corporation",
      "country": "Philippines",
@@ -10330,15 +10647,21 @@
      "name": "ACM Landholdings, Inc.",
      "country": "Philippines",
      "customer": false
+    },
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
     }
    ],
    "contacts": [
     {
-     "id": "64795",
-     "name": "Tony Apale",
-     "company": "PTC",
+     "id": "34278665939",
+     "name": "Rachelle Kho",
+     "company": "Northern Star Energy",
      "country": "Philippines",
-     "title": "CHRO",
+     "title": "HR Manager",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10354,21 +10677,21 @@
      "customer": false
     },
     {
-     "id": "34278665939",
-     "name": "Rachelle Kho",
-     "company": "Northern Star Energy",
-     "country": "Philippines",
-     "title": "HR Manager",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "671389561048",
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
      "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
+     "country": "Philippines",
+     "title": "CHRO",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10398,6 +10721,16 @@
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
      "event": null,
      "source": "Offline Sources",
      "customer": false

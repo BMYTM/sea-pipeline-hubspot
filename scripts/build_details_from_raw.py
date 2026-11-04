@@ -224,6 +224,14 @@ def main():
             "title": c[col("Meeting name")] if c[col("Meeting name")] not in ("", "Unassigned") else None,
             "owner": owner(c[col("Activity assigned to")]) if c[col("Activity assigned to")] not in ("", "Unassigned") else None,
             "companies": [], "contacts": []})
+    def add_contact(m, c, hdr, country):
+        opt = lambda pre: next((c[k] for k, h in enumerate(hdr) if h.startswith(pre) and c[k] not in ("", "Unassigned")), None)
+        cid = opt("Contact [")
+        if not cid or cid in {x["id"] for x in m["contacts"]}: return
+        nm = " ".join(x for x in (opt("First Name"), opt("Last Name")) if x)
+        co, src_ = opt("Company Name [company]"), opt("Original Traffic Source")
+        m["contacts"].append({"id": cid, "name": nm, "company": co, "country": country, "title": opt("Job Title"), "event": opt("Event Name"),
+                              "source": re.sub(r"\s*\([A-Z_]+\)$", "", src_) if src_ else None, "customer": norm(co) in won_names})
     oh, orows = rows_of("meetings_other.txt")
     if oh:
         col = lambda pre: next(k for k, h in enumerate(oh) if h.startswith(pre))
@@ -232,20 +240,12 @@ def main():
             if c[col("Company [")] not in {x["id"] for x in m["companies"]}:
                 m["companies"].append({"id": c[col("Company [")], "name": c[col("Company name")], "country": c[col("Country/Region")],
                                        "customer": norm(c[col("Company name")]) in won_names})
+            add_contact(m, c, oh, c[col("Country/Region")])  # contacts on the meeting, whatever their own country field says
     ch, crows = rows_of("meetings_contacts.txt")
     if ch:
         col = lambda pre: next(k for k, h in enumerate(ch) if h.startswith(pre))
         for c in crows:
-            m = meeting(c, col)
-            if c[col("Contact [")] not in {x["id"] for x in m["contacts"]}:
-                nm = " ".join(x for x in (c[col("First Name")], c[col("Last Name")]) if x and x != "Unassigned")
-                co = c[col("Company Name")] if c[col("Company Name")] != "Unassigned" else None
-                opt = lambda pre: next((c[k] for k, h in enumerate(ch) if h.startswith(pre) and c[k] not in ("", "Unassigned")), None)
-                src_ = opt("Original Traffic Source")
-                m["contacts"].append({"id": c[col("Contact [")], "name": nm, "company": co, "country": c[col("Country [")],
-                                      "title": opt("Job Title"), "event": opt("Event Name"),
-                                      "source": re.sub(r"\s*\([A-Z_]+\)$", "", src_) if src_ else None,
-                                      "customer": norm(co) in won_names})
+            add_contact(meeting(c, col), c, ch, c[col("Country [")])
     for m in by_id.values():
         m["companies"].sort(key=lambda x: not x["customer"])  # a won customer first
         m["customer"] = any(x["customer"] for x in m["companies"] + m["contacts"])
