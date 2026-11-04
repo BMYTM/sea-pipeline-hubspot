@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T23:34:27Z",
+ "generated_at": "2026-11-04T23:34:32Z",
  "source": "HubSpot (manual pull)",
  "closures": [
   {
@@ -1408,7 +1408,7 @@
    "created": "2023-01-24",
    "deal_owner": "Nova Sinulingga",
    "company": "Aditya Birla Group",
-   "account_owner": "Akash Kumar (34182343)",
+   "account_owner": "Abdul Khan (1698206293)",
    "source": "Management",
    "contacts": [
     {
@@ -2224,6 +2224,55 @@
    "payment_status": null,
    "paid_date": null,
    "sub_source": "Email Outreach",
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
+  },
+  {
+   "id": "519366681792",
+   "deal": "Mega LifeSciences - New Deal",
+   "country": "Thailand",
+   "amount": 200000.0,
+   "close_date": "2027-02-28",
+   "created": "2026-09-03",
+   "deal_owner": "Suntisuk Kulpiya",
+   "company": "Mega LifeSciences",
+   "account_owner": "Suntisuk Kulpiya (34133357)",
+   "source": "Management",
+   "contacts": [
+    {
+     "name": "Voranitha Silpavechakul",
+     "title": "Human Capital Development manager"
+    }
+   ],
+   "remarks": null,
+   "headcount": 5200,
+   "industry": "Healthcare and Pharmaceuticals",
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "probability": 0.6,
+   "next_step": null,
+   "last_activity": null,
+   "conv_prob": null,
+   "conv_reason": null,
+   "cta": null,
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 200000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": "2026-10-09",
+   "proposal_sent_source": "Date entered Proposal Sent stage",
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
+   "sub_source": "Mukul Jain",
    "partner": null,
    "last_meeting": null,
    "last_meeting_title": null,
@@ -4045,7 +4094,7 @@
    "stage": "Demo/Developing",
    "probability": 0.4,
    "next_step": null,
-   "last_activity": "2026-11-03",
+   "last_activity": "2026-11-04",
    "conv_prob": null,
    "conv_reason": null,
    "cta": null,
@@ -4113,6 +4162,55 @@
    "payment_status": null,
    "paid_date": null,
    "sub_source": "Cold-Call",
+   "partner": null,
+   "last_meeting": null,
+   "last_meeting_title": null,
+   "meetings": 0
+  },
+  {
+   "id": "535243368646",
+   "deal": "AutoX - New Deal",
+   "country": "Thailand",
+   "amount": 50000.0,
+   "close_date": "2027-02-02",
+   "created": "2026-11-04",
+   "deal_owner": "Suntisuk Kulpiya",
+   "company": "AutoX",
+   "account_owner": "Suntisuk Kulpiya (34133357)",
+   "source": "Sales",
+   "contacts": [
+    {
+     "name": "Umaporn Posoh",
+     "title": "Senior Recruitment Officer"
+    }
+   ],
+   "remarks": null,
+   "headcount": 2000,
+   "industry": "Banking & Financial Services (BFSI)",
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/535243368646",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "probability": 0.4,
+   "next_step": null,
+   "last_activity": null,
+   "conv_prob": null,
+   "conv_reason": null,
+   "cta": null,
+   "cta_reason": null,
+   "subscription": null,
+   "implementation": null,
+   "split_note": null,
+   "year1_total": 50000.0,
+   "booked_currency": "USD",
+   "booked_amount": null,
+   "proposal_sent": null,
+   "proposal_sent_source": null,
+   "tcv": null,
+   "acv": null,
+   "invoice_date": null,
+   "payment_status": null,
+   "paid_date": null,
+   "sub_source": "Sales Outreach",
    "partner": null,
    "last_meeting": null,
    "last_meeting_title": null,
@@ -6498,55 +6596,6 @@
    "meetings": 64
   },
   {
-   "id": "519366681792",
-   "deal": "Mega LifeSciences - New Deal",
-   "country": "Thailand",
-   "amount": 0.0,
-   "close_date": "2027-02-28",
-   "created": "2026-09-03",
-   "deal_owner": "Suntisuk Kulpiya",
-   "company": "Mega LifeSciences",
-   "account_owner": "Suntisuk Kulpiya (34133357)",
-   "source": "Management",
-   "contacts": [
-    {
-     "name": "Voranitha Silpavechakul",
-     "title": "Human Capital Development manager"
-    }
-   ],
-   "remarks": null,
-   "headcount": null,
-   "industry": "Healthcare and Pharmaceuticals",
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "probability": 0.6,
-   "next_step": null,
-   "last_activity": null,
-   "conv_prob": null,
-   "conv_reason": null,
-   "cta": null,
-   "cta_reason": null,
-   "subscription": null,
-   "implementation": null,
-   "split_note": null,
-   "year1_total": 0.0,
-   "booked_currency": "USD",
-   "booked_amount": null,
-   "proposal_sent": "2026-10-09",
-   "proposal_sent_source": "Date entered Proposal Sent stage",
-   "tcv": null,
-   "acv": null,
-   "invoice_date": null,
-   "payment_status": null,
-   "paid_date": null,
-   "sub_source": "Mukul Jain",
-   "partner": null,
-   "last_meeting": null,
-   "last_meeting_title": null,
-   "meetings": 0
-  },
-  {
    "id": "512054574282",
    "deal": "SHERA Public Company Limited - New Deal",
    "country": "Thailand",
@@ -6607,7 +6656,7 @@
   {
    "id": "534532876509",
    "deal_id": "508099332323",
-   "date": "2026-11-04",
+   "date": "2026-11-10",
    "title": "Meeting with Asialink Finance and Mark",
    "owner": "Jun de Dios (29741979)"
   },
@@ -6697,13 +6746,6 @@
   },
   {
    "id": "510679732426",
-   "deal_id": "511204612323",
-   "date": "2026-08-12",
-   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
-   "owner": "HONO HR (192531917)"
-  },
-  {
-   "id": "510679732426",
    "deal_id": "420946178244",
    "date": "2026-08-12",
    "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
@@ -6711,14 +6753,21 @@
   },
   {
    "id": "510679732426",
-   "deal_id": "295427044579",
+   "deal_id": "60864294079",
    "date": "2026-08-12",
    "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
    "owner": "HONO HR (192531917)"
   },
   {
    "id": "510679732426",
-   "deal_id": "60864294079",
+   "deal_id": "511204612323",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "owner": "HONO HR (192531917)"
+  },
+  {
+   "id": "510679732426",
+   "deal_id": "295427044579",
    "date": "2026-08-12",
    "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
    "owner": "HONO HR (192531917)"
@@ -8693,6 +8742,64 @@
  ],
  "company_meetings": [
   {
+   "id": "538149582051",
+   "date": "2026-11-20",
+   "title": "Tentative alternative 2 — Hauslands discovery meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "456175923407",
+     "name": "The Hauslands",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "900240022734",
+     "name": "Walter H. Guillarte",
+     "company": "Hausland",
+     "country": "Philippines",
+     "title": "Chief Human Resources and Organization Development Officer",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "538163767499",
+   "date": "2026-11-19",
+   "title": "Tentative alternative 2 — Meralco with Ralph Placido",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9719517665",
+     "name": "MERALCO",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "1910654",
+     "name": "Ralph Lawrence S. Placido",
+     "company": "Meralco",
+     "country": "Philippines",
+     "title": "Head of HR for Subsidiaries",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
    "id": "527569461443",
    "date": "2026-11-19",
    "title": "Cognizant x HONO Meeting",
@@ -8715,20 +8822,78 @@
    "deal_id": null
   },
   {
+   "id": "538163767498",
+   "date": "2026-11-13",
+   "title": "Tentative alternative 1 — Meralco with Ralph Placido",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9719517665",
+     "name": "MERALCO",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "1910654",
+     "name": "Ralph Lawrence S. Placido",
+     "company": "Meralco",
+     "country": "Philippines",
+     "title": "Head of HR for Subsidiaries",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "538149582050",
+   "date": "2026-11-12",
+   "title": "Tentative alternative 1 — Hauslands discovery meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "456175923407",
+     "name": "The Hauslands",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "900240022734",
+     "name": "Walter H. Guillarte",
+     "company": "Hausland",
+     "country": "Philippines",
+     "title": "Chief Human Resources and Organization Development Officer",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
    "id": "537906161895",
    "date": "2026-11-12",
    "title": "Placeholder — Aboitiz Power Group with Ms. Lasala",
    "owner": "Jun de Dios (29741979)",
    "companies": [
     {
-     "id": "136893503732",
-     "name": "Aboitiz Group",
+     "id": "4988769214",
+     "name": "Aboitiz Power Group",
      "country": "Philippines",
      "customer": false
     },
     {
-     "id": "4988769214",
-     "name": "Aboitiz Power Group",
+     "id": "136893503732",
+     "name": "Aboitiz Group",
      "country": "Philippines",
      "customer": false
     }
@@ -8980,21 +9145,21 @@
    ],
    "contacts": [
     {
-     "id": "31276004085",
-     "name": "Micheal Eusoof",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "HRMS Business Partner",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9074,16 +9239,6 @@
      "customer": false
     },
     {
-     "id": "618135392491",
-     "name": "Himanshu Shah",
-     "company": "Sudarshan Chemicals Industries",
-     "country": "Thailand",
-     "title": "Global Head of Total Rewards, HR Technology & HR Service Delivery",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "15866",
      "name": "Krishnan Unni",
      "company": "Mega LifeSciences",
@@ -9099,6 +9254,16 @@
      "company": "FIZA HEALTHCARE PRIVATE LIMITED",
      "country": "Thailand",
      "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "618135392491",
+     "name": "Himanshu Shah",
+     "company": "Sudarshan Chemicals Industries",
+     "country": "Thailand",
+     "title": "Global Head of Total Rewards, HR Technology & HR Service Delivery",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9194,21 +9359,21 @@
    ],
    "contacts": [
     {
-     "id": "1124051",
-     "name": "Xandra Galang",
-     "company": "Ayala",
-     "country": "Philippines",
-     "title": "Strategic HR Talent Management Head",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "34221150703",
      "name": "Pol Sangalang",
      "company": "Paladins Law",
      "country": "Philippines",
      "title": "Founder",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "1124051",
+     "name": "Xandra Galang",
+     "company": "Ayala",
+     "country": "Philippines",
+     "title": "Strategic HR Talent Management Head",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9287,21 +9452,21 @@
    ],
    "contacts": [
     {
-     "id": "31276004288",
-     "name": "Frances Padilla",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "Assistant Manager",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "31276004085",
      "name": "Micheal Eusoof",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9332,21 +9497,21 @@
    ],
    "contacts": [
     {
-     "id": "757752627446",
-     "name": "Mark Joseph Cancino",
-     "company": "Asialink Finance Corporation",
+     "id": "572001",
+     "name": "Devendra Pratap Singh",
+     "company": "AG&P",
      "country": "Singapore",
-     "title": "Chief People Officer",
+     "title": "CIO",
      "event": null,
      "source": "Offline Sources",
      "customer": false
     },
     {
-     "id": "572001",
-     "name": "Devendra Pratap Singh",
-     "company": "AG&P",
-     "country": "Philippines",
-     "title": "CIO",
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Singapore",
+     "title": "Chief People Officer",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9440,7 +9605,7 @@
    "contacts": [],
    "customer": false,
    "on_deal": false,
-   "deal_id": null
+   "deal_id": "535243368646"
   },
   {
    "id": "522208895225",
@@ -9467,21 +9632,21 @@
      "customer": false
     },
     {
-     "id": "15866",
-     "name": "Krishnan Unni",
-     "company": "Mega LifeSciences",
-     "country": "Thailand",
-     "title": "Chief People Officer",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "9555",
      "name": "Anup Mallan",
      "company": "Mega Lifesciences PTY Peru S.A.C.",
      "country": "Thailand",
      "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9589,21 +9754,21 @@
    ],
    "contacts": [
     {
-     "id": "31276004085",
-     "name": "Micheal Eusoof",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "HRMS Business Partner",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -9663,21 +9828,21 @@
    ],
    "contacts": [
     {
-     "id": "64795",
-     "name": "Tony Apale",
-     "company": "PTC",
-     "country": "Philippines",
-     "title": "CHRO",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "671389561048",
      "name": "Julio Rivero",
      "company": "First Maritime Shared Services",
      "country": "Philippines",
      "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
+     "country": "Philippines",
+     "title": "CHRO",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10314,21 +10479,21 @@
    ],
    "contacts": [
     {
-     "id": "31276004288",
-     "name": "Frances Padilla",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "Assistant Manager",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "31276004085",
      "name": "Micheal Eusoof",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10426,21 +10591,21 @@
    ],
    "contacts": [
     {
-     "id": "31276004085",
-     "name": "Micheal Eusoof",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "HRMS Business Partner",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "31276004288",
      "name": "Frances Padilla",
      "company": "International Elevator & Equipment,",
      "country": "Philippines",
      "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10522,16 +10687,6 @@
    ],
    "contacts": [
     {
-     "id": "1701801",
-     "name": "Maconcepcion Babon",
-     "company": "inspiro",
-     "country": "Philippines",
-     "title": null,
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
      "id": "22401184499",
      "name": "Sunil Narang",
      "company": "JaiHo Enterprises",
@@ -10545,8 +10700,18 @@
      "id": "1228901",
      "name": "Paulo",
      "company": "inspiro",
-     "country": "Philippines",
+     "country": "Singapore",
      "title": "Associate Vice President, Human Resources Operations",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "1701801",
+     "name": "Maconcepcion Babon",
+     "company": "inspiro",
+     "country": "Singapore",
+     "title": null,
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10637,6 +10802,12 @@
      "customer": true
     },
     {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
      "id": "13769093306",
      "name": "Northern Star Energy Corporation",
      "country": "Philippines",
@@ -10647,31 +10818,15 @@
      "name": "ACM Landholdings, Inc.",
      "country": "Philippines",
      "customer": false
-    },
-    {
-     "id": "381672495335",
-     "name": "First Maritime Shared Services, Inc.",
-     "country": "Philippines",
-     "customer": false
     }
    ],
    "contacts": [
     {
-     "id": "34278665939",
-     "name": "Rachelle Kho",
-     "company": "Northern Star Energy",
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
      "country": "Philippines",
-     "title": "HR Manager",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
-     "id": "34264766144",
-     "name": "Charmaine Balon",
-     "company": "ACM Homes",
-     "country": "Philippines",
-     "title": "Senior Manager - HR & Admin",
+     "title": "CHRO",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10687,11 +10842,21 @@
      "customer": false
     },
     {
-     "id": "64795",
-     "name": "Tony Apale",
-     "company": "PTC",
+     "id": "34264766144",
+     "name": "Charmaine Balon",
+     "company": "ACM Homes",
      "country": "Philippines",
-     "title": "CHRO",
+     "title": "Senior Manager - HR & Admin",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "34278665939",
+     "name": "Rachelle Kho",
+     "company": "Northern Star Energy",
+     "country": "Philippines",
+     "title": "HR Manager",
      "event": null,
      "source": "Offline Sources",
      "customer": false
@@ -10699,45 +10864,6 @@
    ],
    "customer": true,
    "on_deal": true,
-   "deal_id": null
-  },
-  {
-   "id": "510151266503",
-   "date": "2026-08-06",
-   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
-   "owner": "Jun de Dios (29741979)",
-   "companies": [
-    {
-     "id": "13449770188",
-     "name": "International Elevator and Equipment, Inc.",
-     "country": "Philippines",
-     "customer": true
-    }
-   ],
-   "contacts": [
-    {
-     "id": "31276004288",
-     "name": "Frances Padilla",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "Assistant Manager",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    },
-    {
-     "id": "31276004085",
-     "name": "Micheal Eusoof",
-     "company": "International Elevator & Equipment,",
-     "country": "Philippines",
-     "title": "HRMS Business Partner",
-     "event": null,
-     "source": "Offline Sources",
-     "customer": false
-    }
-   ],
-   "customer": true,
-   "on_deal": false,
    "deal_id": null
   }
  ],
@@ -10757,7 +10883,7 @@
    "owner": "Soranan Natejan (1894277595)",
    "source": "Offline Sources",
    "created": "2026-09-30",
-   "last_activity": "2026-11-03",
+   "last_activity": "2026-11-04",
    "deals": 2,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/880062281976"
   },
@@ -10838,25 +10964,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/795960405204"
   },
   {
-   "id": "869916495080",
-   "name": "Boonyalak Siri",
-   "title": "HRM Supervisor",
-   "company": "Koi Café",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "",
-   "mql_date": "2026-09-18",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-09-18",
-   "last_activity": "2026-10-27",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/869916495080"
-  },
-  {
    "id": "28383324356",
    "name": "Nutthida Thongbai-On",
    "title": "People Analytics & Regional HR",
@@ -10874,6 +10981,25 @@
    "last_activity": "2026-09-18",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/28383324356"
+  },
+  {
+   "id": "869916495080",
+   "name": "Boonyalak Siri",
+   "title": "HRM Supervisor",
+   "company": "Koi Café",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "",
+   "mql_date": "2026-09-18",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-09-18",
+   "last_activity": "2026-10-27",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/869916495080"
   },
   {
    "id": "34249653459",
@@ -10952,6 +11078,101 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/841427901632"
   },
   {
+   "id": "692455878862",
+   "name": "Vijittra P",
+   "title": "HR",
+   "company": "THAI NIPPON STEEL ENGINEERING & CONSTRUCTION CORPORATION LTD.",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2026-09-02",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-02-11",
+   "last_activity": "2026-11-03",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/692455878862"
+  },
+  {
+   "id": "857519734976",
+   "name": "Rattana Jala",
+   "title": "HR director",
+   "company": "Jaymart Group",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "",
+   "mql_date": "2026-09-02",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-09-02",
+   "last_activity": "2026-09-02",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/857519734976"
+  },
+  {
+   "id": "34267547351",
+   "name": "Siraya Ngamkham",
+   "title": "Training and Development Manager",
+   "company": "THAI NIPPON STEEL ENGINEERING & CONSTRUCTION CORPORATION LTD.",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "",
+   "mql_date": "2026-09-02",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2024-09-06",
+   "last_activity": "2026-11-03",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/34267547351"
+  },
+  {
+   "id": "852997199087",
+   "name": "Chattip",
+   "title": "HR",
+   "company": "Toyota Tsusho (Thailand)",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "",
+   "mql_date": "2026-09-02",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-08-28",
+   "last_activity": "2026-09-04",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/852997199087"
+  },
+  {
+   "id": "808357038271",
+   "name": "Phurit Chettana",
+   "title": "HR Planning and System Development Manager",
+   "company": "Sushiro GH (Thailand) Ltd.",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2026-09-02",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-06-29",
+   "last_activity": "2026-06-29",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/808357038271"
+  },
+  {
    "id": "400520824029",
    "name": "Sutassana A",
    "title": "HRIS",
@@ -10990,82 +11211,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/794191159524"
   },
   {
-   "id": "857519734976",
-   "name": "Rattana Jala",
-   "title": "HR director",
-   "company": "Jaymart Group",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "",
-   "mql_date": "2026-09-02",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-09-02",
-   "last_activity": "2026-09-02",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/857519734976"
-  },
-  {
-   "id": "786073184480",
-   "name": "Panumas C",
-   "title": "HR director",
-   "company": "Double A (1991) Public Company Limited",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2026-09-02",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-05-27",
-   "last_activity": "2026-07-14",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/786073184480"
-  },
-  {
-   "id": "808357038271",
-   "name": "Phurit Chettana",
-   "title": "HR Planning and System Development Manager",
-   "company": "Sushiro GH (Thailand) Ltd.",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2026-09-02",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-06-29",
-   "last_activity": "2026-06-29",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/808357038271"
-  },
-  {
-   "id": "852997199087",
-   "name": "Chattip",
-   "title": "HR",
-   "company": "Toyota Tsusho (Thailand)",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "",
-   "mql_date": "2026-09-02",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-08-28",
-   "last_activity": "2026-09-04",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/852997199087"
-  },
-  {
    "id": "792920971495",
    "name": "Nattapohn S",
    "title": "HR",
@@ -11085,29 +11230,10 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/792920971495"
   },
   {
-   "id": "34267547351",
-   "name": "Siraya Ngamkham",
-   "title": "Training and Development Manager",
-   "company": "THAI NIPPON STEEL ENGINEERING & CONSTRUCTION CORPORATION LTD.",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "",
-   "mql_date": "2026-09-02",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2024-09-06",
-   "last_activity": "2026-11-03",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/34267547351"
-  },
-  {
-   "id": "692455878862",
-   "name": "Vijittra P",
-   "title": "HR",
-   "company": "THAI NIPPON STEEL ENGINEERING & CONSTRUCTION CORPORATION LTD.",
+   "id": "786073184480",
+   "name": "Panumas C",
+   "title": "HR director",
+   "company": "Double A (1991) Public Company Limited",
    "country": "Thailand",
    "stage": "Marketing Qualified Lead",
    "lead_status": "In Progress",
@@ -11117,10 +11243,10 @@
    "customer_date": null,
    "owner": "Soranan Natejan (1894277595)",
    "source": "Offline Sources",
-   "created": "2026-02-11",
-   "last_activity": "2026-11-03",
+   "created": "2026-05-27",
+   "last_activity": "2026-07-14",
    "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/692455878862"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/786073184480"
   },
   {
    "id": "28390810847",
@@ -11161,25 +11287,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/192673117383"
   },
   {
-   "id": "848813512914",
-   "name": "Pisan",
-   "title": "HR manager",
-   "company": "Siam Fukoku",
-   "country": "Thailand",
-   "stage": "Disqualified",
-   "lead_status": "",
-   "mql_date": "2026-08-21",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-08-21",
-   "last_activity": "2026-09-09",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/848813512914"
-  },
-  {
    "id": "848808485055",
    "name": "Thanaphat K",
    "title": "HR analyst",
@@ -11197,6 +11304,25 @@
    "last_activity": "2026-08-21",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/848808485055"
+  },
+  {
+   "id": "848813512914",
+   "name": "Pisan",
+   "title": "HR manager",
+   "company": "Siam Fukoku",
+   "country": "Thailand",
+   "stage": "Disqualified",
+   "lead_status": "",
+   "mql_date": "2026-08-21",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-08-21",
+   "last_activity": "2026-09-09",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/848813512914"
   },
   {
    "id": "841538733295",
@@ -11316,7 +11442,7 @@
    "id": "840865373417",
    "name": "Thanwarin M",
    "title": "HRD",
-   "company": "Yamaha Motor Asian Center",
+   "company": "Thai Yamaha Motor",
    "country": "Thailand",
    "stage": "Marketing Qualified Lead",
    "lead_status": "",
@@ -11330,25 +11456,6 @@
    "last_activity": "2026-08-10",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/840865373417"
-  },
-  {
-   "id": "292209208531",
-   "name": "Fatima",
-   "title": "Finance Executive",
-   "company": null,
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2026-08-09",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Suntisuk Kulpiya (34133357)",
-   "source": "Offline Sources",
-   "created": "2025-05-14",
-   "last_activity": "2025-05-16",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/292209208531"
   },
   {
    "id": "289300945106",
@@ -11370,23 +11477,23 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/289300945106"
   },
   {
-   "id": "671389561048",
-   "name": "Julio Rivero",
-   "title": "General Manager",
-   "company": "First Maritime Shared Services",
+   "id": "292209208531",
+   "name": "Fatima",
+   "title": "Finance Executive",
+   "company": null,
    "country": "Philippines",
-   "stage": "Interested",
+   "stage": "Marketing Qualified Lead",
    "lead_status": "In Progress",
-   "mql_date": null,
-   "sql_date": "2026-08-09",
+   "mql_date": "2026-08-09",
+   "sql_date": null,
    "opp_date": null,
-   "customer_date": "2026-08-09",
-   "owner": "Jun de Dios (29741979)",
+   "customer_date": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
    "source": "Offline Sources",
-   "created": "2026-01-30",
-   "last_activity": "2026-11-03",
-   "deals": 3,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/671389561048"
+   "created": "2025-05-14",
+   "last_activity": "2025-05-16",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/292209208531"
   },
   {
    "id": "62254",
@@ -11427,6 +11534,25 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/496004053200"
   },
   {
+   "id": "671389561048",
+   "name": "Julio Rivero",
+   "title": "General Manager",
+   "company": "First Maritime Shared Services",
+   "country": "Philippines",
+   "stage": "Interested",
+   "lead_status": "In Progress",
+   "mql_date": null,
+   "sql_date": "2026-08-09",
+   "opp_date": null,
+   "customer_date": "2026-08-09",
+   "owner": "Jun de Dios (29741979)",
+   "source": "Offline Sources",
+   "created": "2026-01-30",
+   "last_activity": "2026-11-03",
+   "deals": 3,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/671389561048"
+  },
+  {
    "id": "64795",
    "name": "Tony Apale",
    "title": "CHRO",
@@ -11446,25 +11572,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/64795"
   },
   {
-   "id": "838180124892",
-   "name": "Peter Garbes, Jr.",
-   "title": "CEO",
-   "company": "Protege Logistics",
-   "country": "Philippines",
-   "stage": "Sales Qualified Lead",
-   "lead_status": "",
-   "mql_date": null,
-   "sql_date": "2026-08-06",
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Jun de Dios (29741979)",
-   "source": "Offline Sources",
-   "created": "2026-08-06",
-   "last_activity": null,
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/838180124892"
-  },
-  {
    "id": "813181434043",
    "name": "Murf de Leon",
    "title": "Operations Head",
@@ -11482,6 +11589,25 @@
    "last_activity": "2026-07-10",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/813181434043"
+  },
+  {
+   "id": "838180124892",
+   "name": "Peter Garbes, Jr.",
+   "title": "CEO",
+   "company": "Protege Logistics",
+   "country": "Philippines",
+   "stage": "Sales Qualified Lead",
+   "lead_status": "",
+   "mql_date": null,
+   "sql_date": "2026-08-06",
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Jun de Dios (29741979)",
+   "source": "Offline Sources",
+   "created": "2026-08-06",
+   "last_activity": null,
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/838180124892"
   },
   {
    "id": "838059736302",
@@ -11636,25 +11762,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/586859266294"
   },
   {
-   "id": "813190460651",
-   "name": "Natchaya W",
-   "title": "Payroll",
-   "company": "General Beverage",
-   "country": "Thailand",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2026-07-08",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Soranan Natejan (1894277595)",
-   "source": "Offline Sources",
-   "created": "2026-07-07",
-   "last_activity": "2026-08-06",
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/813190460651"
-  },
-  {
    "id": "46506720497",
    "name": "Abhinav Singh",
    "title": "Asia Pacific CFO (Agriculture)",
@@ -11672,6 +11779,25 @@
    "last_activity": "2026-08-11",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/46506720497"
+  },
+  {
+   "id": "813190460651",
+   "name": "Natchaya W",
+   "title": "Payroll",
+   "company": "General Beverage",
+   "country": "Thailand",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2026-07-08",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Soranan Natejan (1894277595)",
+   "source": "Offline Sources",
+   "created": "2026-07-07",
+   "last_activity": "2026-08-06",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/813190460651"
   },
   {
    "id": "10901205707",
@@ -11693,25 +11819,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/10901205707"
   },
   {
-   "id": "538116307165",
-   "name": "Peter Davidson",
-   "title": "HR Manager",
-   "company": null,
-   "country": "Malaysia",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2026-07-06",
-   "sql_date": null,
-   "opp_date": "2025-11-12",
-   "customer_date": null,
-   "owner": "Shruti Malhotra (75694492)",
-   "source": "Offline Sources",
-   "created": "2025-11-12",
-   "last_activity": null,
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/538116307165"
-  },
-  {
    "id": "813189719249",
    "name": "Weeraporn Kreetaworn",
    "title": "HR manager",
@@ -11731,23 +11838,23 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/813189719249"
   },
   {
-   "id": "774007032009",
-   "name": "Gerald Lagula",
-   "title": "Talent Development Head",
-   "company": "Unioil",
-   "country": "Philippines",
-   "stage": "On Hold",
-   "lead_status": "",
-   "mql_date": null,
-   "sql_date": "2026-07-04",
-   "opp_date": null,
+   "id": "538116307165",
+   "name": "Peter Davidson",
+   "title": "HR Manager",
+   "company": null,
+   "country": "Malaysia",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2026-07-06",
+   "sql_date": null,
+   "opp_date": "2025-11-12",
    "customer_date": null,
-   "owner": "Jun de Dios (29741979)",
+   "owner": "Shruti Malhotra (75694492)",
    "source": "Offline Sources",
-   "created": "2026-05-07",
-   "last_activity": "2026-10-19",
+   "created": "2025-11-12",
+   "last_activity": null,
    "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/774007032009"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/538116307165"
   },
   {
    "id": "800084796616",
@@ -11769,13 +11876,32 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/800084796616"
   },
   {
+   "id": "774007032009",
+   "name": "Gerald Lagula",
+   "title": "Talent Development Head",
+   "company": "Unioil",
+   "country": "Philippines",
+   "stage": "On Hold",
+   "lead_status": "",
+   "mql_date": null,
+   "sql_date": "2026-07-04",
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Jun de Dios (29741979)",
+   "source": "Offline Sources",
+   "created": "2026-05-07",
+   "last_activity": "2026-10-19",
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/774007032009"
+  },
+  {
    "id": "1762276",
    "name": "Vacharavich Tasanaroungrong",
    "title": "Chief People Officer",
    "company": "Origin Property Public Company Limited.",
    "country": "Thailand",
    "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
+   "lead_status": "Bad Timing",
    "mql_date": "2026-07-03",
    "sql_date": null,
    "opp_date": null,
@@ -11807,42 +11933,23 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/34266727897"
   },
   {
-   "id": "812227015921",
-   "name": "Rose Uy",
-   "title": "Business Manager",
-   "company": "RichPrime Global Inc",
+   "id": "155757039831",
+   "name": "Jeanica Claridad",
+   "title": "Food Safety Supervisor",
+   "company": "Benby Enterprises Incorporated",
    "country": "Philippines",
    "stage": "Sales Qualified Lead",
-   "lead_status": "",
+   "lead_status": "In Progress",
    "mql_date": null,
    "sql_date": "2026-07-02",
-   "opp_date": null,
+   "opp_date": "2025-01-11",
    "customer_date": null,
-   "owner": "Jun de Dios (29741979)",
+   "owner": "Suntisuk Kulpiya (34133357)",
    "source": "Offline Sources",
-   "created": "2026-07-02",
+   "created": "2025-01-06",
    "last_activity": null,
    "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/812227015921"
-  },
-  {
-   "id": "812152922358",
-   "name": "Krizna Almoros",
-   "title": "HR Manager",
-   "company": "BENBY ENTERPRISES, INC.",
-   "country": "Philippines",
-   "stage": "Sales Qualified Lead",
-   "lead_status": "",
-   "mql_date": null,
-   "sql_date": "2026-07-02",
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Jun de Dios (29741979)",
-   "source": "Offline Sources",
-   "created": "2026-07-02",
-   "last_activity": null,
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/812152922358"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/155757039831"
   },
   {
    "id": "812228457716",
@@ -11864,23 +11971,23 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/812228457716"
   },
   {
-   "id": "155757039831",
-   "name": "Jeanica Claridad",
-   "title": "Food Safety Supervisor",
-   "company": "Benby Enterprises Incorporated",
+   "id": "812227015921",
+   "name": "Rose Uy",
+   "title": "Business Manager",
+   "company": "RichPrime Global Inc",
    "country": "Philippines",
    "stage": "Sales Qualified Lead",
-   "lead_status": "In Progress",
+   "lead_status": "",
    "mql_date": null,
    "sql_date": "2026-07-02",
-   "opp_date": "2025-01-11",
+   "opp_date": null,
    "customer_date": null,
-   "owner": "Suntisuk Kulpiya (34133357)",
+   "owner": "Jun de Dios (29741979)",
    "source": "Offline Sources",
-   "created": "2025-01-06",
+   "created": "2026-07-02",
    "last_activity": null,
    "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/155757039831"
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/812227015921"
   },
   {
    "id": "155783991504",
@@ -11900,6 +12007,44 @@
    "last_activity": null,
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/155783991504"
+  },
+  {
+   "id": "812152922358",
+   "name": "Krizna Almoros",
+   "title": "HR Manager",
+   "company": "BENBY ENTERPRISES, INC.",
+   "country": "Philippines",
+   "stage": "Sales Qualified Lead",
+   "lead_status": "",
+   "mql_date": null,
+   "sql_date": "2026-07-02",
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Jun de Dios (29741979)",
+   "source": "Offline Sources",
+   "created": "2026-07-02",
+   "last_activity": null,
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/812152922358"
+  },
+  {
+   "id": "1700314",
+   "name": "Annie Caw",
+   "title": null,
+   "company": "East West Banking Corporation",
+   "country": "Philippines",
+   "stage": "Sales Qualified Lead",
+   "lead_status": "Unqualified",
+   "mql_date": null,
+   "sql_date": "2026-07-01",
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "source": "Offline Sources",
+   "created": "2024-01-22",
+   "last_activity": null,
+   "deals": 1,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1700314"
   },
   {
    "id": "1765453",
@@ -11938,25 +12083,6 @@
    "last_activity": "2026-07-07",
    "deals": 1,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/745508515021"
-  },
-  {
-   "id": "1700314",
-   "name": "Annie Caw",
-   "title": null,
-   "company": "East West Banking Corporation",
-   "country": "Philippines",
-   "stage": "Sales Qualified Lead",
-   "lead_status": "Unqualified",
-   "mql_date": null,
-   "sql_date": "2026-07-01",
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Suntisuk Kulpiya (34133357)",
-   "source": "Offline Sources",
-   "created": "2024-01-22",
-   "last_activity": null,
-   "deals": 1,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1700314"
   },
   {
    "id": "810203997392",
@@ -12320,44 +12446,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/10898689514"
   },
   {
-   "id": "23031157984",
-   "name": "Jerry Ngo",
-   "title": "Chief Executive Officer",
-   "company": "East West Banking Corporation",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Amiel Sabangan (487550599)",
-   "source": "Offline Sources",
-   "created": "2024-07-08",
-   "last_activity": null,
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/23031157984"
-  },
-  {
-   "id": "1792152",
-   "name": "Anshum Sinha",
-   "title": "Chief Executive",
-   "company": "Global Workforce Development",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Sonu Kumar (33933207)",
-   "source": "Offline Sources",
-   "created": "2024-01-31",
-   "last_activity": null,
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1792152"
-  },
-  {
    "id": "769637023948",
    "name": "Sanjiv Vohra",
    "title": "President & Chief Executive Officer",
@@ -12396,6 +12484,120 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1242259"
   },
   {
+   "id": "1792152",
+   "name": "Anshum Sinha",
+   "title": "Chief Executive",
+   "company": "Global Workforce Development",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Sonu Kumar (33933207)",
+   "source": "Offline Sources",
+   "created": "2024-01-31",
+   "last_activity": null,
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1792152"
+  },
+  {
+   "id": "1238522",
+   "name": "Beth Franco",
+   "title": "Sr. HR Manager",
+   "company": "Max's Group, Inc.",
+   "country": "Philippines",
+   "stage": "Lost/Not Intrested",
+   "lead_status": "In Progress",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Amiel Sabangan (487550599)",
+   "source": "Offline Sources",
+   "created": "2023-11-01",
+   "last_activity": "2026-06-02",
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1238522"
+  },
+  {
+   "id": "23031157984",
+   "name": "Jerry Ngo",
+   "title": "Chief Executive Officer",
+   "company": "East West Banking Corporation",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Amiel Sabangan (487550599)",
+   "source": "Offline Sources",
+   "created": "2024-07-08",
+   "last_activity": null,
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/23031157984"
+  },
+  {
+   "id": "773254207706",
+   "name": "Arijit Roy",
+   "title": "Head - Human Resources, Philippines",
+   "company": "Tata Consultancy Services",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Akash Kumar (34182343)",
+   "source": "Offline Sources",
+   "created": "2023-10-19",
+   "last_activity": "2023-10-19",
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/773254207706"
+  },
+  {
+   "id": "23050327268",
+   "name": "Mary Bernardez",
+   "title": "Human Resources Manager",
+   "company": "TaskUs",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Amiel Sabangan (487550599)",
+   "source": "Offline Sources",
+   "created": "2024-07-08",
+   "last_activity": null,
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/23050327268"
+  },
+  {
+   "id": "111128284368",
+   "name": "Juanita Siya",
+   "title": "President",
+   "company": "scinnova.com.ph",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "Unqualified",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Amiel Sabangan (487550599)",
+   "source": "Offline Sources",
+   "created": "2024-11-26",
+   "last_activity": null,
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/111128284368"
+  },
+  {
    "id": "1700537",
    "name": "Kimberly Gaffud",
    "title": null,
@@ -12413,6 +12615,25 @@
    "last_activity": null,
    "deals": 0,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1700537"
+  },
+  {
+   "id": "111067711714",
+   "name": "Gladys Ocampo",
+   "title": "Head of HR Shared Services",
+   "company": "Union Bank of the Philippines",
+   "country": "Philippines",
+   "stage": "Marketing Qualified Lead",
+   "lead_status": "In Progress",
+   "mql_date": "2024-11-26",
+   "sql_date": null,
+   "opp_date": null,
+   "customer_date": null,
+   "owner": "Amiel Sabangan (487550599)",
+   "source": "Offline Sources",
+   "created": "2024-11-26",
+   "last_activity": null,
+   "deals": 0,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/111067711714"
   },
   {
    "id": "111169273054",
@@ -12453,44 +12674,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/23049311716"
   },
   {
-   "id": "23050327268",
-   "name": "Mary Bernardez",
-   "title": "Human Resources Manager",
-   "company": "TaskUs",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Amiel Sabangan (487550599)",
-   "source": "Offline Sources",
-   "created": "2024-07-08",
-   "last_activity": null,
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/23050327268"
-  },
-  {
-   "id": "1238522",
-   "name": "Beth Franco",
-   "title": "Sr. HR Manager",
-   "company": "Max's Group, Inc.",
-   "country": "Philippines",
-   "stage": "Lost/Not Intrested",
-   "lead_status": "In Progress",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Amiel Sabangan (487550599)",
-   "source": "Offline Sources",
-   "created": "2023-11-01",
-   "last_activity": "2026-06-02",
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1238522"
-  },
-  {
    "id": "46493508545",
    "name": "Chachi Relova-Cordero",
    "title": "Chief Financial Officer",
@@ -12510,44 +12693,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/46493508545"
   },
   {
-   "id": "111128284368",
-   "name": "Juanita Siya",
-   "title": "President",
-   "company": "scinnova.com.ph",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "Unqualified",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Amiel Sabangan (487550599)",
-   "source": "Offline Sources",
-   "created": "2024-11-26",
-   "last_activity": null,
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/111128284368"
-  },
-  {
-   "id": "773254207706",
-   "name": "Arijit Roy",
-   "title": "Head - Human Resources, Philippines",
-   "company": "Tata Consultancy Services",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Akash Kumar (34182343)",
-   "source": "Offline Sources",
-   "created": "2023-10-19",
-   "last_activity": "2023-10-19",
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/773254207706"
-  },
-  {
    "id": "1789051",
    "name": "Arlene Bassig",
    "title": "Head People",
@@ -12565,25 +12710,6 @@
    "last_activity": null,
    "deals": 0,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-1/1789051"
-  },
-  {
-   "id": "111067711714",
-   "name": "Gladys Ocampo",
-   "title": "Head of HR Shared Services",
-   "company": "Union Bank of the Philippines",
-   "country": "Philippines",
-   "stage": "Marketing Qualified Lead",
-   "lead_status": "In Progress",
-   "mql_date": "2024-11-26",
-   "sql_date": null,
-   "opp_date": null,
-   "customer_date": null,
-   "owner": "Amiel Sabangan (487550599)",
-   "source": "Offline Sources",
-   "created": "2024-11-26",
-   "last_activity": null,
-   "deals": 0,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-1/111067711714"
   },
   {
    "id": "5127459266",

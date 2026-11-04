@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T23:34:27Z",
+ "generated_at": "2026-11-04T23:34:32Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -141,15 +141,15 @@
    "region": "Thailand & Others",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 6,
-   "amount": 365000.0
+   "count": 7,
+   "amount": 415000.0
   },
   {
    "region": "Thailand & Others",
    "stage_id": "280510158",
    "stage": "Proposal Sent",
    "count": 4,
-   "amount": 100000.0
+   "amount": 300000.0
   },
   {
    "region": "Thailand & Others",
@@ -297,7 +297,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 18
+   "count": 20
   },
   {
    "region": "Thailand & Others",
@@ -489,6 +489,19 @@
    "last_contacted": "2026-08-07",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515113098451"
+  },
+  {
+   "id": "519366681792",
+   "deal": "Mega LifeSciences - New Deal",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Thailand & Others",
+   "amount": 200000.0,
+   "close_date": "2027-02-28",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": null,
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792"
   },
   {
    "id": "534672912612",
@@ -967,7 +980,7 @@
    "amount": 50000.0,
    "close_date": "2027-01-31",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-11-03",
+   "last_contacted": "2026-11-04",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/526802138353"
   },
@@ -983,6 +996,19 @@
    "last_contacted": "2026-10-22",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/523343584494"
+  },
+  {
+   "id": "535243368646",
+   "deal": "AutoX - New Deal",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Thailand & Others",
+   "amount": 50000.0,
+   "close_date": "2027-02-02",
+   "owner": "Suntisuk Kulpiya",
+   "last_contacted": null,
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/535243368646"
   },
   {
    "id": "508879036615",
@@ -1607,19 +1633,6 @@
    "last_contacted": "2026-07-15",
    "probability": 0.3,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/334969359605"
-  },
-  {
-   "id": "519366681792",
-   "deal": "Mega LifeSciences - New Deal",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Thailand & Others",
-   "amount": 0.0,
-   "close_date": "2027-02-28",
-   "owner": "Suntisuk Kulpiya",
-   "last_contacted": null,
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/519366681792"
   },
   {
    "id": "512054574282",
