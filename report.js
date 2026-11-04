@@ -54,15 +54,7 @@
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
-    const ninety = new Date(Date.parse(asof) - 90 * 864e5).toISOString().slice(0, 10);
-    const gaps = [
-      ['Open deals with no Next step', active.filter((r) => !r.next_step).length, active.length],
-      ['Open deals with no implementation / subscription split', active.filter((r) => r.subscription == null).length, active.length],
-      ['Open deals with no amount', active.filter((r) => !r.amount).length, active.length],
-      ['Open deals with no headcount', active.filter((r) => r.headcount == null).length, active.length],
-      ['Open deals with no meeting logged in 90 days', active.filter((r) => !r.last_meeting || r.last_meeting < ninety).length, active.length],
-      [fy + ' wins with no invoice or payment details', won.filter((r) => !r.invoice_date && !r.payment_status && !r.paid_date).length, won.length]];
-    return {asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming, gaps,
+    return {asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
   }
 
@@ -222,20 +214,6 @@
       if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(up.length), 'center')]);
       grid(s, rows, {colW: [0.5, 1.05, 1.2, 0.85, 1.8, 0.95, 0.95, 1.35, 1.3, 1.1, 1.25], fs: 9.5, rowH: 0.42});
     });
-
-    // 9. AR
-    s = sheet('AR', 'From Invoice Raised Date, Payment Status and Amount Received Date on ' + M.fy + ' won deals · USD', 'HubSpot SEA Sales Pipeline – closed-won deals; Invoice raised date, Payment status, Amount received date');
-    const ar = M.won.filter((r) => r.invoice_date || r.payment_status || r.paid_date);
-    const arRows = [[H('S.No.'), H('Clients Name'), H('Amount Due'), H('Date of Invoice'), H('Expected Date of Payment')]]
-      .concat(ar.length ? ar.map((r, i) => [C(String(i + 1), 'center'), C(r.company || r.deal), C(r.payment_status && /paid/i.test(r.payment_status) ? '0' : '—', 'right'), C(dt(r.invoice_date)), C(r.paid_date ? 'Paid ' + dt(r.paid_date) : '—')])
-        : [[C('No invoice or payment details are filled in on won deals in HubSpot yet', 'left', {colspan: 5})]]);
-    arRows.push([T('Total', 'left', {colspan: 2}), T('—', 'right'), T(''), T('')]);
-    grid(s, arRows, {colW: [0.8, 4.2, 2.0, 2.2, 3.1], fs: 13, rowH: 0.45});
-
-    // Appendix: data gaps
-    s = sheet('Appendix – HubSpot data to update', 'Fields behind the blank cells in this report', 'HubSpot SEA Sales Pipeline – deal fields checked by this report (On-Hold deals excluded)');
-    grid(s, [[H('What is missing', {align: 'left'}), H('Deals'), H('Out of')]].concat(M.gaps.map(([a, b, c]) => [C(a), C(String(b), 'right'), C(String(c), 'right')])),
-      {y: 1.4, colW: [8.6, 1.6, 1.6], fs: 14, rowH: 0.45});
     return pres;
   }
 
