@@ -45,7 +45,7 @@ alltext = "\n".join(texts)
 print(f"slides: {len(prs.slides)}")
 fy = f"FY{str(fy0 + 1)[2:]}"
 checks = [(f"Contracts Signed – {fy}", "contracts sheet"), (f"{len(props)} open deals in Proposal Sent", "proposals sheet"),
-          (f"{len(active)} open deals (Demo → Contracting)", "pipeline sheet"), ("Overview – Annual", "overview sheet"), ("Meetings Scheduled", "meetings scheduled sheet"),
+          (f"{len(active)} open deals (Demo → Contracting)", "pipeline sheet"), ("Overview – Annual", "overview sheet"), ("New Client Meetings", "new client meetings sheet"), ("Existing Client Meetings", "existing client meetings sheet"),
           ("Contracts Signed This Year", "contracts count box"),
           (f"{round(sum(val(r) for r in active)):,}", "pipeline total"),
           (f"{round(sum(val(r) for r in won)):,}", "contracts total")]

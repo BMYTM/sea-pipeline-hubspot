@@ -23,6 +23,9 @@
   const src = (r) => [r.source, r.sub_source && r.sub_source !== r.source ? r.sub_source : null].filter(Boolean).join(' · ') || '—';
   const stageLbl = (s) => s === 'Demo/Developing' ? 'Demo' : s;
   const pad = (n) => String(n).padStart(2, '0');
+  // Meetings owned by these people are left out of every meeting slide (HubSpot owner id or name)
+  const SKIP_OWNERS = [['1698206293', 'Abdul Khan'], ['34182343', 'Akash Kumar']];
+  const skipOwner = (m) => !!m.owner && SKIP_OWNERS.some(([id, name]) => m.owner.includes('(' + id + ')') || m.owner.startsWith(name));
 
   // sc = {label, country, target, targetNote}: country null = all of SEA
   function model(D, SEA, sc = {label: 'SEA', country: null}) {
@@ -52,11 +55,27 @@
     const props = pipe.filter((r) => r.stage === 'Proposal Sent');
     const deals = new Map(active.concat(D.closures.filter(inScope)).map((r) => [r.id, r]));
     const seen = new Set(), meets = [];
-    (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
+    (D.meetings || []).forEach((m) => { if (seen.has(m.id) || !deals.has(m.deal_id) || skipOwner(m)) return; seen.add(m.id); meets.push(Object.assign({deal: deals.get(m.deal_id)}, m)); });
+    // meetings logged only against a company or contact that the data matched to one open deal count as that deal's sales meetings
+    (D.company_meetings || []).forEach((m) => { if (!m.deal_id || seen.has(m.id) || !deals.has(m.deal_id) || skipOwner(m)) return;
+      seen.add(m.id); meets.push(Object.assign({}, m, {deal: deals.get(m.deal_id)})); });
+    // Meetings with SEA companies/contacts that match no open sales deal: with an existing client (won SEA deal) they go
+    // on Existing Client Meetings; the rest are new sales and join New Client Meetings, without deal details
+    const shown = new Set(meets.map((m) => m.id));
+    const where = (m) => (m.companies[0] || m.contacts && m.contacts[0] || {}).country;
+    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && !m.on_deal && !m.deal_id && !skipOwner(m) && (!sc.country || where(m) === sc.country));
+    other.filter((m) => !m.customer).forEach((m) => { const ct = (m.contacts || [])[0], co = m.companies[0];
+      // no deal: Source comes from the contact (Event Name, e.g. PMAP Tech HR 2026 – Booth, else Original Traffic Source)
+      const ce = (m.contacts || []).find((x) => x.event), cs = ce ? 'Event · ' + ce.event : (ct && ct.source) || null;
+      meets.push(Object.assign({}, m, {deal: {company: (ct && ct.company) || (co ? co.name : ct && ct.name), country: where(m), headcount: null, source: cs,
+        contacts: ct ? [{name: ct.name, title: ct.title || null}] : [], next_step: null}})); });
+    meets.sort((a, b) => b.date.localeCompare(a.date) || b.id.localeCompare(a.id));
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
-    return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming,
+    const client = other.filter((m) => m.customer);
+    const otherDone = client.filter((m) => m.date <= asof && m.date >= since), otherUp = client.filter((m) => m.date > asof).reverse();
+    return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming, otherDone, otherUp,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
   }
 
@@ -116,6 +135,23 @@
     sections.forEach((M) => { divider(M); section(M); });
     return pres;
 
+    // Existing Client Meetings (customer onboarding/go-live and other meetings that match no open sales deal),
+    // inside each section after New Client Meetings: one table, upcoming first, then completed in the last 30 days
+    function otherMeetings(M, sheet) {
+      const srcO = 'HubSpot meetings associated with companies or contacts in ' + (M.country || 'Thailand, Malaysia, Philippines, Indonesia or Singapore') + ' (Meeting start time, Activity assigned to) that do not match an open SEA sales deal, with companies that have a closed-won SEA deal';
+      const list = M.otherUp.map((m) => [m, 'Upcoming']).concat(M.otherDone.map((m) => [m, 'Completed']));
+      const row = ([m, st], i) => { const ct = (m.contacts || [])[0], c = m.companies[0] || (ct ? {name: ct.company || ct.name, country: ct.country} : {});
+        const more = m.companies.length > 1 ? ' (+' + (m.companies.length - 1) + ')' : '';
+        return [C(String(i + 1), 'center'), C(st, 'center', st === 'Upcoming' ? {bold: true, color: HB.purple} : {}), C(dt(m.date)), C(m.owner), C((c.name || '—') + more), C(c.country), C(m.title)]; };
+      pages(list.map(row), 12).forEach((pg, pi, all) => {
+        const s = sheet('Existing Client Meetings' + part(pi, all), M.otherUp.length + ' upcoming · ' + M.otherDone.length + ' completed in the last 30 days · clients with a won SEA deal', srcO);
+        const rows = [[H('S.No.'), H('Status'), H('Meeting Date'), H('Owner'), H('Company'), H('Country'), H('Meeting')]]
+          .concat(pg.length ? pg : [[C('No upcoming meetings, or meetings in the last 30 days, with existing ' + M.label + ' clients', 'left', {colspan: 7})]]);
+        if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 6}), T(String(list.length), 'center')]);
+        grid(s, rows, {colW: [0.5, 0.95, 1.05, 1.7, 2.8, 1.0, 4.3], fs: 10, rowH: 0.36});
+      });
+    }
+
     function divider(M) {
       const d = pres.addSlide(); d.background = {color: HB.purple};
       d.addText(M.country ? M.label : 'SEA Overall', {x: 0.75, y: 2.2, w: 6.4, h: 1.3, fontSize: 44, bold: true, color: 'FFFFFF', fontFace: FONT, valign: 'bottom', margin: 0});
@@ -138,7 +174,7 @@
       split: 'HubSpot SEA Sales Pipeline – closed-won deals; Implementation fee and Annual subscription fee (USD)',
       target: M.targetNote || 'FY target USD ' + n0(M.target) + ' from dashboard settings, spread evenly by month',
       open: 'HubSpot SEA Sales Pipeline – open deals (On-Hold deals excluded); Close date, Deal probability, Number of employees, fees (USD)',
-      meet: 'HubSpot meetings linked to SEA deals (Meeting start time, Activity assigned to); contact and Next step from the linked deal',
+      meet: 'HubSpot meetings linked to SEA deals, logged against a company or contact of one open deal, or with SEA companies/contacts that are not clients (Meeting start time, Activity assigned to); contact and Next step from the deal',
     };
 
     // 1. Overview- Annual
@@ -213,31 +249,22 @@
       grid(s, rows, {colW: [0.5, 2.2, 0.95, 0.9, 1.7, 1.1, 1.1, 0.85, 1.25, 0.95, 0.9], fs: 9.5, rowH: 0.3});
     });
 
-    // 7. Meetings Completed
-    const showRecent = M.recent.length > 0, ml = (showRecent ? M.recent : M.done).slice(0, 20);
+    // 7. New Client Meetings (open sales deals): one table, upcoming first, then completed in the last 30 days
     const person = (m) => (m.deal.contacts || [])[0] || {};
-    const mc = ml.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
-      C(r.next_step || (m.title ? 'Meeting: ' + m.title : '—'))]; });
-    pages(mc, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Completed' + part(pi, all), showRecent ? M.recent.length + ' meeting' + (M.recent.length === 1 ? '' : 's') + ' in the last 30 days'
-        : ml.length ? 'None in the last 30 days · latest ' + ml.length + ' logged shown (last: ' + dt(ml[0].date) + ')' : 'No meetings logged on ' + M.label + ' deals', SRC.meet);
-      const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No meetings logged on open or won ' + M.label + ' deals', 'left', {colspan: 10})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 9}), T(String(ml.length), 'center')]);
-      grid(s, rows, {colW: [0.5, 1.05, 1.25, 1.9, 0.95, 0.95, 1.45, 1.35, 1.15, 1.8], fs: 9.5, rowH: 0.42});
+    const nc = M.upcoming.slice(0, 20).map((m) => [m, 'Upcoming']).concat(M.recent.slice(0, 20).map((m) => [m, 'Completed']));
+    const ncRows = nc.map(([m, st], i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(st, 'center', st === 'Upcoming' ? {bold: true, color: HB.purple} : {}),
+      C(dt(m.date)), C(m.owner), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
+      C(st === 'Upcoming' ? (m.title ? 'Meeting: ' + m.title : r.next_step) : (r.next_step || (m.title ? 'Meeting: ' + m.title : '—')))]; });
+    pages(ncRows, 10).forEach((pg, pi, all) => {
+      s = sheet('New Client Meetings' + part(pi, all), M.upcoming.length + ' upcoming · ' + M.recent.length + ' completed in the last 30 days · open ' + M.label + ' deals and new prospects', SRC.meet);
+      const rows = [[H('S.No.'), H('Status'), H('Meeting Date'), H('Owner'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
+        .concat(pg.length ? pg : [[C('No upcoming meetings, or meetings in the last 30 days, on open ' + M.label + ' deals', 'left', {colspan: 11})]]);
+      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(nc.length), 'center')]);
+      grid(s, rows, {colW: [0.5, 0.95, 1.0, 1.2, 1.7, 0.9, 0.85, 1.3, 1.2, 1.0, 1.7], fs: 9.5, rowH: 0.42});
     });
 
-    // 8. Meetings Scheduled
-    const up = M.upcoming.slice(0, 20);
-    const ms = up.map((m, i) => { const r = m.deal, p = person(m); return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C('—', 'center'), C(r.company || r.deal), C(r.country), C(n0(r.headcount), 'right'), C(src(r)), C(p.name), C(p.title),
-      C(m.title ? 'Meeting: ' + m.title : r.next_step)]; });
-    pages(ms, 10).forEach((pg, pi, all) => {
-      s = sheet('Meetings Scheduled' + part(pi, all), up.length + ' upcoming meeting' + (up.length === 1 ? '' : 's') + ' on open ' + M.label + ' deals · Meeting Type is not recorded in HubSpot', SRC.meet);
-      const rows = [[H('S.No.'), H('Meeting Date'), H('Owner'), H('Meeting Type'), H('Clients Name'), H('Location'), H('Headcount'), H('Source'), H('Point of Contact'), H('Title'), H('Next Steps')]]
-        .concat(pg.length ? pg : [[C('No upcoming meetings linked to open ' + M.label + ' deals in HubSpot', 'left', {colspan: 11})]]);
-      if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 10}), T(String(up.length), 'center')]);
-      grid(s, rows, {colW: [0.5, 1.05, 1.2, 0.85, 1.8, 0.95, 0.95, 1.35, 1.3, 1.1, 1.25], fs: 9.5, rowH: 0.42});
-    });
+    // 8. Existing Client Meetings for this section
+    otherMeetings(M, sheet);
     }
   }
 

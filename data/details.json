@@ -8691,6 +8691,2056 @@
    "owner": "Nova Sinulingga (533079233)"
   }
  ],
+ "company_meetings": [
+  {
+   "id": "527569461443",
+   "date": "2026-11-19",
+   "title": "Cognizant x HONO Meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "838181546179",
+     "name": "Murf de Leon",
+     "company": "Bestoptions Assistance Inc.",
+     "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "537906161895",
+   "date": "2026-11-12",
+   "title": "Placeholder — Aboitiz Power Group with Ms. Lasala",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "136893503732",
+     "name": "Aboitiz Group",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "4988769214",
+     "name": "Aboitiz Power Group",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "713561277636",
+     "name": "Monette Lasala",
+     "company": "Aboitiz Power Corporation",
+     "country": "Philippines",
+     "title": "Chief Human Resources Officer",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "534532876509",
+   "date": "2026-11-10",
+   "title": "Meeting with Asialink Finance and Mark",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "537786805458",
+   "date": "2026-11-05",
+   "title": "TP Philippines — Meeting with Rachel",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "1701186",
+     "name": "Rachel Majito-Cacabelos",
+     "company": "Teleperformance",
+     "country": "Philippines",
+     "title": "HR Vice President",
+     "event": "PMAP Tech HR 2026 – Booth",
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "537930943708",
+   "date": "2026-11-04",
+   "title": "IEE-HONO - Prep Call For Afternoon F2F Meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "537288034529",
+   "date": "2026-11-04",
+   "title": "IEE — Office meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "537298946267",
+   "date": "2026-11-03",
+   "title": "Quick Catch-up",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "537278793961",
+   "date": "2026-11-03",
+   "title": "IEE — Go-live planning",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "537214732495",
+   "date": "2026-11-03",
+   "title": "HONO meeting with Philippine Transmarine Carriers / FMSS",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "537009674439",
+   "date": "2026-11-03",
+   "title": "IEE-HONO - Full Go-Live Preparation",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "535155636454",
+   "date": "2026-11-03",
+   "title": "HONO Reference Call with Ms. Rizzel Pascua",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "8490577094",
+     "name": "Philippine Dealing System Holdings Corp.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "936201",
+     "name": "Rizzel Pascua",
+     "company": "PDS Group",
+     "country": "Philippines",
+     "title": "HR Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": "508099332323"
+  },
+  {
+   "id": "536643443925",
+   "date": "2026-11-02",
+   "title": "Meeting Invitation - Interaction with Mega Lifesciences Team",
+   "owner": "Abdul Khan (1698206293)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "618135392491",
+     "name": "Himanshu Shah",
+     "company": "Sudarshan Chemicals Industries",
+     "country": "Thailand",
+     "title": "Global Head of Total Rewards, HR Technology & HR Service Delivery",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "46089739463",
+     "name": "Parte Parte",
+     "company": "FIZA HEALTHCARE PRIVATE LIMITED",
+     "country": "Thailand",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "519366681792"
+  },
+  {
+   "id": "524642132177",
+   "date": "2026-11-02",
+   "title": "Canceled: Qualfon | HONO | Overview Demo",
+   "owner": "Akash Kumar (34182343)",
+   "companies": [
+    {
+     "id": "8309465038",
+     "name": "QUALFON PHILIPPINES, INC.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "848809052399",
+     "name": "Neha Khurana",
+     "company": "QUALFON PHILIPPINES, INC.",
+     "country": "Philippines",
+     "title": "Country Head - Human Resources",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "534463015113",
+   "date": "2026-10-29",
+   "title": "RFP clarification",
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988178910",
+     "name": "Kenanga Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "529589966018"
+  },
+  {
+   "id": "534317336765",
+   "date": "2026-10-28",
+   "title": "Meeting with Kenanga Investment Bank Berhad (KIBB)",
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988178910",
+     "name": "Kenanga Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "531842700481",
+   "date": "2026-10-23",
+   "title": "PMAP AC alignment: MPD 4: The Art of Ethical Leadership: Balancing What’s Right with What Drives Business Performance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "387447936219",
+     "name": "Ayala Corporation",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "13769093307",
+     "name": "Sangalang & Gaerlan, Business Lawyers",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "1124051",
+     "name": "Xandra Galang",
+     "company": "Ayala",
+     "country": "Philippines",
+     "title": "Strategic HR Talent Management Head",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "34221150703",
+     "name": "Pol Sangalang",
+     "company": "Paladins Law",
+     "country": "Philippines",
+     "title": "Founder",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "534468294867",
+   "date": "2026-10-21",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "9798264554",
+     "name": "Thai Public Broadcasting Service (Thai PBS)",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "526799803625"
+  },
+  {
+   "id": "534463015112",
+   "date": "2026-10-20",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988177873",
+     "name": "AmBank Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "216255209695"
+  },
+  {
+   "id": "534463015111",
+   "date": "2026-10-16",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "432558266555",
+     "name": "Touch 'n Go Sdn Bhd - Company",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "511204612323"
+  },
+  {
+   "id": "528211392759",
+   "date": "2026-10-16",
+   "title": "IEE-HONO - Offline Attendance Capturing",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "526539600063",
+   "date": "2026-10-14",
+   "title": "Placeholder - Reference Call with Mr. Devendra of AG&P",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "346507506900",
+     "name": "Atlantic, Gulf & Pacific Company (AG&P)",
+     "country": "Singapore",
+     "customer": true
+    },
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Singapore",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "572001",
+     "name": "Devendra Pratap Singh",
+     "company": "AG&P",
+     "country": "Philippines",
+     "title": "CIO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": "508099332323"
+  },
+  {
+   "id": "524088687835",
+   "date": "2026-10-02",
+   "title": "IEE-HONO Alignment Meeting - Employee Data",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "523884474572",
+   "date": "2026-10-02",
+   "title": "Catch Up with Mark Joseph",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "508099332323"
+  },
+  {
+   "id": "534524146892",
+   "date": "2026-09-30",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "439340165332",
+     "name": "AutoX",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "522208895225",
+   "date": "2026-09-29",
+   "title": "Mr. Anup x Mr. Mukul - Overall Commercial discussion",
+   "owner": "Boonchoo Malhotra (1401897672)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "46089739463",
+     "name": "Parte Parte",
+     "company": "FIZA HEALTHCARE PRIVATE LIMITED",
+     "country": "Thailand",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "519366681792"
+  },
+  {
+   "id": "521948896497",
+   "date": "2026-09-26",
+   "title": "Zoom huddle with Jun",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "838181546179",
+     "name": "Murf de Leon",
+     "company": "Bestoptions Assistance Inc.",
+     "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "531677642992"
+  },
+  {
+   "id": "520188827883",
+   "date": "2026-09-24",
+   "title": "Confirmed: Discussion with Hono on potential Payroll solution for Indonesia",
+   "owner": "HONO HR (192531917)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "17258842360",
+     "name": "Hendra Wijaya",
+     "company": "Marriott International",
+     "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "10900527855",
+     "name": "Robby Fachri",
+     "company": "Marriott International, Inc.",
+     "country": "Indonesia",
+     "title": "Area Director Of Human Resources - Indonesia",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "519014367467",
+   "date": "2026-09-24",
+   "title": "KGHxHONO: UAT Training - Overtime Module",
+   "owner": "HONO HR (192531917)",
+   "companies": [
+    {
+     "id": "297074835698",
+     "name": "Koko Global Hospitality",
+     "country": "Thailand",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "535000681674",
+     "name": "Parisara Sae-Heng",
+     "company": "Koko Global Hospitality",
+     "country": "Thailand",
+     "title": "HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": true
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "520298896582",
+   "date": "2026-09-22",
+   "title": "IEE x HONO Courtesy Call",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "519943776503",
+   "date": "2026-09-22",
+   "title": "Catch up with Xandra Galang/Ayala Corporation",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "387447936219",
+     "name": "Ayala Corporation",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "1124051",
+     "name": "Xandra Galang",
+     "company": "Ayala",
+     "country": "Philippines",
+     "title": "Strategic HR Talent Management Head",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "520193699054",
+   "date": "2026-09-21",
+   "title": "HONO x PTC Ceremonial Signing",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
+     "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "519516327135",
+   "date": "2026-09-18",
+   "title": "Mukul/Deepali",
+   "owner": "HONO HR (192531917)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "751881917655",
+     "name": "Deepali Jain",
+     "company": "Standard Chartered India",
+     "country": "Singapore",
+     "title": "Global TA Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "517368469734",
+   "date": "2026-09-08",
+   "title": "Discussion on Recruitment Module for Smartpark",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
+     "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": "515111097585"
+  },
+  {
+   "id": "517338611913",
+   "date": "2026-09-08",
+   "title": "Short Catch Up with PDS",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "8490577094",
+     "name": "Philippine Dealing System Holdings Corp.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "936201",
+     "name": "Rizzel Pascua",
+     "company": "PDS Group",
+     "country": "Philippines",
+     "title": "HR Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "516592311514",
+   "date": "2026-09-08",
+   "title": "Introduction cum DEMO Meeting - TCS | HONO",
+   "owner": "Shashank Kaushik (34363627)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "841427901632",
+     "name": "Mandira Ganguly",
+     "company": "Tata Consultancy Services",
+     "country": "Singapore",
+     "title": "GM- Total Rewards",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "516149343419",
+   "date": "2026-09-08",
+   "title": "Indorama Corporation <> HONO | Introduction Call",
+   "owner": "Prerna Taneja (31558294)",
+   "companies": [
+    {
+     "id": "6036895220",
+     "name": "Indorama Synthetics",
+     "country": "Indonesia",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "841519352032",
+     "name": "Adeline Edward",
+     "company": "Indorama Corporation",
+     "country": "Indonesia",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "514759608558",
+   "date": "2026-09-08",
+   "title": "HONO x PTC/FMSS: Payroll demo",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "534468294866",
+   "date": "2026-09-03",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "9798774771",
+     "name": "Toyota Tsusho (Thailand)",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "534468294864",
+   "date": "2026-09-02",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988763600",
+     "name": "Jaymart Group",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "516122646755",
+   "date": "2026-09-02",
+   "title": "Short Catch up with Mark Joseph/Asialink Finance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "757752627446",
+     "name": "Mark Joseph Cancino",
+     "company": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "508099332323"
+  },
+  {
+   "id": "514883434702",
+   "date": "2026-09-01",
+   "title": "Continue Marriott x HONO Technical Review ",
+   "owner": "HONO HR (192531917)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "17258842360",
+     "name": "Hendra Wijaya",
+     "company": "Marriott International",
+     "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "515432911074",
+   "date": "2026-08-31",
+   "title": "Short Catch up on Inspiro Proposal",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "515426936018",
+   "date": "2026-08-31",
+   "title": "Call with Sunil on Inspiro Proposal",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "512872165601",
+   "date": "2026-08-31",
+   "title": "Placeholder : Iron Bird Logistic",
+   "owner": "Shruti Malhotra (75694492)",
+   "companies": [
+    {
+     "id": "9797384436",
+     "name": "ASEAN Business Partners",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "38384575183",
+     "name": "Whardana Caramia",
+     "company": "ASEAN Business Partners",
+     "country": "Singapore",
+     "title": "COUNTRY MANAGER",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "513064001737",
+   "date": "2026-08-28",
+   "title": "Get together ex P&G sales guys",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "838181546179",
+     "name": "Murf de Leon",
+     "company": "Bestoptions Assistance Inc.",
+     "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "531677642992"
+  },
+  {
+   "id": "514212355280",
+   "date": "2026-08-27",
+   "title": "Marriott x HONO Technical Review ",
+   "owner": "HONO HR (192531917)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "17258842360",
+     "name": "Hendra Wijaya",
+     "company": "Marriott International",
+     "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "513941525742",
+   "date": "2026-08-27",
+   "title": "Hono x PTC/FMSS: System Demo Part 1",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "514053475543",
+   "date": "2026-08-25",
+   "title": "Canceled: IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "513150870726",
+   "date": "2026-08-25",
+   "title": "Mega Lifesciences x HONO - Proposal Discussion",
+   "owner": "Boonchoo Malhotra (1401897672)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "15866",
+     "name": "Krishnan Unni",
+     "company": "Mega LifeSciences",
+     "country": "Thailand",
+     "title": "Chief People Officer",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "9555",
+     "name": "Anup Mallan",
+     "company": "Mega Lifesciences PTY Peru S.A.C.",
+     "country": "Thailand",
+     "title": "Head - HR Services",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "519366681792"
+  },
+  {
+   "id": "526469040368",
+   "date": "2026-08-24",
+   "title": "Ivy Mobility<>HONO Connect",
+   "owner": "Harish Asnani (35787228)",
+   "companies": [
+    {
+     "id": "7570891219",
+     "name": "Ivy Mobility",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "850235265230",
+     "name": "Vijay Kumar",
+     "company": "Ivy Mobility",
+     "country": "Singapore",
+     "title": "HR Manager-Payroll",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "513756425422",
+   "date": "2026-08-24",
+   "title": "Short Catch Up On Inspiro",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "513178345672",
+   "date": "2026-08-24",
+   "title": "Meeting with Ms. Apples / Asialink Finance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "46484315105",
+     "name": "Apples Mangubat",
+     "company": "Asialink Finance",
+     "country": "Philippines",
+     "title": "President & COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "534468294863",
+   "date": "2026-08-20",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "13769092561",
+     "name": "MK Restaurant Group",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "contacts": [],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "515113098451"
+  },
+  {
+   "id": "508053688551",
+   "date": "2026-08-20",
+   "title": "Marriott / HONO Agent Planning",
+   "owner": "HONO HR (192531917)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "17258842360",
+     "name": "Hendra Wijaya",
+     "company": "Marriott International",
+     "country": "Singapore",
+     "title": "Director HR Technology & Analytics",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "512716682445",
+   "date": "2026-08-18",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "512460675287",
+   "date": "2026-08-18",
+   "title": "Meeting with Sunil and Boonchoo on Inspiro",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "511702102241",
+   "date": "2026-08-18",
+   "title": "Meeting with Best Option Management Consultants",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "838181546179",
+     "name": "Murf de Leon",
+     "company": "Bestoptions Assistance Inc.",
+     "country": "Philippines",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": "531677642992"
+  },
+  {
+   "id": "511212987600",
+   "date": "2026-08-18",
+   "title": "Cognizant | HONO | Introduction ",
+   "owner": "Akash Kumar (34182343)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "841538733295",
+     "name": "Bharat G",
+     "company": "Cognizant",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "511553236181",
+   "date": "2026-08-13",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  },
+  {
+   "id": "510306187454",
+   "date": "2026-08-13",
+   "title": "Hono x TOA global: Payroll demo",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [],
+   "contacts": [
+    {
+     "id": "17266838742",
+     "name": "Lovelyn Poda",
+     "company": "TOA Global",
+     "country": "Philippines",
+     "title": "Site Human Resources Head",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "510679732426",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "owner": "HONO HR (192531917)",
+   "companies": [
+    {
+     "id": "8244339449",
+     "name": "Rams Solutions Sdn Bhd",
+     "country": "Malaysia",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "116500372689",
+     "name": "Brian Liew Liew",
+     "company": "RAMSSOL",
+     "country": "Malaysia",
+     "title": "COO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "510911156453",
+   "date": "2026-08-11",
+   "title": "Meeting with Inspiro",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "4988745203",
+     "name": "inspiro",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "1701801",
+     "name": "Maconcepcion Babon",
+     "company": "inspiro",
+     "country": "Philippines",
+     "title": null,
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Philippines",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "1228901",
+     "name": "Paulo",
+     "company": "inspiro",
+     "country": "Philippines",
+     "title": "Associate Vice President, Human Resources Operations",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "510634759362",
+   "date": "2026-08-11",
+   "title": "Internal Meeting for the INSPIRO Discussion",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "22401184499",
+     "name": "Sunil Narang",
+     "company": "JaiHo Enterprises",
+     "country": "Singapore",
+     "title": "Director HR",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "508637319407",
+   "date": "2026-08-11",
+   "title": "Initial Meeting: Hono x Anta PH",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "426644150498",
+     "name": "dotPH",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "758117493950",
+     "name": "Paula Martina Montalban",
+     "company": "Anta Sports Philippines inc",
+     "country": "Philippines",
+     "title": "Compensation and Benefits Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "759335905469",
+     "name": "Rizza Casino",
+     "company": "dotPH",
+     "country": "Philippines",
+     "title": "HR Head / Acting CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": false,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "509913505015",
+   "date": "2026-08-07",
+   "title": "HRIS Project Kick-off",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "13769093306",
+     "name": "Northern Star Energy Corporation",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "13679133172",
+     "name": "ACM Landholdings, Inc.",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "contacts": [
+    {
+     "id": "34278665939",
+     "name": "Rachelle Kho",
+     "company": "Northern Star Energy",
+     "country": "Philippines",
+     "title": "HR Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "34264766144",
+     "name": "Charmaine Balon",
+     "company": "ACM Homes",
+     "country": "Philippines",
+     "title": "Senior Manager - HR & Admin",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "671389561048",
+     "name": "Julio Rivero",
+     "company": "First Maritime Shared Services",
+     "country": "Philippines",
+     "title": "General Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "64795",
+     "name": "Tony Apale",
+     "company": "PTC",
+     "country": "Philippines",
+     "title": "CHRO",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": true,
+   "deal_id": null
+  },
+  {
+   "id": "510151266503",
+   "date": "2026-08-06",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "contacts": [
+    {
+     "id": "31276004288",
+     "name": "Frances Padilla",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "Assistant Manager",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    },
+    {
+     "id": "31276004085",
+     "name": "Micheal Eusoof",
+     "company": "International Elevator & Equipment,",
+     "country": "Philippines",
+     "title": "HRMS Business Partner",
+     "event": null,
+     "source": "Offline Sources",
+     "customer": false
+    }
+   ],
+   "customer": true,
+   "on_deal": false,
+   "deal_id": null
+  }
+ ],
  "leads": [
   {
    "id": "880062281976",

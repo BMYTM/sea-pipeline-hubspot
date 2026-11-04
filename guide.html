@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SEA Pipeline Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .guide{max-width:860px}
+  .guide h2{font-family:var(--serif);font-weight:400;font-size:22px;margin:0 0 6px}
+  .guide h3{font-size:14px;font-weight:600;margin:16px 0 4px}
+  .guide p,.guide li{max-width:72ch}
+  .guide ul,.guide ol{padding-left:20px;margin:6px 0}
+  .guide li{margin:3px 0}
+  .guide table{border-collapse:collapse;width:100%;font-size:13px;margin:8px 0}
+  .guide th,.guide td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  .guide th{color:var(--muted);font-weight:500}
+  .guide code{font-size:12px;background:var(--grid);padding:1px 4px;border-radius:4px}
+  .toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px}
+  .toc a,.back{color:var(--c1);text-decoration:none}
+  .suggest{display:inline-block;margin-top:10px;font-size:12px;color:var(--c1);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+  .suggest:hover,.toc a:hover,.back:hover{text-decoration:underline}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:var(--grid);color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="sea guide">
+  <header class="head">
+    <div class="head-row">
+      <h1>SEA pipeline guide</h1>
+      <a class="back" href="index.html">← Back to the dashboard</a>
+    </div>
+    <div class="sub">How the dashboard and the weekly review PPT are built, and what to keep up to date in HubSpot · last updated 4 Nov 2026</div>
+  </header>
+
+  <section class="card">
+    <h2>Help us improve this</h2>
+    <p>This guide is for the whole SEA team. If a rule here does not match how you work, a number looks wrong, or you want a slide changed, suggest it. Every section has a <span class="tag">Suggest a change</span> link that opens a pre-filled email; you can also raise it in the weekly review.</p>
+    <div class="cta">
+      <a class="btn" id="suggest-all" href="#">Suggest a change</a>
+      <span class="note" style="margin:0">Goes to Boonchoo Malhotra (boonchoo.malhotra@hono.ai)</span>
+    </div>
+    <nav class="toc" style="margin-top:14px" aria-label="Contents">
+      <a href="#refresh">Data refresh</a><a href="#dashboard">Dashboard tabs</a><a href="#deck">Weekly review PPT</a>
+      <a href="#targets">Targets</a><a href="#meetings">Meetings</a><a href="#hubspot">Keeping HubSpot clean</a>
+    </nav>
+  </section>
+
+  <section class="card" id="refresh">
+    <h2>Data refresh</h2>
+    <ul>
+      <li>The data is refreshed once a day in the morning (Bangkok time) straight from HubSpot. The date at the top of the dashboard shows when.</li>
+      <li>Scope: the <b>SEA Sales Pipeline</b>, deal Region Thailand &amp; Others, Indonesia, Philippines, Malaysia and Singapore. All amounts are USD (HubSpot "Amount in company currency").</li>
+      <li><b>On-Hold deals are left out</b> of the pipeline numbers and the PPT.</li>
+      <li>A change made in HubSpot today shows on the portal after the next morning's refresh.</li>
+    </ul>
+    <a class="suggest" data-section="Data refresh" href="#">Suggest a change</a>
+  </section>
+
+  <section class="card" id="dashboard">
+    <h2>Dashboard tabs</h2>
+    <table>
+      <tr><th>Tab</th><th>What it shows</th></tr>
+      <tr><td>Closures</td><td>Closed-won SEA deals by country, year and month, with deal value.</td></tr>
+      <tr><td>Active pipeline</td><td>Open deals (Demo → Contracting) with stage, close date, owner, source and amount. Click a number to filter.</td></tr>
+      <tr><td>Meetings</td><td>Meetings logged on SEA deals, filterable by country, owner, month and stage.</td></tr>
+    </table>
+    <a class="suggest" data-section="Dashboard tabs" href="#">Suggest a change</a>
+  </section>
+
+  <section class="card" id="deck">
+    <h2>Weekly review PPT</h2>
+    <p>Click <b>Download weekly review (PPT)</b> on the dashboard. The deck is built in your browser from the same data, in the HONO theme.</p>
+    <h3>Order</h3>
+    <ol>
+      <li>Cover</li>
+      <li><b>SEA Overall</b>, then <b>Thailand</b>, <b>Malaysia</b>, <b>Philippines</b>, <b>Indonesia</b> (Singapore has no section for now). Each section starts with a divider and has the same slides:</li>
+    </ol>
+    <table>
+      <tr><th>Slide</th><th>What it shows</th></tr>
+      <tr><td>Overview – Annual</td><td>Annual and YTD target, contracts signed, YTD ACV and achievement %, vs the same months last year.</td></tr>
+      <tr><td>Monthly ACV</td><td>Each month and quarter of the fiscal year (Apr–Mar) vs last year and target. Negative variances in red.</td></tr>
+      <tr><td>Contracts and ACV by Month</td><td>Number of contracts, implementation and subscription by month and quarter.</td></tr>
+      <tr><td>Contracts Signed</td><td>Closed-won deals this fiscal year.</td></tr>
+      <tr><td>Proposals Sent</td><td>Open deals in Proposal Sent, with source, close date and probability.</td></tr>
+      <tr><td>Pipeline</td><td>All open deals by stage.</td></tr>
+      <tr><td>New Client Meetings</td><td>Sales meetings: upcoming first, then completed in the last 30 days. See <a href="#meetings">Meetings</a>.</td></tr>
+      <tr><td>Existing Client Meetings</td><td>Meetings with clients that already have a won SEA deal (onboarding, go-live, account meetings).</td></tr>
+    </table>
+    <a class="suggest" data-section="Weekly review PPT" href="#">Suggest a change</a>
+  </section>
+
+  <section class="card" id="targets">
+    <h2>Targets</h2>
+    <ul>
+      <li>SEA FY target: <b>USD 3,000,000</b>, spread evenly by month (250,000 a month).</li>
+      <li>Country targets: split <b>equally</b> across Thailand, Malaysia, Philippines and Indonesia — <b>USD 750,000</b> each (62,500 a month).</li>
+      <li>Fiscal year runs April to March; quarters are fiscal (Q1 = Apr–Jun).</li>
+    </ul>
+    <a class="suggest" data-section="Targets" href="#">Suggest a change</a>
+  </section>
+
+  <section class="card" id="meetings">
+    <h2>Meetings</h2>
+    <h3>Which meetings are included</h3>
+    <ul>
+      <li>Meetings linked to an open SEA deal.</li>
+      <li>Meetings logged only against a <b>company or contact</b> in Thailand, Malaysia, Philippines, Indonesia or Singapore. When one open deal fits (a company on the deal, a company named like the deal, or a contact on the deal), the meeting is shown on that deal.</li>
+      <li>Completed meetings: <b>last 30 days only</b>. Upcoming: everything scheduled.</li>
+      <li>Meetings owned by Abdul Khan and Akash Kumar are not included.</li>
+    </ul>
+    <h3>New Client vs Existing Client</h3>
+    <table>
+      <tr><th>Slide</th><th>Rule</th><th>Examples (4 Nov)</th></tr>
+      <tr><td>New Client Meetings</td><td>Meetings on open deals, plus meetings with companies that are not clients and have no deal yet (new sales).</td><td>Kenanga, AmBank, Thai PBS, Touch 'n Go, Asialink; Teleperformance and Aboitiz (PMAP Tech HR 2026)</td></tr>
+      <tr><td>Existing Client Meetings</td><td>Meetings with a company that has a closed-won SEA deal and no open deal for the meeting.</td><td>IEE go-live, Ayala</td></tr>
+    </table>
+    <h3>Source on new-sales meetings without a deal</h3>
+    <p>Taken from the contact: the <b>Event Name</b> (e.g. "PMAP Tech HR 2026 – Booth"), otherwise the contact's Original Traffic Source.</p>
+    <a class="suggest" data-section="Meetings" href="#">Suggest a change</a>
+  </section>
+
+  <section class="card" id="hubspot">
+    <h2>Keeping HubSpot clean</h2>
+    <p>The report can only be as good as HubSpot. These make the biggest difference:</p>
+    <ol>
+      <li><b>Link every sales meeting to its deal</b>, not just the company or contact.</li>
+      <li>Set the deal <b>Region</b> to the SEA country (a deal under another region, e.g. India-North, is left out).</li>
+      <li>Set the contact's <b>Country</b> (e.g. Philippines) so meetings with that person are picked up.</li>
+      <li>Fill <b>Event Name</b> on contacts met at events, and <b>Deal Source / Sub-source</b> on deals.</li>
+      <li>Keep <b>Next step</b>, <b>Close date</b>, <b>Implementation fee</b> and <b>Annual subscription fee</b> current on open deals.</li>
+      <li>Merge duplicate contacts and companies (e.g. two records for the same person).</li>
+    </ol>
+    <a class="suggest" data-section="Keeping HubSpot clean" href="#">Suggest a change</a>
+  </section>
+</main>
+<script>
+  // Suggest a change: opens a pre-filled email to the portal owner
+  (() => {
+    const to = 'boonchoo.malhotra@hono.ai';
+    const link = (section) => 'mailto:' + to + '?subject=' + encodeURIComponent('SEA pipeline portal – suggestion' + (section ? ': ' + section : '')) +
+      '&body=' + encodeURIComponent('Section: ' + (section || 'General') + '\n\nWhat should change:\n\nWhy:\n\n(Page: ' + location.href.split('#')[0] + ')');
+    document.getElementById('suggest-all').href = link('');
+    document.querySelectorAll('a.suggest').forEach((a) => { a.href = link(a.dataset.section); });
+  })();
+</script>
+</body>
+</html>

@@ -34,6 +34,12 @@ for extra in sorted(NEW.glob("meetings_extra*.txt")):
     add = [r for r in erows if key(r) not in have_m]; rows += add; have_m |= {key(r) for r in add}
     print(f"{extra.name}: +{len(add)} meetings")
 write_tsv("meetings.txt", h, rows)
+# meetings with SEA companies / contacts (customers, and meetings not linked to a deal): feeds the "Customer & Other Meetings" slides
+for f in ["meetings_other.txt", "meetings_contacts.txt"]:
+    if (NEW / f).exists():
+        h, rows = tsv(f); write_tsv(f, h, rows)
+    else:
+        (RAW / f).unlink(missing_ok=True); print(f + " not pulled: Customer & Other Meetings will miss these meetings this run")
 h, a = tsv("mql.txt"); _, b = tsv("sql.txt"); write_tsv("contacts.txt", h, a + b)
 h, a = tsv("qual.txt"); _, b = tsv("lost_sales.txt"); write_tsv("lost_qual.txt", h, a + b)
 recs = json.loads((NEW / "money.txt").read_text())["results"]
