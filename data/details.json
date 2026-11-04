@@ -8691,6 +8691,857 @@
    "owner": "Nova Sinulingga (533079233)"
   }
  ],
+ "company_meetings": [
+  {
+   "id": "537906161895",
+   "date": "2026-11-12",
+   "title": "Placeholder — Aboitiz Power Group with Ms. Lasala",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988769214",
+     "name": "Aboitiz Power Group",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "136893503732",
+     "name": "Aboitiz Group",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534532876509",
+   "date": "2026-11-10",
+   "title": "Meeting with Asialink Finance and Mark",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "537930943708",
+   "date": "2026-11-04",
+   "title": "IEE-HONO - Prep Call For Afternoon F2F Meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "537288034529",
+   "date": "2026-11-04",
+   "title": "IEE — Office meeting",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "537298946267",
+   "date": "2026-11-03",
+   "title": "Quick Catch-up",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "537278793961",
+   "date": "2026-11-03",
+   "title": "IEE — Go-live planning",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "537214732495",
+   "date": "2026-11-03",
+   "title": "HONO meeting with Philippine Transmarine Carriers / FMSS",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "537009674439",
+   "date": "2026-11-03",
+   "title": "IEE-HONO - Full Go-Live Preparation",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "535155636454",
+   "date": "2026-11-03",
+   "title": "HONO Reference Call with Ms. Rizzel Pascua",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "8490577094",
+     "name": "Philippine Dealing System Holdings Corp.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "536643443925",
+   "date": "2026-11-02",
+   "title": "Meeting Invitation - Interaction with Mega Lifesciences Team",
+   "owner": "Abdul Khan (1698206293)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "524642132177",
+   "date": "2026-11-02",
+   "title": "Canceled: Qualfon | HONO | Overview Demo",
+   "owner": "Akash Kumar (34182343)",
+   "companies": [
+    {
+     "id": "8309465038",
+     "name": "QUALFON PHILIPPINES, INC.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534463015113",
+   "date": "2026-10-29",
+   "title": "RFP clarification",
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988178910",
+     "name": "Kenanga Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534317336765",
+   "date": "2026-10-28",
+   "title": "Meeting with Kenanga Investment Bank Berhad (KIBB)",
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988178910",
+     "name": "Kenanga Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "531842700481",
+   "date": "2026-10-23",
+   "title": "PMAP AC alignment: MPD 4: The Art of Ethical Leadership: Balancing What’s Right with What Drives Business Performance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "387447936219",
+     "name": "Ayala Corporation",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "13769093307",
+     "name": "Sangalang & Gaerlan, Business Lawyers",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "534468294867",
+   "date": "2026-10-21",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "9798264554",
+     "name": "Thai Public Broadcasting Service (Thai PBS)",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534463015112",
+   "date": "2026-10-20",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988177873",
+     "name": "AmBank Group",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534463015111",
+   "date": "2026-10-16",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "432558266555",
+     "name": "Touch 'n Go Sdn Bhd - Company",
+     "country": "Malaysia",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "528211392759",
+   "date": "2026-10-16",
+   "title": "IEE-HONO - Offline Attendance Capturing",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "526539600063",
+   "date": "2026-10-14",
+   "title": "Placeholder - Reference Call with Mr. Devendra of AG&P",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "346507506900",
+     "name": "Atlantic, Gulf & Pacific Company (AG&P)",
+     "country": "Singapore",
+     "customer": true
+    },
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "524088687835",
+   "date": "2026-10-02",
+   "title": "IEE-HONO Alignment Meeting - Employee Data",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "523884474572",
+   "date": "2026-10-02",
+   "title": "Catch Up with Mark Joseph",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534524146892",
+   "date": "2026-09-30",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "439340165332",
+     "name": "AutoX",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "522208895225",
+   "date": "2026-09-29",
+   "title": "Mr. Anup x Mr. Mukul - Overall Commercial discussion",
+   "owner": "Boonchoo Malhotra (1401897672)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "519014367467",
+   "date": "2026-09-24",
+   "title": "KGHxHONO: UAT Training - Overtime Module",
+   "owner": "HONO HR (192531917)",
+   "companies": [
+    {
+     "id": "297074835698",
+     "name": "Koko Global Hospitality",
+     "country": "Thailand",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "520298896582",
+   "date": "2026-09-22",
+   "title": "IEE x HONO Courtesy Call",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "519943776503",
+   "date": "2026-09-22",
+   "title": "Catch up with Xandra Galang/Ayala Corporation",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "387447936219",
+     "name": "Ayala Corporation",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "520193699054",
+   "date": "2026-09-21",
+   "title": "HONO x PTC Ceremonial Signing",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "517368469734",
+   "date": "2026-09-08",
+   "title": "Discussion on Recruitment Module for Smartpark",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "517338611913",
+   "date": "2026-09-08",
+   "title": "Short Catch Up with PDS",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "8490577094",
+     "name": "Philippine Dealing System Holdings Corp.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "516149343419",
+   "date": "2026-09-08",
+   "title": "Indorama Corporation <> HONO | Introduction Call",
+   "owner": "Prerna Taneja (31558294)",
+   "companies": [
+    {
+     "id": "6036895220",
+     "name": "Indorama Synthetics",
+     "country": "Indonesia",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "514759608558",
+   "date": "2026-09-08",
+   "title": "HONO x PTC/FMSS: Payroll demo",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534468294866",
+   "date": "2026-09-03",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "9798774771",
+     "name": "Toyota Tsusho (Thailand)",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534468294864",
+   "date": "2026-09-02",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "4988763600",
+     "name": "Jaymart Group",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "516122646755",
+   "date": "2026-09-02",
+   "title": "Short Catch up with Mark Joseph/Asialink Finance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "515432911074",
+   "date": "2026-08-31",
+   "title": "Short Catch up on Inspiro Proposal",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "515426936018",
+   "date": "2026-08-31",
+   "title": "Call with Sunil on Inspiro Proposal",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "512872165601",
+   "date": "2026-08-31",
+   "title": "Placeholder : Iron Bird Logistic",
+   "owner": "Shruti Malhotra (75694492)",
+   "companies": [
+    {
+     "id": "9797384436",
+     "name": "ASEAN Business Partners",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "513941525742",
+   "date": "2026-08-27",
+   "title": "Hono x PTC/FMSS: System Demo Part 1",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "514053475543",
+   "date": "2026-08-25",
+   "title": "Canceled: IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "513150870726",
+   "date": "2026-08-25",
+   "title": "Mega Lifesciences x HONO - Proposal Discussion",
+   "owner": "Boonchoo Malhotra (1401897672)",
+   "companies": [
+    {
+     "id": "137377368292",
+     "name": "Mega LifeSciences",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "526469040368",
+   "date": "2026-08-24",
+   "title": "Ivy Mobility<>HONO Connect",
+   "owner": "Harish Asnani (35787228)",
+   "companies": [
+    {
+     "id": "7570891219",
+     "name": "Ivy Mobility",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "513756425422",
+   "date": "2026-08-24",
+   "title": "Short Catch Up On Inspiro",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "513178345672",
+   "date": "2026-08-24",
+   "title": "Meeting with Ms. Apples / Asialink Finance",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "9822697708",
+     "name": "Asialink Finance Corporation",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "534468294863",
+   "date": "2026-08-20",
+   "title": null,
+   "owner": "Suntisuk Kulpiya (34133357)",
+   "companies": [
+    {
+     "id": "13769092561",
+     "name": "MK Restaurant Group",
+     "country": "Thailand",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "512716682445",
+   "date": "2026-08-18",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "512460675287",
+   "date": "2026-08-18",
+   "title": "Meeting with Sunil and Boonchoo on Inspiro",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "511553236181",
+   "date": "2026-08-13",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "510679732426",
+   "date": "2026-08-12",
+   "title": "Meeting between Mr. Brian and Mr. Mukul on RAMs and ITMax Project",
+   "owner": "HONO HR (192531917)",
+   "companies": [
+    {
+     "id": "8244339449",
+     "name": "Rams Solutions Sdn Bhd",
+     "country": "Malaysia",
+     "customer": true
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "510911156453",
+   "date": "2026-08-11",
+   "title": "Meeting with Inspiro",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    },
+    {
+     "id": "4988745203",
+     "name": "inspiro",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "510634759362",
+   "date": "2026-08-11",
+   "title": "Internal Meeting for the INSPIRO Discussion",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "12672070846",
+     "name": "JaiHo Consulting Group",
+     "country": "Singapore",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "508637319407",
+   "date": "2026-08-11",
+   "title": "Initial Meeting: Hono x Anta PH",
+   "owner": "Allyssa Ruazol (33612211)",
+   "companies": [
+    {
+     "id": "426644150498",
+     "name": "dotPH",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": false
+  },
+  {
+   "id": "509913505015",
+   "date": "2026-08-07",
+   "title": "HRIS Project Kick-off",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "4988184305",
+     "name": "Philippine Transmarine Carriers, Inc.",
+     "country": "Philippines",
+     "customer": true
+    },
+    {
+     "id": "381672495335",
+     "name": "First Maritime Shared Services, Inc.",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "13769093306",
+     "name": "Northern Star Energy Corporation",
+     "country": "Philippines",
+     "customer": false
+    },
+    {
+     "id": "13679133172",
+     "name": "ACM Landholdings, Inc.",
+     "country": "Philippines",
+     "customer": false
+    }
+   ],
+   "customer": true
+  },
+  {
+   "id": "510151266503",
+   "date": "2026-08-06",
+   "title": "IEE-HONO - BBP Review Sessions (Reboot)",
+   "owner": "Jun de Dios (29741979)",
+   "companies": [
+    {
+     "id": "13449770188",
+     "name": "International Elevator and Equipment, Inc.",
+     "country": "Philippines",
+     "customer": true
+    }
+   ],
+   "customer": true
+  }
+ ],
  "leads": [
   {
    "id": "880062281976",

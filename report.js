@@ -56,7 +56,12 @@
     const done = meets.filter((m) => m.date <= asof), upcoming = meets.filter((m) => m.date > asof).reverse();
     const since = new Date(Date.parse(asof) - 30 * 864e5).toISOString().slice(0, 10);
     const recent = done.filter((m) => m.date >= since);
-    return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming,
+    // Customer & other meetings: meetings with SEA companies that are not on the sales slides above
+    // (customer onboarding/go-live, reference calls, meetings not linked to a deal)
+    const shown = new Set(meets.map((m) => m.id));
+    const other = (D.company_meetings || []).filter((m) => !shown.has(m.id) && (!sc.country || (m.companies[0] || {}).country === sc.country));
+    const otherDone = other.filter((m) => m.date <= asof && m.date >= since), otherUp = other.filter((m) => m.date > asof).reverse();
+    return {label: sc.label, country: sc.country, targetNote: sc.targetNote, asof, fy, pfy, fy0, months, elapsed, target, won, monthly, quarters, ytd, full, pipe, props, done, recent, upcoming, otherDone, otherUp,
       wonTotal: sum(won, val), ytdTarget: target / 12 * elapsed};
   }
 
@@ -114,7 +119,33 @@
 
     // Divider + the same slides for SEA overall, then for each country
     sections.forEach((M) => { divider(M); section(M); });
+    otherMeetings(sections[0]);
     return pres;
+
+    // Customer & Other Meetings: divider, then completed (last 30 days) and scheduled
+    function otherMeetings(M) {
+      const d = pres.addSlide(); d.background = {color: HB.purple};
+      d.addText('Customer & Other\nMeetings', {x: 0.75, y: 1.6, w: 6.4, h: 1.9, fontSize: 44, bold: true, color: 'FFFFFF', fontFace: FONT, valign: 'bottom', margin: 0, lineSpacingMultiple: 0.95});
+      d.addText('Meetings with SEA companies that are not on an open sales deal: customer onboarding and go-live, reference calls, and meetings not linked to a deal', {x: 0.8, y: 3.65, w: 6.3, h: 0.75, fontSize: 14, color: 'E7DEF5', fontFace: FONT, margin: 0, valign: 'top'});
+      d.addText(M.otherDone.length + ' in the last 30 days · ' + M.otherUp.length + ' scheduled', {x: 0.8, y: 4.5, w: 6.3, h: 0.4, fontSize: 13, color: 'D9CCF0', fontFace: FONT, margin: 0});
+      d.addShape(pres.shapes.RECTANGLE, {x: 7.35, y: 0, w: 5.98, h: 7.5, fill: {color: 'FFFFFF'}, line: {type: 'none'}});
+      honoLogo(d, 8.85, 3.25, 2.9);
+      gradBar(d, 8.85, 4.35, 2.9, 0.05);
+      const srcO = 'HubSpot meetings associated with companies in Thailand, Malaysia, Philippines, Indonesia or Singapore (Meeting start time, Activity assigned to), not linked to an open SEA sales deal; Customer = company has a closed-won SEA deal';
+      const row = (m, i) => { const c = m.companies[0] || {}, more = m.companies.length > 1 ? ' (+' + (m.companies.length - 1) + ')' : '';
+        return [C(String(i + 1), 'center'), C(dt(m.date)), C(m.owner), C((c.name || '—') + more), C(c.country), C(m.customer ? 'Customer' : 'Other', 'center'), C(m.title)]; };
+      const head = (first) => [[H('S.No.'), H(first), H('Owner'), H('Company'), H('Country'), H('Type'), H('Meeting')]];
+      const colW = [0.5, 1.1, 1.75, 2.75, 1.05, 0.95, 4.2];
+      [[M.otherDone, 'Completed', 'in the last 30 days', 'No customer or other meetings in the last 30 days'],
+       [M.otherUp, 'Scheduled', 'upcoming', 'No upcoming customer or other meetings']].forEach(([list, kind, when, empty]) => {
+        pages(list.map(row), 12).forEach((pg, pi, all) => {
+          const s = sheetBase('Customer & Other Meetings – ' + kind + part(pi, all), list.length + ' meeting' + (list.length === 1 ? '' : 's') + ' ' + when, srcO);
+          const rows = head('Meeting Date').concat(pg.length ? pg : [[C(empty, 'left', {colspan: 7})]]);
+          if (pi === all.length - 1) rows.push([T('Total', 'left', {colspan: 6}), T(String(list.length), 'center')]);
+          grid(s, rows, {colW, fs: 10, rowH: 0.36});
+        });
+      });
+    }
 
     function divider(M) {
       const d = pres.addSlide(); d.background = {color: HB.purple};

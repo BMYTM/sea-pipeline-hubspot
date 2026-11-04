@@ -194,6 +194,28 @@ def main():
                        for did, ms in meet.items() if did in deal_ids for mid, (d_, t) in ms.items()),
                       key=lambda x: (x["date"], x["id"]), reverse=True)
 
+    # meetings with SEA companies (raw/meetings_other.txt: one row per meeting and company). The report shows the ones
+    # that are not on an open sales deal (customer onboarding, reference calls, meetings not linked to a deal).
+    company_meetings = []
+    if (RAW / "meetings_other.txt").exists():
+        ot = json.loads((RAW / "meetings_other.txt").read_text())["results"][0]["content"].split("Dataset TSV:\n")[1].strip().split("\n")
+        oh = ot[0].split("\t"); col = lambda pre: next(k for k, h in enumerate(oh) if h.startswith(pre))
+        c_mid, c_start, c_title, c_own = col("Record ID"), col("Meeting start time"), col("Meeting name"), col("Activity assigned to")
+        c_cid, c_cname, c_ctry = col("Company ["), col("Company name"), col("Country/Region")
+        won_names = {(r.get("company") or "").strip().lower() for r in closures} - {""}
+        by_id = {}
+        for line in ot[1:]:
+            c = line.split("\t")
+            if len(c) != len(oh): continue
+            m = by_id.setdefault(c[c_mid], {"id": c[c_mid], "date": c[c_start][:10], "title": c[c_title] if c[c_title] not in ("", "Unassigned") else None,
+                                             "owner": owner(c[c_own]) if c[c_own] not in ("", "Unassigned") else None, "companies": []})
+            if c[c_cid] not in {x["id"] for x in m["companies"]}:
+                m["companies"].append({"id": c[c_cid], "name": c[c_cname], "country": c[c_ctry], "customer": c[c_cname].strip().lower() in won_names})
+        for m in by_id.values():
+            m["companies"].sort(key=lambda x: not x["customer"])  # a won customer first
+            m["customer"] = any(x["customer"] for x in m["companies"])
+        company_meetings = sorted(by_id.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
+
     # a deal linked to two companies comes back as two rows: keep one
     def dedupe(rows):
         seen, out_ = set(), []
@@ -212,6 +234,7 @@ def main():
            "closures": sorted(closures, key=lambda x: x["close_date"] or "", reverse=True),
            "active": sorted(active, key=lambda x: -(x["amount"] or 0)),
            "meetings": meetings,
+           "company_meetings": company_meetings,
            "leads": sorted(leads.values(), key=lambda x: max(x["mql_date"] or "", x["sql_date"] or ""), reverse=True)}
     (DATA / "details.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
     print("closures", len(closures), "active", len(active), "leads", len(leads),
