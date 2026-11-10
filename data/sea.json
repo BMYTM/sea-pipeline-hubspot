@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T23:33:32Z",
+ "generated_at": "2026-11-10T23:34:05Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -106,8 +106,8 @@
    "region": "Philippines",
    "stage_id": "280510157",
    "stage": "Demo/Developing",
-   "count": 5,
-   "amount": 846100.0
+   "count": 6,
+   "amount": 872460.0
   },
   {
    "region": "Philippines",
@@ -302,7 +302,7 @@
   {
    "region": "Thailand & Others",
    "stage": "In Progress",
-   "count": 5
+   "count": 4
   },
   {
    "region": "Thailand & Others",
@@ -312,7 +312,7 @@
   {
    "region": "Thailand & Others",
    "stage": "MQL- Qualified",
-   "count": 2
+   "count": 3
   },
   {
    "region": "Thailand & Others",
@@ -822,9 +822,9 @@
    "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 73880.0,
-   "close_date": "2026-11-30",
+   "close_date": "2026-12-21",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-02",
+   "last_contacted": "2026-11-10",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
   },
@@ -1230,6 +1230,19 @@
    "last_contacted": "2026-04-28",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/499553621196"
+  },
+  {
+   "id": "538243170500",
+   "deal": "South Asialink Finance Corporation (SAFC)",
+   "stage_id": "280510157",
+   "stage": "Demo/Developing",
+   "region": "Philippines",
+   "amount": 26360.0,
+   "close_date": "2026-12-21",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-11-03",
+   "probability": 0.4,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/538243170500"
   },
   {
    "id": "416188364988",
