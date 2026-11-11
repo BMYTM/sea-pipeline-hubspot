@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T23:34:05Z",
+ "generated_at": "2026-11-11T23:33:58Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -1357,7 +1357,7 @@
    "amount": 18600.0,
    "close_date": "2026-12-19",
    "owner": "Jun de Dios",
-   "last_contacted": null,
+   "last_contacted": "2026-11-11",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515193189573"
   },
