@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T23:33:58Z",
+ "generated_at": "2026-11-12T23:33:42Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -272,7 +272,7 @@
   {
    "region": "Philippines",
    "stage": "Disqualified",
-   "count": 4
+   "count": 6
   },
   {
    "region": "Philippines",
@@ -297,12 +297,12 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 22
+   "count": 20
   },
   {
    "region": "Thailand & Others",
    "stage": "In Progress",
-   "count": 4
+   "count": 6
   },
   {
    "region": "Thailand & Others",
@@ -824,7 +824,7 @@
    "amount": 73880.0,
    "close_date": "2026-12-21",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-10",
+   "last_contacted": "2026-11-12",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
   },
@@ -1240,7 +1240,7 @@
    "amount": 26360.0,
    "close_date": "2026-12-21",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-03",
+   "last_contacted": "2026-11-12",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/538243170500"
   },
@@ -1357,7 +1357,7 @@
    "amount": 18600.0,
    "close_date": "2026-12-19",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-11",
+   "last_contacted": "2026-11-12",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515193189573"
   },
