@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T23:33:42Z",
+ "generated_at": "2026-11-13T23:33:39Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -369,7 +369,7 @@
    "amount": 513000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-03",
+   "last_contacted": "2026-11-13",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111097585"
   },
@@ -1097,7 +1097,7 @@
    "amount": 44000.0,
    "close_date": "2026-04-30",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-02-06",
+   "last_contacted": "2026-11-13",
    "probability": 0.7,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/187781578939"
   },
@@ -1565,7 +1565,7 @@
    "amount": null,
    "close_date": "2025-03-01",
    "owner": "Prielle Seandrè Tactacan",
-   "last_contacted": "2026-02-06",
+   "last_contacted": "2026-11-13",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/22012789185"
   },
