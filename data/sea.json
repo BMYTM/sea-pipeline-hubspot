@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T23:35:42Z",
+ "generated_at": "2026-11-16T23:33:18Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -302,7 +302,7 @@
   {
    "region": "Thailand & Others",
    "stage": "In Progress",
-   "count": 6
+   "count": 5
   },
   {
    "region": "Thailand & Others",
@@ -312,7 +312,7 @@
   {
    "region": "Thailand & Others",
    "stage": "MQL- Qualified",
-   "count": 3
+   "count": 4
   },
   {
    "region": "Thailand & Others",
