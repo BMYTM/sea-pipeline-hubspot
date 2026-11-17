@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T23:33:18Z",
+ "generated_at": "2026-11-17T23:33:13Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -237,12 +237,7 @@
   {
    "region": "Indonesia",
    "stage": "Engaged",
-   "count": 6
-  },
-  {
-   "region": "Indonesia",
-   "stage": "In Progress",
-   "count": 4
+   "count": 10
   },
   {
    "region": "Indonesia",
@@ -277,12 +272,7 @@
   {
    "region": "Philippines",
    "stage": "Engaged",
-   "count": 6
-  },
-  {
-   "region": "Philippines",
-   "stage": "In Progress",
-   "count": 8
+   "count": 14
   },
   {
    "region": "Philippines",
@@ -297,12 +287,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 20
-  },
-  {
-   "region": "Thailand & Others",
-   "stage": "In Progress",
-   "count": 5
+   "count": 25
   },
   {
    "region": "Thailand & Others",
@@ -369,7 +354,7 @@
    "amount": 513000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-13",
+   "last_contacted": "2026-11-03",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/515111097585"
   },
@@ -731,7 +716,7 @@
    "stage": "On-Hold",
    "region": "Philippines",
    "amount": 108000.0,
-   "close_date": "2027-01-29",
+   "close_date": "2027-03-31",
    "owner": "Jun de Dios",
    "last_contacted": "2026-10-23",
    "probability": 0.5,
