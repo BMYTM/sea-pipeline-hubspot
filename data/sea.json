@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T23:33:19Z",
+ "generated_at": "2026-11-19T23:33:43Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -277,7 +277,7 @@
   {
    "region": "Philippines",
    "stage": "New Lead",
-   "count": 4
+   "count": 5
   },
   {
    "region": "Thailand & Others",
@@ -287,7 +287,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 25
+   "count": 26
   },
   {
    "region": "Thailand & Others",
@@ -497,7 +497,7 @@
    "amount": 199500.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-10-19",
+   "last_contacted": "2026-11-19",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/534672912612"
   },
@@ -653,7 +653,7 @@
    "amount": 128256.0,
    "close_date": "2027-02-27",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-08-28",
+   "last_contacted": "2026-11-19",
    "probability": 0.6,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/512459995376"
   },
@@ -705,7 +705,7 @@
    "amount": 110769.0,
    "close_date": "2025-02-28",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
+   "last_contacted": "2026-11-19",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/9301752250"
   },
@@ -718,7 +718,7 @@
    "amount": 108000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-10-23",
+   "last_contacted": "2026-11-19",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/379729670388"
   },
@@ -1329,7 +1329,7 @@
    "amount": 19000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-10-19",
+   "last_contacted": "2026-11-19",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/513634997475"
   },
@@ -1394,7 +1394,7 @@
    "amount": 16800.0,
    "close_date": "2027-02-26",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-10-19",
+   "last_contacted": "2026-11-19",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/502011290855"
   },
@@ -1563,7 +1563,7 @@
    "amount": 0.0,
    "close_date": "2027-02-28",
    "owner": "Soranan Natejan",
-   "last_contacted": "2026-11-09",
+   "last_contacted": "2026-11-19",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/517313274045"
   },
