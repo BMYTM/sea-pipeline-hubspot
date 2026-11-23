@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T23:33:43Z",
+ "generated_at": "2026-11-23T09:50:16Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -287,7 +287,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 26
+   "count": 27
   },
   {
    "region": "Thailand & Others",
@@ -303,6 +303,11 @@
    "region": "Thailand & Others",
    "stage": "Marketing Nurture",
    "count": 11
+  },
+  {
+   "region": "Thailand & Others",
+   "stage": "New Lead",
+   "count": 2
   }
  ],
  "open_deals": [
@@ -497,7 +502,7 @@
    "amount": 199500.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-19",
+   "last_contacted": "2026-11-21",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/534672912612"
   },
@@ -718,7 +723,7 @@
    "amount": 108000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-19",
+   "last_contacted": "2026-11-23",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/379729670388"
   },
@@ -731,7 +736,7 @@
    "amount": 96000.0,
    "close_date": "2027-03-31",
    "owner": "Jun de Dios",
-   "last_contacted": "2026-11-02",
+   "last_contacted": "2026-11-23",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/531677642992"
   },
@@ -1041,7 +1046,7 @@
    "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 47000.0,
-   "close_date": "2026-11-27",
+   "close_date": "2027-01-31",
    "owner": "Jun de Dios",
    "last_contacted": "2026-02-06",
    "probability": 0.6,
@@ -1340,7 +1345,7 @@
    "stage": "Demo/Developing",
    "region": "Philippines",
    "amount": 18600.0,
-   "close_date": "2026-12-19",
+   "close_date": "2027-02-28",
    "owner": "Jun de Dios",
    "last_contacted": "2026-11-12",
    "probability": 0.4,
@@ -1392,7 +1397,7 @@
    "stage": "On-Hold",
    "region": "Philippines",
    "amount": 16800.0,
-   "close_date": "2027-02-26",
+   "close_date": "2027-03-31",
    "owner": "Jun de Dios",
    "last_contacted": "2026-11-19",
    "probability": 0.5,
@@ -1418,7 +1423,7 @@
    "stage": "Proposal Sent",
    "region": "Philippines",
    "amount": 15800.0,
-   "close_date": "2026-12-18",
+   "close_date": "2027-02-28",
    "owner": "Jun de Dios",
    "last_contacted": "2026-08-04",
    "probability": 0.6,
