@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T23:34:01Z",
+ "generated_at": "2026-11-24T23:33:16Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -114,7 +114,7 @@
    "stage_id": "280510158",
    "stage": "Proposal Sent",
    "count": 6,
-   "amount": 737936.0
+   "amount": 696626.0
   },
   {
    "region": "Philippines",
@@ -806,19 +806,6 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/403846554863"
   },
   {
-   "id": "508099332323",
-   "deal": "AsiaLink Finance Corporation",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Philippines",
-   "amount": 73880.0,
-   "close_date": "2026-12-21",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-11-12",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
-  },
-  {
    "id": "21071258827",
    "deal": "HSBC Holdings Indonesia",
    "stage_id": "280510160",
@@ -910,6 +897,19 @@
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/174721274089"
   },
   {
+   "id": "508099332323",
+   "deal": "AsiaLink Finance Corporation",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Philippines",
+   "amount": 54520.0,
+   "close_date": "2026-12-21",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-11-12",
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/508099332323"
+  },
+  {
    "id": "57476230342",
    "deal": "Agrinesia Raya",
    "stage_id": "280510160",
@@ -983,7 +983,7 @@
    "amount": 50000.0,
    "close_date": "2027-04-28",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-10-22",
+   "last_contacted": "2026-11-24",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/523343584494"
   },
@@ -1038,19 +1038,6 @@
    "last_contacted": "2026-07-08",
    "probability": 0.5,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/500196369598"
-  },
-  {
-   "id": "351130684663",
-   "deal": "Nutriasia",
-   "stage_id": "280510158",
-   "stage": "Proposal Sent",
-   "region": "Philippines",
-   "amount": 47000.0,
-   "close_date": "2027-01-31",
-   "owner": "Jun de Dios",
-   "last_contacted": "2026-02-06",
-   "probability": 0.6,
-   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/351130684663"
   },
   {
    "id": "526799803625",
@@ -1246,6 +1233,19 @@
    "last_contacted": "2026-02-06",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/416188364988"
+  },
+  {
+   "id": "351130684663",
+   "deal": "Nutriasia",
+   "stage_id": "280510158",
+   "stage": "Proposal Sent",
+   "region": "Philippines",
+   "amount": 25050.0,
+   "close_date": "2027-01-31",
+   "owner": "Jun de Dios",
+   "last_contacted": "2026-02-06",
+   "probability": 0.6,
+   "url": "https://app.hubspot.com/contacts/25298601/record/0-3/351130684663"
   },
   {
    "id": "7766005467",
