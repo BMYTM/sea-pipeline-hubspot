@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T23:33:16Z",
+ "generated_at": "2026-11-26T23:33:45Z",
  "source": "HubSpot (seed snapshot)",
  "target_usd": 3000000,
  "fy_start": "2026-04-01",
@@ -287,7 +287,7 @@
   {
    "region": "Thailand & Others",
    "stage": "Engaged",
-   "count": 27
+   "count": 26
   },
   {
    "region": "Thailand & Others",
@@ -297,7 +297,7 @@
   {
    "region": "Thailand & Others",
    "stage": "MQL- Qualified",
-   "count": 4
+   "count": 5
   },
   {
    "region": "Thailand & Others",
@@ -307,7 +307,7 @@
   {
    "region": "Thailand & Others",
    "stage": "New Lead",
-   "count": 2
+   "count": 3
   }
  ],
  "open_deals": [
@@ -983,7 +983,7 @@
    "amount": 50000.0,
    "close_date": "2027-04-28",
    "owner": "Suntisuk Kulpiya",
-   "last_contacted": "2026-11-24",
+   "last_contacted": "2026-11-25",
    "probability": 0.4,
    "url": "https://app.hubspot.com/contacts/25298601/record/0-3/523343584494"
   },
